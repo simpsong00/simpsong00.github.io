@@ -1125,8 +1125,8 @@ Every turn when the player is in the IMAX Theater:
 The IMAX waiting count is a number that varies. The IMAX waiting count is 0.
 
 After waiting when the player is in the IMAX Theater:
-	increase the IMAX waiting count by 1;
-	if the IMAX waiting count is 2:
+	if the player is in the IMAX Theater, increase the IMAX waiting count by 1;
+	if the player is in the IMAX Theater and the IMAX waiting count is 2:
 		now preview is 0;
 		say "The main feature finally starts!! Professor Eaton is on the screen in her lab. The camera zooms in and she says 'What if we could send messages across time. My console requires an enormous amount of energy to enable entanglement stabilization by means of the quantum Zeno effect. It[line break]' ... CRASH... a loud noise interrupts and the movie stops. House lights are turned on, and an employee announces over the speakers: [line break]'Sorry folks, the film broke, the movie is now over.";
 		increase the score by 5.

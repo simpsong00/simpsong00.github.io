@@ -1117,11 +1117,19 @@ The IMAX Theater is west of the Cincinnati Museum Center. "The IMAX Theater fill
 preview is a number that varies. preview is initially 1.
 
 Every turn when the player is in the IMAX Theater:
-	if preview is 1, say "These previews seem to go on forever!";
-	after waiting twice:
+	if preview is 1:
+		say "These previews seem to go on forever!";
+	otherwise:
+		say "You enjoy hanging around?".
+
+The IMAX waiting count is a number that varies. The IMAX waiting count is 0.
+
+After waiting when the player is in the IMAX Theater:
+	increase the IMAX waiting count by 1;
+	if the IMAX waiting count is 2:
 		now preview is 0;
-		say "The main feature finally starts!! Professor Eaton is on the screen in her lab. The camera zooms in and she says 'What if we could send messages across time. My console requires an enormous amount of energy to enable entanglement stablization by means of the quantum zeno effect. It[line break]' ... CRASH... a loud noise interrupts and the movie stops. House lights are turned on, and an employee announces over the speakers: [line break]'Sorry folks, the film broke, the movie is now over.";
-		increase score by 5.
+		say "The main feature finally starts!! Professor Eaton is on the screen in her lab. The camera zooms in and she says 'What if we could send messages across time. My console requires an enormous amount of energy to enable entanglement stabilization by means of the quantum Zeno effect. It[line break]' ... CRASH... a loud noise interrupts and the movie stops. House lights are turned on, and an employee announces over the speakers: [line break]'Sorry folks, the film broke, the movie is now over.";
+		increase the score by 5.
 
 A theater poster is a thing in the IMAX Theater. It is fixed in place. "A theater poster, featuring Professer Cassandra Eaton is mounted at the doorway."
 The description of the theater poster is "It's a large teal movie poster showing the beautiful Cassandra Eaton, with equations spinning around her head. It almost glows from the poster backlighting.".
@@ -1646,13 +1654,17 @@ The Pod is a container in the Hyperloop Station. The description of the Pod is "
 Understand "car" or "bean" or "jelly bean" or "carriage" as the Pod.
 
 Instead of entering the pod:
-	say "Whoosh... You take off from [the location] and travel in the hyperloop pod to [if location is airstrip]the Hyperloop Station.[otherwise] the Airstrip.";
-	if location is airstrip, move Pod to hyperloop station;
-	if location is hyperloop station, move Pod to airstrip;
-	if the location is Airstrip:
+	if location is airstrip:
+		say "Whoosh... You take off from [the location] and travel in the hyperloop pod to [if location is airstrip]the Hyperloop Station.[otherwise] the Airstrip.";
+		move Pod to hyperloop station;
 		move the player to Hyperloop Station;
+	else if location is hyperloop station:
+		say "Whoosh... You take off from [the location] and travel in the hyperloop pod to [if location is airstrip]the Hyperloop Station.[otherwise] the Airstrip.";
+		move Pod to airstrip;
+		move the player to airstrip;
 	otherwise:
-		move the player to Airstrip.
+		say "What pod?";
+		stop the action.
 
 Section 2 Plane
 
@@ -1938,6 +1950,7 @@ The description of the SCIF is "This secure communication device, or SCIF, is st
 
 The SCIF can be switched on or switched off. The SCIF is switched off.
 The SCIF can be activated or unactivated. The SCIF is unactivated.
+THe SCIF is fixed in place.
 
 Understand "device" as SCIF.
 
@@ -3499,7 +3512,8 @@ Chapter 3 - Release
 Test me with "examine watch / go west / go west / go down / go down / go west / go west / take SCIF".
 
 Release along with an interpreter, website, the introductory booklet, the introductory postcard, private source text, and cover art.
-Release along with a file of "Spoiler-free Map" called "Quantum The Game - Map Spoiler Free.pdf"
+Release along with a file of "Spoiler-free Map" called "Quantum The Game - Map Spoiler Free.pdf".
+
 
 
 

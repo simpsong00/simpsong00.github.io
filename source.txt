@@ -1653,6 +1653,9 @@ The Pod is a container in the Hyperloop Station. The description of the Pod is "
 
 Understand "car" or "bean" or "jelly bean" or "carriage" as the Pod.
 
+Instead of taking the pod:
+	say "The Pod is a large vehicle, embedded in a hyperloop tube. It exists for transport. You are unable to take it.";
+
 Instead of entering the pod:
 	if location is airstrip:
 		say "Whoosh... You take off from [the location] and travel in the hyperloop pod to [if location is airstrip]the Hyperloop Station.[otherwise] the Airstrip.";

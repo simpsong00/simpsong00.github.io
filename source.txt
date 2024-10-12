@@ -270,6 +270,8 @@ A stack of zorkmid bills is nowhere. "On the ground sit 200 neatly stacked zorkm
 
 The ground is a backdrop. The ground is everywhere. Understand "sand" and "earth" and "here" and "hole" as the ground. The description of the ground is "yep, that's the earth we walk on.".
 
+The weather is a backdrop. The weather is everywhere. The description of the weather is "Another beautiful day in paradise!".
+
 Check digging into the ground with the shovel when the player is in Edgewater Park for the first time:
 	say "You seem to be digging a hole here." instead.
 	
@@ -457,6 +459,7 @@ Old Cellar is a room below The Headquarters Entrance. "On the side of the house,
 Paint cans are things in the Old Cellar. "Two old [italic type]paint cans[roman type] are here side-by-side like a set of dilapidated bongos."
 The Paint cans are fixed in place.
 Understand "cans" as Paint cans.
+Understand "can" as Paint cans.
 The description of the paint cans is "These look like they'd make drum sounds if you tapped on them.".
 
 Set of Shelves is a lockable door. "[if location is old cellar]An old set of [italic type]shelves[roman type] is here, filled with [italic type]seashells[roman type].[else]You see the back of a set of shelves."
@@ -778,7 +781,7 @@ A truss is scenery in the Sheldonian Theatre. "The truss was designed by Christo
 Understand "theater" as Sheldonian Theatre.
 Understand "Sheldonian Theater" as Sheldonian Theatre.
 
-Clarendon Building is a room. "Once home to the Oxford University Press, this now houses administrative offices. You can go east or west."
+Clarendon Building is a room. "This is a neoclassical building completed in 1715 to enable moving the University Presses out of the basement of the Sheldonian Theater. They couldn't work while plays were in progress, hence the necessity of the move.[paragraph break]As for your movement, You can go east or west."
 
 A piece of paper is a thing. The piece of paper is in the Clarendon Building. "There is a piece of paper on the floor."
 The description of the piece of paper is "It's just a slip of paper, but it does appear to have some writing on it.".
@@ -867,6 +870,7 @@ Understand "wink eyes rapidly" as rapid blinking.
 Understand "wink eyes" as rapid blinking.
 Understand "wink eye" as rapid blinking.
 Understand "wink" as rapid blinking.
+Understand "rapid eye blinking" as rapid blinking.
 
 Carry out rapid blinking:
 	say "You blink rapidly.";
@@ -1028,7 +1032,7 @@ The description of the Yoga Master is "They are a serene yoga master, and they a
 Instead of talking to Yoga Master:
 		say "The Yoga Master simply breaths out. And then in. Their breathing is slow and rhythmic. They do not even open their eyes when you talk to them."
 
-Yoga Mat is a thing. It is nowhere. "A beautiful yoga mat is here. It's color oscillates gently."
+Yoga Mat is a thing. It is nowhere. "A beautiful yoga mat is here. Its color oscillates gently."
 The description of the Yoga Mat is "it is a large yoga mat, thicker than most. It is soft, but not in a rubbery way, it feels more like lying on a thick bed of pine needles, covered with cloth. It's color is changing constantly.".
 
 Meditating is an action applying to nothing. Understand "meditate" as Meditating. 
@@ -1041,7 +1045,7 @@ Carry out Meditating:
 	now the Yoga Mat is in the Peaceful Meditation.
 
 Instead of talking to Hologram:
-        say "I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.[paragraph break]Of course, hackers will alter metaverse programs to remove both safety features. With no blinking-eye exit, and no id mark, it would be hard to tell what is real and what is meta. With the appropriate setup, you could trap a person in the metaverse, and make them think it’s real."
+        say "I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, [bold type]rapid eye blinking[roman type] could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.[paragraph break]Of course, hackers will alter metaverse programs to remove both safety features. With no blinking-eye exit, and no id mark, it would be hard to tell what is real and what is meta. With the appropriate setup, you could trap a person in the metaverse, and make them think it’s real."
 
 After asking the hologram about a topic listed in the Table of Cassie_AV Replies, say "[line break][muse entry][line break]".
 
@@ -1402,7 +1406,7 @@ The Crystal is a thing. "The Crystal is a brilliant blue color." The Crystal can
 
 Section 1 - Robert Clayton
 
-Robert Clayton is a person in The Rock Church St George. He is carrying the Crystal. "Robert Clayton is an outdoorsman. He carries a knife on his hip and looks like he knows his way around.[if asleep] He is sleeping like a baby."
+Robert Clayton is a man in The Rock Church St George. He is carrying the Crystal. "Robert Clayton is an outdoorsman. He carries a knife on his hip and looks like he knows his way around.[if asleep] He is sleeping like a baby."
 
 Understand "The Lion" as Robert Clayton.
 Understand "rob" or "clay" or "robbie" as Robert Clayton.
@@ -1594,7 +1598,7 @@ After switching on the laser:
 		now the laser is switched off;
 		
 After switching on the vr suit: 
-		say "The world around you flickers and then you suddenly appear in brand new world.";
+		say "The world around you flickers and then you suddenly appear in a brand new metaverse world.";
 		now the VR Suit is activated;
 		now the previous location is the location;
 		now the player is in the Metaverse;
@@ -1688,7 +1692,7 @@ Flying to is an action applying to one visible thing. Understand "fly to [any fl
 
 Understand "Fly jet to [any flyable room]" as flying to.
 
-Understand "start" or "start jet" or "start plane" as a mistake ("Say fly to LOCATION").
+Understand "start" or "start jet" or "start plane" or "start engine" as a mistake ("Say fly to LOCATION").
 
 Check flying to:
 	if the player is not in the Quotient Jet, say "You need to be in a jet to fly somewhere." instead;
@@ -1887,6 +1891,11 @@ Understand "solve [something]" or "complete [something]" or "finish [something]"
 
 Solving is an action applying to one thing, requiring light. Instead of solving the jigsaw: if the jigsaw is solved, say "It's finished already." instead; say "You haven't got the final piece." 
 
+Check solving:
+	unless the player is in the Farmhouse:
+		say "You don't see a puzzle to solve."
+instead.
+
 Carry out solving something: say "That's not a meaningful action in this case." 
 Before putting the jagged piece on the jigsaw: try solving the jigsaw instead. 
 Before inserting the jagged piece into the jigsaw: try solving the jigsaw instead.
@@ -2066,6 +2075,7 @@ The description of the spy glass is "It is a small handheld magnifying glass, ma
 The treat cupboard is an openable closed container. The description is "A treat cupboard designed to keep your treats fresh."
 The treat cupboard is in the Quotient jet. 
 The treat cupboard is closed.
+The treat cupboard is fixed in place.
 
 The chocolate-covered strawberry are a thing. "An exquisite dark-chocolate covered strawberry."
 The chocolate-covered strawberry are in the treat cupboard. 
@@ -2091,8 +2101,11 @@ Section 3  TVs
 A television is a kind of device. A television has a number called the channel. Understand the channel property as referring to a television. Understand "channel" as a television.
 
 The widescreen TV is a television in Lawsons Deli. The Frame TV is a television in Cassie's Office.
-The widescreen TV is fixed in place.
+The widescreen TV is fixed in place. "There is a widescreen TV here. (type TVTUNER for instructions)"
+
 The Frame TV is fixed in place.
+
+Understand "tvtuner" as a mistake ("If you turn it on, you can tune it to a channel using the command TUNE tv TO number")
 
 Changing the channel of it to is an action applying to one thing and one number.
 
@@ -2727,7 +2740,7 @@ Understand "jason" as The Prime Minister.
 
 Chapter 2 - Jack
 
-Jack is a person. He is in Skyline Chili. "Jack is a seasoned spy, known for his quick thinking and negotiation skills. He didn't start out as a spy as his initial contributions were in building Quotient's quantum computer, Tardis, in space. He is Sarah's brother and has a complex romantic relationship with Kara."
+Jack is a man. He is in Skyline Chili. "Jack is a seasoned spy, known for his quick thinking and negotiation skills. He didn't start out as a spy as his initial contributions were in building Quotient's quantum computer, Tardis, in space. He is Sarah's brother and has a complex romantic relationship with Kara."
 
 After going to Skyline Chili for the first time:
 	try looking;
@@ -2758,7 +2771,7 @@ index	quip_string
 
 Chapter 3 - Sarah
 
-Sarah is a person. She is in the Conference Room. "Sarah, Jack's fearless sister, is here. She is always ready to dive into danger and is a highly skilled agent with a deep bond with her brother. At twenty-two, she was the youngest member ever to join this elite group.”
+Sarah is a woman. She is in the Conference Room. "Sarah, Jack's fearless sister, is here. She is always ready to dive into danger and is a highly skilled agent with a deep bond with her brother. At twenty-two, she was the youngest member ever to join this elite group.”
 The description of Sarah is "Sarah is Jack's younger sister, known for her fearless attitude. She is an amazing agent at Quotient. Sarah was recruited into Quotient while she was while she was an undergraduate at Hertford College in Oxford. Sarah did her graduate work in history and economics. She is athletic, intelligent, and a great agent for Quotient.[paragraph break]She was a Rhodes Scholar, and a star student. Her undergraduate degree was in modern languages. She is fluent in four and dabbled in many others. Her language skills, sharp mind, and athleticism made her a great candidate when Quotient started looking for agents. The Rhodes Scholarship got her included on the list of prospective agents, but her skills resulted in her selection. She had studied dance since she was a child and had transitioned those skills to the study of Chinese martial arts.".
 
 After going to the Conference Room for the first time:
@@ -2772,14 +2785,14 @@ After going from the Conference Room for the first time:
 
 Chapter 4 - Martin
 
-Martin is a person. He is in The Hallway. "Martin, one of the original founders of Quotient. In his late 50s, Martin is a tall, fit, and sharp-minded leader. He has salt and pepper hair. He is still as fit as when he was thirty-five. He looks to be in deep thought."
+Martin is a man. He is in The Hallway. "Martin, one of the original founders of Quotient. In his late 50s, Martin is a tall, fit, and sharp-minded leader. He has salt and pepper hair. He is still as fit as when he was thirty-five. He looks to be in deep thought."
 The description of Martin is "Martin, one of the original founders of Quotient. In his late 50s, Martin is a tall, fit, and sharp-minded leader. He has salt and pepper hair. He is still as fit as when he was thirty-five. His deep blue eyes seem to dart around the room. He is always calculating escape routes, staying alert for threats, or just unexpected surprises. This was an old habit that didn’t go away just because he was now in a highly secure Quotient facility. As the original founder, he knew more about the history of Quotient than anyone. What he had started as a quantum computing initiative had turned into a global, independent spy agency.";
 
 Understand "marty" as Martin.
 
 Chapter 5 - Kara
 	
-Kara is a person. She is in the Radcliffe Square. "Kara, a brilliant scientist at NASA, has a complex, romantic relationship with Jack. She is now part of Quotient."
+Kara is a woman. She is in the Radcliffe Square. "Kara, a brilliant scientist at NASA, has a complex, romantic relationship with Jack. She is now part of Quotient."
 The description of Kara is "Kara is a brilliant scientist at the NASA Glenn Research Center before she joined Quotient. An overachiever, and an only child, she has a doctorate from Cal Berkeley and enjoyed being spoiled. Kara is a tall, dark-skinned, French-Italian woman with long, dark, wavy hair. She has a complicated history with Jack.".
 
 After going to the Radcliffe Square for the first time:
@@ -2788,14 +2801,14 @@ After going to the Radcliffe Square for the first time:
 
 Chapter 6 - Desmond
 
-Desmond is a person. He is in the yard. "Desmond, Sarah's husband, the CTO at BrightStar, and a key ally in the mission against the Quantum Contingent."
+Desmond is a man. He is in the yard. "Desmond, Sarah's husband, the CTO at BrightStar, and a key ally in the mission against the Quantum Contingent."
 The description of Desmond is "Desmond is Sarah's husband and the CTO at BrightStar. He is not a spy, but is supportive of the team in his own way.".
 
 Understand "husband" or "desi" or "des" or "desy" or "non spy" as Desmond.
 
 Chapter 7 - Florin
 
-Florin is a person. He is in the Ngorogoro Crater. "Florin, an outstanding Quotient agent, and a former MI-5 agent, is strolling around. He looks anxious, like he lost something important."
+Florin is a man. He is in the Ngorogoro Crater. "Florin, an outstanding Quotient agent, and a former MI-5 agent, is strolling around. He looks anxious, like he lost something important."
 
 Understand "flo" as Florin.
 
@@ -2812,6 +2825,8 @@ Chapter 8 - Cassie
 Cassie is a woman in the Cassie's Office. "Professor Cassandra Eaton’s thing of beauty is a deep understanding of quantum mechanics and time. She is tall and her silvery-blond hair is wavy, almost to her shoulders. Her piercing blue eyes have both put dread in the hearts of students during oral exams and have enraptured a few men’s hearts over the years."
 The description of Cassie is "Cassie's thing of beauty is a deep understanding of quantum mechanics and time. She is the Lucasian Professor of Mathematics and head of all quantum studies at Oxford. She completed her PhD when she was only twenty-one and has been at Oxford ever since. Her deep understanding of quantum mechanics and the essence of time are world renowned. Today, her silvery-blond hair is pulled back, and her piercing blue eyes looks determined to make something work.".
 
+Understand "prof" or "eaton" or "professor cassandra" or "cassandra" or "professor" or "professor eaton" or "professor cassandra eaton" as Cassie.
+
 Instead of talking to Cassie:
 	if Cassie is in Cassie's lab:
 		say "[if the Quantum Console is activated] The entanglement is stable. Nice work! [Otherwise][one of]We need to get to keep the entanglement going. Check the console.[or]We need a powerful energy source.[at random]";
@@ -2821,14 +2836,14 @@ Instead of talking to Cassie:
 
 Chapter 9 - President
 
-The President is a person. She is in The White House. "President Bridget O'Connor is a wise leader. She has been friends with Martin for many years. Earlier in her career she ran the NSA, and has maintained many of her old contacts with various 3 letter agencies. The President is aware of Quotient's operations."
+The President is a woman. She is in The White House. "President Bridget O'Connor is a wise leader. She has been friends with Martin for many years. Earlier in her career she ran the NSA, and has maintained many of her old contacts with various 3 letter agencies. The President is aware of Quotient's operations."
 The description of The President is "President Bridget O'Connor is a strong, insightful leader with a deep understanding of national security. Her friendship with Martin was rumored to be more than just a friendship when they were in college together. Earlier in her career she ran the NSA. (She's also reported to be a good dancer). 'Hello,' the President says with a smile.".
 
 Understand "pres" or "prez" or "bridge" or "leader of the free world" as President.
 
 Chapter 10 - Prime Minister
 
-The Prime Minister is a person. He is in The White House. "Prime Minister Jason Stevenson is a skilled martial artist in addition to an ingenious political leader."
+The Prime Minister is a man. He is in The White House. "Prime Minister Jason Stevenson is a skilled martial artist in addition to an ingenious political leader."
 	The description of The Prime Minister is "Prime Minister Jason Stevenson is an experienced leader with a deep understanding of European state affairs as well as genetics. He is a skilled martial artist, and has been known to relax in front of a videogame at times. 'Hello,' the Prime Minister says with a smile.".
 	
 Understand "minister" as Prime Minister.
@@ -2870,7 +2885,7 @@ Understand "shout" as screaming.
 Understand "yell" as screaming.
 
 Instead of showing the Jagged Piece to Martin:
-	say "'[line break]Excellent work. Now that you have successfully ransacked my office, let's go catch you up on the mission.'[line break] --- Martin heads to his office[line break]";
+	say "[line break]'Excellent work. Now that you have successfully ransacked my office, let's go catch you up on the mission.'[line break] --- Martin heads to his office[line break]";
 	now Martin is in Martin's office;
 	
 Instead of showing the light saber to Cassie:

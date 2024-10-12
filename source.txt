@@ -131,7 +131,7 @@ Understand "help" as helping.
 Carry out helping:
 	say "[story title] understands commands, such as '[command prompt]examine [a random thing that can be seen by the player]'. You can get some information about the current game state with commands such as LOOK, EXAMINE, INVENTORY and the special commands PLACES and OBJECTS.[line break] Commands are typically in the format of VERB, VERB NOUN, or VERB with/to NOUN. As in TAKE, TAKE THE SHOVEL, or TALK TO SARAH. In some cases, you may do something more complex like this. >hit the nail with the hammer. 
 	
-	You move from place to place with commands like NORTH, UP, etc. If you stumble across the TARDIS communicator, take it! You can examine it again and again to hear the Quotient quantum computer talk to you about things that might be of interest near you.[line break]And remember, commands can be abbreviated, for example, n is NORTH and x is EXAMINE. You get points from collecting treasures and solving puzzles. As your points go higher, so does your rank! Type POINTS for more info, or SCORE to see your score. You should figure out the true mission of the game as you go along.[paragraph break]Now, let's get adventuring!";
+	You move from place to place with commands like NORTH, UP, etc. If you stumble across the TARDIS communicator, take it! You can examine it again and again to hear the Quotient quantum computer talk to you about things that might be of interest near you.[line break]And remember, commands can be abbreviated, for example, n is NORTH and x is EXAMINE. You get points from collecting treasures and solving puzzles. As your points go higher, so does your rank! Type POINTS for more info, or SCORE to see your score. You should figure out the true mission of the game as you go along. Remember, in addition to EXAMINE, you can READ certain objects as well.[paragraph break]Now, let's get adventuring!";
 
 Hinting is an action out of world.
 Understand "hint" as hinting.
@@ -176,7 +176,7 @@ Table of Credits
 Role	Contributor
 "Author"	"Gregory R. Simpson"
 "My Love and First Tester"	"Karen"
-"Beta Tester"	"P-Tux7 (thanks for all of the input!)"
+"Beta Testers"	"P-Tux7 and johnbrown (thanks for all the help!)"
 "My Inspiration"	"Bridget and Jason"
 "Game Inspiration"	"Zork"
 "Book Inspiration"	"The Quantum Contingent"
@@ -184,7 +184,7 @@ Role	Contributor
 "Cover Photo"	"I took this photo of the Rock Church of St. George in Ethiopia and then used smartphone app Prisma to give it the wild color look."
 "In Game Photos"	"All in game photos are personal photos that I took. (there are only 8, it's a 'text' adventure.)"
 "Zorkmid ASCII Image"	"This was from Dean Menezes's port of Zork for Inform7."
-"Release"	"107.RC2"
+"Release"	"107.RC13"
 
 
 Chapter 7 Magic Movements, Xyzzy, Magic Words
@@ -196,7 +196,6 @@ xyzzying to default is an action applying to nothing. Understand "xyzzy" as xyzz
 Carry out xyzzying to default:
 	say "You mutter the magic word, and winds whirl around you until you appear at headquarters.";
 	move the player to headquarters;
-[	now the player has the light saber;]
 	now the player has the flashlight;
 	now the player has the keycard;
 	now the player has the tardis communicator;
@@ -395,7 +394,7 @@ The read text of the The Leaflet is "WELCOME Agent![line break]Congratulations o
 [italic type]    *leaflet and mailbox based on the original ZORK, one of the first interactive fiction adventures[roman type]"
 
 
-Lane is west of The Security Checkpoint. "The long lane is lined with [italic type]large willow trees[roman type] whose branches sway smoothly in the breeze, their branches sway smoothly, calming one’s nerves with only a glance. These massive centurions are actually part of the sophisticated security system guarding the route to this remote, hidden fortress near Greenville, Ohio"
+Lane is west of The Security Checkpoint. "The long lane is lined with [italic type]large willow trees[roman type] whose branches sway smoothly in the breeze, their branches sway smoothly, calming one’s nerves with only a glance. These massive centurions are actually part of the sophisticated security system guarding the route to this remote, hidden fortress near Greenville, Ohio.[paragraph break]You can go east or west on the lane."
 
 The large willow trees are scenery in the Lane. "These large oaks separate the path from the massive [italic type]cornfield[roman type] to the north."
 
@@ -406,7 +405,7 @@ The cornfield are scenery in the Lane. "The cornfield seems to go on for ever. Y
 
 Understand "corn" as cornfield.
 
-The Gate is west of the Lane. "The gate is open. There is a [italic type]sign[roman type] mounted by the gate"
+The Gate is west of the Lane. "The gate is open. There is a [italic type]sign[roman type] mounted by the gate[paragraph break]The lane goes west toward the house and east back toward the Security Checkpoint."
 
 The Sign is scenery in The Gate. "Let em grow up."
 The read text of the sign is "Let em grow up."
@@ -433,7 +432,7 @@ Understand "porch swings" as porch swing.
 Report entering the porch swing:
 	say "Oh, this is so relaxing. A great place for coffee and connections."
 
-The Farmhouse is west of The Headquarters Entrance. "You cross the porch of the old victorian home and enter the dining room. A [italic type]grape chandelier[roman type] hangs above the long table. From the [italic type]north window[roman type], you can see the [italic type]lawn[roman type], the hammock and the fields past the hammock to the north."
+The Farmhouse is west of The Headquarters Entrance. "You cross the porch of the old victorian home and enter the dining room. A [italic type]grape chandelier[roman type] hangs above the long table. From the [italic type]north window[roman type], you can see the [italic type]lawn[roman type], the hammock and the fields past the hammock to the north.[paragraph break]You can go east to exit the house, or continue west into the kitchen you see in the next room."
 
 Parking is southwest of The Headquarters Entrance. Parking is south of Fire Pit. "There is some parking here off the driveway, just past the house.[paragraph break]A fire pit is to the north, or you can return northeast to the entrance."
 
@@ -1503,7 +1502,7 @@ Instead of asking Robert Clayton about something:
 Instead of talking to Robert Clayton:
 	say "[one of]Excuse me... I'm just passing through. You must have me confused with someone else.[or]I said, I don't know you, friend. Step away.[or]I'm handy with a knife. Want to see?[or]You decide to not talk to Robert Clayton, the Lion anymore. (for your own safety)[at random]"
 
-Chapter 9 Washington DC
+Chapter 10 Washington DC
 
 Understand "DC" and "Washington" and "Washington DC" as the Andrews Air Force Base.
 
@@ -1651,7 +1650,7 @@ Understand "Portrait" as The Presidential Portraits.
 Instead of examining the Presidential Portraits: 
 	say "The only complete set of presidential portraits outside the White House.[paragraph break]https://npg.si.edu/portraits/collection-highlights/presidential-portraits[paragraph break]".
 
-Chapter 10 Vehicles
+Chapter 11 Vehicles
 
 Section 1 Pod
 
@@ -1682,6 +1681,9 @@ The Quotient Jet can be airborne or grounded.
 The Quotient Jet is grounded.
 
 Understand "plane" as jet.
+
+Instead of taking the Quotient Jet:
+	say "The jet is much to large for you to carry. You can enter the jet if you wish.";
 
 Instead of examining the Quotient Jet:
 	say "The Quotient Jet is a matte-black Gulfstream 950ER Superjet with a custom interior featuring a conference table with a holographic projection screen. It also has a bedroom and the treat cupboard is stocked with fresh chocolate-covered strawberries every time you board.[if mount_var is 1]It appears there is a succulent on top of the cockpit like some sort of crazy hat.[else]";
@@ -1720,6 +1722,9 @@ The SpaceX Rocket can be airborne or grounded.
 The SpaceX Rocket is grounded.
 
 Understand "capsule" as SpaceX Rocket.
+
+Instead of taking the SpaceX Rocket:
+	say "The rocket is 420 feet tall. I don't think you can lift it.";
 
 A room can be rocketable or non-rocketable. The SpacePort and Tardis are rocketable.
 	
@@ -2233,6 +2238,9 @@ Instead of drinking the rediwhip:
 Instead of eating the rediwhip:
 	say "You shoot the can of rediwhip directly into your mouth. Ahhhh, the classics."
 	
+Instead of tasting the rediwhip:
+	say "You shoot the can of rediwhip directly into your mouth. Ahhhh, the classics."
+	
 Understand "whipped cream" as rediwhip.
 Understand "cream" as rediwhip.
 Understand "whip" as rediwhip.
@@ -2426,6 +2434,7 @@ A digital notepad is a treasure. The digital notepad can be switched on or switc
 
 The digital notepad is switched on.
 Understand "ipad" as digital notepad.
+Understand "pad" as digital notepad.
 
 The read text of the digital notepad is "[if switched on]Cassie's crystal stolen.... Last known whereabouts, Africa. Suspect the Lion.[else]It appears to be off."
 
@@ -3453,11 +3462,11 @@ Germany is a memory. It is suggested by the Pretzel. The description is "Ahhhh, 
 
 campfires is a memory. It is suggested by the Smore. The description is "Shoot, my mind keeps wandering, but yes, those s'more's over the camprfire were tasty!"
 
-Family is a memory. It is suggested by Sarah. The description is "She does remind me of my family, must be the hair. According to the briefing I read before I came, her brother is Jack... MUST focus."
+Family is a memory. It is suggested by Sarah. The description is "Sarah does remind me of my family, must be the hair. According to the briefing I read before I came, her brother is Jack... MUST focus."
 
-my childhood is a memory. It is suggested by Figurine. The description is "I remember playing with figurines like this one when I was a child. Not that that thought helps me with the mission! MUST focus."
+my childhood is a memory. It is suggested by Figurine. The description is "I remember playing with figurines like the Tumnus figurine when I was a child. Not that that thought helps me with the mission! MUST focus."
 
-days gone by is a memory. It is suggested by deck of cards. The description is "This place does feel familiar. In fact the rug reminds me of one from a TV show that hid a trap door."
+days gone by is a memory. It is suggested by deck of cards. The description is "[if the location is The Farmhouse]The place does feel familiar. In fact the rug reminds me of one from a TV show that hid a trap door.[else]I remember playing cards in an old farmhouse. We used to play hide and seek in the cornfield north of the yard of the house."
 
 college is a Memory. It is suggested by Mountain Dew. The description is "I remember getting through many long study sessions in college with Mountain Dew. It is great for when you need energy to go the extra mile."
 
@@ -3527,7 +3536,7 @@ Score	Rank
 107	"Super Duper Agent"
 214	"Master Super Duper Agent"
 
-Chapter 3 - Release
+Chapter 3 Release
 
 Test me with "examine watch / go west / go west / go down / go down / go west / go west / take SCIF".
 

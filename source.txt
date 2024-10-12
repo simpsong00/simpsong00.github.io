@@ -375,7 +375,7 @@ Book 3 - Places
 
 Chapter 1 Farmstead
 
-Farmstead Area is a region. Security Checkpoint, Lane, The Kitchen, The Gate, Headquarters Entrance, The Farmhouse, Old Cellar, Yard, Smokehouse, Fire Pit, Old Barn are in the Farmstead Area.
+Farmstead Area is a region. Security Checkpoint, Lane, The Kitchen, The Gate, Headquarters Entrance, The Farmhouse, Old Cellar, Yard, Smokehouse, Fire Pit, Old Barn, Parking are in the Farmstead Area.
 
 Security Checkpoint is a room. "The facial recognition [italic type]cameras[roman type] at the perimeter of the property scan visitors meticulously. Hidden defenses lower as you pass, allowing you to proceed casually up the lane to the west."
 
@@ -415,7 +415,7 @@ Instead of examining the sign:
 	Display the figure of sign_image;
 	say "Let em grow up"
 
-Headquarters Entrance is west of The Gate. "You stand before a massive old home with tall clay-shingled clapboard [italic type]turrets[roman type] stretching up into the sky. An expansive old-fashioned porch sprawls across the entire front of the mansion. Wooden [italic type]porch swings[roman type] dangle from chains, rocking gently in the sweet-smelling breeze scented by the surrounding [italic type]old-growth lilac and magnolia bushes[roman type].[paragraph break]The house is directly in front of you to the west. There are steps down into a cellar here, and a yard to the north."
+Headquarters Entrance is west of The Gate. "You stand before a massive old home with tall clay-shingled clapboard [italic type]turrets[roman type] stretching up into the sky. An expansive old-fashioned porch sprawls across the entire front of the mansion. Wooden [italic type]porch swings[roman type] dangle from chains, rocking gently in the sweet-smelling breeze scented by the surrounding [italic type]old-growth lilac and magnolia bushes[roman type].[paragraph break]The house is directly in front of you to the west. There are steps down into a cellar here, a yard to the north, and some parking to the southwest."
 
 The Turrets are scenery in the Headquarters Entrance. "Tall Circular towers, like you'd see on an old Victorian house, or as defensive towers on a castle!".
 
@@ -432,6 +432,8 @@ Report entering the porch swing:
 	say "Oh, this is so relaxing. A great place for coffee and connections."
 
 The Farmhouse is west of The Headquarters Entrance. "You cross the porch of the old victorian home and enter the dining room. A [italic type]grape chandelier[roman type] hangs above the long table. From the [italic type]north window[roman type], you can see the [italic type]lawn[roman type], the hammock and the fields past the hammock to the north."
+
+Parking is southwest of The Headquarters Entrance. Parking is south of Fire Pit. "There is some parking here off the driveway, just past the house.[paragraph break]A fire pit is to the north, or you can return northeast to the entrance."
 
 The north window is scenery in the Farmhouse. The outdoors is scenery in the Farmhouse. Understand "lawn" and "field" as the outdoors. The description of the outdoors is "Beyond a short stretch of clear ground, past the hammock, the Cornfield is thick and uninhabited for as far as you can see." Instead of searching the north window, try examining the outdoors. The description of the north window is "It gives a view of the cornfield and hammock."
 
@@ -554,7 +556,7 @@ Hyperloop Station is west of The Hallway. "A sleek, futuristic station with a po
 
 Airstrip is a port. "This hidden airstrip is exclusively for Quotient. The Quotient Jet is housed here. It is the fastest non-military jet in the world."
 
-Yard is north from The Headquarters Entrance. "A large yard with a hammock, [if bonfire is nowhere]and a place were a great bonfire once stood.[else] and a huge roaring bonfire." 
+Yard is north from The Headquarters Entrance. "A large yard with a hammock, [if bonfire is nowhere]and a place were a great bonfire once stood.[else] and a huge roaring bonfire.[end if][paragraph break]You can go west or south. A cornfield lies to the north." 
 
 Hammock is an enterable scenery supporter in the Yard. "A hammock hangs between two trees."  
 
@@ -658,7 +660,7 @@ Instead of taking the bowling balls:
 Understand "bowling ball" as Bowling balls.
 Understand "bowling ball garden" as Bowling balls.
 
-Fire Pit is south of The Smokehouse. "A nearby fire pit is surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in flower garden. There is nowhere to go here but back to the smokehouse."
+Fire Pit is south of The Smokehouse. "[if the player was in Parking]You pass by the back of the house and stumble upon a fire pit surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in flower garden.[paragraph break]You can go north or return south to parking.[else]A nearby fire pit is surrounded by a meticulously maintained fairy flower garden.[paragraph break]You can go back to the Smoke House to the north or you can go south.[end if]"
 
 The Fairy is scenery in The Fire Pit. "The inanimate, ornamental fairy appears to be twirling around, dancing, and enjoying life."
 
@@ -1686,11 +1688,11 @@ Flying to is an action applying to one visible thing. Understand "fly to [any fl
 
 Understand "Fly jet to [any flyable room]" as flying to.
 
-Understand "start" or "start jet" as a mistake ("Say fly to LOCATION").
+Understand "start" or "start jet" or "start plane" as a mistake ("Say fly to LOCATION").
 
 Check flying to:
-	if the player is not in the Quotient Jet, say "You need to be in the plane to fly it." instead;
-	if the Quotient Jet is airborne, say "The plane is already in flight." instead;
+	if the player is not in the Quotient Jet, say "You need to be in a jet to fly somewhere." instead;
+	if the Quotient Jet is airborne, say "The jet is already in flight." instead;
 	if the noun is the location, say "You are already at [the noun]." instead.
 
 Carry out flying to:

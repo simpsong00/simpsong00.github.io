@@ -172,7 +172,9 @@ Table of Credits
 Role	Contributor
 "Author"	"Gregory R. Simpson"
 "My Love and First Tester"	"Karen"
-"Beta Testers"	"P-Tux7 and johnbrown (thanks for all the help!)"
+"Beta Tester 1"	"P-Tux7 (thanks for being first, an early version test!)"
+"Beta Tester 2"	"johnbrown (thanks for all the help!, lots of good finds with transcripts too!)"
+"Beta Tester 3"	"Brother Jeff (thanks for all the help... And I thought I was done! haha)"
 "My Inspiration"	"Bridget and Jason"
 "Game Inspiration"	"Zork"
 "Book Inspiration"	"The Quantum Contingent"
@@ -195,6 +197,7 @@ Carry out xyzzying to default:
 	now the player has the flashlight;
 	now the player has the keycard;
 	now the player has the tardis communicator;
+	now the player has the Mirrored Ball;
 	now the player has the scroll of treasure;
 	move jet to airstrip;    
 
@@ -349,7 +352,7 @@ After taking the flashlight for the first time:
 	continue the action.
 
 At the time when flashlight-timer bings:
-	say "Your watch vibrates. You have an incoming text from Martin. [line break][italic type]Nice work. The flashlight should put some light on the situation.[roman type][paragraph break]".
+	say "Your watch vibrates. You have an incoming text from Martin. [line break][italic type]Nice work. The flashlight should shine some light on the situation.[roman type][paragraph break]".
 	
 After taking the gun for the first time:
 	the gun-timer bings in 2 turns from now;
@@ -369,7 +372,7 @@ At the time when mirrorball-timer bings:
 		say "Your watch vibrates a haptic rhythm. You have an incoming text from TARDIS?[line break][italic type]You really need to find the TARDIS COMMUNICATOR, it's not far from you now. When you find it, I'll be able to talk to you a lot more, and I know you'll enjoy that.[paragraph break]Anyway, since you haven't found it yet, I thought I'd text you because I just LOVE that Mirrored Ball. For some reason, I think it could be important to our mission! So, congrats on the ball, now go find the communicator so I can help you on your journey![roman type]".
 	
 At the time when the lightsaber-timer bings:
-	say "Your watch vibrates, You have an incoming text from Cassie. [line break] [italic type]My instruments detected a powerful pulse of energy near your location. If it's what I think it is, it could be key to getting my console operational.[roman type][paragraph break]".
+	say "[if the player is in Cassie's Lab]Oh, you've done it! The light saber should be powerful enough to power my console![else]Your watch vibrates, You have an incoming text from Cassie. [line break] [italic type]My instruments detected a powerful pulse of energy near your location. If it's what I think it is, it could be key to getting my console operational.[roman type][paragraph break]".
 	
 At the time when the laser-timer bings:
 	say "Your watch vibrates, You have an incoming text from Jack. [line break] [italic type]Hey! The sky is red all over the city! You must have found and activated the laser. Great work![roman type][paragraph break]".
@@ -591,8 +594,17 @@ smore is a thing. the smore is nowhere. The scent of the smore is "Yum, melted c
 The description of the smore is "The golden brown marshmellow has been smashed into the melted chocolate with two graham cracker slabs, creating the perfect backyard campfire delicacy.".
 Understand "s'more" as smore.
 
+Counter_smore is a number that varies. Counter_smore is initially 0.
+
 Instead of eating the smore:
-	say "Oh, these are great. I used to eat them when I was a kid!"
+	if player does not have the smore, try taking the smore;
+	if counter_smore is 0:
+		increase counter_smore by 1;
+		say "Ah, a s'more. Chidhood memories flood your mind. You can't help but take another one.";
+	otherwise:
+		increase counter_smore by 1;
+		say "Yum, I've eaten [counter_smore] of these, and each one is as good as the last. You immediately take another!"
+
 	
 Instead of attacking the flint when the steel striker is not worn by the player:
 	say "You must wear the steel striker over your knuckles, in order to hit the flint at the best angle."
@@ -1092,7 +1104,7 @@ The Cincinnati Area is a region. The Lunken Airport, Cincinnati Museum Center, T
 
 Lunken Airport is a port. It is east of Cincinnati Museum Center. "A small private airfield close to downtown Cincinnati. The 1000 acre airfield was the largest municipal airfield in the world when it opened in 1925.[paragraph break]From here you can head west to the Cincinnati Museum Center."
 
-Cincinnati Museum Center is north of Skyline Chili. "This extravagant art déco passenger train station was built between 1929 and 1933 and has carvings of the [italic type]Greek God Mercury[roman type] on each side of its immense arched facade. It was the inspiration of the Hall of Justice in the DC comic universe. (So, I guess this means you are a DC hero instead of Marvel) The dramatic ceiling over the [italic type]rotunda lobby[roman type] is awe-inspiring. The one hundred and six feet tall, one hundred and eighty feet wide, half dome entrance is the second largest in the world, behind only the Sydney Opera House.[paragraph break]There is a Skyline Chile south of here. The IMAX Theater is to the west. A staircase leads down."
+Cincinnati Museum Center is north of Skyline Chili. "This extravagant art déco passenger train station was built between 1929 and 1933 and has carvings of the [italic type]Greek God Mercury[roman type] on each side of its immense arched facade. It was the inspiration of the Hall of Justice in the DC comic universe. (So, I guess this means you are a DC hero instead of Marvel) The dramatic ceiling over the [italic type]rotunda lobby[roman type] is awe-inspiring. The one hundred and six feet tall, one hundred and eighty feet wide, half dome entrance is the second largest in the world, behind only the Sydney Opera House.[paragraph break]There is a Skyline Chile south of here. The IMAX Theater is to the west. A staircase leads down. You can return to the airport to the east."
 
 The Greek God Mercury is scenery in the Museum Center. "The tall carvings stand guard on each side of the massive dome."
 
@@ -1127,6 +1139,8 @@ Every turn when the player is in the IMAX Theater:
 		say "These previews seem to go on forever!";
 	otherwise:
 		say "You enjoy hanging around?".
+		
+Understand "watch previews" as a mistake ("Just wait, and they will be over before you know it.").
 
 The IMAX waiting count is a number that varies. The IMAX waiting count is 0.
 
@@ -1194,7 +1208,9 @@ Understand "nimrod" or "engineers" or "engineer" as Nimrods.
 
 Building 336 is a room. It is east of Nela Park. "This was a research lab during the peak of Lighting work at Nela Park. Scientists worked on many elaborate devices in these labs. The lab is lined with cabinets and there is a pile of fluorescent tubes on the floor."
 
-Fluorescent Tube is a container in Building 336. "The fluorescent tube reminds you of a light saber as you wave it around. (except it doesn't light up)"
+Fluorescent Tube is a container in Building 336. "The fluorescent tube reminds you of a light saber. (except it doesn't light up)"
+
+The description of the Fluoresent Tube is "The fluorescent tube reminds you of a light saber, but it needs something to light it up."
 
 The Fluorescent Tube is open.
 
@@ -1228,9 +1244,18 @@ Instead of inserting the Crystal into the Fluorescent Tube:
 The Light Saber is a thing. It is nowhere. "An iconic blue light saber shimmers in your hand." Light Saber can be scored or unscored.
 The description of the Light Saber is "An iconic blue light saber shimmers in your hand.".
 
-Lighting Institute is a room. It is west of Nela Park. "Still in remarkable shape thanks to its live-in caretaker, the building has a fountain and the the room overlooking the fountain, the next [italic type]National Christmas Tree[roman type] is being fashioned into existence here."
+Lighting Institute is a room. It is west of Nela Park. "Still in remarkable shape, thanks to its live-in caretaker, the building has a fountain and the main room you have entered is a circular room overlooking this fountain. What was once a beautiful green expanse lies beyond the fountain. To the side of the room, the next [italic type]National Christmas Tree[roman type] is being fashioned into existence."
 
-The National Christmas Tree is scenery in The Lighting Institute. "The Christmas Tree is at least 30 feet tall and is covered with thousands of lights in the shape of different spaceships from Star Wars and Star Trek lore. The Millenium Falcon is the crowning star on the tree."
+The National Christmas Tree is a supporter in The Lighting Institute. "The Christmas Tree is at least 30 feet tall and is covered with thousands of lights in the shape of different spaceships from Star Wars and Star Trek lore."
+
+The Millenium Falcon is a thing. It is on the National Christmas Tree. "The [italic type]Millenium Falcon[roman type] is the crowning star on the tree. The classic Star Wars ship is adorned with blinking red lights and you can hear [italic type]Chewbacca[roman type] roar."
+
+The description of the Millenium Falcon is "The classic Star Wars ship is adorned with blinking red lights and if you listen to the ship you can hear [italic type]Chewbacca[roman type] roar."
+
+Understand "ship" as Millenium Falcon.
+
+Chewbacca is thing. It is part of the Millenium Falcon. 
+The description of Chewbacca is "Hairy little guy isn't he."
 
 Edgewater Park is a room. It is west of Burke Lakefront. "This is the [italic type]beach[roman type] on the 'North Coast'... sand, sun and fun! The sand feels good between your toes."
 
@@ -1255,7 +1280,7 @@ The Outerspace Area is a region. Spaceport, Tardis, The Control Center, The Airb
 
 Spaceport is a port. "Starbase, Texas is the town that surrounds the SpaceX launch and landing site near South Padre Island. Elon Musk started the town when he was perfecting the Starship. It has since grown into a thriving metropolis with many of the trappings of an even larger city. It was designed from the ground up to be ecologically friendly and ultra-high tech. The entire town runs on solar power. Battery backup and solar panels are distributed across all homes and commercial facilities but managed cooperatively. It is one giant virtual power plant. [bold type]This is the Spaceport for launches into space.[roman type]"
 
-Tardis is a port. "[first time]The Dragon capsule begins firing its Draco thrusters to maneuver to the docking bay. The docking maneuver isn't simple but appears so because of the automatic nature of the Dragon capsule’s autopilot software. You draw closer and closer until you hear a loud locking sound and feel a slight shake as the docking clamps lock the rocket into place.[paragraph break]You've successfully docked at the airlock to TARDIS.[only] TARDIS is a boxy-looking station, similar in shape to a 1960s London police box like Dr. Who’s time machine, only much larger. Quotient had even painted it TARDIS blue."
+Tardis is a port. "[first time]The Dragon capsule begins firing its Draco thrusters to maneuver to the docking bay. The docking maneuver isn't simple but appears so because of the automatic nature of the Dragon capsule’s autopilot software. You draw closer and closer until you hear a loud locking sound and feel a slight shake as the docking clamps lock the rocket into place.[paragraph break]You've successfully docked at the airlock to TARDIS.[only] TARDIS is a boxy-looking station, similar in shape to a 1960s London police box like Dr. Who’s time machine, only much larger. Quotient had even painted it TARDIS blue. You are now in the airlock."
 
 The Control Center is a room. "The control center has lots of [italic type]controls[roman type], but you don't care.[paragraph break]There is a much cooler room to the north."
 
@@ -1267,12 +1292,16 @@ Instead of pushing controls:
 Instead of touching controls:
 	say "no touching the controls... move along."
 
-The Airbnb is north of the Control Center. "This is the best hotel room view in the Solar System. another room lies to the west." The shade door is here. "A large metal shade blocks what you assume is a window." 
+The Airbnb is north of the Control Center. "This is the best hotel room view in the Solar System.[paragraph break]The viewing area for the Quantum Computer lies to the west. The Control Center lies to the south." The shade door is here. "A large metal shade blocks what you assume is a window." 
 The description of the shade door is "A large metal protective shade or shield.".
 
 Instead of opening the shade door, say "The shade opens revealing the On a [italic type]Clear Day You can See Forever[roman type] window. It’s named after the old musical. The view was unimaginably beautiful. Space is the definition of dark. It makes the stars stand out like diamonds on velvet. Of course, the most amazing view is of our own blue marble, Earth. The drifting clouds created hazy, moving lines across the blue orb. Entire continents seemed small, our place in the universe seemed less important. We are but one planet in a vast sea of endless space. Lightning storms exploded in the clouds as they traversed land and sea. As former NASA astronaut Mike Massimino mused, 'How can something so beautiful be tolerated by human eyes.'"
 
-The Quantum View is west of the Airbnb. "This is the computer viewing area allowing you to view the specially designed Zero-G shock mount for the quantum computer core through a window. The quantum computer is in a room of the station not accessible by humans. It operated under the vacuum of space at all times." 
+Clear Day is scenery in the Airbnb. "On a Clear Day You can See Forever is a 70's musical comedy drama, but I digress. On TARDIS, it's a cool window into the depths of space."
+
+Understand "see forever" or "forever" or "on a clear day" as Clear Day.
+
+The Quantum View is west of the Airbnb. "This is the computer viewing area allowing you to view the specially designed Zero-G shock mount for the quantum computer core through a window. The quantum computer is in a room of the station not accessible by humans. It operated under the vacuum of space at all times.[paragraph break]The Airbnb lies to the east." 
 
 Section 1 - Things in TARDIS
 
@@ -1284,6 +1313,12 @@ Understand "ctlaltdel" as rebooting the Quantum Computer.
 Understand "ctl-alt-del" as rebooting the Quantum Computer.
 Understand "ctrl-alt-del" as rebooting the Quantum Computer.
 Understand "controlaltdelete" as rebooting the Quantum Computer.
+
+Instead of switching off the Quantum Computer:
+	say "You can't turn it off.";
+	
+Instead of switching on the Quantum Computer:
+	say "It is already on.";
 
 Rebooting the Quantum Computer is an action applying to nothing. 
 
@@ -1315,6 +1350,8 @@ A keypad is a thing. The keypad is in Tardis. "[if the titanium door is locked]T
 The description of the keypad is "The keypad is a standard numeric keypad. You can type any number on it.".
 
 Typing a password on is an action applying to one topic and one thing. Understand "type [text] on [something]" as typing a password on.
+
+Understand "type [text]" as a mistake ("You need to say: TYPE thing ON something")
 
 Carry out typing a password on:
 	if the second noun is the keypad:
@@ -1366,7 +1403,7 @@ Instead of examining the sunrise:
 	Display the figure of crater_image;
 	say "The sun rays burst over the ancient caldera which covers almost a hundred square miles."
 
-Lalibela Ethiopia is west of the Ngorogoro Crater. "Lalibela is the home of eleven medieval rock-hewn churches. The rock churches were carved into [italic type]single blocks of rock[roman type] around the 13th century.[paragraph break]One of these churches is to the west."
+Lalibela Ethiopia is west of the Ngorogoro Crater. "Lalibela is the home of eleven medieval rock-hewn churches. The rock churches were carved into [italic type]single blocks of rock[roman type] around the 13th century.[paragraph break]One of these churches is to the west. The crater lies to the east."
 
 The single blocks of rock are scenery in Lalibela Ethiopia. "The mammoth blocks of red volcanic scoria stone looked almost like they were placed here by giants. They were created by King Lalibela, who set out to create a ‘new Jerusalem’ to eliminate the dangerous trek pilgrims made to Jerusalem."
 
@@ -1518,7 +1555,7 @@ The DC Area is a region. Andrews Air Force Base, National Mall, Washington Monum
 
 Andrews Air Force Base is a port. It is west of the Lincoln Memorial. "This large airforce base is west of Washington DC. (In other words, head east). Washington, D.C. was laid out into four quadrants, Northwest (NW), Northeast (NE), Southeast (SE) and Southwest (SW). Each of the quadrants was bounded by axes that radiated out from the U.S. Capitol building. Streets were labeled to indicate their quadrant. It was designed in a baroque style, with avenues emanating out from the many green spaces across the district.[paragraph break]Regardless, you still need to go east."
 
-National Mall is a room. "[if aslan is magic]You are standing on the expansive lawn of the National Mall, a green stretch in the heart of Washington, DC. The air is filled with the scent of blooming flowers. Your watch says it is 2050. An [italic type]older couple[roman type] is having a picnic on the mall. They look especially joyful. [paragraph break][bold type]Congratulations! You have won the game.[paragraph break][roman type]Feel free to wander around, I have moved the Jet to Andrews Air Force base for your convenience.[otherwise]You are standing on the expansive lawn of the National Mall, a green stretch in the heart of Washington, DC. The air is filled with the murmur of tourists and the scent of blooming flowers.[paragraph break]The Capitol is to the west, the Smithsonian Castle is to the north, and the National Air and Space Museum is to the south. West leads back to the Washington Monument."
+National Mall is a room. "[if aslan is magic]You are standing on the expansive lawn of the National Mall, a green stretch in the heart of Washington, DC. The air is filled with the scent of blooming flowers. Your watch says it is 2050. An [italic type]older couple[roman type] is having a picnic on the mall. They look especially joyful. [paragraph break][bold type]Congratulations! You have won the game.[paragraph break][roman type]Feel free to wander around, I have moved the Jet to Andrews Air Force base for your convenience.[otherwise]You are standing on the expansive lawn of the National Mall, a green stretch in the heart of Washington, DC. The air is filled with the murmur of tourists and the scent of blooming flowers.[paragraph break]The Capitol is to the east, the Smithsonian Castle is to the north, and the National Air and Space Museum is to the south. West leads back to the Washington Monument."
 
 Older couple is scenery in the National Mall. "Doesn't that look like Martin and Cassie? Did she send a message back in time?"
 
@@ -1593,7 +1630,7 @@ Instead of putting the mirrored ball on the hook:
 After switching on the laser: 
 	If the mirrored ball is hung:
 		say "You shine the laser at the mirrored ball.[paragraph break]";
-		say "The beam reflects in such a way that a magical red glow appears high over the sanctuary. Two other distinct beams split off and illiminate objects carved in the wall. One is a clock tower, and the other is a lion. You sense a magical shudder in the time continuum.";
+		say "The beam reflects in such a way that a magical red glow appears high over the sanctuary. Two other distinct beams split off and illiminate objects carved in the wall. One is a [italic type]clock tower[roman type], and the other is a [italic type]creature[roman type] of some type.[paragraph break][bold type]You sense a magical shudder in the time continuum.[line break][roman type]";
 		now the laser is energized;
 		the laser-timer bings in 2 turns from now;
 		if the laser is unscored, increase score by 10;
@@ -1603,6 +1640,10 @@ After switching on the laser:
 		say "The laser shines through the rose window, and refracts harmlessly to the sides.";
 		say "The laser shuts off.";
 		now the laser is switched off;
+		
+clock tower is scenery in the National Cathedral. "[if laser is energized]The clock tower that appeard on the wall, illuminated by the laser, is striking 1:07 p.m.[else]You can't make anything out on the wall without more light."
+
+The creature is scenery in the National Cathedral. "[if laser is energized]The creature that appeared on the wall, illuminated by the laser, appears to be a large cat, like a lion.[else]You can't make anything out on the wall without more light."
 		
 After switching on the vr suit: 
 		say "The world around you flickers and then you suddenly appear in a brand new metaverse world.";
@@ -1646,7 +1687,11 @@ The Statue of Freedom is scenery in the US Capitol. The description is "A bronze
 
 Smithsonian Castle is north of the National Mall. "The distinctive red sandstone architecture and charming tower makes this building stand out on the mall. It serves as the administrative heart of the Smithsonian Institution. Its towers and turrets give it a fairy-tale appearance, and the surrounding gardens are a peaceful retreat."
 
-National Air Space Museum is south of the National Mall. "[if aslan is magic]The National Air and Space Museum is now one giant virtual reality experience where you can fly to Mars or Space walk next to Saturn's rings. [otherwise]The National Air and Space Museum is filled with the wonders of flight and space exploration. Other exhibits include historic aircraft, spacecraft, and interactive displays."
+National Air Space Museum is south of the National Mall. "[if aslan is magic]The National Air and Space Museum is now one giant virtual reality experience where you can fly to Mars or Space walk next to Saturn's rings. [otherwise]The National Air and Space Museum is filled with the [italic type]wonders of flight[roman type] and space exploration. Other exhibits include historic aircraft, spacecraft, and interactive displays."
+
+The Wonders of Flight is scenery in the National Air Space Museum. The description is "Old space capsules, shuttles, and a replica of the original Wright flyer are suspended here."
+
+Understand "exhibits" or "aircraft" or "displays" as Wonders of Flight.
 
 National Portrait Gallery is north of the Reflecting Pool. "[if aslan is magic]The National Portrait Gallery now features talking holgrams of all of the former Presidents.[otherwise]Occuping part of the old U.S. Patent office and holding a collection of over 23,000 works of art, including the only complete set of [italic type]presidential portraits[roman type] outside the White House, The National Portrait Gallery's sweeping courtyard is a large rectangular venue with a striking, glass-and-steel, wavy canopy overhead, flooding the area with natural light in stark contrast to the deep black granite floors. It is the same light and dark contrast of Quotient and the [italic type]Contingent[roman type]."
 
@@ -1768,6 +1813,8 @@ The view of the outer space is a backdrop. It is in the Outerspace Area. The des
 The countdown begun is a truth state that varies. The countdown begun is false.
 The docking clamps is a number that varies. The docking clamps is 0.
 
+Understand "dock" as a mistake ("And how should we do that?").
+
 Instead of pushing the yellow button:
 	if player is not in rocket:
 		say "You can't push the button while outside the rocket.";
@@ -1825,7 +1872,7 @@ Instead of pushing the red button:
 		if rocket is in the blackness of space:
 			say "You cannot eject once you leave earth.";
 		otherwise:
-			say "WHOOP WHOOP, Ejection System Activated! You are thrown out of the rocket, experiencing 3g's in the process. After being thrown clear, another explosion rocks your world as your parachute is blasted open, saving you from certain death as you drift the short distance back to the launch pad.";
+			say "[paragraph break]WHOOP WHOOP, Ejection System Activated! You are thrown out of the rocket, experiencing 3g's in the process. After being thrown clear, another explosion rocks your world as your parachute is blasted open, saving you from certain death as you drift the short distance back to the launch pad.";
 			move player to spaceport.
 
 The Blackness of Space is a room. The Blackness of Space is part of the Outerspace Area. "[if player is in rocket]You are in the vastness of space, having successfully launched from the Earth. You can see the docking ring of TARDIS nearby, and the blue marble you call home off in the distance.[else]You are spacewalking in space... be careful not to drift away! You can see the docking ring of TARDIS as well as your favorite planet, Earth."
@@ -1906,6 +1953,10 @@ Understand "picture" as the jigsaw puzzle.
 Understand "piece" or "pieces" as the puzzle when the jagged piece is not visible. 
 Understand "jigsaw" as the jagged piece when the jigsaw puzzle is not visible. It is fixed in place. 
 The description of the puzzle is “A puzzle of many different movie and show posters. This one is nearly finished, missing only one piece that you could ever find." 
+
+Instead of reading the jigsaw puzzle:
+	try examining the jigsaw puzzle;
+	stop the action.
 
 Instead of looking under the table: say "You glance down there but find nothing of interest."
 Instead of taking the jigsaw puzzle: say "If you took it, the pieces would fall apart."
@@ -2022,6 +2073,19 @@ The Quantum Console can be locked or unlocked. The Quantum Console is locked.
 The Quantum Console can be scored or unscored. The Quantum Console is unscored.
 The Quantum Console is closed.
 
+Before opening the Quantum Console:
+	if the Quantum Console is locked: 
+		say "The console is locked with a password. You'll need to type it on the keyboard to unlock the console.";
+	otherwise:
+		continue the action.
+		
+Before unlocking keylessly the Quantum Console:
+	if the Quantum Console is locked: 
+		say "The console is locked with a password. You'll need to type it on the keyboard to unlock the console.";
+		stop the action;
+	otherwise:
+		continue the action.
+
 Instead of inserting the Light Saber into the Quantum Console:
 	if the Quantum Console is locked:
 		say "The console is locked with a password.";
@@ -2058,6 +2122,9 @@ Instead of switching on the Quantum Console:
 				
 A keyboard is a thing. The keyboard is in Cassie's lab. "A wireless keyboard is here."
 The description of the keyboard is "The keyboard is a standard qwerty keyboard. It is wireless, and backlit.".
+
+Instead of taking the keyboard:
+	say "Cassie needs the keyboard.";
 
 The description of the Quantum Console is "The console is a complex apparatus. It appears to have a place to hold a long cylindrical object and is also connected to other pieces of equipment by various tubes and wires. It also has a keyboard and a digital display.".
 		
@@ -2258,10 +2325,11 @@ Check changing the channel of something to:
 	if the noun is not a television, say "[The noun] cannot be tuned to a channel." instead.
 
 Carry out changing the channel of something to:
-	now the channel of the noun is the number understood.
+	now the channel of the noun is the number understood;
 
 Report changing the channel of something to:
-	say "You tune [the noun] to channel [number understood]."
+	say "You tune [the noun] to channel [number understood].";
+	try examining the noun.
 
 Instead of examining a television:
 	if the noun is switched off, say "[The noun] is currently turned off." instead;
@@ -2342,6 +2410,7 @@ The Pimms are a treasure. The Pimms are in the Turf Tavern.
 The description of the Pimms is "It's a glass of Pimms, you drink it!".
 
 Instead of drinking the Pimms:
+	if player does not have the Pimms, try taking the Pimms;
 	say "Nothing is as refreshing as a Pimms on a hot summer day in Oxford!"
 	
 Understand "beer" or "alcohol" or "lemonade" as Pimms.
@@ -2350,23 +2419,33 @@ Understand "beer" or "alcohol" or "lemonade" as Pimms.
 	
 A pretzel is a treasure. The pretzel is in Lawsons Deli. 
 The description of the pretzel is "A perfectly browned knot with just the right amount of large salt crystals.".
-		
+
+Counter_pretzel is a number that varies. Counter_pretzel is initially 0.
+
 Instead of eating the pretzel:
-	say "Delicious!! Lawson's makes the best pretzels! (Rumor has it they use LYE!)!"
-	
+	if player does not have pretzel, try taking the pretzel;
+	if counter_pretzel is 0:
+		increase counter_pretzel by 1;
+		say "Delicious!! Lawson's makes the best pretzels! (Rumor has it they use LYE!)!";
+	otherwise:
+		increase counter_pretzel by 1;
+		say "Yum, I've eaten [counter_pretzel] of these, and each one is as good as the last. You immediately take another!"
+			
 [-----]
 	
 The rediwhip is a treasure. The rediwhip is in the kitchen. "You see classic all american rediwhip here."
 The description of the rediwhip is "It's the classic spray can of Whipped Cream.".
 
 Instead of drinking the rediwhip:
+	if player does not have pretzel, try taking the pretzel;
 	say "You shoot the can of rediwhip directly into your mouth. Ahhhh, the classics."
 	
 Instead of eating the rediwhip:
+	if player does not have rediwhip, try taking the rediwhip;
 	say "You shoot the can of rediwhip directly into your mouth. Ahhhh, the classics."
 	
-Instead of tasting the rediwhip:
-	say "You shoot the can of rediwhip directly into your mouth. Ahhhh, the classics."
+Instead of tasting the noun:
+	try eating the noun;
 	
 Understand "whipped cream" or "cream" or "whip" as rediwhip.
 	
@@ -2463,9 +2542,17 @@ A scone is a treasure. The scone is in Vaults_Garden.
 The description of the scone is "A delicious scone with raspberry jam".
 
 Understand "scones" as scone.
-		
+
+Counter_scone is a number that varies. Counter_scone is initially 0.
+
 Instead of eating the scone:
-	say "Delicious!! I love a warm scone at any time of day!"
+	if player does not have the scone, try taking the scone;
+	if counter_scone is 0:
+		increase counter_scone by 1;
+		say "Delicious!! I love a warm scone at any time of day!";
+	otherwise:
+		increase counter_scone by 1;
+		say "Yum, I've eaten [counter_scone] of these, and each one is as good as the last. You immediately take another!"
 	
 [-----]
 
@@ -2493,9 +2580,18 @@ Understand "shuffle deck" as a mistake ("You don't have time to play cards, you 
 
 A 3-way Chili is a treasure. The 3-way Chili is in Skyline Chili. 
 The description of the 3-way Chili is "Beautiful oval ceramic plate, carefullyl placed spaghetti noodles, bathed in the secretive chile and piled high with finely shredded cheese.".
-	
+
+
+Counter_chili is a number that varies. Counter_chili is initially 0.
+
 Instead of eating the 3-way Chili:
-	say "The wonderous chili fulfills your cravings."
+	if player does not have the 3-way Chili, try taking the 3-way Chili;
+	if counter_chili is 0:
+		increase counter_chili by 1;
+		say "The wonderous chili fulfills your cravings!";
+	otherwise:
+		increase counter_chili by 1;
+		say "Chili number [counter_chili] done! The server immediatly puts another in it's place."
 	
 Understand "chili" or "manna" or "wonderous food" as 3-way Chili.
 
@@ -2509,6 +2605,7 @@ Understand "mtn dew" as Mountain Dew.
 Understand "nectar" or "nectar of the gods" as Mountain Dew.
 	
 Instead of drinking the Mountain Dew:
+	if player does not have Mountain Dew, try taking the Mountain Dew;
 	say "Now you have the energy of an Astronaut!";
 	now The Mountain Dew is drank.
 		
@@ -2606,16 +2703,16 @@ index	quip_string1
 Table of tardis_space_quips
 index	quip_string1
 1	"Isn't Outer Space Cool!!!!?"
-2	"I'm sorry Dave, I can't do that... hahahahaha..."
+2	"Remember when all else fails: control-alt-delete"
 3	"You can even space walk!"
 4	"Always open the shade. The view is amazing!"
 5	"REBOOT ME? You want to REBOOT ME???"
-6 	"No touching those controls!."
-7	"Remember when all else fails: control-alt-delete"
-8	"I love Mountain Dew. It's like TANG, its got great astrounaut vibes."
-9	"What are you waiting for?"
-10	"I can't tell you everything."
-11	"Space, the final frontier... but not in this adventure!"
+6 	"The lever is for docking and undocking only!"
+7	"I'm sorry Dave, I can't do that... hahahahaha..."
+8	"So, how's it going? Do I need to provide better hints?"
+9	"You aren't allowed to touch the touch controls. You aren't qualified. Oh that's right, you can't talk to me... this is a one way conversation."
+10	"I can't tell you everything, but I can tell you more."
+11	"Did you push the giant red button?"
 12	"Ok, if you are going to keep doing this, maybe just use the up arrow."
 
 
@@ -2927,7 +3024,7 @@ The description of the Server is "The server looks the same as when Jack and Sar
 
 Chapter 12 - Robot
 
-The robot is a person. The robot is in The Lighting Institute. "There is GE robot here decorating the Christmas trees."
+The robot is a person. The robot is in The Lighting Institute. "There is GE robot here decorating the National Christmas tree."
 The description of the robot is "The Robot is a GE HAL 9000. It looks similar to the robot from Lost in Space. It was custom built for creating well lit Christmas trees.".
 
 Book 7 - Things People do
@@ -3068,15 +3165,15 @@ Instead of showing the Tardis Communicator to [person]:
 	
 Instead of showing the Ancient Pendant to [person]:
 	if Ancient Pendant is polished:
-		say "[line break]The pendant's finish is like a mirror. It reminds me of the one Lancelot is wearing in the tapestry. Perhaps you should put it on?";
+		say "[line break]The pendant's finish is like a mirror. It reminds me of the one Lancelot is wearing in the tapestry. [if the player is not wearing the pendant]Perhaps you should put it on?[end if]";
 	otherwise:
 		say "[line break]The pendant is rusty. I think you need to polish it.";
 		
 Instead of giving the Ancient Pendant to [person]:
 	if Ancient Pendant is polished:
-		say "[line break]The pendant's finish is like a mirror. It reminds me of the one Lancelot is wearing in the tapestry. Perhaps you should put it on?";
+		say "[line break]You should keep it. The pendant's finish is like a mirror. It reminds me of the one Lancelot is wearing in the tapestry.[if the player is not wearing the pendant]Perhaps you should put it on?[end if]";
 	otherwise:
-		say "[line break]The pendant is rusty. I think you need to polish it.";
+		say "[line break]You should keep it. The pendant is rusty. I think you need to polish it.";
 
 Instead of screaming:
 	if the player is in Duke Humfreys Library:
@@ -3463,12 +3560,14 @@ The scent of Mountain Dew is "A fizzy mountain dew reminds you of a dew filled m
 The scent of the bonfire is "It smells like smoke... not unusual for a fire!"
 The scent of the succulent is "It has the smell of a beautiful rainforest, all in less than the size of a bowling ball."
 The scent of the strawberry is "A brief but satisfying hint of berry with a deep enveloping smell of cocoa."
+The scent of Chewbacca is "He smells like Old Spice."
 
 The loaf of bread is in the Kitchen. The scent of the bread is "Ah -- fresh-baked bread.”
 The description of the loaf of bread is "It looks freshly baked!".
 
 Instead of eating the bread:
-	say "That hit the spot!"
+	if player does not have the bread, try taking the bread;
+	say "You take a bite of bread. That hit the spot!"
 	
 Cutting into it with is an action applying to one thing and one carried thing.
 Understand "cut [something] with/using [something]" as cutting into it with.
@@ -3512,10 +3611,10 @@ The sound of the Quantum Computer is "bzzp, bing, tick-tock, whirr. Wait, it's i
 The sound of the bonfire is "Roar!".
 The sound of the light saber is "Hmmmmm, Zoooommm, VRRoommmmm".
 The sound of the mirrored ball is "You hear a distance song. It sounds like it is bouncing off of blue ocean waves. It is Dancing Queen by Abba."
-The sound of the succulent is "I think the succulent's sound is the Taylor Swift Folklore album."
-The sound of the Greek God Mercury is "Just do it!"
-The sound of the gun is "Kapooooeee"
-
+The sound of the succulent is "I think the succulent's sound is the Taylor Swift Folklore album.".
+The sound of the Greek God Mercury is "Just do it!".
+The sound of the tranquilizer gun is "Kapooooeee".
+The sound of the Millenium Falcon is "Rrrraaaaaaaaagggghhhhh".
 
 Chapter 5 - Creating and Recalling Memories [modified from Sand-Dancer by Aaron Reed and Alexei Othenin-Girard]
 

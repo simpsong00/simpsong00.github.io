@@ -15,7 +15,7 @@ Chapter 1 Setup
 Use scoring.
 Use American dialect and the serial comma.
 The maximum score is 214.
-The release number is 107.
+The release number is 108.
 The story description is "Quotient the Game! Play an old fashioned interactive fiction adventure based on the books 'The Quantum Contingent' and 'Quantum Time'. Meet many of the characters and visit places from the books. As in any good interactive fiction game, there are puzzles and a secret mission.".
 The story creation year is 2024.
 The story genre is "Science Fiction".
@@ -130,7 +130,7 @@ Understand "help" as helping.
 
 
 Carry out helping:
-	say "[story title] understands commands, such as '[command prompt]examine [a random thing that can be seen by the player]'. You can get some information about the current game state with commands such as LOOK, EXAMINE, INVENTORY and the special commands PLACES and OBJECTS.[line break] Commands are typically in the format of VERB, VERB NOUN, or VERB with/to NOUN. As in TAKE, TAKE THE SHOVEL, or TALK TO SARAH. In some cases, you may do something more complex like this. >HIT THE NAIL WITH THE HAMMER, or >ASK MARTIN ABOUT THE COMPUTER.[paragraph break]In Quotient, if you take an item, it will automatically be examined for you. Note that some items may also be read, as in READ item.[paragraph break]You move from place to place with commands like NORTH, UP, etc. If you stumble across the TARDIS communicator, take it! You can examine it again and again to hear the Quotient quantum computer talk to you about things that might be of interest near you.[line break]And remember, commands can be abbreviated. For example, n is NORTH and x is EXAMINE. You get points from collecting treasures and solving puzzles. As your points go higher, so does your rank! Type POINTS for more info, or SCORE to see your score. You should figure out the true mission of the game as you go along. [paragraph break]Remember, in addition to EXAMINE, you can READ certain objects as well. Finally, ABOUT will tell you what the game is based on, and CREDITS gives credit where credit is due![paragraph break]Now, let's get adventuring!";
+	say "[story title] understands commands, such as '[command prompt]examine [a random thing that can be seen by the player]'. You can get some information about the current game state with commands such as LOOK, EXAMINE, INVENTORY and the special commands PLACES and OBJECTS.[paragraph break]Commands are typically in the format of VERB, VERB NOUN, or VERB with/to NOUN. As in TAKE, TAKE THE SHOVEL, or TALK TO SARAH. In some cases, you may do something more complex like this. >HIT THE NAIL WITH THE HAMMER, or >ASK MARTIN ABOUT THE COMPUTER.[paragraph break]In [italic type]Quotient the Game[roman type], if you take an item, it will automatically be examined for you. (but not read) In this fictional world, based on real places, you move around with commands like NORTH, SOUTH, UP, etc. If you are ever unsure of the ways you can go, just type EXITS.[paragraph break]If you stumble across the TARDIS communicator, take it! You can examine it again [italic type]and again[roman type] to hear the Quotient quantum computer talk to you about things that might be of interest near you. If you examine it enough, it will give you some hints based on the region you are currently in.[line break]And remember, commands can be abbreviated. For example, n is NORTH and x is EXAMINE. You get points from collecting treasures and solving puzzles. As your points go higher, so does your rank! Type POINTS for more info, or SCORE to see your score. You should figure out the true mission of the game as you go along. [paragraph break]Remember, in addition to EXAMINE, you can READ certain objects as well. It is helpful to read things if they can be read. Finally, ABOUT will tell you what the game is based on, and CREDITS gives credit where credit is due![paragraph break]Now, let's get adventuring!";
 
 Hinting is an action out of world.
 Understand "hint" or "hints" or "clue" or "clues" as hinting.
@@ -164,25 +164,24 @@ Understand "credits" or "credit" as showing the credits.
 Showing the credits is an action out of world.
 
 Carry out showing the credits:
-	say "[italic type]Quotient, The Game[roman type] is written in Inform7. Inform7 is the work of Graham Nelson. First a shout-out to the people on Intfiction.org. They were enormously helpful. If I ever got stuck on how to code something, they would help me out! I also experimented with using ChatGPT to help me figure out some coding challenges. It did pretty well, but the people at Intfiction.org were better.[paragraph break]Many of the description passages were adapted from my books. This game is a tongue-in-cheek adaptation of that world and it's characters.[paragraph break]This was my first Inform7 creation. I enjoyed making it and I hope you enjoy playing it. Now let's get adventuring![paragraph break]";
+	say "[italic type]Quotient, The Game[roman type] is written in Inform7. Inform7 is the work of Graham Nelson. First a shout-out to the people on Intfiction.org. They were enormously helpful. If I ever got stuck on how to code something, they would help me out! I also experimented with using ChatGPT to help me figure out some coding challenges. It did pretty well, but the people at Intfiction.org were better. Also a big shout out to my beta testers! In addition to family, that includes some great help from people that found the game through intfiction and discord. [paragraph break]Many of the description passages were adapted from my books. This game is a tongue-in-cheek adaptation of that world and it's characters. I took the cover photo of the Rock Church of St. George in Ethiopia and then used smartphone app Prisma to give it the wild color look. All other in game photos are personal photos that I took. (there are only 8, it's a 'text' adventure.)[paragraph break]This was my first Inform7 creation. I enjoyed making it and I hope you enjoy playing it. Now let's get adventuring![paragraph break]
+[bold type]Imagine a slow scrolling set of credits now![roman type][paragraph break]";
 	repeat through the Table of Credits:
-		say "[The Role entry]: [The Contributor entry][line break]";
+		say fixed letter spacing;
+		say "[Role entry][line break][roman type]";
 
 Table of Credits
-Role	Contributor
-"Author"	"Gregory R. Simpson"
-"My Love and First Tester"	"Karen"
-"Beta Tester 1"	"P-Tux7 (thanks for being first, an early version test!)"
-"Beta Tester 2"	"johnbrown (thanks for all the help!, lots of good finds with transcripts too!)"
-"Beta Tester 3"	"Brother Jeff (thanks for all the help... And I thought I was done! haha)"
-"My Inspiration"	"Bridget and Jason"
-"Game Inspiration"	"Zork"
-"Book Inspiration"	"The Quantum Contingent"
-"Second Book Inspiration"	"Quantum Time"
-"Cover Photo"	"I took this photo of the Rock Church of St. George in Ethiopia and then used smartphone app Prisma to give it the wild color look."
-"In Game Photos"	"All in game photos are personal photos that I took. (there are only 8, it's a 'text' adventure.)"
-"Zorkmid ASCII Image"	"This was from Dean Menezes's port of Zork for Inform7."
-"Release"	"107.RC13"
+Role	
+"Author..................................Gregory R. Simpson"
+"My Love & 1st Test:.....................Karen"
+"Beta Tester 1...........................P-Tux7"
+"Beta Tester 2...........................johnbrown"
+"Beta Tester 3:..........................Brother Jeff"
+"My Inspiration:.........................Bridget and Jason"
+"Game Inspiration........................Zork"
+"Book Inspiration........................The Quantum Contingent"
+"Second Book.............................Quantum Time"
+"Release.................................108"
 
 
 Chapter 7 Magic Movements, Xyzzy, Magic Words
@@ -316,7 +315,7 @@ Book 2 - Play Begins
 Chapter 1 When Play Begins
 
 When play begins:
-	say "Do you want to become an agent of Quotient, the global, independent spy agency? You are at the entrance to their top secret headquarters. Proceed down the lane to begin your mission and earn the rank of Secret Agent! If this is your first text adventure, just type help."
+	say "Do you want to become an agent of Quotient, the global, independent spy agency? You are at the entrance to their top secret headquarters. Proceed down the lane to begin your mission and earn the rank of Secret Agent! If this is your first text adventure, just type [bold type]help[roman type]."
 
 Chapter 2 - Ports
 
@@ -331,9 +330,6 @@ The mark is part of the player. The mark is scenery.
 The read text of the mark is "You know... your initials".
 
 Understand "foot" or "appendage" or "left foot" as mark.
-
-Instead of examining the player:
-    say "You are, as always, you, except when you aren't. If you want to examine your inner self further, I'm afraid that will cost more than 200 Zorkmids.[if player is in VR Area][line break]You notice a small, faint mark on your foot.";
 
 Instead of examining the mark:
     say "[if player is in VR Area]You look at the bottom of your left foot. What appear to be your initials are written there in black sharpie.";
@@ -1053,7 +1049,7 @@ Check Meditating:
 if the player is not in the Peaceful Meditation, say "You feel a calm sense of security." instead;
 
 Carry out Meditating:
-	say "'[line break]Ahhhh, welcome to Peaceful Meditation,' says the normally silent Yoga Master. 'Take a deep cleansing breath. Your anagram for the day is: The Oldest Log.'[line break]";
+	say "[line break]'Ahhhh, welcome to Peaceful Meditation,' says the normally silent Yoga Master. 'Take a deep cleansing breath. Your anagram for the day is: The Oldest Log.'[line break]";
 	now the Yoga Mat is in the Peaceful Meditation.
 
 Instead of talking to Hologram:
@@ -1345,6 +1341,20 @@ Instead of examining the Quantum Computer when the Quantum Computer is wonky:
 The titanium door is a door. The titanium door is north of the Tardis and south of the Control Center. The titanium door is lockable and locked. "[if location is Tardis]A large titanium door is to the north. It has rivets around it's exterior like it belongs on a submarine.[else]The airlock to return to the ship is to the south."
 The description of the titanium door is "The titanium door is riveting. It is locked and has a keypad with numbers beside it, type the numbers on the keypad to unlock the door and proceed through the airlock and onto the ship.".
 
+Before opening the titanium door:
+	if the titanium door is locked: 
+		say "You can only open the titanium door by unlocking it using the keypad at the side of the door.";
+		stop the action;
+	otherwise:
+		continue the action.
+		
+Before unlocking keylessly the titanium door:
+	if the titanium door is locked: 
+		say "You can only open the titanium door by unlocking it using the keypad at the side of the door.";
+		stop the action;
+	otherwise:
+		continue the action.
+
 A keypad is a thing. The keypad is in Tardis. "[if the titanium door is locked]The titanium door is locked and has a keypad with numbers beside it. Type the numbers on the keypad to unlock.[else]"
 
 The description of the keypad is "The keypad is a standard numeric keypad. You can type any number on it.".
@@ -1545,7 +1555,7 @@ Instead of telling Robert Clayton about something:
 		Move Robert Clayton to The Rock Church St George;
 	
 Instead of talking to Robert Clayton:
-	say "[one of]Excuse me... I'm just passing through. You must have me confused with someone else.[or]I said, I don't know you, friend. Step away.[or]I'm handy with a knife. Want to see?[or]You decide to not talk to Robert Clayton, the Lion anymore. (for your own safety)[at random]"
+	say "[one of]Excuse me... I'm just passing through. You must have me confused with someone else.[or]I said, I don't know you, friend. Step away.[or]I'm handy with a knife. Want to see?[or]You decide to not talk to Robert Clayton, the Lion anymore. (for your own safety)[cycling]"
 
 Chapter 10 Washington DC
 
@@ -1555,7 +1565,13 @@ The DC Area is a region. Andrews Air Force Base, National Mall, Washington Monum
 
 Andrews Air Force Base is a port. It is west of the Lincoln Memorial. "This large airforce base is west of Washington DC. (In other words, head east). Washington, D.C. was laid out into four quadrants, Northwest (NW), Northeast (NE), Southeast (SE) and Southwest (SW). Each of the quadrants was bounded by axes that radiated out from the U.S. Capitol building. Streets were labeled to indicate their quadrant. It was designed in a baroque style, with avenues emanating out from the many green spaces across the district.[paragraph break]Regardless, you still need to go east."
 
-National Mall is a room. "[if aslan is magic]You are standing on the expansive lawn of the National Mall, a green stretch in the heart of Washington, DC. The air is filled with the scent of blooming flowers. Your watch says it is 2050. An [italic type]older couple[roman type] is having a picnic on the mall. They look especially joyful. [paragraph break][bold type]Congratulations! You have won the game.[paragraph break][roman type]Feel free to wander around, I have moved the Jet to Andrews Air Force base for your convenience.[otherwise]You are standing on the expansive lawn of the National Mall, a green stretch in the heart of Washington, DC. The air is filled with the murmur of tourists and the scent of blooming flowers.[paragraph break]The Capitol is to the east, the Smithsonian Castle is to the north, and the National Air and Space Museum is to the south. West leads back to the Washington Monument."
+National Mall is a room. "[if aslan is magic]You are standing on the expansive lawn of the National Mall, a green stretch in the heart of Washington, DC. The air is filled with the scent of blooming flowers. Your watch says it is 2050. An [italic type]older couple[roman type] is having a picnic on the mall. They look especially joyful.[endgamemall][otherwise]You are standing on the expansive lawn of the National Mall, a green stretch in the heart of Washington, DC. The air is filled with the murmur of tourists and the scent of blooming flowers.[paragraph break]The Capitol is to the east, the Smithsonian Castle is to the north, and the National Air and Space Museum is to the south. West leads back to the Washington Monument."
+
+To say endgamemall:
+say "[paragraph break]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[line break]";
+say "[bold type]Congratulations! You have won the game.[paragraph break][roman type]Feel free to wander around, I have moved the Jet to Andrews Air Force base for your convenience.[line break]If you examine the older couple on the lawn, you notice they look like Cassie and Martin. Cassie managed to send a message back in time, asking Martin to marry her earlier in their lives. (that was the binary message you found in her lab)[paragraph break]He did, and thanks to a little Aslan magic (and a mysterious Lancelot pendant) you managed to travel forward in time to see them sitting on the National Mall. Oh, and by the way, you have been granted a scroll listing all of the treasures and their locations in case you want to go back and get one. I hope you enjoyed [italic type]Quotient, the Game![roman type]";
+say "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[line break]";
+
 
 Older couple is scenery in the National Mall. "Doesn't that look like Martin and Cassie? Did she send a message back in time?"
 
@@ -1570,7 +1586,7 @@ The Resolute Desk is scenery in the White House. "The resolute desk was designed
 
 Understand "hms" or "hms resolute" as The Resolute Desk.
 
-Reflecting Pool is west of the Washington Monument. "The Reflecting Pool is a long, rectangular body of water that mirrors the sky and the surrounding monuments. [italic type]Ducks[roman type] glide across its surface, and visitors stroll along its edges, taking in the serene view.[paragraph break]To the west is the Lincoln Memorial, and to the east, the Washington Monument rises in the distance."
+Reflecting Pool is west of the Washington Monument. "The Reflecting Pool is a long, rectangular body of water that mirrors the sky and the surrounding monuments. [italic type]Ducks[roman type] glide across its surface, and visitors stroll along its edges, taking in the serene view.[paragraph break]To the west is the Lincoln Memorial, to the north is the National Portrat Gallery and to the east, the Washington Monument rises in the distance."
 
 Ducks are scenery in the Reflecting Pool. "They are just cruising around on top of the water like normal ducks."
 
@@ -1695,7 +1711,7 @@ Understand "exhibits" or "aircraft" or "displays" as Wonders of Flight.
 
 National Portrait Gallery is north of the Reflecting Pool. "[if aslan is magic]The National Portrait Gallery now features talking holgrams of all of the former Presidents.[otherwise]Occuping part of the old U.S. Patent office and holding a collection of over 23,000 works of art, including the only complete set of [italic type]presidential portraits[roman type] outside the White House, The National Portrait Gallery's sweeping courtyard is a large rectangular venue with a striking, glass-and-steel, wavy canopy overhead, flooding the area with natural light in stark contrast to the deep black granite floors. It is the same light and dark contrast of Quotient and the [italic type]Contingent[roman type]."
 
-The Contingent is scenery in The National Portrait Gallery. "The Contingent was a terroist group who believed they could solve immortality in less than ten years, soon enough to allow their founding members to become immortal. The Contingent wanted to become an enhanced race of superhumans, who would prevent all, except those they selected, from following in their immortal path. They wanted to control the rest of what they called base-level humans, threatening severe retaliation against any world power that tried to stop them. They were thwarted by Quotient in 2028."
+The Contingent is scenery in The National Portrait Gallery. "The Contingent was a terrorist group who believed they could solve immortality in less than ten years, soon enough to allow their founding members to become immortal. The Contingent wanted to become an enhanced race of superhumans, who would prevent all, except those they selected, from following in their immortal path. They wanted to control the rest of what they called base-level humans, threatening severe retaliation against any world power that tried to stop them. They were thwarted by Quotient in 2028."
 
 The Presidential Portraits are scenery in the National Portrait Gallery. "The only complete set of Presidential Portraits outside the White House."
 Understand "Portrait" as The Presidential Portraits.
@@ -1871,8 +1887,10 @@ Instead of pushing the red button:
 	otherwise:
 		if rocket is in the blackness of space:
 			say "You cannot eject once you leave earth.";
+		else if rocket is in Tardis:
+			say "You cannot eject while docked at TARDIS.";
 		otherwise:
-			say "[paragraph break]WHOOP WHOOP, Ejection System Activated! You are thrown out of the rocket, experiencing 3g's in the process. After being thrown clear, another explosion rocks your world as your parachute is blasted open, saving you from certain death as you drift the short distance back to the launch pad.";
+			say "[paragraph break][bold type]WHOOP WHOOP, Ejection System Activated![roman type] You are thrown out of the rocket, experiencing 3g's in the process. After being thrown clear, another explosion rocks your world as your parachute is blasted open, saving you from certain death as you drift the short distance back to the launch pad.";
 			move player to spaceport.
 
 The Blackness of Space is a room. The Blackness of Space is part of the Outerspace Area. "[if player is in rocket]You are in the vastness of space, having successfully launched from the Earth. You can see the docking ring of TARDIS nearby, and the blue marble you call home off in the distance.[else]You are spacewalking in space... be careful not to drift away! You can see the docking ring of TARDIS as well as your favorite planet, Earth."
@@ -2076,6 +2094,7 @@ The Quantum Console is closed.
 Before opening the Quantum Console:
 	if the Quantum Console is locked: 
 		say "The console is locked with a password. You'll need to type it on the keyboard to unlock the console.";
+		stop the action;
 	otherwise:
 		continue the action.
 		
@@ -2673,17 +2692,17 @@ Instead of examining tardis communicator:
 Table of tardis_quips
 index	quip_string1
 1	"I am TARDIS, the incredibly intelligent quantum computer Quotient uses. This communicator connects me to you everytime you examine it."
-2	"I like to talk. I am based on ChatGPT11. Too bad this communicator is one way. You just have to listen to me!"
+2	"I like to talk. I am based on ChatGPT11. Too bad this communicator is one way. You just have to listen to me! You can however, talk to other people in the game. Try TALK to MARTIN, or ASK SARAH about MISSION"
 3	"Do you think I'm going to help you? I'm feeling kind of wonky. You should reboot me."
-4	"I hope you at least know you can shorten examine to just x."
-5	"You know you get points for taking treasures, not just looking at them"
+4	"I hope you at least know you can shorten examine to just x. HELP will give you a few more tips if this is your first adventure."
+5	"Every treasure is a clue... except food, I just like food."
 6 	"Have you watched the TV Show LOST?"
-7	"What is your favorite song? Oh, that's right, this is a one way communicator. I have a whole playlist for you to listen to!"
-8	"Here's a Spotify playlist for you. http://spoti.fi/3w9WxSD "
-9	"You are still examing me? I hope you helped Desmond. He's hungry."
+7	"What is your favorite song? Oh, that's right, this is a one way communicator. I have a whole playlist for you to listen to! http://spoti.fi/3w9WxSD"
+8	"Did you look at the scenery by the lane. You may find a path there you missed."
+9	"You are still examing me? I hope you helped Desmond. He's hungry. It won't save the world, but you'll at least get a yummy treat out of it."
 10	"Have you read The Quantum Contingent? It's one of my favorite books."
 11	"Have you examined Martin's desk. It's pretty nice. (as is the desk in the White House!) Of course, Aslan is pretty cool too, but I'm getting ahead of myself."
-12	"Ok, if you are going to keep doing this, maybe just use the up arrow, and by the way, if you go to other regions, I'll tell you some other tidbits of information."
+12	"If you go to other regions, I'll tell you some other tidbits of information."
 
 Table of tardis_spaceport_quips
 index	quip_string1
@@ -2712,7 +2731,7 @@ index	quip_string1
 8	"So, how's it going? Do I need to provide better hints?"
 9	"You aren't allowed to touch the touch controls. You aren't qualified. Oh that's right, you can't talk to me... this is a one way conversation."
 10	"I can't tell you everything, but I can tell you more."
-11	"Did you push the giant red button?"
+11	"Did you push the big red button?"
 12	"Ok, if you are going to keep doing this, maybe just use the up arrow."
 
 
@@ -2758,9 +2777,9 @@ index	quip_string1
 7	"The National Cathedral has a really beautiful little chapel on the side."
 8	"Do you want me to hummm some theme music for you?"
 9	"I don't really have a lot more to say."
-10	"In my opinion, lasers should be refracted for the most beautiful scene."
+10	"In my opinion, lasers should be reflected thousands of times for the most beautiful scene."
 11	"Don't forget to look at the resolute desk. It is a real gem."
-12	"The Chapel is beautiful. I bet Kara would love to read there."
+12	"The Chapel is beautiful. I bet Kara would love to read there. Or pray."
 
 Table of tardis_Cincy_quips
 index	quip_string1
@@ -2772,7 +2791,7 @@ index	quip_string1
 6 	"You enjoy my company, don't you."
 7	"The DC Justice Center, er, I mean the Cincinnati Museum Center is the second largest half dome in the world."
 8	"Do you want me to hummm some theme music for you? It's different in Cincy."
-9	"I don't really have a lot more to say."
+9	"If you pryed open the corn cob, you'd know your way around the caverns."
 10	"Yeah, caves are twisty... but maybe they'll give you a medal."
 11	"Do you want to go to Cleveland?"
 12	"I really enjoy that painting in the hallway at HQ. It makes me hungry."
@@ -2783,10 +2802,10 @@ index	quip_string1
 2	"Have you been to Edgwater park. I hear it's fun to dig in the sand there."
 3	"Go Browns!"
 4	"Cleveland Rocks, Cleveland Rocks, Cleveland Rocks."
-5	"GE Lighting was once headquartered in Cleveland."
+5	"GE Lighting was once headquartered in Cleveland at Nela Park. I bet those engineers are really good at containing energy."
 6 	"You enjoy my company, don't you."
 7	"Kara used to work here at NASA."
-8	"Do you want me to hummm some theme music for you? It's different in Cleveland."
+8	"Star Wars Light Sabers are made with Crystals."
 9	"I think those engineers at Nela Park are working on more than light bulbs."
 10	"The North Coast is the best!"
 11	"Cassie needs something that could contain the power of a powerful energy source."
@@ -2800,7 +2819,7 @@ index	quip_string1
 4	"Do you think Robert has Cassie's crystal?"
 5	"Toto has a good Africa song. Want me to hum it?"
 6 	"You enjoy my company, don't you."
-7	"Jack and Sarah have had some amazing adventures here!"
+7	"I bet the White House has an armory!"
 8	"How did you like your free 'African massage?'"
 9	"Are you looking for a precious gem or a crystal?"
 10	"Good luck getting what you came for... you might need a weapon."
@@ -2854,7 +2873,7 @@ Book 6 People
 
 Chapter 1 - Player
 
-The description of the player is "In the absence of a mirror, you're not quite sure what you look like today.”
+The description of the player is "You are, as always, you, except when you aren't. If you want to examine your inner self further, I'm afraid that will cost more than 200 Zorkmids.[if player is in VR Area][paragraph break]You notice a small, faint mark on your foot.”
 
 Flattering is an action applying to one thing. Understand "flatter [someone]" and "praise [someone]" as flattering.
  
@@ -2998,7 +3017,7 @@ Understand "prof" or "eaton" or "professor cassandra" or "cassandra" or "profess
 
 Instead of talking to Cassie:
 	if Cassie is in Cassie's lab:
-		say "[if the Quantum Console is activated] The entanglement is stable. Nice work! [Otherwise][one of]We need to get to keep the entanglement going. Check the console.[or]We need a powerful energy source get this thing going.[or]You'll need a password to open the console.[or]I really should have done my yoga in the metaverse before I came to the lab.[or]If you have something specific you want to know, ask me, otherwise, I'm going to get to work.[at random]";
+		say "[if the Quantum Console is activated] The entanglement is stable. Nice work! [Otherwise][one of]We need to get to keep the entanglement going. Check the console.[or]We need a powerful energy source get this thing going.[or]You'll need a password to open the console.[or]I really should have done my yoga in the metaverse before I came to the lab.[or]If you have something specific you want to know, ask me, otherwise, I'm going to get to work.[cycling]";
 	otherwise:
 		say "Cassie looks at you with a mix of curiosity and determination. 'Ready to get to work? I'm going to the lab' she says.[paragraph break][if the Quantum Computer is wonky]'Oh, and the computer appears to need a reboot' she says as she disappears[paragraph break]";
 		now Cassie is in Cassie's Lab.
@@ -3192,7 +3211,7 @@ After asking the Kara about a topic listed in the Table of Kara's responses, say
 
 After asking the Kara about something:
 	if the topic understood is not a topic listed in the Table of Kara's responses:
-		say "[line break][one of]Kara looks at you quizzically, 'I don't know much about that.[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Kara looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[at random]"
+		say "[line break][one of]Kara looks at you quizzically, 'I don't know much about that.[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Kara looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[cycling]"
 		
 After telling the Kara about a topic listed in the Table of Kara's responses, say "[line break][response entry][line break]".
 
@@ -3501,31 +3520,31 @@ Instead of talking to Robot:
 	say "[line break]I'm sorry Dave, I can't do that.[line break]"
 
 Instead of talking to Martin:
-        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if Martin is in The Hallway]Hello Agent, I'm glad you arrived. I'll brief you in my office, after you show me the puzzle piece.[else][one of]'Do you have any other suggestions?' you ask.[paragraph break]'Be careful out there, and take the Tardis Communicator.' His voice is clear as he looks you straight in the eye.[or]'I will,' you reply. 'What can you tell me about the time experiment?'[paragraph break]'Cassie is a genius when it comes to time. You'll need to see her. She calls her lab Continum.'[or]'Do you like Cassie?.[paragraph break]'That's a strange question for someone who has just started her, but I will say, I have always enjoyed Cassie's company.'[or]You decide against talking any further with Martin right now.[then at random]".
+        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if Martin is in The Hallway]Hello Agent, I'm glad you arrived. I'll brief you in my office, after you show me the puzzle piece.[else][one of]'Do you have any other suggestions?' you ask.[paragraph break]'Be careful out there, and take the Tardis Communicator.' His voice is clear as he looks you straight in the eye.[or]'I will,' you reply. 'What can you tell me about the time experiment?'[paragraph break]'Cassie is a genius when it comes to time. You'll need to see her. She calls her lab Continum.'[or]'Do you like Cassie?.[paragraph break]'That's a strange question for someone who has just started her, but I will say, I have always enjoyed Cassie's company.'[or]You decide against talking any further with Martin right now.[cycling]".
 
 Instead of talking to Sarah:
-        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if Sarah is in Nela Park][one of]'Hello again, what are you up to.' you say.[paragraph break]'I'm looking for some type of containment device, not sure exactly what kind yet, but the engineers at Nela are actually working undercover for the CIA.'[or]'Ahhh, ok. Good to know.'[paragraph break]'Thanks for your help on this mission. We were going to just do a fun training mission, but then the lion escaped and messed up our plans.'[or]'No problem. It's great to get to work with you and the quotient team.'[or]You decide against talking any further with Sarah right now.[then at random][else][one of]'Hi, there,' you say confidently.[paragraph break]'Hi, Welcome to the team.' she replies with a smile.[or]'I've been meaning to ask you about Martin,' you comment. 'What's he like?'[paragraph break]'Martin is legendary for his connections. He can call in favors from all over. And underneath that Marine-like exterior is a softie. He's like a father to me.'[or]'Thank you.[paragraph break]'Of course, Good luck.'[or]You decide against talking any further with Sarah right now.[then at random]".
+        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if Sarah is in Nela Park][one of]'Hello again, what are you up to.' you say.[paragraph break]'I'm looking for some type of containment device, not sure exactly what kind yet, but the engineers at Nela are actually working undercover for the CIA.'[or]'Ahhh, ok. Good to know.'[paragraph break]'Thanks for your help on this mission. We were going to just do a fun training mission, but then the lion escaped and messed up our plans.'[or]'No problem. It's great to get to work with you and the quotient team.'[or]You decide against talking any further with Sarah right now.[cycling][else][one of]'Hi, there,' you say confidently.[paragraph break]'Hi, Welcome to the team.' she replies with a smile.[or]'I've been meaning to ask you about Martin,' you comment. 'What's he like?'[paragraph break]'Martin is legendary for his connections. He can call in favors from all over. And underneath that Marine-like exterior is a softie. He's like a father to me.'[or]'Thank you.[paragraph break]'Of course, Good luck.'[or]You decide against talking any further with Sarah right now.[cycling]".
 
 Instead of talking to Desmond:
-        say "[if the bonfire is in the Yard]These s'mores are great! Help yourself![else][one of]'Hey,' you say casually.[paragraph break]'Hello, Beautiful day eh?' he replies seemingly distracted.[or]'I've been meaning to ask you about the mission,' you comment. 'What do we do?'[paragraph break]'That's a question for an agent.'[or]'What are you doing out here?.[paragraph break]'I just want to make some s'mores while I wait for my wife, but I'm having trouble getting the fire started.'[or]You decide against talking any further with Desmond right now.[then at random]".
+        say "[if the bonfire is in the Yard]These s'mores are great! Help yourself![else][one of]'Hey,' you say casually.[paragraph break]'Hello, Beautiful day eh?' he replies seemingly distracted.[or]'I've been meaning to ask you about the mission,' you comment. 'What do we do?'[paragraph break]'That's a question for an agent.'[or]'What are you doing out here?.[paragraph break]'I just want to make some s'mores while I wait for my wife, but I'm having trouble getting the fire started.'[or]You decide against talking any further with Desmond right now.[cycling]".
 
 Instead of talking to Jack:
-        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if the laser is switched on]Wow, look at that red sky! You must have found the laser. Good work![else if Jack is in the Lincoln Memorial][one of]'Hello again, what are you up to.' you say.[paragraph break]'I'm looking for a laser.'[or]'Why?[paragraph break]'It has something to do with Cassie's time experiment. She said I'll know it when I see it.'[or]'I'll help.' you say. 'Thanks. It's great to have you on the team.'[or]You decide against talking any further with Jack right now.[then at random][else][one of]'Hi, there,' you say confidently.[paragraph break]'Hey, the new agent! What do you need?' says Jack.[or]'I wanted your advice on the TARDIS computer I've heard about,' you comment.'[paragraph break]'You can always just reboot it! When all else fails, control-alt-delete I say!'[or]'You designed it, right.[paragraph break]'I sure did.'[or]You decide against talking any further with Jack right now.[then at random]".
+        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if the laser is switched on]Wow, look at that red sky! You must have found the laser. Good work![else if Jack is in the Lincoln Memorial][one of]'Hello again, what are you up to.' you say.[paragraph break]'I'm looking for a laser.'[or]'Why?[paragraph break]'It has something to do with Cassie's time experiment. She said I'll know it when I see it.'[or]'I'll help.' you say. 'Thanks. It's great to have you on the team.'[or]You decide against talking any further with Jack right now.[cycling][else][one of]'Hi, there,' you say confidently.[paragraph break]'Hey, the new agent! What do you need?' says Jack.[or]'I wanted your advice on the TARDIS computer I've heard about,' you comment.'[paragraph break]'You can always just reboot it! When all else fails, control-alt-delete I say!'[or]'You designed it, right.[paragraph break]'I sure did.'[or]You decide against talking any further with Jack right now.[cycling]".
 
 Instead of talking to Florin:
-        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else][one of]'Hi, how's it going,' you say casually.[paragraph break]'Well hello!' he replies ethusiatically.[or]'What are you up to?' you say.[paragraph break]'Just trying to put a lion back in a cage'[or]'Are you searching for Robert Clayton?'[paragraph break]'I am, but I've lost my gun, so he keeps running away.'[or]You decide against talking any further with Florin right now.[then at random]".
+        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else][one of]'Hi, how's it going,' you say casually.[paragraph break]'Well hello!' he replies ethusiatically.[or]'What are you up to?' you say.[paragraph break]'Just trying to put a lion back in a cage'[or]'Are you searching for Robert Clayton?'[paragraph break]'I am, but I've lost my gun, so he keeps running away.'[or]You decide against talking any further with Florin right now.[cycling]".
 
 Instead of talking to the President:
-        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else][one of]'Hello Madam President'[paragraph break]'Hello. I heard Martin has recruited you?'[or]'Yes Madam President' you say.[paragraph break]'It is important work. Good Luck.'[or]You decide against talking any further with the President right now.[then at random]".
+        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else][one of]'Hello Madam President'[paragraph break]'Hello. I heard Martin has recruited you?'[or]'Yes Madam President' you say.[paragraph break]'It is important work. Good Luck.'[or]You decide against talking any further with the President right now.[cycling]".
 
 Instead of talking to the Prime Minister:
-        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else][one of]'Hello Sir.'[paragraph break]'Hello. I heard you are attempting to help Professor Eaton'[or]'Yes Sir' you say.[paragraph break]'That's great. She is a remarkable scientist. The best we have. Good Luck.'[or]You decide against talking any further with the Prime Minister right now.[then at random]".
+        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else][one of]'Hello Sir.'[paragraph break]'Hello. I heard you are attempting to help Professor Eaton'[or]'Yes Sir' you say.[paragraph break]'That's great. She is a remarkable scientist. The best we have. Good Luck.'[or]You decide against talking any further with the Prime Minister right now.[cycling]".
 
 Instead of talking to Kara:
-        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if the player has the pendant][one of]You found the pendant! Good work![or]I know Cassie was looking for a power source too.[or]Good Luck![or]You decide against talking any further with Kara right now.[then at random][else][one of]'Hello, aren't you Kara?'[paragraph break]'Yes, I am. I'm looking for an ancient Pendant, what are you doing here?'[or]'Martin told me to help Cassie'[paragraph break]'Outstanding. Last time I saw her she was looking for a power source. She is amazing.'[or]'I'll see what I can do'[paragraph break]'Good luck!'[or]You decide against talking any further with Kara right now.[then at random]".
+        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if the player has the pendant][one of]You found the pendant! Good work![or]I know Cassie was looking for a power source too.[or]Good Luck![or]You decide against talking any further with Kara right now.[cycling][else][one of]'Hello, aren't you Kara?'[paragraph break]'Yes, I am. I'm looking for an ancient Pendant, what are you doing here?'[or]'Martin told me to help Cassie'[paragraph break]'Outstanding. Last time I saw her she was looking for a power source. She is amazing.'[or]'I'll see what I can do'[paragraph break]'Good luck!'[or]You decide against talking any further with Kara right now.[cycling]".
 
 Instead of talking to Server:
-        say "[one of]'Can I order?[paragraph break]'Why of course, but I already put in your standard order![or]'Can I get a Mountain Dew?'[paragraph break]'Coming right up!'[or]'Do you know the way to the Museum Center?'[paragraph break]'Sure. Head north, or is it south?'[or]You decide against talking any further with the server right now.[then at random]".
+        say "[one of]'Can I order?[paragraph break]'Why of course, but I already put in your standard order![or]'Can I get a Mountain Dew?'[paragraph break]'Coming right up!'[or]'Do you know the way to the Museum Center?'[paragraph break]'Sure. Head north, or is it south?'[or]You decide against talking any further with the server right now.[cycling]".
 
 
 Chapter 4 Smelling and Listening 
@@ -3607,11 +3626,11 @@ The sound of the rocket is "rumble, rumble".
 The sound of the jet is "hmmmmmmmmmmmmmm".
 The sound of the watch is "tick tock".
 The sound of the Mountain Dew is "fizzzzzzzzz".
-The sound of the Quantum Computer is "bzzp, bing, tick-tock, whirr. Wait, it's in a vacuum... never mind, you can't hear anything.".
+The sound of the Quantum Computer is "bzzp, bing, tick-tock, whirr. Wait, it's in a vacuum... never mind, you can't hear anything".
 The sound of the bonfire is "Roar!".
 The sound of the light saber is "Hmmmmm, Zoooommm, VRRoommmmm".
-The sound of the mirrored ball is "You hear a distance song. It sounds like it is bouncing off of blue ocean waves. It is Dancing Queen by Abba."
-The sound of the succulent is "I think the succulent's sound is the Taylor Swift Folklore album.".
+The sound of the mirrored ball is "a distance song. It sounds like it is bouncing off of blue ocean waves. It is Dancing Queen by Abba".
+The sound of the succulent is "the Taylor Swift Folklore album".
 The sound of the Greek God Mercury is "Just do it!".
 The sound of the tranquilizer gun is "Kapooooeee".
 The sound of the Millenium Falcon is "Rrrraaaaaaaaagggghhhhh".

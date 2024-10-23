@@ -3065,7 +3065,7 @@ Instead of attacking The Prime Minister:
 	say "You awaken in a small prison cell in the Tower of London.";
 	end the story.
 	
-Chapter 2  Showing / Giving / Telling 
+Chapter 2  Showing / Giving / Screaming 
 
 screaming is an action applying to nothing. Understand "scream" as screaming.
 Understand "make noise" as screaming.
@@ -3222,15 +3222,15 @@ After telling the Kara about something:
 
 Table of Kara's responses
 topic	response
-"desmond"	"He's my sister's husband. A great guy."
+"desmond"	"He's my sister's husband. He's a great guy, but he's not a spy."
 "Jack"	"I love Jack. He happens to be an expert at quantum computing, and a great dancer."
 "Sarah"	"Sarah is my soon to be sister-in-law. Why do you ask about her? Do you know something I don't?"
-"Martin"	"He is like a father to me."
+"Martin"	"He is like a father to me. His connections are legendary."
 "computer"	"Tardis is our computer. Jack built it."
 "the computer"	"Tardis is our computer. It is in space."
 "tardis"	"Tardis is our computer. Jack built it."
-"mission"	"We must get to the Continuum and power up the console."
-"the mission"	"We must get to the Continuum and power up the console."
+"mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about."
+"the mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about."
 "Florin"	"Florin is gracious. A great agent. I heard he used to be MI-5."
 "Cassie"	"She's brilliant with time, but can't she see Martin is in love with her?"
 "President"	"President Bridget O'Connor is one of the finest women I have ever known."
@@ -3255,6 +3255,7 @@ topic	response
 "robert clayton"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "clayton/robert"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "password/passcode"	"I don't know. You'd have to ask Cassie."
+"pendant"	"The legend is that Lancelot could do unbelievable things if he was wearing this pendant. It had a mirror-like finish. He polished it every day."
 
 Section 2 - Desmond	
 
@@ -3275,7 +3276,7 @@ Section 5 - Cassie
 After asking Cassie about a topic listed in the Table of Cassie's responses, say "[line break][response entry][line break]".
 
 After asking the Cassie about something:
-	if the topic understood is not a topic listed in the Table of Kara's responses:
+	if the topic understood is not a topic listed in the Table of Cassie's responses:
 		say "[line break][one of]hmmm, for a magical result, you'll need to do more than just the mission. When all else fails, use lasers I always say![or]I think Lancelot knew something. If you find his pendant, wear it for good luck.[or]I haven't time for this, we must stabilize the entanglement![at random]"
 		
 After telling the Cassie about a topic listed in the Table of Cassie's responses, say "[line break][response entry][line break]".
@@ -3311,16 +3312,16 @@ topic	response
 "mtn dew"	"Refreshing!"
 "metaverse/vr/meta"	"I do simulations there."
 "laser/lasers"	"Critical for stabilization."
-"crystal"	"The Crystal should be able to provide the power we need for the quantum console."
+"crystal"	"The Crystal is said to be a Kyber Crystal, It should be able to provide the power we need for the quantum console."
 "movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
-"password/passcode/pass"	"Oh, it changes every day. I leave myself an anagram hint in my yoga simulation."
-"console"	"It needs a strong power source, and to open it, you'll need to enter the password."
-"quantum console"	"It needs a strong power source, and to open it, you'll need to enter the password."
+"password/passcode/pass"	"Oh, it changes every day. I leave myself an anagram hint in my yoga simulation in the VR lab."
+"console"	"It needs a strong power source, and to open it, you'll need my password."
+"quantum console"	"It needs a strong power source, and to open it, you'll need my password."
 "yoga"	"I practice yoga every day in my VR lab."
 "meditation"	"I meditate every day in my VR lab"
 "tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
-"light saber"	"That would be perfect for powering my console."
-"light sabre"	"That would be perfect for powering my console."
+"light saber"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
+"light sabre"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
 	
 Section 6 - Jack
 
@@ -3376,7 +3377,7 @@ topic	response
 "tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
 "light saber"	"It is a powerful weapon, just like Star Wars, except, I think we might be able to really make one."
 "light sabre"	"A powerful weapon with a british spelling."
-"crystal"	"I heard it was stolen by the lion."
+"crystal"	"I heard it was stolen by the Lion."
 
 Section 7 - Sarah
 
@@ -3386,10 +3387,10 @@ After asking the Sarah about something:
 	if the topic understood is not a topic listed in the Table of Sarah's responses:
 		say "[line break]Sarah smiles. 'That's an interesting question!'.[line break]"
 		
-After telling the Sarah about a topic listed in the Table of Jack's responses, say "[line break][response entry][line break]".
+After telling the Sarah about a topic listed in the Table of Sarah's responses, say "[line break][response entry][line break]".
 
 After telling the Sarah about something:
-	if the topic understood is not a topic listed in the Table of Jack's responses:
+	if the topic understood is not a topic listed in the Table of Sarah's responses:
 		say "[line break][one of]Sarah looks at you quizzically, 'I don't know much about that.[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Sarah looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[at random]"
 
 Table of Sarah's responses
@@ -3398,10 +3399,10 @@ topic	response
 "Jack"	"I love Jack, he's my brother."
 "Kara"	"Kara is an expert at quantum communication."
 "Florin"	"Florin is a very capable agent. He trained me. He is a dear friend."
-"Martin"	"He is like a father to me."
-"computer"	"Tardis is our computer. It is in space."
-"the computer"	"Tardis is our computer. It is in space."
-"tardis"	"Tardis is our computer. It is in space."
+"Martin"	"He is like a father to me. His connections are legendary."
+"computer"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
+"the computer"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
+"tardis"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
 "mission"	"We must get to the Continuum and power up the console. Anything else is an unknown at this point."
 "the mission"	"We must get to the Continuum and power up the console. Anything else is an unknown at this point."
 "Cassie"	"She's brilliant with time, but can't she see Martin is in love with her?"

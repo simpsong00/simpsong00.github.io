@@ -130,14 +130,28 @@ Understand "help" as helping.
 
 
 Carry out helping:
-	say "[story title] understands commands, such as '[command prompt]examine [a random thing that can be seen by the player]'. You can get some information about the current game state with commands such as LOOK, EXAMINE, INVENTORY and the special commands PLACES and OBJECTS.[paragraph break]Commands are typically in the format of VERB, VERB NOUN, or VERB with/to NOUN. As in TAKE, TAKE THE SHOVEL, or TALK TO SARAH. In some cases, you may do something more complex like this. >HIT THE NAIL WITH THE HAMMER, or >ASK MARTIN ABOUT THE COMPUTER.[paragraph break]In [italic type]Quotient the Game[roman type], if you take an item, it will automatically be examined for you. (but not read) In this fictional world, based on real places, you move around with commands like NORTH, SOUTH, UP, etc. If you are ever unsure of the ways you can go, just type EXITS.[paragraph break]If you stumble across the TARDIS communicator, take it! You can examine it again [italic type]and again[roman type] to hear the Quotient quantum computer talk to you about things that might be of interest near you. If you examine it enough, it will give you some hints based on the region you are currently in.[line break]And remember, commands can be abbreviated. For example, n is NORTH and x is EXAMINE. You get points from collecting treasures and solving puzzles. As your points go higher, so does your rank! Type POINTS for more info, or SCORE to see your score. You should figure out the true mission of the game as you go along. [paragraph break]Remember, in addition to EXAMINE, you can READ certain objects as well. It is helpful to read things if they can be read. Finally, ABOUT will tell you what the game is based on, and CREDITS gives credit where credit is due![paragraph break]Now, let's get adventuring!";
+	say "[story title] understands commands, such as '[command prompt]examine [a random thing that can be seen by the player]'. You can get some information about the current game state with commands such as LOOK, EXAMINE, INVENTORY and the special commands PLACES and OBJECTS.[paragraph break]Commands are typically in the format of VERB, VERB NOUN, or VERB with/to NOUN. As in TAKE, TAKE THE SHOVEL, or TALK TO SARAH. In some cases, you may do something more complex like this. >HIT THE NAIL WITH THE HAMMER, or >ASK MARTIN ABOUT THE COMPUTER.[paragraph break]In [italic type]Quotient the Game[roman type], if you take an item, it will automatically be examined for you. (but not read) In this fictional world, based on real places, you move around with commands like NORTH, SOUTH, UP, etc. If you are ever unsure of the ways you can go, just type EXITS.[paragraph break]If you stumble across the TARDIS communicator, take it! You can examine it again [italic type]and again[roman type] to hear the Quotient quantum computer talk to you about things that might be of interest near you. If you examine it enough, it will give you some hints based on the region you are currently in.[line break]And remember, commands can be abbreviated. For example, n is NORTH and x is EXAMINE.[paragraph break]Scenery that can be examined in a room will be shown in [italic type]italics.[roman type] 'Things' that can be examined or taken are listed in a paragraph below the room description, and the directions to exit are listed in a separate paragraph as well.[paragraph break]You get points from collecting treasures and solving puzzles. As your points go higher, so does your rank! Type POINTS for more info, or SCORE to see your score. You should figure out the true mission of the game as you go along. [paragraph break]Remember, in addition to EXAMINE, you can READ certain objects as well. It is helpful to read things if they can be read. Finally, ABOUT will tell you what the game is based on, and CREDITS gives credit where credit is due![paragraph break]Now, let's get adventuring!";
 
 Hinting is an action out of world.
 Understand "hint" or "hints" or "clue" or "clues" as hinting.
 
 Carry out hinting:
-	say "Your best chance for context sensitive hints is to find the TARDIS communicator and examine it. It will talk to you everytime you examine it, and it will say different things in different areas of the game.[paragraph break]Your one hint is that the Tardis communicator is near the farmhouse, so I'd recommend you find it before flying off to far away places! Good luck and enjoy the journey!";
+	say "Your best chance for context sensitive hints is to find the TARDIS communicator and examine it. It will talk to you every time you examine it, and it will say different things in different areas of the game.[paragraph break]Your one hint is that the Tardis communicator is near the farmhouse, so I'd recommend you find it before flying off to far away places! Good luck and enjoy the journey!";
 	say "For basic help, type HELP.";
+
+Reviewing the game world is an action out of world.
+
+Carry out reviewing the game world:
+	say "Room and Object Report:";
+	repeat with location running through rooms:
+		say "[line break][bold type][location][roman type] - [description of location][paragraph break]";
+		repeat with item running through things in location:
+			if the item is scenery:
+				say "    - Scenery: [bold type][item][roman type] - [description of item][line break]";
+			otherwise:
+				say "    - Object: [bold type][item][roman type] - [description of item][line break]".
+
+Understand "review world" as reviewing the game world.
 
 	
 Chapter 6 Credits / About 
@@ -205,6 +219,13 @@ Instead of xyzzying [noun]:
 	move the player to noun;
 	
 The previous location is a room that varies.
+
+xyzzyplundering is an action applying to one visible thing. Understand "xyzzyplunder [any thing]" as xyzzyplundering.
+
+Carry out xyzzyplundering [anything]:
+	move the noun to the location;
+	say "You mutter the magic word, and with a flash, you have the [noun].";
+	try taking the noun;
 
 Understand "plugh" as a mistake ("Is your voice hollow?")
 
@@ -382,7 +403,7 @@ Chapter 1 Farmstead
 
 Farmstead Area is a region. Security Checkpoint, Lane, The Kitchen, The Gate, Headquarters Entrance, The Farmhouse, Old Cellar, Yard, Smokehouse, Fire Pit, Old Barn, Parking are in the Farmstead Area.
 
-Security Checkpoint is a room. "The facial recognition [italic type]cameras[roman type] at the perimeter of the property scan visitors meticulously. Hidden defenses lower as you pass, allowing you to proceed casually up the lane to the west."
+Security Checkpoint is a room. "The facial recognition [italic type]cameras[roman type] at the perimeter of the property scan visitors meticulously. Hidden defenses lower as you pass.[paragraph break]This allows you to proceed casually up the lane to the west."
 
 The cameras are scenery in the Security Checkpoint. "These cameras are state-of-the-art. Infrared, motion detecting, high res, any buzz word you can think of, these have it.";
 
@@ -390,7 +411,7 @@ Understand "camera" or "cam" as cameras.
 
 A Mailbox is a an openable closed container in the Security Checkpoint. The Mailbox is fixed in place. The description of the mailbox is "It's a non-descript mailbox mounted on an old cedar post.".
 The Leaflet is a thing in A Mailbox.
-The description of the leaflet is "It's a tri-fold leaflet addressed to 'secret agent'[paragraph break]".
+The description of the leaflet is "It's a tri-fold leaflet addressed to 'secret agent'".
 
 Understand "mail" or "box" as Mailbox.
 	
@@ -405,14 +426,14 @@ The large willow trees are scenery in the Lane. "These large oaks separate the p
 Understand "trees" as the large willow trees.
 Understand "tree" as the large willow trees.
 
-The cornfield are scenery in the Lane. "The cornfield seems to go on for ever. You can enter the cornfield via a small path through the trees to the north."
+The cornfield are scenery in the Lane. "The cornfield seems to go on forever. You can enter the cornfield via a small path through the trees to the north."
 
 Understand "corn" as cornfield.
 
-The Gate is west of the Lane. "The gate is open. There is a [italic type]sign[roman type] mounted by the gate[paragraph break]The lane goes west toward the house and east back toward the Security Checkpoint."
+The Gate is west of the Lane. "The gate is open. There is a [italic type]sign[roman type] mounted by the gate.[paragraph break]The lane goes west toward the house and east back toward the Security Checkpoint."
 
-The Sign is scenery in The Gate. "Let em grow up."
-The read text of the sign is "Let em grow up."
+The Sign is scenery in The Gate. "Let 'em grow up."
+The read text of the sign is "Let 'em grow up."
 
 Figure of sign_image is the file “sign.png”
 
@@ -435,7 +456,7 @@ Understand "swings" or "porch swings" as porch swing.
 Report entering the porch swing:
 	say "Oh, this is so relaxing. A great place for coffee and connections."
 
-The Farmhouse is west of The Headquarters Entrance. "You cross the porch of the old victorian home and enter the dining room. A [italic type]grape chandelier[roman type] hangs above the long table. From the [italic type]north window[roman type], you can see the [italic type]lawn[roman type], the hammock and the fields past the hammock to the north.[paragraph break]You can go east to exit the house, or continue west into the kitchen you see in the next room."
+The Farmhouse is west of The Headquarters Entrance. "You cross the porch of the old Victorian home and enter the dining room. A [italic type]grape chandelier[roman type] hangs above the long table. From the [italic type]north window[roman type], you can see the [italic type]lawn[roman type], the hammock and the fields past the hammock to the north.[paragraph break]You can go east to exit the house or continue west into the kitchen you see in the next room."
 
 Parking is southwest of The Headquarters Entrance. Parking is south of Fire Pit. "There is some parking here off the driveway, just past the house.[paragraph break]A fire pit is to the north, or you can return northeast to the entrance."
 
@@ -443,7 +464,7 @@ The north window is scenery in the Farmhouse. The outdoors is scenery in the Far
 
 The grape chandelier is scenery in the Farmhouse. "The glass grapes are grouped into bunches. The are purple and stretch along a long cast-iron frame."
 
-An oriental rug is in the Farmhouse. "To one side of the room is [if the escape tunnel is not revealed]a large oriental rug.[otherwise]an escape tunnel." Understand "carpet" as the rug. The description of the oriental rug is "This beautiful oriental rug has a red hue and two piecing blue strips eminating out from the center like hands on a clock. Silver circles adorn the edges.".
+An oriental rug is in the Farmhouse. "To one side of the room is [if the escape tunnel is not revealed]a large oriental rug.[otherwise]an escape tunnel." Understand "carpet" as the rug. The description of the oriental rug is "This beautiful oriental rug has a red hue and two piecing blue strips emanating out from the center like hands on a clock. Silver circles adorn the edges.".
 
 Check looking under the rug: say "There's an escape tunnel under the rug." instead.
 Check taking the rug: say "The rug is too heavy to lift." instead.
@@ -454,7 +475,7 @@ The Kitchen is west of the Farmhouse. "A large kitchen with attached family room
 
 The Zebra Head is scenery in the Kitchen. "The zebra head is mounted as you might expect a wild animal head might be mounted in a game lodge. Surprisingly, this one appears to have a smile.".
 
-The River Rock Fireplace is scenery in the Kitchen. "The fireplace is made up of smooth, gray river rocks. The edges of the rocks protrude from the light colored morter. A stunning piece of art and craftsmanship in its own right.".
+The River Rock Fireplace is scenery in the Kitchen. "The fireplace is made up of smooth, gray river rocks. The edges of the rocks protrude from the light colored mortar. A stunning piece of art and craftsmanship in its own right.".
 
 Old Cellar is a room below The Headquarters Entrance. "On the side of the house, two old-fashioned cellar doors angle off the ground. After humming a quick tune and smiling for the hidden cameras, the vault-like locks on the doors release. Heavy tempered steel doors swing open to reveal rickety steps leading down to an old brick and moss-lined cellar.[paragraph break]You cautiously head down into the cellar."
 
@@ -467,7 +488,7 @@ The description of the paint cans is "These look like they'd make drum sounds if
 Set of Shelves is a lockable door. "[if location is old cellar]An old set of [italic type]shelves[roman type] is here, filled with [italic type]seashells[roman type].[else]You see the back of a set of shelves."
 Set of Shelves is below the old cellar and above the Secret Passage. Set of Shelves is locked. The description is "A heavy set of shelves that looks like it might conceal something."
 
-The Seashells are a scenery in the old cellar. "A beautiful selection of old conk shells, lightning whelks, alphabet cones and lion's paws."
+The Seashells are a scenery in the old cellar. "A beautiful selection of old conch shells, lightning whelks, alphabet cones and lion's paws."
 
 Understand "shells" or "sea shells" as Seashells.
 	
@@ -506,11 +527,13 @@ Advanced Technology is scenery in the Inner Sanctum. The description of the Adva
 
 Quotient is scenery in the Inner Sanctum. The description of Quotient is "Quotient was founded by Martin Austin and is a global, independent spy agency. Their secret power is their Quantum Computer, known as TARDIS. It gives them amazing surveillance and intelligence capabilities by rendering most forms of encryption useless."
 
-Conference Room is west of The Inner Sanctum. "A stark polished [italic type]stainless steel table[roman type] dominates the center of the room, surrounded by comfortable chairs. [italic type]Monitors[roman type] and [italic type]touch panels[roman type] line the walls. This is where the most critical missions are planned and executed.[paragraph break]Martin's office is to the north and a hallway is to the west."
+Conference Room is west of The Inner Sanctum. "A stark polished [italic type]stainless-steel table[roman type] dominates the center of the room, surrounded by comfortable chairs. [italic type]Monitors[roman type] and [italic type]touch panels[roman type] line the walls. This is where the most critical missions are planned and executed.[paragraph break]Martin's office is to the north and a hallway is to the west."
 
 The monitors are scenery in the Conference room. "The monitors show many different things. One shows a map of the world with markers on different points around the globe. The other shows a 24-hour news station. A third is streaming Rocket League; the car with the succulent on top just scored!"
 
-The stainless steel table is scenery in the Conference room. "Highly polished and pristine. Otherwise, it's just a table."
+The stainless-steel table is scenery in the Conference room. "Highly polished and pristine. Otherwise, it's just a table."
+
+Understand "stainless steel table" as stainless-steel table.
 
 The touch panels are scenery in the Conference room. "The touch panel's control things like monitors that drop from the ceiling, mood music, and many other spy-like things, but they only respond to Martin's touch, so they aren't much use to you.".
 
@@ -524,12 +547,12 @@ Understand "monitor" or "mon" or "display" as monitors.
 
 A chair is a kind of supporter. A chair is always enterable. 
 A meeting chair is a chair. It is in the Conference Room. 
-The description of the meeting chair is "It's a contemporary looking office chair."
+The description of the meeting chair is "It's a contemporary-looking office chair."
 
 Report entering the meeting chair:
 	say "You sit in the chair and take in the view of the conference room. It's quite a room!"
 
-Martin's Office is north of the Conference Room. "This is Martin's office. Martin is the founder of Quotient. The office contains a beautiful [italic type]teak desk[roman type] with a leather chair and has a built in [italic type]bookcase[roman type]. The room has a [italic type]coffered ceiling[roman type]. There is a [italic type]photo[roman type] on the wall."
+Martin's Office is north of the Conference Room. "This is Martin's office. Martin is the founder of Quotient. The office contains a beautiful [italic type]teak desk[roman type] with a leather chair and has a built-in [italic type]bookcase[roman type]. The room has a [italic type]coffered ceiling[roman type]. There is a [italic type]photo[roman type] on the wall."
 
 After going to Martin's Office:
 	try looking;
@@ -552,7 +575,7 @@ The photo is scenery in the Martin's Office. "This photo appears to be of the ha
 
 Hallway is west of the Conference Room. "A stark hallway, with a modern flair and a captivating [italic type]abstract painting[roman type]. You can go south, east, or west."
 
-The abstract painting is scenery in the Hallway. "It is a beautiful painting with bright teal and orange accents. Some say it reminds them of a skyline. Whether it is the skyline of a city or a type of chili is unknown."
+The abstract painting is scenery in the Hallway. "It is a beautiful painting with bright teal and orange accents. Some say it reminds them of a skyline. Whether it is the skyline of a city, or a type of chili is unknown."
 
 Medical Center is south of The Hallway. "A facility for treating injuries and conducting medical research."
 
@@ -560,7 +583,7 @@ Hyperloop Station is west of The Hallway. "A sleek, futuristic station with a po
 
 Airstrip is a port. "This hidden airstrip is exclusively for Quotient. The Quotient Jet is housed here. It is the fastest non-military jet in the world."
 
-Yard is north from The Headquarters Entrance. "A large yard with a hammock, [if bonfire is nowhere]and a place were a great bonfire once stood.[else] and a huge roaring bonfire.[end if][paragraph break]You can go west or south. A cornfield lies to the north." 
+Yard is north from The Headquarters Entrance. "A large yard with a hammock, [if bonfire is nowhere]and a place where a great bonfire once stood.[else] and a huge roaring bonfire.[end if][paragraph break]You can go west or south. A cornfield lies to the north." 
 
 Hammock is an enterable scenery supporter in the Yard. "A hammock hangs between two trees."  
 
@@ -661,7 +684,7 @@ Instead of burning the whole kindling:
 [----------End of bonfire making -------]
 
 
-Smokehouse is west of the Yard. "An old ivy-covered smokehouse surrounded by a [italic type]bowling ball[roman type] garden. You can go east, west, or south. (or just type EXITS at anytime to see which way you can go.)"
+Smokehouse is west of the Yard. "An old ivy-covered smokehouse surrounded by a [italic type]bowling ball[roman type] garden. You can go east, west, or south. (or just type EXITS at any time to see which way you can go.)"
 
 The Shovel is an object. It is in the Smokehouse. "A rusty shovel is here. It looks like it would only work in sand."
 The description of the Shovel is "Looks like an ordinary shovel to me.".
@@ -673,7 +696,7 @@ Instead of taking the bowling balls:
 
 Understand "bowling ball" or "bowling ball garden" as Bowling balls.
 
-Fire Pit is south of The Smokehouse. "[if the player was in Parking]You pass by the back of the house and stumble upon a fire pit surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go north or return south to parking.[else]A  fire pit is surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go back to the Smoke House to the north or you can go south.[end if]"
+Fire Pit is south of The Smokehouse. "[if the player was in Parking]You pass by the back of the house and stumble upon a fire pit surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go north or return south to parking.[else]A fire pit is surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go back to the Smoke House to the north or you can go south.[end if]"
 
 The Fairy is scenery in The Fire Pit. "The inanimate, ornamental fairy appears to be twirling around, dancing, and enjoying life."
 
@@ -691,6 +714,8 @@ Chapter 3 Cornfield
 
 The Cornfield_a is a region. Corn Maze, Clearing, Dead End, Hidden Path, Secret Path, Cemetery are in the Cornfield_a..
 
+Every turn when a random chance of 1 in 4 succeeds and player is in Cornfield_a: say "[one of][italic type]A bird is chirping near by...[roman type][or][italic type]The breeze ruffles softly through the corn...[roman type][or][italic type]Well, at least if you get hungry, you have corn...[roman type][or][italic type]A groundhog runs past you...'[roman type][in random order]" [Just adding a bit more ambience while in cornfield.]
+
 Corn Maze is a room. "You stand at the entrance of a vast cornfield maze. [italic type]Tall stalks[roman type] surround you on all sides, you can go east or north into the corn."
 
 Tall Stalks are scenery in the Corn Maze. The description of the Tall Stalks is "It's a Maize Maze... get it? The stalks are normal cornstalks."
@@ -706,7 +731,7 @@ Secret Path is a room. "A narrow, hidden path reveals itself. It seems to lead d
 Cemetery is a room. "You've made it through the cornfield and reached the old cemetery. [paragraph break]You can exit the way you came, or maybe to the west."
 
 Tombstones are a thing in the Cemetery. They are fixed in place. "There are many old worn [italic type]tombstones[roman type] here."
-The description of the Tombstones is "The tombstones are so old, they are almost worn past recognition. One of them reads Zimrod Flathead, 1799-1893.".
+The description of the Tombstones is "The tombstones are so old; they are almost worn past recognition. One of them reads Zimrod Flathead, 1799-1893.".
 The read text of the tombstones is "Zimrod Flathead, 1799-1893."
 
 Before going west from the Hidden Path:
@@ -794,12 +819,12 @@ Broad Street is a room. "You are standing on Broad Street. [paragraph break]To t
 
 Sheldonian Theatre is a room. "Home to all public ceremonies at Oxford University, it was designed by Christopher Wren and built between 1664 and 1669. Wren was a professor of astronomy at the time but managed to design a marvel of a building. It was a D-shaped setup, modeled after Roman theaters. A [italic type]truss[roman type] spans the entire theater. It was named after Gilbert Sheldon, the Archbishop of Canterbury, and its primary financial backer. A [italic type]beautiful tapestry[roman type] hangs on one wall. [paragraph break]Exits are north, south and east."
 
-A truss is scenery in the Sheldonian Theatre. "The truss was designed by Christopher Wren to span the seventy feet necessary to put the entire theater under roof without supporting columns which could spoild the view."
+A truss is scenery in the Sheldonian Theatre. "The truss was designed by Christopher Wren to span the seventy feet necessary to put the entire theater under roof without supporting columns which could spoil the view."
 
 Understand "theater" as Sheldonian Theatre.
 Understand "Sheldonian Theater" as Sheldonian Theatre.
 
-Clarendon Building is a room. "This is a neoclassical building completed in 1715 to enable moving the University Presses out of the basement of the Sheldonian Theater. They couldn't work while plays were in progress, hence the necessity of the move.[paragraph break]As for your movement, You can go east or west."
+Clarendon Building is a room. "This is a neoclassical building completed in 1715 to enable moving the University Presses out of the basement of the Sheldonian Theater. They couldn't work while plays were in progress, hence the necessity of the move.[paragraph break]As for your movement, you can go east or west."
 
 A piece of paper is a thing. The piece of paper is in the Clarendon Building. "There is a piece of paper on the floor."
 The description of the piece of paper is "It's just a slip of paper, but it does appear to have some writing on it.".
@@ -807,7 +832,7 @@ The read text of the piece of paper is "I hope you are enjoying your journey. We
 
 Bodleian Library is a room. "You are at the entrance of the Bodleian Library, one of the oldest libraries in Europe. The door at the entrance of the Bodleian is adorned with coats of arms of many of the colleges.[paragraph break]To the south is Radcliffe Square, to the west, The Divinity School. North leads to the Sheldonian Theatre. You can enter the old Duke Humfrey's library to the east."
 
-Radcliffe Square is a room. "You are in Radcliffe Square. The sun is beaming and the sky is unusually blue for Oxford. [paragraph break]The exquisite Radcliffe Camera, or [italic type]radcam[roman type] stands to the south, the Bodleian Library to the north, and Convocation House to the east."
+Radcliffe Square is a room. "You are in Radcliffe Square. The sun is beaming, and the sky is unusually blue for Oxford. [paragraph break]The exquisite Radcliffe Camera, or [italic type]radcam[roman type], stands to the south, the Bodleian Library to the north, and Convocation House to the east."
 
 Radcam is scenery in Radcliffe Square. "The exquisite Radcliffe Camera"
 
@@ -817,7 +842,7 @@ Instead of examining the radcam:
 	Display the figure of radcam_image;
 	say "A magnificent circular building of Taynton stone."
 
-Radcliffe Camera is a room. "Called the Radcam for short, this is a centerpiece of Oxford. Its beautiful orange-brown Taynton stone almost glows in the morning sun. The majestic circular building, ensconced with Corinthian columns and topped by a high lead-covered dome and [italic type]cupola[roman type], was built between 1737 and 1749 in the grand Palladian style.[paragraph break]You are now inside this magnificent building which serves as a reading room for the Bodleian Library. You can exit south, southwest or north."
+Radcliffe Camera is a room. "Called the Radcam for short, this is a centerpiece of Oxford. Its beautiful orange-brown Taynton stone almost glows in the morning sun. The majestic circular building, ensconced with Corinthian columns and topped by a high lead-covered dome and [italic type]cupola[roman type], was built between 1737 and 1749 in the grand Palladian style.[paragraph break]You are now inside this magnificent building, which serves as a reading room for the Bodleian Library. You can exit south, southwest or north."
 
 The cupola is scenery in the Radcliffe Camera. "The cupola is the dome on top of the dome. The dome itself is the third largest in Britain."
 
@@ -855,7 +880,7 @@ The read text of the old chalkboard is "Sqrt(Pi) = Gamma f(1/2)".
 Understand "chalkboard" as old chalkboard.
 
 A water cannon is scenery in Cassie's office.
-The description of the water cannon is "Everytime you look at the water cannon, it sprays you in the face!".
+The description of the water cannon is "Every time you look at the water cannon, it sprays you in the face!".
 
 The hanging hammock chair is an enterable scenery supporter in Cassie's office.
 The description of the hanging hammock chair is "A free swinging handwoven cotton hammock chair with oak handles.".
@@ -896,14 +921,14 @@ The equipment is scenery on the countertop. "Delicate scales and glass test tube
 
 Convocation House is a room. "The Convocation house is primarily used for events. It was once used as a meeting place for the House of Commons. Its stone vaulted ceiling dates back to 1758-1759.[paragraph break]You can go north or east."
 
-The Turf Tavern is a room.  "[if the player was in Cassie's Office]You enter the 12th Century inn, Turf Tavern, from the front. It is very popular with Oxford Students.[paragraph break]You can go northeast or west.[otherwise] You head down New College Lane and shuffle past the tourists posing for pictures under the Hertford Bridge, or the Bridge of Sighs, so called for its similarity to the famous bridge in Venice. After passing under the bridge, you ducked into the very narrow alleyway known as St. Helen’s Passage. It is marked by a green street sign affixed to the wall, or you could easily miss it. Following the winding cobblestone passage leads you to the entrance of the pub where many famous alumni have enjoyed a drink or dinner. They built the Turf Tavern just outside the city walls in order to avoid jurisdiction of the colleges. It was a fitting place to discuss Quotient business.[paragraph break]You can go northeast or west."
+The Turf Tavern is a room. "[if the player was in Cassie's Office]You enter the 12th Century inn, Turf Tavern, from the front. It is very popular with Oxford Students.[paragraph break]You can go northeast or west.[otherwise]You head down New College Lane and shuffle past the tourists posing for pictures under the Hertford Bridge, or the Bridge of Sighs, so called for its similarity to the famous bridge in Venice. After passing under the bridge, you ducked into the very narrow alleyway known as St. Helen’s Passage. It is marked by a green street sign affixed to the wall, or you could easily miss it. Following the winding cobblestone passage leads you to the entrance of the pub where many famous alumni have enjoyed a drink or dinner. They built the Turf Tavern just outside the city walls in order to avoid jurisdiction of the colleges. It was a fitting place to discuss Quotient business.[paragraph break]You can go northeast or west."
 
 The Black Painted Board is a thing. It is in the Turf Tavern. It is fixed in place. "A traditional black painted board is mounted on a post and is filled with writing."
 The description of the Black Painted Board is "It looks like a chalkboard upon which they have painted many words.".
 The read text of the Black Painted Board is "Whilst here at Oxford University ---- in 1963 --- At the Turf Tavern, Bob Hawke, Former Austrailian Prime Minister entered the Guinness Book of Records after downing a Yard of Ale in 11 seconds.".
 Understand "board" as black painted board.
 
-Vaults_Garden is a room. "Vaults and Garden, is a beautiful cafe in the University Church of St. Mary the Virgin. There are outdoor tables here where people are enjoying some warm scones, raspberry jam, and traditional English tea . The smell of the fresh-baked scones is enchanting. [paragraph break]You can go west or north.”
+Vaults_Garden is a room. "Vaults and Garden, is a beautiful cafe in the University Church of St. Mary the Virgin. There are outdoor tables here where people are enjoying some warm scones, raspberry jam, and traditional English tea. The smell of the fresh-baked scones is enchanting. [paragraph break]You can go west or north.”
 The printed name of Vaults_Garden is "Vaults and Garden's".
 
 Narnia Lamp is a room. "You stumble across a Narnia lamp post near an oaken door. The oaken door is framed with two golden fauns. An inspirational stop for C.S. Lewis. This is a dead end."
@@ -959,7 +984,7 @@ Instead of unlocking the wooden door with the keycard:
 		
 Section 2 Old Safe, Gold Key, and Intelligence Papers 
 		
-The old safe is an enterable closed openable container. The old safe is in the Duke Humfreys Library. It is lockable and locked. The description is "An old safe is here. It has a cylindrical key hole."
+The old safe is an enterable closed openable container. The old safe is in the Duke Humfreys Library. It is lockable and locked. The description is "An old safe is here. It has a cylindrical keyhole."
 
 The old safe is fixed in place.
 
@@ -1023,7 +1048,7 @@ The Metaverse is a room. "The most obvious clue that you are in the metaverse is
 Dystopian 2049 is east of the Metaverse. "The difference between a world where people are totally addicted to their metasuits and the 1999 movie, The Matrix, would be that people would voluntarily spend many, if not most, of their waking hours in a pod that removed them from reality. There wouldn't need to be a digital rebellion to put them there.[paragraph break]The metaverse was the device that philosopher Robert Nozick referred to as an 'experience machine' in the thought experiment from his book Anarchy, State and Utopia. A machine that would allow us to only experience bliss. Robert believed that most people would decide to not plug in since they would know the experience was not real. In this dystopian vision of 2049, Robert was mistaken. Perhaps he underestimated how dystopian 2049 would become.[paragraph break]In this idea of the future, augmented reality glasses became as common as smartphones in the 2020s. As a result, society morphed. Buildings were bland cubes. The beauty was only viewable through the AR glasses almost everyone wore. The same was true for clothing. People simply designed virtual wardrobes, and their glasses emitted a tag corresponding to which outfit they wanted people to see. A quick touch to the temple of their AR glasses and their outfit morphed. If you were to remove your AR glasses, everyone was walking around in black spandex, past plain white buildings. It made the AR effect work better, and it was comfortable.[paragraph break]Homes didn’t need landscaping; it was added by the AR glasses. Holiday decorations were easy. You could morph your home into a scary haunted house for Halloween or Santa’s workshop for Christmas.[paragraph break]This changed the physical world immensely. There was no need for street signs or lane markings on roads. The remaining signs were fading and in disrepair. Now, all signage, labeling, and advertising were augmented on top of the physical world. And it wasn’t just advertising and directions. The real world was becoming bland. AR eliminated the need for physical decorations, beautiful color schemes, or landscaping. The beauty of new city developments was all provided through augmentation.
 If you were one of the few that still wandered into a physical store, there were no labels. The QR code on the plain cardboard box caused the box to transform into an interactive ad for the product when viewing the product through your AR glasses. With no glasses, it was a shelf full of brown cardboard boxes with QR codes. With AR glasses, it was a shelf of gleaming digital icons, floating videos, and interactive product displays. It was hard to live and work in this world without using AR.[paragraph break]The design of the physical world was disappearing into the AR facade. Why make anything look particularly good if you could just slap a coat of AR paint on it instead? Textures and colors gave way to black (clothing), white (buildings), and specific Pantone colors for different types of objects. All cars were a specific shade of brown. It was easier to paint the AR world on top of this strange, bland, monotone world that had blossomed. The world was now one giant green screen. At least when you weren’t fully inside the metaverse.[paragraph break]In this projected future, dependence on AR led to a dramatic increase in the use of Virtual Reality in society. In 2049, people used VR the way people used TV earlier in the century. It was the primary form of home entertainment. Just as many of the prior generation fell asleep to TV, people often just fell asleep in their virtual world, happy to be lying in a fantasy world of their own creation, away from what was becoming a more and more bland physical world, and away from the connection of physical human relationships. This was the real downfall of dystopian 2049.[paragraph break]Of course, you might just end up sleeping here if you can't get that suit off."
 
-Utopian 2049 is west of the Metaverse. "Technology isn't inherently bad. It has to do with how we use it. In this projected future, AR still existed, but it was only to augment the beauty of the real world, not replace it entirely. It made you less likely to peer at a sporting event through the lens of your camera. Instead, you could watch the event and still have some brief real-time statistics appear in the lower left hand corner of your field of vision. In Utopian 2049, the metaverse was here too. In this scenario, it was great for enhancing solo activities like working out, or playing video games with your far flung friends on the internet, but people still wanted to come back to their real world friends and live in the real world.[paragraph break]Too bad you might never be able to return!"
+Utopian 2049 is west of the Metaverse. "Technology isn't inherently bad. It has to do with how we use it. In this projected future, AR still existed, but it was only to augment the beauty of the real world, not replace it entirely. It made you less likely to peer at a sporting event through the lens of your camera. Instead, you could watch the event and still have some brief real-time statistics appear in the lower left-hand corner of your field of vision. In Utopian 2049, the metaverse was here too. In this scenario, it was great for enhancing solo activities like working out or playing video games with your far-flung friends on the internet, but people still wanted to come back to their real world friends and live in the real world.[paragraph break]Too bad you might never be able to return!"
 
 Future National Park is north of the Metaverse. "For the few remaining Luddites that shunned this strange new metaverse world of the dystopian future scenario, at least they picked up a few advantages. The world’s most beautiful outdoor spaces weren’t overcrowded anymore. Most just visited these sites virtually.[paragraph break]You are now in the heart of a grove of Redwoods. They tower over you. Making you feel peaceful.[paragraph break]Maybe this virtual world isn't so bad?"
 
@@ -1098,7 +1123,7 @@ Understand "CVG" as the Lunken Airport.
 
 The Cincinnati Area is a region. The Lunken Airport, Cincinnati Museum Center, The Cavern, IMAX Theater, and Skyline Chili are in the Cincinnati Area.
 
-Lunken Airport is a port. It is east of Cincinnati Museum Center. "A small private airfield close to downtown Cincinnati. The 1000 acre airfield was the largest municipal airfield in the world when it opened in 1925.[paragraph break]From here you can head west to the Cincinnati Museum Center."
+Lunken Airport is a port. It is east of Cincinnati Museum Center. "A small private airfield close to downtown Cincinnati. The 1000-acre airfield was the largest municipal airfield in the world when it opened in 1925.[paragraph break]From here, you can head west to the Cincinnati Museum Center."
 
 Cincinnati Museum Center is north of Skyline Chili. "This extravagant art déco passenger train station was built between 1929 and 1933 and has carvings of the [italic type]Greek God Mercury[roman type] on each side of its immense arched facade. It was the inspiration of the Hall of Justice in the DC comic universe. (So, I guess this means you are a DC hero instead of Marvel) The dramatic ceiling over the [italic type]rotunda lobby[roman type] is awe-inspiring. The one hundred and six feet tall, one hundred and eighty feet wide, half dome entrance is the second largest in the world, behind only the Sydney Opera House.[paragraph break]There is a Skyline Chile south of here. The IMAX Theater is to the west. A staircase leads down. You can return to the airport to the east."
 
@@ -1126,7 +1151,7 @@ The read text of the Museum Guide is "Today we have a special IMAX movie on Quan
 Understand "ad" as the advertisements.
 Understand "ads" as the advertisements.
 
-The IMAX Theater is west of the Cincinnati Museum Center. "The IMAX Theater fills the senses with it's gigantic wrap around screen and 44 laser focused speakers. Previews are currently playing. You would need to wait to see the feature film."
+The IMAX Theater is west of the Cincinnati Museum Center. "The IMAX Theater fills the senses with its gigantic wrap around screen and 44 laser focused speakers. Previews are currently playing. You would need to wait to see the feature film."
 
 preview is a number that varies. preview is initially 1.
 
@@ -1171,7 +1196,9 @@ Cave3 is west of Cave6.
 Skyline Chili is a room. "This is a staple of Cincinnati, the way cheesesteak is a staple of Philly, and music is a staple of Nashville. Whenever Jack and Sarah were in Cincinnati, they had to stop at Skyline. The old-fashion diner with its 50s style counter and iconic [italic type]clock[roman type] was a comforting throwback to two spies with a job that could often be uncomfortable.[paragraph break]The server passes out plastic circular dishes with oyster crackers and smiles as she walks away. The server heads back to the corral where the local delicacy is assembled. The [italic type]stainless-steel slab[roman type] in the middle of the corral is covered with mini hot dogs and a mound of shredded cheese. A large vat of chili is recessed in the middle of the island.
 The walls are decorated with [italic type]sports photos[roman type] of local teams."
 
-The stainless steel slab is scenery in the Skyline Chili. "Looking at the slab makes your mouth water."
+The stainless-steel slab is scenery in the Skyline Chili. "Looking at the slab makes your mouth water."
+
+Understand "stainless steel slab" as stainless-steel slab.
 
 The Sports Photos are scenery in Skyline Chili. "Old photos of the Cincinnati pro sports teams, FCC Cincinnati, the Reds, and the Bengals. Some photos were more than a decade old."
 
@@ -1206,7 +1233,7 @@ Building 336 is a room. It is east of Nela Park. "This was a research lab during
 
 Fluorescent Tube is a container in Building 336. "The fluorescent tube reminds you of a light saber. (except it doesn't light up)"
 
-The description of the Fluoresent Tube is "The fluorescent tube reminds you of a light saber, but it needs something to light it up."
+The description of the Fluorescent Tube is "The fluorescent tube reminds you of a light saber, but it needs something to light it up."
 
 The Fluorescent Tube is open.
 
@@ -1272,9 +1299,13 @@ Chapter 8 Tardis / Outerspace
 Understand "Earth" as the Spaceport.
 Understand "Space" as the Tardis.
 
-The Outerspace Area is a region. Spaceport, Tardis, The Control Center, The Airbnb, The Quantum View are in the Outerspace Area.
+The Outerspace Area is a region. Spaceport, Tardis, The Control Center, The Airbnb, The Quantum View, Flying through the Air, Flying through Space are in the Outerspace Area.
 
-Spaceport is a port. "Starbase, Texas is the town that surrounds the SpaceX launch and landing site near South Padre Island. Elon Musk started the town when he was perfecting the Starship. It has since grown into a thriving metropolis with many of the trappings of an even larger city. It was designed from the ground up to be ecologically friendly and ultra-high tech. The entire town runs on solar power. Battery backup and solar panels are distributed across all homes and commercial facilities but managed cooperatively. It is one giant virtual power plant. [bold type]This is the Spaceport for launches into space.[roman type]"
+Spaceport is a port. "Starbase, Texas is the town that surrounds the SpaceX launch and landing site near South Padre Island. Elon Musk started the town when he was perfecting the Starship. It has since grown into a thriving metropolis with many of the trappings of an even larger city. It was designed from the ground up to be ecologically friendly and ultra-high tech. The entire town runs on solar power. [italic type]Battery backup and solar panels[roman type] are distributed across all homes and commercial facilities but managed cooperatively. It is one giant virtual power plant. [bold type]This is the Spaceport for launches into space.[roman type]"
+
+Battery is scenery in Spaceport. "The megapacks store up the excess solar power during the day and distribute the power across the homes at night."
+
+Understand "battery" or "solar" or "solar panels" or "backup" or "battery backup" or "power" or "power plant" or "virtual power plant" as Battery.
 
 Tardis is a port. "[first time]The Dragon capsule begins firing its Draco thrusters to maneuver to the docking bay. The docking maneuver isn't simple but appears so because of the automatic nature of the Dragon capsule’s autopilot software. You draw closer and closer until you hear a loud locking sound and feel a slight shake as the docking clamps lock the rocket into place.[paragraph break]You've successfully docked at the airlock to TARDIS.[only] TARDIS is a boxy-looking station, similar in shape to a 1960s London police box like Dr. Who’s time machine, only much larger. Quotient had even painted it TARDIS blue. You are now in the airlock."
 
@@ -1397,7 +1428,7 @@ Figure of crater_image is the file “ngorongoro.png”
 
 Instead of examining the caldera:
 	Display the figure of crater_image;
-	say "The sun rays burst over the ancient caldera which covers almost a hundred square miles."
+	say "The sun rays burst over the ancient caldera, which covers almost a hundred square miles."
 
 The printed name of Arusha Airport is "Maasai Encampment".
 
@@ -1563,7 +1594,7 @@ Understand "DC" and "Washington" and "Washington DC" as the Andrews Air Force Ba
 
 The DC Area is a region. Andrews Air Force Base, National Mall, Washington Monument, The White House, The Lincoln Memorial, The National Cathedral, The Chapel, US Capitol, Smithsonian Castle, National Portrait Gallery, Lawsons Deli, Reflecting Pool, National Air Space Museum are in the DC Area.
 
-Andrews Air Force Base is a port. It is west of the Lincoln Memorial. "This large airforce base is west of Washington DC. (In other words, head east). Washington, D.C. was laid out into four quadrants, Northwest (NW), Northeast (NE), Southeast (SE) and Southwest (SW). Each of the quadrants was bounded by axes that radiated out from the U.S. Capitol building. Streets were labeled to indicate their quadrant. It was designed in a baroque style, with avenues emanating out from the many green spaces across the district.[paragraph break]Regardless, you still need to go east."
+Andrews Air Force Base is a port. It is west of the Lincoln Memorial. "This large AirForce base is west of Washington DC. (In other words, head east). Washington, D.C. was laid out into four quadrants, Northwest (NW), Northeast (NE), Southeast (SE) and Southwest (SW). Each of the quadrants was bounded by axes that radiated out from the U.S. Capitol building. Streets were labeled to indicate their quadrant. It was designed in a baroque style, with avenues emanating out from the many green spaces across the district.[paragraph break]Regardless, you still need to go east."
 
 National Mall is a room. "[if aslan is magic]You are standing on the expansive lawn of the National Mall, a green stretch in the heart of Washington, DC. The air is filled with the scent of blooming flowers. Your watch says it is 2050. An [italic type]older couple[roman type] is having a picnic on the mall. They look especially joyful.[endgamemall][otherwise]You are standing on the expansive lawn of the National Mall, a green stretch in the heart of Washington, DC. The air is filled with the murmur of tourists and the scent of blooming flowers.[paragraph break]The Capitol is to the east, the Smithsonian Castle is to the north, and the National Air and Space Museum is to the south. West leads back to the Washington Monument."
 
@@ -1582,17 +1613,17 @@ The White House is north of the Washington Monument. "You are quickly ushered in
 Armory Cabinet is an openable closed container in The White House. It is fixed in place. "A discreet armory cabinet is here."
 The description of the Armory Cabinet is "It is a sleek cabinet. Designed to not attract attention.".
 
-The Resolute Desk is scenery in the White House. "The resolute desk was designed by William Evenden, and is 6 feet wide. It was made from oak from the HMS Resolute. Queen Victoria sent the desk to the White House in 1880. The HMS Resolute had been abandoned in the Arctic after being trapped in ice. It eventually sailed itself with the currents to the Davis strait where it was discovered by an American whaling ship in 1855. The Americans returned the ship and it was decommissed in 1879. A second resolute desk sits in Buckingham Palace."
+The Resolute Desk is scenery in the White House. "The resolute desk was designed by William Evenden and is 6 feet wide. It was made from oak from the HMS Resolute. Queen Victoria sent the desk to the White House in 1880. The HMS Resolute had been abandoned in the Arctic after being trapped in ice. It eventually sailed itself with the currents to the Davis strait, where it was discovered by an American whaling ship in 1855. The Americans returned the ship, and it was decomissioned in 1879. A second resolute desk sits in Buckingham Palace."
 
 Understand "hms" or "hms resolute" as The Resolute Desk.
 
-Reflecting Pool is west of the Washington Monument. "The Reflecting Pool is a long, rectangular body of water that mirrors the sky and the surrounding monuments. [italic type]Ducks[roman type] glide across its surface, and visitors stroll along its edges, taking in the serene view.[paragraph break]To the west is the Lincoln Memorial, to the north is the National Portrat Gallery and to the east, the Washington Monument rises in the distance."
+Reflecting Pool is west of the Washington Monument. "The Reflecting Pool is a long, rectangular body of water that mirrors the sky and the surrounding monuments. [italic type]Ducks[roman type] glide across its surface, and visitors stroll along its edges, taking in the serene view.[paragraph break]To the west is the Lincoln Memorial, to the north is the National Portrait Gallery and to the east, the Washington Monument rises in the distance."
 
 Ducks are scenery in the Reflecting Pool. "They are just cruising around on top of the water like normal ducks."
 
 Understand "talk to ducks" as a mistake ("The ducks look at you as if you are crazy.")
 
-Lincoln Memorial is west of the Reflecting Pool. "The Lincoln Memorial sits majestically at the western end of the National Mall, a tribute to the 16th President of the United States. The [italic type]Statue of Lincoln[roman type] is seated here in contemplation.[paragraph break]The Reflecting Pool stretches out to the east, leading back to the National Mall. The National Cathedral is a few miles north of here. West returns to Andrews Airforce Base."
+Lincoln Memorial is west of the Reflecting Pool. "The Lincoln Memorial sits majestically at the western end of the National Mall, a tribute to the 16th President of the United States. The [italic type]Statue of Lincoln[roman type] is seated here in contemplation.[paragraph break]The Reflecting Pool stretches out to the east, leading back to the National Mall. The National Cathedral is a few miles north of here. West returns to Andrews AirForce Base."
 
 The Statue of Lincoln is scenery in the Lincoln Memorial. "This incredible Georgia White Marble statue weights 175 tons and is a scale such that if Lincoln were standing, he would be 28 feet tall."
 
@@ -1606,7 +1637,7 @@ Instead of examining the Statue of Lincoln:
 	
 The National Cathedral is north of the Lincoln Memorial. "This neo-gothic cathedral is the sixth largest in the world. Its stunning stone towers stand 676 feet tall. You notice a unique [italic type]grotesque[roman type] on the Northwest tower. You enter in reverence. The [italic type]west rose window[roman type] is awe inspiring.[paragraph break]A small hallway leads west."
 
-The grotesque is scenery in the National Cathedral. "One of the gargoyles or grotesques on the Northwest tower looks like a Darth Varder Mask. (Really)."
+The grotesque is scenery in the National Cathedral. "One of the gargoyles or grotesques on the Northwest tower looks like a Darth Vader Mask. (Really)."
 
 Understand "gargoyle" as grotesque.
 Understand "gargoyles" as grotesque.
@@ -1709,7 +1740,7 @@ The Wonders of Flight is scenery in the National Air Space Museum. The descripti
 
 Understand "exhibits" or "aircraft" or "displays" as Wonders of Flight.
 
-National Portrait Gallery is north of the Reflecting Pool. "[if aslan is magic]The National Portrait Gallery now features talking holgrams of all of the former Presidents.[otherwise]Occuping part of the old U.S. Patent office and holding a collection of over 23,000 works of art, including the only complete set of [italic type]presidential portraits[roman type] outside the White House, The National Portrait Gallery's sweeping courtyard is a large rectangular venue with a striking, glass-and-steel, wavy canopy overhead, flooding the area with natural light in stark contrast to the deep black granite floors. It is the same light and dark contrast of Quotient and the [italic type]Contingent[roman type]."
+National Portrait Gallery is north of the Reflecting Pool. "[if aslan is magic]The National Portrait Gallery now features talking holgrams of all of the former Presidents.[otherwise]Occupying part of the old U.S. Patent office and holding a collection of over 23,000 works of art, including the only complete set of [italic type]presidential portraits[roman type] outside the White House, The National Portrait Gallery's sweeping courtyard is a large rectangular venue with a striking, glass-and-steel, wavy canopy overhead, flooding the area with natural light in stark contrast to the deep black granite floors. It is the same light and dark contrast of Quotient and the [italic type]Contingent[roman type]."
 
 The Contingent is scenery in The National Portrait Gallery. "The Contingent was a terrorist group who believed they could solve immortality in less than ten years, soon enough to allow their founding members to become immortal. The Contingent wanted to become an enhanced race of superhumans, who would prevent all, except those they selected, from following in their immortal path. They wanted to control the rest of what they called base-level humans, threatening severe retaliation against any world power that tried to stop them. They were thwarted by Quotient in 2028."
 
@@ -1723,9 +1754,9 @@ Chapter 11 Vehicles
 
 Section 1 Pod
 
-The Pod is a container in the Hyperloop Station. The description of the Pod is "The Pod is sleek and shaped like a Jelly Bean. You can enter the pod, but there do not appear to be any controls."
+The Pod is a container in the Hyperloop Station. The description of the Pod is "The Pod is sleek and shaped like a jellybean. You can enter the pod, but there do not appear to be any controls."
 
-Understand "car" or "bean" or "jelly bean" or "carriage" as the Pod.
+Understand "car" or "bean" or "jellybean" or "carriage" as the Pod.
 
 Instead of taking the pod:
 	say "The Pod is a large vehicle, embedded in a hyperloop tube. It exists for transport. You are unable to take it.";
@@ -1756,7 +1787,7 @@ Instead of taking the Quotient Jet:
 	say "The jet is much to large for you to carry. You can enter the jet if you wish.";
 
 Instead of examining the Quotient Jet:
-	say "The Quotient Jet is a matte-black Gulfstream 950ER Superjet. It has what appears to be a small circular shelf on top of the cockpit. It features a custom interior featuring a conference table with a holographic projection screen. It also has a bedroom and the treat cupboard is stocked with fresh chocolate-covered strawberries every time you board.[if mount_var is 1]It appears there is a succulent on top of the cockpit like some sort of crazy hat.[else]";
+	say "The Quotient Jet is a matte-black Gulfstream 950ER Superjet. It has what appears to be a small circular shelf on top of the cockpit. It features a custom interior featuring a conference table with a holographic projection screen. It also has a bedroom, and the treat cupboard is stocked with fresh chocolate-covered strawberries every time you board.[if mount_var is 1]It appears there is a succulent on top of the cockpit like some sort of crazy hat.[else]";
 
 A room can be flyable or non-flyable. The Airstrip, Hidden Airbase, Spaceport, Burke Lakefront, Andrews Air Force Base, Lunken Airport, Arusha Airport and Narnia Lamp are flyable.
 
@@ -1834,6 +1865,10 @@ Understand "dock" as a mistake ("And how should we do that?").
 Instead of pushing the yellow button:
 	if player is not in rocket:
 		say "You can't push the button while outside the rocket.";
+	else if the rocket is in Flying through the Air:
+		say "You can't start the countdown while flying through the air!";
+	else if the rocket is in Flying through Space:
+		say "You can't start the countdown while flying through space!";
 	otherwise:
 		if the countdown begun is true:
 			say "The countdown is already in progress!";
@@ -1849,12 +1884,13 @@ Instead of pulling the blue lever:
 			say "The docking clamps are now open!";
 			now the docking clamps are 1;
 		otherwise:
-			if the rocket is in the blackness of space:
+			if the rocket is in the Blackness of Space:
 				say "You have successfully docked at TARDIS[paragraph break]";
 				move the rocket to TARDIS;
 				now the docking clamps are 0;
 				try looking;
 			otherwise:
+				say "The docking clamps are now closed.";
 				now the docking clamps are 0.
 
 Instead of pushing the black button:
@@ -1872,7 +1908,8 @@ Instead of pushing the black button:
 					say "The thundering sound of the Raptor engines could not be heard since you are in space, but it still does the trick... taking you home.[paragraph break]”;
 					try looking;
 				otherwise:
-					move the rocket to blackness of space;
+					move the rocket to Flying through the Air;
+					now the flying counter is 1;
 					say "The thundering sound of the Raptor engines could be heard for miles as your extreme Uber ride lifted off. The giant SpaceX Starship lifted off through a cloud of smoke and arched over the ocean as you yell 'To infinity and beyond!'[paragraph break]”;
 					try looking;
 					now the countdown begun is false;
@@ -1889,14 +1926,95 @@ Instead of pushing the red button:
 			say "You cannot eject once you leave earth.";
 		else if rocket is in Tardis:
 			say "You cannot eject while docked at TARDIS.";
+		else if rocket is in Flying through the Air:
+			say "The G forces prevent you from operating any controls.";
+		else if rocket is in Flying through Space:
+			say "The G forces prevent you from operating any controls. You should slow soon and regain the ability to work the controls.";
 		otherwise:
 			say "[paragraph break][bold type]WHOOP WHOOP, Ejection System Activated![roman type] You are thrown out of the rocket, experiencing 3g's in the process. After being thrown clear, another explosion rocks your world as your parachute is blasted open, saving you from certain death as you drift the short distance back to the launch pad.";
 			move player to spaceport.
 
 The Blackness of Space is a room. The Blackness of Space is part of the Outerspace Area. "[if player is in rocket]You are in the vastness of space, having successfully launched from the Earth. You can see the docking ring of TARDIS nearby, and the blue marble you call home off in the distance.[else]You are spacewalking in space... be careful not to drift away! You can see the docking ring of TARDIS as well as your favorite planet, Earth."
 
+Nutter butter is an edible thing in Blackness of Space. "A nutter butter is floating here."
+
 Instead of launching when the countdown begun is false:
     say "The rocket can't launch yet. The countdown hasn't started.";
+
+[flying... concept and portions adapted from "House of Dream of Moon" by The IF Whispers Team]
+
+Flying Through the Air is a room. "The SpaceX rocket shudders as it lifts off the pad toward the [italic type]final frontier[roman type]! You glance out the window as you race upward, the G forces pulling you deep into your seat. You can only watch as the [italic type]earth[roman type] moves away from you at a rapid clip. You start to wonder what you have done."
+
+Instead of going north in Flying Through the Air:
+	say "You are held to your seat by the G forces of the launch.";
+	
+Instead of going south in Flying Through the Air:
+	say "You are held to your seat by the G forces of the launch.";
+	
+Instead of going east in Flying Through the Air:
+	say "You are held to your seat by the G forces of the launch.";
+	
+Instead of going west in Flying Through the Air:
+	say "You are held to your seat by the G forces of the launch.";
+	
+Instead of going up in Flying Through the Air:
+	say "You are held to your seat by the G forces of the launch.";
+	
+Instead of going down in Flying Through the Air:
+	say "You are held to your seat by the G forces of the launch.";
+
+The flying counter is a number that varies. The Flying Counter is 0.
+
+Table of Flying
+message
+"Your life flashes before your eyes as you contemplate the speed at which you are leaving your world behind!"
+"You consider screaming, but realize noone is listening, except maybe TARDIS."
+"As the rocket races to the stars, the atmosphere thins and you begin transitioning to the inky blackness of space."
+"You continue your ascent into the atmosphere, and stars start to blink into view. Is that because you are passing out, or because you are leaving the atmosphere, you aren't sure."
+"You are almost there, stay awake!"
+"You have now fully left the atmosphere and the shuddering climb is now a smooth arrow-like approach to your goal."
+"Thrusters kick in to slow you as you see TARDIS racing toward you."
+"You have slowed and feel weightless."
+"You have stopped just outside of TARDIS. You notice a nutter-butter floating nearby. You meant to eat that before you took off."
+
+The earth is scenery in Flying Through the Air. It has description "The objects on the ground are getting smaller. Cars look like the matchbox cars of your childhood." 
+The clouds are scenery in Flying Through the Air. They have description "The clouds disappear as fast as they appear." Understand "air" as clouds. The spaceoverhead is scenery in Flying Through the Air. It has description "The transition to the inky blackness of space begins. It is a deep, soulless black, that is until the stars start to fade into view." 
+
+Understand "space" or "outer space" or "ink" or "inky blackness" as spaceoverhead.
+
+Every turn while flying counter > 0:
+	choose row flying counter in Table of Flying;
+	now flying counter is flying counter plus one;
+	if flying counter > number of rows in Table of Flying, now flying counter is zero;
+	say "[message entry][paragraph break]";
+	if flying counter is zero begin;
+		move the rocket to Blackness of Space;
+		try looking;
+	end if;
+	if flying counter is seven begin;
+		move the rocket to Flying Through Space;
+		try looking;
+	end if.
+	
+Instead of going north in Flying Through Space:
+	say "You are beginning to get comfortable with the fact that you are hundreds of miles above the ground.";
+	
+Instead of going south in Flying Through Space:
+	say "Now I can see why they call it the Blue Marble.";
+	
+Instead of going east in Flying Through Space:
+	say "You can't go east when you are hurtling through space. What does east even mean in deep space?";
+	
+Instead of going west in Flying Through Space:
+	say "Someday, you'll look back at flight foundly.";
+	
+Instead of going up in Flying Through Space:
+	say "You are already going up. At a rapid pace at that!";
+	
+Instead of going down in Flying Through Space:
+	say "What goes up, must come down, but not yet!";
+
+Flying Through Space is a room. "The first stage separates, and you feel the engines of the orbiter kick in. The roar of the engines is non-existent because of the vacuum of space, but their power can still be felt in the forceful jolts of the ship." 
 
 Book 5 - Things
 
@@ -1965,8 +2083,8 @@ The iron key is a passkey. It unlocks the iron cage.
 The description of the iron key is "The head of the key bears the image of a polar bear."
 
 A long wooden table is in the Farmhouse. 
-The description of the long wooden table is "It appears to be made of cherry with inlaid birdseye maple. The table has a tressel design, allowing room for a large dog to sleep underneath.".
-A jigsaw puzzle is on the table. 
+The description of the long wooden table is "It appears to be made of cherry with inlaid birds-eye maple. The table has a trestle design, allowing room for a large dog to sleep underneath.".
+A jigsaw puzzle is on the long wooden table. 
 Understand "picture" as the jigsaw puzzle. 
 Understand "piece" or "pieces" as the puzzle when the jagged piece is not visible. 
 Understand "jigsaw" as the jagged piece when the jigsaw puzzle is not visible. It is fixed in place. 
@@ -2210,7 +2328,7 @@ The flashlight is a light source. The Flashlight is in the Cemetery.
 Section 3 - More Things
 
 The Throne is a chair. It is in the Sheldonian Theatre.
-The description of the throne is "This stately thone has been sat in by many great minds over the years. It rests on exquisitely carved lion's feet. Is that something under it's paw?".
+The description of the throne is "This stately throne has been sat in by many great minds over the years. It rests on exquisitely carved lion's feet. Is that something under its paw?".
 Understand "paw" as Throne.
 
 Report entering the throne:
@@ -2477,7 +2595,7 @@ The read text of the medal is "First Class Spelunker Agent!"
 [-----]
 
 The succulent is a treasure. The succulent is in The Clearing.
-The description of the Succulent is "A small, green succulent, suitable for placing on on a shelf or even on top of a sleek, fast-flying jet.".
+The description of the Succulent is "A small, green succulent, suitable for placing on a shelf or even on top of a sleek, fast-flying jet.".
 The read text of the succulent is "eeeeeee!"
 
 Understand "shelf" or "circular shelf" or "table" or "mounting shelf" or "mount" or "circular mounting" or "circular mounting shelf" as top of jet.
@@ -2510,7 +2628,7 @@ The read text of the book is "Thirteen-year-old Allie loves capturing her dreams
 
 [italic type]Dreamcatchers[roman type] is a middle grade novel perfect for kids, or for anyone who never wants to grow up"
 
-The description of the book is "It's the book [italic type]Dreamcatchers[roman type] , by Bridget Simpson. (Rumor has it, some of it was written in The Lost Lodge.)".
+The description of the book is "It's the book [italic type]Dreamcatchers[roman type], by Bridget Simpson. (Rumor has it, some of it was written in The Lost Lodge.)".
 
 Understand "dreamcatchers" or "dream" or "catchers" or "dream catchers" as book.
 
@@ -2598,7 +2716,7 @@ Understand "shuffle deck" as a mistake ("You don't have time to play cards, you 
 [-----]
 
 A 3-way Chili is a treasure. The 3-way Chili is in Skyline Chili. 
-The description of the 3-way Chili is "Beautiful oval ceramic plate, carefullyl placed spaghetti noodles, bathed in the secretive chile and piled high with finely shredded cheese.".
+The description of the 3-way Chili is "Beautiful oval ceramic plate, carefully placed spaghetti noodles, bathed in the secretive chili and piled high with finely shredded cheese.".
 
 
 Counter_chili is a number that varies. Counter_chili is initially 0.
@@ -2617,7 +2735,7 @@ Understand "chili" or "manna" or "wonderous food" as 3-way Chili.
 [-----]
 
 A Mountain Dew is a treasure. The Mountain Dew is in Skyline Chili. The Mountain Dew can be drank or notdrank. The Mountain Dew is notdrank.
-The description of the Mountain Dew is "Yahoo, The neon green Mountain Dew is here.".
+The description of the Mountain Dew is "Yahoo, the neon green Mountain Dew is here.".
 The read text of Mountain Dew is "Ingredients are all Natural... Just kidding. Yahoo!".
 Understand "mt dew" as Mountain Dew.
 Understand "mtn dew" as Mountain Dew.
@@ -2691,7 +2809,7 @@ Instead of examining tardis communicator:
 	
 Table of tardis_quips
 index	quip_string1
-1	"I am TARDIS, the incredibly intelligent quantum computer Quotient uses. This communicator connects me to you everytime you examine it."
+1	"I am TARDIS, the incredibly intelligent quantum computer Quotient uses. This communicator connects me to you every time you examine it."
 2	"I like to talk. I am based on ChatGPT11. Too bad this communicator is one way. You just have to listen to me! You can however, talk to other people in the game. Try TALK to MARTIN, or ASK SARAH about MISSION"
 3	"Do you think I'm going to help you? I'm feeling kind of wonky. You should reboot me."
 4	"I hope you at least know you can shorten examine to just x. HELP will give you a few more tips if this is your first adventure."
@@ -2950,7 +3068,7 @@ Chapter 6 - Desmond
 desmond_carry is a number that varies. desmond_carry is initially 1.
 
 Desmond is a man. He is in the yard. "Desmond, Sarah's husband, the CTO at BrightStar, and a key ally in the mission against the Quantum Contingent."
-The description of Desmond is "Desmond is Sarah's husband and the CTO at BrightStar. He is not a spy, but is supportive of the team in his own way.[if desmond_carry is 1] He is holding a flint and a steel striker.".
+The description of Desmond is "Desmond is Sarah's husband and the CTO at BrightStar. He is not a spy but is supportive of the team in his own way.[if desmond_carry is 1] He is holding a flint and a steel striker.".
 Desmond is carrying the flint and the steel striker.
 
 Understand "husband" or "desi" or "des" or "desy" or "non spy" as Desmond.
@@ -3011,7 +3129,7 @@ Instead of examining Florin:
 Chapter 8 - Cassie
 
 Cassie is a woman in the Cassie's Office. "Professor Cassandra Eaton’s thing of beauty is a deep understanding of quantum mechanics and time. She is tall and her silvery-blond hair is wavy, almost to her shoulders. Her piercing blue eyes have both put dread in the hearts of students during oral exams and have enraptured a few men’s hearts over the years."
-The description of Cassie is "Cassie's thing of beauty is a deep understanding of quantum mechanics and time. She is the Lucasian Professor of Mathematics and head of all quantum studies at Oxford. She completed her PhD when she was only twenty-one and has been at Oxford ever since. Her deep understanding of quantum mechanics and the essence of time are world renowned. Today, her silvery-blond hair is pulled back, and her piercing blue eyes looks determined to make something work.".
+The description of Cassie is "Cassie's thing of beauty is a deep understanding of quantum mechanics and time. She is the Lucasian Professor of Mathematics and head of all quantum studies at Oxford. She completed her PhD when she was only twenty-one and has been at Oxford ever since. Her deep understanding of quantum mechanics and the essence of time are world renowned. Today, her silvery-blond hair is pulled back, and her piercing blue eyes look determined to make something work.".
 
 Understand "prof" or "eaton" or "professor cassandra" or "cassandra" or "professor" or "professor eaton" or "professor cassandra eaton" as Cassie.
 
@@ -3032,7 +3150,7 @@ Understand "pres" or "prez" or "bridge" or "leader of the free world" as Preside
 Chapter 10 - Prime Minister
 
 The Prime Minister is a man. He is in The White House. "Prime Minister Jason Stevenson is a skilled martial artist in addition to an ingenious political leader."
-	The description of The Prime Minister is "Prime Minister Jason Stevenson is an experienced leader with a deep understanding of European state affairs as well as genetics. He is a skilled martial artist, and has been known to relax in front of a videogame at times. 'Hello,' the Prime Minister says with a smile.".
+	The description of The Prime Minister is "Prime Minister Jason Stevenson is an experienced leader with a deep understanding of European state affairs as well as genetics. He is a skilled martial artist and has been known to relax in front of a videogame at times. 'Hello,' the Prime Minister says with a smile.".
 	
 Understand "minister" as Prime Minister.
 
@@ -3044,7 +3162,7 @@ The description of the Server is "The server looks the same as when Jack and Sar
 Chapter 12 - Robot
 
 The robot is a person. The robot is in The Lighting Institute. "There is GE robot here decorating the National Christmas tree."
-The description of the robot is "The Robot is a GE HAL 9000. It looks similar to the robot from Lost in Space. It was custom built for creating well lit Christmas trees.".
+The description of the robot is "The Robot is a GE HAL 9000. It looks similar to the robot from Lost in Space. It was custom built for creating well-lit Christmas trees.".
 
 Book 7 - Things People do
 
@@ -3056,12 +3174,12 @@ Instead of attacking Martin:
 	end the story.
 	
 Instead of attacking The President:
-	say "Your attack is pointless and you suddenly find yourself on the floor with your consiousness drifting away.[paragraph break]";
+	say "Your attack is pointless. You find yourself on the floor with your consiousness drifting away.[paragraph break]";
 	say "You awaken in a Maximum Security Prison.";
 	end the story.
 	
 Instead of attacking The Prime Minister:
-	say "The Prime Minister easily blocks your attack and you suddenly find yourself on the floor with your consiousness drifting away.[paragraph break]";
+	say "The Prime Minister easily blocks your attack and you find yourself in pain on the floor with your consiousness drifting away.[paragraph break]";
 	say "You awaken in a small prison cell in the Tower of London.";
 	end the story.
 	
@@ -3081,7 +3199,7 @@ Instead of giving the Jagged Piece to Martin:
 	now Martin is in Martin's office;
 	
 Instead of showing the light saber to Cassie:
-	say "[line break]That looks like that would work perfectly.";
+	say "[line break]That looks like that would work perfectly as an energy source for my console.";
 	
 Instead of giving the light saber to Cassie:
 	say "[line break]I'll need you to place it in the console while I calibrate it.";
@@ -3108,7 +3226,7 @@ Instead of giving the tube to Sarah:
 	say "[line break]You keep it. The Engineers at Nela have been doing undercover work for the US government for years. They are trying to make a glass tube capable of containing a great power source.";
 	
 Instead of showing the tube to [person]:
-	say "[line break]Did that come from the Lighting research lab in Cleveland? Maybe it can be used to make a light?";
+	say "[line break]Did that come from the Lighting research lab in Cleveland? Maybe it can be used to make a light? You should show it to Sarah.";
 	
 Instead of showing the Tranquilizer Gun to Florin:
 	say "[line break]That looks just like my gun. Now you can stop Robert!";
@@ -3123,7 +3241,7 @@ Instead of showing the Tranquilizer Gun to [person]:
 	say "[line break]I think Florin was looking for that.";
 	
 Instead of giving the Tranquilizer Gun to [person]:
-	say "[line break]I'm good, thanks.";
+	say "[line break]I'm good, thanks. Maybe Florin needs it.";
 	
 Instead of showing the map to Sarah:
 	say "[line break]Yes, I know where our secret airbases are, do you?";
@@ -3171,10 +3289,10 @@ Instead of showing the Mirrored Ball to [person]:
 	say "[line break]Cool! Where you get that? You should show it to Sarah, she'd get a kick out of it.";
 	
 Instead of showing the Tardis Communicator to Jack:
-	say "[line break]The TARDIS Communicator can be very helpful. Everytime you examine it, TARDIS will talk to you. Unfortunately, it's version 1.0, so it's a one way connection. You can't give TARDIS any commands.";
+	say "[line break]The TARDIS Communicator can be very helpful. Every time you examine it, TARDIS will talk to you. Unfortunately, it's version 1.0, so it's a one way connection. You can't give TARDIS any commands.";
 	
 Instead of showing the Tardis Communicator to Martin:
-	say "[line break]The TARDIS Communicator is useful. Everytime you examine it, TARDIS will talk to you. Since it's version 1.0, it's a one way connection. You can't give TARDIS any commands.";
+	say "[line break]The TARDIS Communicator is useful. Every time you examine it, TARDIS will talk to you. Since it's version 1.0, it's a one way connection. You can't give TARDIS any commands.";
 	
 Instead of showing the Tardis Communicator to Desmond:
 	say "[line break]Like I said, I'm just here for the s'mores. That looks like a spy thing.";
@@ -3294,8 +3412,8 @@ topic	response
 "computer"	"Oh, I don't talk about such things."
 "the computer"	"Oh, I don't talk about such things."
 "tardis"	"Tardis is from Dr. Who isn't it?"
-"mission"	"I need to make the entanglement stable!"
-"the mission"	"I need to make the entanglement stable!"
+"mission"	"I need to make the entanglement stable!Your mission is to help me do so. I need a power source and TARDIS needs to be rebooted. Jack is helping me with a laser in DC."
+"the mission"	"I need to make the entanglement stable! Your mission is to help me do so. I need a power source and TARDIS needs to be rebooted. Jack is helping me with a laser in DC."
 "Florin"	"Florin is a friend. I would recommend agents, he would develop them!"
 "President"	"President Bridget O'Connor is considered an outstanding leader."
 "Prime Minister"	"Martin always said he'd make a great Quotient Agent."
@@ -3453,7 +3571,9 @@ After telling Martin about something:
 Table of Martin's Replies
 Topic	Muse
 "mission"	"We need to help Cassie with her experiment. That means, rebooting the computer and getting to the Continum to help her. There may be more steps required. We're not sure yet."
-"the mission"	"We need to help Cassie with her experiment. That means, rebooting the computer and getting to the Continum to help her. There may be more steps required. We're not sure yet."
+"the mission"	"We need to help Cassie with her experiment. That means, rebooting the computer and getting to the Continum to help her with her quantum console. There may be other steps required. We're not sure yet."
+"quantum console"	"You'll have to ask Cassie about that."
+"console"	"You'll have to ask Cassie about that."
 "computer"	"Tardis is our computer. It is in space."
 "the computer"	"Tardis is our computer. It is in space."
 "tardis"	"Tardis is our computer. It is in space."
@@ -3536,16 +3656,16 @@ Instead of talking to Florin:
         say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else][one of]'Hi, how's it going,' you say casually.[paragraph break]'Well hello!' he replies ethusiatically.[or]'What are you up to?' you say.[paragraph break]'Just trying to put a lion back in a cage'[or]'Are you searching for Robert Clayton?'[paragraph break]'I am, but I've lost my gun, so he keeps running away.'[or]You decide against talking any further with Florin right now.[cycling]".
 
 Instead of talking to the President:
-        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else][one of]'Hello Madam President'[paragraph break]'Hello. I heard Martin has recruited you?'[or]'Yes Madam President' you say.[paragraph break]'It is important work. Good Luck.'[or]You decide against talking any further with the President right now.[cycling]".
+        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else][one of]'Hello Madam President'[paragraph break]'Hello. I heard Martin has recruited you?'[or]'Yes Madam President' you say.[paragraph break]'It is important work. Good Luck.'[or]One of the President's aides comes over and politely signals for you to move on.[cycling]".
 
 Instead of talking to the Prime Minister:
-        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else][one of]'Hello Sir.'[paragraph break]'Hello. I heard you are attempting to help Professor Eaton'[or]'Yes Sir' you say.[paragraph break]'That's great. She is a remarkable scientist. The best we have. Good Luck.'[or]You decide against talking any further with the Prime Minister right now.[cycling]".
+        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else][one of]'Hello Sir.'[paragraph break]'Hello. I heard you are attempting to help Professor Eaton'[or]'Yes Sir' you say.[paragraph break]'That's great. She is a remarkable scientist. The best we have. Good Luck.'[or]The Prime Minister's chief of staff nods politely to you, then turns his back to you and begins a private conversation with the Prime Minister.[cycling]".
 
 Instead of talking to Kara:
         say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if the player has the pendant][one of]You found the pendant! Good work![or]I know Cassie was looking for a power source too.[or]Good Luck![or]You decide against talking any further with Kara right now.[cycling][else][one of]'Hello, aren't you Kara?'[paragraph break]'Yes, I am. I'm looking for an ancient Pendant, what are you doing here?'[or]'Martin told me to help Cassie'[paragraph break]'Outstanding. Last time I saw her she was looking for a power source. She is amazing.'[or]'I'll see what I can do'[paragraph break]'Good luck!'[or]You decide against talking any further with Kara right now.[cycling]".
 
 Instead of talking to Server:
-        say "[one of]'Can I order?[paragraph break]'Why of course, but I already put in your standard order![or]'Can I get a Mountain Dew?'[paragraph break]'Coming right up!'[or]'Do you know the way to the Museum Center?'[paragraph break]'Sure. Head north, or is it south?'[or]You decide against talking any further with the server right now.[cycling]".
+        say "[one of]'Can I order?[paragraph break]'Why of course, but I already put in your standard order![or]'Can I get a Mountain Dew?'[paragraph break]'Coming right up!'[or]'Do you know the way to the Museum Center?'[paragraph break]'Sure. Head north, or is it south?'[or]The server rolls their eyes at you and walks away.[cycling]".
 
 
 Chapter 4 Smelling and Listening 
@@ -3582,6 +3702,8 @@ The scent of the succulent is "It has the smell of a beautiful rainforest, all i
 The scent of the strawberry is "A brief but satisfying hint of berry with a deep enveloping smell of cocoa."
 The scent of Chewbacca is "He smells like Old Spice."
 
+[Bread cutting... I really should move this somewhere else]
+
 The loaf of bread is in the Kitchen. The scent of the bread is "Ah -- fresh-baked bread.”
 The description of the loaf of bread is "It looks freshly baked!".
 
@@ -3603,6 +3725,8 @@ Check cutting into the bread with the paring knife:
 
 Check cutting into the scone with the paring knife:
 	say "You decide to savor small slices of this delicable scone. Each piece pleases you" instead.
+	
+Section 2 - Sounds
 
 A thing has some text called sound. The sound of a thing is usually "silence".
 
@@ -3619,8 +3743,6 @@ Definition: a thing is audible if the sound of it is not "silence".
 
 Before printing the name of something audible while listening to a room:
 	say "[sound] from the "
-	
-Section 2 - Sounds
 
 The sound of the rediwhip is "sploosh".
 The sound of the rocket is "rumble, rumble". 

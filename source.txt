@@ -475,7 +475,7 @@ The Kitchen is west of the Farmhouse. "A large kitchen with attached family room
 
 The Zebra Head is scenery in the Kitchen. "The zebra head is mounted as you might expect a wild animal head might be mounted in a game lodge. Surprisingly, this one appears to have a smile.".
 
-The River Rock Fireplace is scenery in the Kitchen. "The fireplace is made up of smooth, gray river rocks. The edges of the rocks protrude from the light colored mortar. A stunning piece of art and craftsmanship in its own right.".
+The River Rock Fireplace is scenery in the Kitchen. "The fireplace is made up of smooth, gray river rocks. The edges of the rocks protrude from the light-colored mortar. A stunning piece of art and craftsmanship in its own right.".
 
 Old Cellar is a room below The Headquarters Entrance. "On the side of the house, two old-fashioned cellar doors angle off the ground. After humming a quick tune and smiling for the hidden cameras, the vault-like locks on the doors release. Heavy tempered steel doors swing open to reveal rickety steps leading down to an old brick and moss-lined cellar.[paragraph break]You cautiously head down into the cellar."
 
@@ -846,7 +846,7 @@ Radcliffe Camera is a room. "Called the Radcam for short, this is a centerpiece 
 
 The cupola is scenery in the Radcliffe Camera. "The cupola is the dome on top of the dome. The dome itself is the third largest in Britain."
 
-Duke Humfreys Library is a room. "Duke Humfreys Library, with its ancient manuscripts and historic reading rooms, is a treasure trove of knowledge. It is also stunning to look at, but please refrain from making too much noise, or sneaking too many photographs."
+Duke Humfreys Library is a room. "Duke Humfrey's Library, with its ancient manuscripts and historic reading rooms, is a treasure trove of knowledge. It is also stunning to look at, but please refrain from making too much noise, or sneaking too many photographs."
 
 The photographs are scenery in the Duke Humfreys Library. 
 
@@ -1434,7 +1434,7 @@ The printed name of Arusha Airport is "Maasai Encampment".
 
 Stars is scenery. The stars are in Arusha Airport. The description is "The stars stretch out overhead for as far as the eye can see... they are like diamonds on an endless black velvet sea."
 
-Ngorogoro Crater is south of Arusha Airport. "Spectacular Ngorongoro Crater is the world’s largest inactive volcanic caldera. The crater is two thousand feet deep and covers almost a hundred square miles.The [italic type]sunrise[roman type] over Ngorongoro Crater pours rays of sunlight out over the massive crater. The tawny grasses of the plain in the center of the crater glow as the sunlight cascades down from the clouds. The edge of the [italic type]lake[roman type] in the center of the crater is pink.[paragraph break]Lalibela, Ethiopia lies to the west, the airport is to the north."
+Ngorogoro Crater is south of Arusha Airport. "Spectacular Ngorongoro Crater is the world’s largest inactive volcanic caldera. The crater is two thousand feet deep and covers almost a hundred square miles. The [italic type]sunrise[roman type] over Ngorongoro Crater pours rays of sunlight out over the massive crater. The tawny grasses of the plain in the center of the crater glow as the sunlight cascades down from the clouds. The edge of the [italic type]lake[roman type] in the center of the crater is pink.[paragraph break]Lalibela, Ethiopia lies to the west, the airport is to the north."
 
 The Lake is scenery. The Lake is in Ngorogoro Crater. "The edge of the lake appears pink from this distance because of the thousands of pink flamingos that make their home there."
 
@@ -1608,7 +1608,7 @@ Older couple is scenery in the National Mall. "Doesn't that look like Martin and
 
 Washington Monument is west of the National Mall. "The Washington Monument stands tall and proud, a towering obelisk that pierces the sky. Its marble facade glows in the sunlight, and the surrounding area is filled with visitors gazing up in awe. [paragraph break]Paths lead to the National Mall to the east, the Reflecting Pool to the west, and to the White House to the north."
 
-The White House is north of the Washington Monument. "You are quickly ushered into the Oval office through a secure entrance. You glance at the painting of Washington crossing the Delaware on the wall just outside the office as secret service rushes you in. In the Oval office, the famous [italic type]resolute desk[roman type], built from the oak timbers of the HMS Resolute (a British Arctic exploration ship) stands out, famed by the gold curtains on the bulletproof windows."
+The White House is north of the Washington Monument. "You are quickly ushered into the Oval Office through a secure entrance. You glance at the painting of Washington crossing the Delaware on the wall just outside the office as secret service rushes you in. In the Oval Office, the famous [italic type]resolute desk[roman type], built from the oak timbers of the HMS Resolute (a British Arctic exploration ship) stands out, famed by the gold curtains on the bulletproof windows."
 
 Armory Cabinet is an openable closed container in The White House. It is fixed in place. "A discreet armory cabinet is here."
 The description of the Armory Cabinet is "It is a sleek cabinet. Designed to not attract attention.".

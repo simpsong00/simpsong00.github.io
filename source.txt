@@ -286,7 +286,7 @@ if the noun is the ground and the player is not in Edgewater Park, say  "The gro
 
 A stack of zorkmid bills is nowhere. "On the ground sit 200 neatly stacked zorkmid bills." Understand "notes" or "banknotes" or "bank notes" or "zorkmids" as the bills. The description of the bills is "[banknotes]".
 
-The ground is a backdrop. The ground is everywhere. Understand "sand" and "earth" and "here" and "hole" as the ground. The description of the ground is "yep, that's the earth we walk on.".
+The ground is a backdrop. The ground is everywhere. Understand "sand" and "here" and "hole" and "land" as the ground. The description of the ground is "yep, that's the land we walk on.".
 
 The weather is a backdrop. The weather is everywhere. The description of the weather is "Another beautiful day in paradise!".
 
@@ -1296,7 +1296,6 @@ The Beach is scenery in Edgewater Park. "The beach is a beautiful tan sand, easy
 
 Chapter 8 Tardis / Outerspace
 
-Understand "Earth" as the Spaceport.
 Understand "Space" as the Tardis.
 
 The Outerspace Area is a region. Spaceport, Tardis, The Control Center, The Airbnb, The Quantum View, Flying through the Air, Flying through Space are in the Outerspace Area.
@@ -1937,6 +1936,7 @@ Instead of pushing the red button:
 The Blackness of Space is a room. The Blackness of Space is part of the Outerspace Area. "[if player is in rocket]You are in the vastness of space, having successfully launched from the Earth. You can see the docking ring of TARDIS nearby, and the blue marble you call home off in the distance.[else]You are spacewalking in space... be careful not to drift away! You can see the docking ring of TARDIS as well as your favorite planet, Earth."
 
 Nutter butter is an edible thing in Blackness of Space. "A nutter butter is floating here."
+The description of the Nutter butter is "The classic, peanut-shaped, cookie."
 
 Instead of launching when the countdown begun is false:
     say "The rocket can't launch yet. The countdown hasn't started.";
@@ -1949,19 +1949,19 @@ Instead of going north in Flying Through the Air:
 	say "You are held to your seat by the G forces of the launch.";
 	
 Instead of going south in Flying Through the Air:
-	say "You are held to your seat by the G forces of the launch.";
+	say "Too late to head back to earth, hold on!";
 	
 Instead of going east in Flying Through the Air:
-	say "You are held to your seat by the G forces of the launch.";
+	say "You are heading up.";
 	
 Instead of going west in Flying Through the Air:
-	say "You are held to your seat by the G forces of the launch.";
+	say "Wild Wild West... Sorry, the only way you can go is up.";
 	
 Instead of going up in Flying Through the Air:
-	say "You are held to your seat by the G forces of the launch.";
+	say "Ok, you continue to rush upward at an unbelievable rate!";
 	
 Instead of going down in Flying Through the Air:
-	say "You are held to your seat by the G forces of the launch.";
+	say "Don't you wish...";
 
 The flying counter is a number that varies. The Flying Counter is 0.
 
@@ -1978,9 +1978,10 @@ message
 "You have stopped just outside of TARDIS. You notice a nutter-butter floating nearby. You meant to eat that before you took off."
 
 The earth is scenery in Flying Through the Air. It has description "The objects on the ground are getting smaller. Cars look like the matchbox cars of your childhood." 
-The clouds are scenery in Flying Through the Air. They have description "The clouds disappear as fast as they appear." Understand "air" as clouds. The spaceoverhead is scenery in Flying Through the Air. It has description "The transition to the inky blackness of space begins. It is a deep, soulless black, that is until the stars start to fade into view." 
+The clouds are scenery in Flying Through the Air. They have description "The clouds disappear as fast as they appear." Understand "air" as clouds. 
+The final frontier is scenery in Flying Through the Air. It has description "The transition to the inky blackness of space begins. It is a deep, soulless black, that is until the stars start to fade into view." 
 
-Understand "space" or "outer space" or "ink" or "inky blackness" as spaceoverhead.
+Understand "outer space" or "ink" or "inky blackness" as the final frontier.
 
 Every turn while flying counter > 0:
 	choose row flying counter in Table of Flying;
@@ -2009,7 +2010,7 @@ Instead of going west in Flying Through Space:
 	say "Someday, you'll look back at flight foundly.";
 	
 Instead of going up in Flying Through Space:
-	say "You are already going up. At a rapid pace at that!";
+	say "You were already going up. At a rapid pace at that!";
 	
 Instead of going down in Flying Through Space:
 	say "What goes up, must come down, but not yet!";

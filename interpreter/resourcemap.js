@@ -46,7 +46,7 @@ StaticImageInfo = {
   "image": 8,
   "url": "interpreter/pict-8.png",
   "width": 450,
-  "height": 299
+  "height": 338
 }
 ,
 9: {
@@ -59,6 +59,13 @@ StaticImageInfo = {
 10: {
   "image": 10,
   "url": "interpreter/pict-10.png",
+  "width": 450,
+  "height": 299
+}
+,
+11: {
+  "image": 11,
+  "url": "interpreter/pict-11.png",
   "width": 450,
   "height": 254
 }

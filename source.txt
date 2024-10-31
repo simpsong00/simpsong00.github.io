@@ -31,6 +31,7 @@ Include Small Kindnesses by Aaron Reed.
 Include Extended Grammar by Aaron Reed.
 Include Basic Screen Effects by Emily Short.
 Include Swearing Reloaded by Shin.
+Include Postures by Emily Short.
 
 Chapter 3 Some helpful help tools from Emily Short's Bronze
 
@@ -178,7 +179,7 @@ Understand "credits" or "credit" as showing the credits.
 Showing the credits is an action out of world.
 
 Carry out showing the credits:
-	say "[italic type]Quotient, The Game[roman type] is written in Inform7. Inform7 is the work of Graham Nelson. First a shout-out to the people on Intfiction.org. They were enormously helpful. If I ever got stuck on how to code something, they would help me out! I also experimented with using ChatGPT to help me figure out some coding challenges. It did pretty well, but the people at Intfiction.org were better. Also a big shout out to my beta testers! In addition to family, that includes some great help from people that found the game through intfiction and discord. [paragraph break]Many of the description passages were adapted from my books. This game is a tongue-in-cheek adaptation of that world and it's characters. I took the cover photo of the Rock Church of St. George in Ethiopia and then used smartphone app Prisma to give it the wild color look. All other in game photos are personal photos that I took. (there are only 8, it's a 'text' adventure.)[paragraph break]This was my first Inform7 creation. I enjoyed making it and I hope you enjoy playing it. Now let's get adventuring![paragraph break]
+	say "[italic type]Quotient, The Game[roman type] is written in Inform7. Inform7 is the work of Graham Nelson. First a shout-out to the people on Intfiction.org. They were enormously helpful. If I ever got stuck on how to code something, they would help me out! I also experimented with using ChatGPT to help me figure out some coding challenges. It did pretty well, but the people at Intfiction.org were better. Also a big shout out to my beta testers! In addition to family, that includes some great help from people that found the game through intfiction and discord. [paragraph break]Many of the description passages were adapted from my books. This game is a tongue-in-cheek adaptation of that world and it's characters. I took the cover photo of the Rock Church of St. George in Ethiopia and then used smartphone app Prisma to give it the wild color look. All other in game photos are personal photos that I took. (there are only 9 others, it's a 'text' adventure.)[paragraph break]This was my first Inform7 creation. I enjoyed making it and I hope you enjoy playing it. Now let's get adventuring![paragraph break]
 [bold type]Imagine a slow scrolling set of credits now![roman type][paragraph break]";
 	repeat through the Table of Credits:
 		say fixed letter spacing;
@@ -195,7 +196,7 @@ Role
 "Game Inspiration........................Zork"
 "Book Inspiration........................The Quantum Contingent"
 "Second Book.............................Quantum Time"
-"Release.................................108"
+"Release.................................108.1b"
 
 
 Chapter 7 Magic Movements, Xyzzy, Magic Words
@@ -338,11 +339,13 @@ Chapter 1 When Play Begins
 When play begins:
 	say "Do you want to become an agent of Quotient, the global, independent spy agency? You are at the entrance to their top secret headquarters. Proceed down the lane to begin your mission and earn the rank of Secret Agent! If this is your first text adventure, just type [bold type]help[roman type]."
 
-Chapter 2 - Ports
+Chapter 2 - Ports and Chairs
 
 A port is a kind of room. Definition: a room is unflyable if it is not an port.
 Instead of going by a vehicle (called the flight) to somewhere unflyable:
     say "You can't drive the [the flight] off-road."
+
+A chair is a kind of supporter. A chair is always enterable. Every chair allows seated and standing. A chair is usually seated.
 
 Chapter 3 - player marks, initals on foot if in metaverse
 
@@ -449,12 +452,13 @@ The old-growth lilac are scenery in the Headquarters Entrance. "The massive lila
 
 Understand "lilac" or "magnolia" or "bushes" or "old-growth" as old-growth lilac.
 
-The porch swing is an enterable scenery supporter in the Headquarters Entrance. "The porch swing looks like a great place to read a book or unwinding after a long day of spy work."
+The porch swing is scenery in the Headquarters Entrance. The porch swing is a chair. "The porch swing looks like a great place to read a book or unwinding after a long day of spy work."
 
 Understand "swings" or "porch swings" as porch swing.
 
-Report entering the porch swing:
-	say "Oh, this is so relaxing. A great place for coffee and connections."
+Instead of sitting on the porch swing:
+	say "Oh, this is so relaxing. A great place for coffee and connections.";
+	continue the action.
 
 The Farmhouse is west of The Headquarters Entrance. "You cross the porch of the old Victorian home and enter the dining room. A [italic type]grape chandelier[roman type] hangs above the long table. From the [italic type]north window[roman type], you can see the [italic type]lawn[roman type], the hammock and the fields past the hammock to the north.[paragraph break]You can go east to exit the house or continue west into the kitchen you see in the next room."
 
@@ -545,12 +549,12 @@ Instead of touching the touch panels:
 
 Understand "monitor" or "mon" or "display" as monitors.
 
-A chair is a kind of supporter. A chair is always enterable. 
 A meeting chair is a chair. It is in the Conference Room. 
 The description of the meeting chair is "It's a contemporary-looking office chair."
 
-Report entering the meeting chair:
-	say "You sit in the chair and take in the view of the conference room. It's quite a room!"
+Instead of sitting on the meeting chair:
+	say "You sit in the chair and take in the view of the conference room. It's quite a room!";
+	continue the action.
 
 Martin's Office is north of the Conference Room. "This is Martin's office. Martin is the founder of Quotient. The office contains a beautiful [italic type]teak desk[roman type] with a leather chair and has a built-in [italic type]bookcase[roman type]. The room has a [italic type]coffered ceiling[roman type]. There is a [italic type]photo[roman type] on the wall."
 
@@ -568,8 +572,9 @@ The bookcase is scenery in the Martin's Office. "There is one book that catches 
 
 Understand "built-in" or "builtin" or "shelf" as bookcase.
 
-Report entering the leather chair:
-	say "Oh yes, it is very comfortable. You swivel back and forth in the chair, pretending to be Martin."
+Instead of sitting on the leather chair:
+	say "Oh yes, it is very comfortable. You swivel back and forth in the chair, pretending to be Martin.";
+	continue the action.
 
 The photo is scenery in the Martin's Office. "This photo appears to be of the hatch from the TV Show Lost. [italic type]Perhaps inspiration for a code?[roman type]"
 
@@ -830,7 +835,9 @@ A piece of paper is a thing. The piece of paper is in the Clarendon Building. "T
 The description of the piece of paper is "It's just a slip of paper, but it does appear to have some writing on it.".
 The read text of the piece of paper is "I hope you are enjoying your journey. Welcome to Oxford."
 
-Bodleian Library is a room. "You are at the entrance of the Bodleian Library, one of the oldest libraries in Europe. The door at the entrance of the Bodleian is adorned with coats of arms of many of the colleges.[paragraph break]To the south is Radcliffe Square, to the west, The Divinity School. North leads to the Sheldonian Theatre. You can enter the old Duke Humfrey's library to the east."
+Bodleian Library is a room. "You are at the entrance of the Bodleian Library, one of the oldest libraries in Europe. The [italic type]great gate[roman type] at the entrance of the Bodleian is open.[paragraph break]To the south is Radcliffe Square, to the North the Sheldonian Theatre. You can enter the old Duke Humfrey's library to the northwest or the Divinity School to the southwest."
+
+Great Gate is scenery in the Bodleian Library. "The large wooden doors of the great gate were constructed in the 17th century and the doors are adorned with crests of many of the coats of arms of the colleges of Oxford."
 
 Radcliffe Square is a room. "You are in Radcliffe Square. The sun is beaming, and the sky is unusually blue for Oxford. [paragraph break]The exquisite Radcliffe Camera, or [italic type]radcam[roman type], stands to the south, the Bodleian Library to the north, and Convocation House to the east."
 
@@ -846,32 +853,28 @@ Radcliffe Camera is a room. "Called the Radcam for short, this is a centerpiece 
 
 The cupola is scenery in the Radcliffe Camera. "The cupola is the dome on top of the dome. The dome itself is the third largest in Britain."
 
-Duke Humfreys Library is a room. "Duke Humfrey's Library, with its ancient manuscripts and historic reading rooms, is a treasure trove of knowledge. It is also stunning to look at, but please refrain from making too much noise, or sneaking too many photographs."
+Duke Humfreys Library is a room. "Duke Humfrey's Library, with its ancient manuscripts and historic reading rooms, is a treasure trove of knowledge. It is also stunning to look at, but please refrain from making too much noise, or sneaking too many photographs.[paragraph break]You can return to the great gate of the Bodleian to the southeast."
 
 The photographs are scenery in the Duke Humfreys Library. 
 
 Instead of taking photographs:
 	say "A red siren goes off, The librarian rushes over, whispering, 'You can't take photos here!'"
 
-Divinity School is a room. "A magnificent medieval building used for university ceremonies and lectures. The ceiling has elaborate lierne vaulting with 455 bosses, almost like stone fireworks bursting over your head. This is where the hospital scene in the Harry Potter movies was filmed.[paragraph break]You can go east or south."
+Divinity School is a room. "A magnificent medieval building used for university ceremonies and lectures. The ceiling has elaborate lierne vaulting with 455 bosses, almost like stone fireworks bursting over your head. This is where the hospital scene in the Harry Potter movies was filmed.[paragraph break]You can go northeast or south."
 
 A hospital bed is an enterable supporter. The hospital bed is in the Divinity School. "A hospital bed, left over from the Harry Potter movies is in the corner."
 The description of the hospital bed is "It's a classic hospital bed, propped such that it's patient could read.".
+The hospital bed allows seated and reclining.
 
-Report entering the hospital bed:
-	say "To imagine that Harry Potter was here!"
+Instead of sitting on the hospital bed:
+	say "To imagine that Harry Potter was here!";
+	continue the action.
 	
-Lying down is an action applying to nothing. Report lying down: say "You lie down for a while in the middle of the space, wondering about the point of existence, then get up again."
+Instead of lying on the hospital bed:
+	say "To imagine that Harry Potter was here!";
+	continue the action.
 
-Lying near is an action applying to one thing. Report lying near: say "You lie down next to [the noun] for a while, mumbling to yourself."
-
-Understand "beneath/under/by/near/beside/alongside/against" or "next to" or "in front of" as "[beside]".
-Understand "on/in/inside" or "on top of" as "[within]".
-Understand "lie down" as lying down.
-Understand "lie down [within] [something]" as entering.
-Understand "lie [beside] [something]" or "lie down [beside] [something]" as lying near.
-
-Cassie's Office is a room. "Cassie’s office reflects her personality. It is a cross between a free-spirited, nature-lover’s reading room, with plants and a [italic type]hanging hammock[roman type] chair, and the office of an eccentric science genius. It includes what looks like a laser-guided [italic type]water cannon[roman type] automatically spraying water at the plants.[paragraph break]A door leads to her lab to the north, another room is to the east."
+Cassie's Office is a room. "Cassie’s office reflects her personality. It is a cross between a free-spirited, nature-lover’s reading room, with plants, and the office of an eccentric science genius. It includes what looks like a laser-guided [italic type]cannon[roman type] automatically spraying water at the plants.[paragraph break]A door leads to her lab to the north, another room is to the east."
 
 An old chalkboard is a thing. It is in Cassie's office. "Mysterious equations fill an [italic type]old chalkboard[roman type] in the corner."
 The old chalkboard is fixed in place.
@@ -879,21 +882,24 @@ The description of the old chalkboard is "It is filled with mathematical equatio
 The read text of the old chalkboard is "Sqrt(Pi) = Gamma f(1/2)".
 Understand "chalkboard" as old chalkboard.
 
-A water cannon is scenery in Cassie's office.
-The description of the water cannon is "Every time you look at the water cannon, it sprays you in the face!".
+A cannon is scenery in Cassie's office.
+The description of the cannon is "Every time you look at the cannon, it sprays you in the face!".
 
-The hanging hammock chair is an enterable scenery supporter in Cassie's office.
+The hanging hammock chair is a chair in Cassie's office. "A free-swinging hammock chair is here."
 The description of the hanging hammock chair is "A free swinging handwoven cotton hammock chair with oak handles.".
 
-Report entering the hanging hammock:
-	say "Wow... what a great chair, I could read here for a long time."
+Instead of sitting on the hanging hammock:
+	say "Wow... what a great chair, I could read here for a long time.";
+	continue the action.
 
-The Virtual Reality Lab is a room. The Virtual Reality Lab is east of Cassie's office. "You are in the Virtual reality lab."
+The Virtual Reality Lab is a room. The Virtual Reality Lab is east of Cassie's office. "You are in the Virtual reality lab. It is a large, mostly empty room. The [italic type]floor[roman type] is a silvery hue."
+
+The floor is scenery in The Virtual Reality Lab. "It appears to be made of millions of small ball bearings."
 
 A metal sign is a thing in the Virtual Reality Lab. "A metal sign is mounted on the wall."
 The metal sign is fixed in place.
-The read text of the metal sign is "Caution! VR Simulations can be very lifelike.".
-The description of the metal sign is "The sign reads, Caution! VR Simulations can be very lifelike.".
+The read text of the metal sign is "Caution! VR Simulations can be very lifelike. The floor will automatically release when the VR suit is turned on. It will return to its locked state when the VR suit is turned off.".
+The description of the metal sign is "The sign is a large rectangular sign. It has writing on it.".
 
 The VR Suit is a wearable device in the Virtual Reality Lab. The description is "A sleek, futuristic Virtual reality headset, not much bigger than a normal set of eyeglasses as well as something that looks like a vest and gloves." The VR Suit can be activated or unactivated.
 
@@ -931,7 +937,11 @@ Understand "board" as black painted board.
 Vaults_Garden is a room. "Vaults and Garden, is a beautiful cafe in the University Church of St. Mary the Virgin. There are outdoor tables here where people are enjoying some warm scones, raspberry jam, and traditional English tea. The smell of the fresh-baked scones is enchanting. [paragraph break]You can go west or north.”
 The printed name of Vaults_Garden is "Vaults and Garden's".
 
-Narnia Lamp is a room. "You stumble across a Narnia lamp post near an oaken door. The oaken door is framed with two golden fauns. An inspirational stop for C.S. Lewis. This is a dead end."
+Narnia Lamp is a room. "You stumble across a Narnia lamp post near an oaken door. The oaken door is framed with two [italic type]golden fauns[roman type]. An inspirational stop for C.S. Lewis. This is a dead end."
+
+Golden Fauns are scenery in the Narnia lamp. "The Faun is a half-goat, half-man creature from Greek and Roman mythology. In [italic type]The Chronicles of Narnia[roman type], by C.S.Lewis, the character, Tumnus, was a faun."
+
+Understand "faun" as Golden Fauns.
 
 Aslan is a thing. Aslan is fixed in place. Aslan is in Narnia Lamp. Aslan can be magic or notmagic. Aslan is notmagic. "Aslan is a lion carved in the oaken door. It has a mystical glow."
 The description of Aslan is "Aslan is a wood carving of a Lion, but it is glowing.".
@@ -1121,11 +1131,12 @@ Chapter 6 Cincinnati
 Understand "Cincinnati" as the Lunken Airport.
 Understand "CVG" as the Lunken Airport.
 
-The Cincinnati Area is a region. The Lunken Airport, Cincinnati Museum Center, The Cavern, IMAX Theater, and Skyline Chili are in the Cincinnati Area.
+The Cincinnati Area is a region. The Lunken Airport, Cincinnati Museum Center, The Cavern, IMAX Theater, Smale Riverfront Park and Skyline Chili are in the Cincinnati Area.
 
-Lunken Airport is a port. It is east of Cincinnati Museum Center. "A small private airfield close to downtown Cincinnati. The 1000-acre airfield was the largest municipal airfield in the world when it opened in 1925.[paragraph break]From here, you can head west to the Cincinnati Museum Center."
+Lunken Airport is a port. It is east of Cincinnati Museum Center. "A small private airfield close to downtown Cincinnati. The 1000-acre airfield was the largest municipal airfield in the world when it opened in 1925.[paragraph break]From here, you can head west to the Cincinnati Museum Center or south to Skyline Chili."
 
-Cincinnati Museum Center is north of Skyline Chili. "This extravagant art déco passenger train station was built between 1929 and 1933 and has carvings of the [italic type]Greek God Mercury[roman type] on each side of its immense arched facade. It was the inspiration of the Hall of Justice in the DC comic universe. (So, I guess this means you are a DC hero instead of Marvel) The dramatic ceiling over the [italic type]rotunda lobby[roman type] is awe-inspiring. The one hundred and six feet tall, one hundred and eighty feet wide, half dome entrance is the second largest in the world, behind only the Sydney Opera House.[paragraph break]There is a Skyline Chile south of here. The IMAX Theater is to the west. A staircase leads down. You can return to the airport to the east."
+Cincinnati Museum Center is north of Smale RIverfront Park. "This extravagant art déco passenger train station was built between 1929 and 1933 and has carvings of the [italic type]Greek God Mercury[roman type] on each side of its immense arched facade. It was the inspiration of the Hall of Justice in the DC comic universe. (So, I guess this means you are a DC hero instead of Marvel) The dramatic ceiling over the [italic type]rotunda lobby[roman type] is awe-inspiring. The one hundred and six feet tall, one hundred and eighty feet wide, half dome entrance is the second largest in the world, behind only the Sydney Opera House.[paragraph break]There is a Skyline Chile south of here. The IMAX Theater is to the west. A staircase leads down. You can return to the airport to the east."
+
 
 The Greek God Mercury is scenery in the Museum Center. "The tall carvings stand guard on each side of the massive dome."
 
@@ -1151,6 +1162,26 @@ The read text of the Museum Guide is "Today we have a special IMAX movie on Quan
 Understand "ad" as the advertisements.
 Understand "ads" as the advertisements.
 
+Smale Riverfront Park is west of Skyline Chili. "This beautiful river walk has the [italic type]Ohio river[roman type] on one side and a beautiful view of the [italic type]Cincinnati skyline[roman type] on the other. The [italic type]Roebling Bridge[roman type] crosses the Ohio River here. [paragraph break]You can go east to Skyline Chili or north to the Cincinnati Museum Center."
+
+Swimming in is an action applying to one visible thing. Understand "swim in [something]" or "wade in [something]" as swimming in.
+Carry out swimming in: say "Nah, not today."
+
+Vague swimming is an action applying to nothing. Understand "swim" or "go swimming" as vague swimming.
+Carry out vague swimming: say "Nah, not today."
+
+The Ohio River is scenery in Smale Riverfront Park. "The mighty Ohio."
+
+Cincinnati Skyline is scenery in Smale Riverfront Park. "The skyline is framed by the Bengals stadium on one side and the Great American Ballpark on the other. The tiara on top of the Great American Building is reminiscent of CIncinnati's nickname, The Queen City."
+
+The Roebling Bridge is scenery in Smale Riverfront Park. "This stunning blue bridge was the prototype for the Brooklyn Bridge in NYC."
+
+Figure of bridge_image is the file “bridge.png”
+
+Instead of examining the Roebling Bridge:
+	Display the figure of bridge_image;
+	say "This stunning blue bridge was the prototype for the Brooklyn Bridge in NYC."
+
 The IMAX Theater is west of the Cincinnati Museum Center. "The IMAX Theater fills the senses with its gigantic wrap around screen and 44 laser focused speakers. Previews are currently playing. You would need to wait to see the feature film."
 
 preview is a number that varies. preview is initially 1.
@@ -1169,7 +1200,7 @@ After waiting when the player is in the IMAX Theater:
 	if the player is in the IMAX Theater, increase the IMAX waiting count by 1;
 	if the player is in the IMAX Theater and the IMAX waiting count is 2:
 		now preview is 0;
-		say "The main feature finally starts!! Professor Eaton is on the screen in her lab. The camera zooms in and she says 'What if we could send messages across time. My console requires an enormous amount of energy to enable entanglement stabilization by means of the quantum Zeno effect. It[line break]' ... CRASH... a loud noise interrupts and the movie stops. House lights are turned on, and an employee announces over the speakers: [line break]'Sorry folks, the film broke, the movie is now over.";
+		say "The main feature finally starts!! Professor Eaton is on the screen in her lab. The camera zooms in and she says 'What if we could send messages across time. My console requires an enormous amount of energy to enable entanglement stabilization by means of the quantum Zeno effect. It'[paragraph break]     ... CRASH... a loud noise interrupts and the movie stops. House lights are turned on, and an employee announces over the speakers: [paragraph break]'Sorry folks, the film broke, the movie is now over.'";
 		increase the score by 5.
 
 A theater poster is a thing in the IMAX Theater. It is fixed in place. "A theater poster, featuring Professer Cassandra Eaton is mounted at the doorway."
@@ -1193,8 +1224,7 @@ A cave room called Cave6 is north of Cave2.
 Cave3 is west of Cave6.
 
 
-Skyline Chili is a room. "This is a staple of Cincinnati, the way cheesesteak is a staple of Philly, and music is a staple of Nashville. Whenever Jack and Sarah were in Cincinnati, they had to stop at Skyline. The old-fashion diner with its 50s style counter and iconic [italic type]clock[roman type] was a comforting throwback to two spies with a job that could often be uncomfortable.[paragraph break]The server passes out plastic circular dishes with oyster crackers and smiles as she walks away. The server heads back to the corral where the local delicacy is assembled. The [italic type]stainless-steel slab[roman type] in the middle of the corral is covered with mini hot dogs and a mound of shredded cheese. A large vat of chili is recessed in the middle of the island.
-The walls are decorated with [italic type]sports photos[roman type] of local teams."
+Skyline Chili is south of Lunken Airport. "This is a staple of Cincinnati, the way cheesesteak is a staple of Philly, and music is a staple of Nashville. Whenever Jack and Sarah were in Cincinnati, they had to stop at Skyline. The old-fashion diner with its 50s style counter and iconic [italic type]clock[roman type] was a comforting throwback to two spies with a job that could often be uncomfortable.[paragraph break]The server passes out plastic circular dishes with oyster crackers and smiles as she walks away. The server heads back to the corral where the local delicacy is assembled. The [italic type]stainless-steel slab[roman type] in the middle of the corral is covered with mini hot dogs and a mound of shredded cheese. A large vat of chili is recessed in the middle of the island. The walls are decorated with [italic type]sports photos[roman type] of local teams.[paragraph break]You can go west to Smale Park or north to Lunken Airport."
 
 The stainless-steel slab is scenery in the Skyline Chili. "Looking at the slab makes your mouth water."
 
@@ -1218,7 +1248,9 @@ The Rock & Roll Hall of Fame is scenery in Burke Lakefront. "The I.M. Pei design
 Understand "Hall of Fame" as Rock & Roll Hall of Fame.
 Understand "Rock and Roll" as Rock & Roll Hall of Fame.
 
-Nela Park is a a room. It is south of Burke Lakefront. "Welcome to the nation's first industrial park (NELA: National Electric Lamp Association). It is where many engineering [italic type]nimrods[roman type] worked on exotic light sources. Now it is mostly deserted except for a few elderly lighting engineers still trying to solve end-darkening.[paragraph break]There are buildings to the east and west. Heading north takes you back to the airport."
+Nela Park is a a room. It is south of Burke Lakefront. "Welcome to the nation's first industrial park (NELA: National Electric Lamp Association). It is where many engineering [italic type]nimrods[roman type] worked on exotic light sources. Now it is mostly deserted except for a few elderly lighting engineers still trying to solve [italic type]end-darkening[roman type].[paragraph break]There are buildings to the east and west. Heading north takes you back to the airport."
+
+End Darkening is scenery in Nela Park. "End darkening occurs when the cathode vaporizes and deposits the metal on the glass tube wall. However, I don't think these engineers are really working on solving end-darkening since these bulbs like these were phased out years ago."
 
 After going to Nela Park for the first time:
 	try looking;
@@ -1229,9 +1261,11 @@ Nimrods are scenery in Nela Park. "Nimrod was an affectionate term used for the 
 
 Understand "nimrod" or "engineers" or "engineer" as Nimrods.
 
-Building 336 is a room. It is east of Nela Park. "This was a research lab during the peak of Lighting work at Nela Park. Scientists worked on many elaborate devices in these labs. The lab is lined with cabinets and there is a pile of fluorescent tubes on the floor."
+Building 336 is a room. It is east of Nela Park. "This was a research lab during the peak of Lighting work at Nela Park. Scientists worked on many elaborate devices in these labs. The lab is lined with cabinets."
 
-Fluorescent Tube is a container in Building 336. "The fluorescent tube reminds you of a light saber. (except it doesn't light up)"
+The Cabinet is scenery in building 336. It is an openable container. It is closed. The description of the cabinet is "A non-descript lab cabinet."
+
+Fluorescent Tube is a container in Building 336. "The fluorescent tube on the cabinet reminds you of a light saber. (except it doesn't light up)"
 
 The description of the Fluorescent Tube is "The fluorescent tube reminds you of a light saber, but it needs something to light it up."
 
@@ -1280,9 +1314,14 @@ Understand "ship" as Millenium Falcon.
 Chewbacca is thing. It is part of the Millenium Falcon. 
 The description of Chewbacca is "Hairy little guy isn't he."
 
-Edgewater Park is a room. It is west of Burke Lakefront. "This is the [italic type]beach[roman type] on the 'North Coast'... sand, sun and fun! The sand feels good between your toes."
+Edgewater Park is a room. It is west of Burke Lakefront. "This is the [italic type]beach[roman type] on the 'North Coast'... sand, sun and fun! [italic type]Lake Erie[roman type] stretches on for as far as the eye can see. The sand feels good between your toes."
+
+Lake Erie is scenery in Edgewater Park. "Kids are splashing in the water. A large barge in the distance looks small. A pleasure boat is docked not too far off shore."
 
 The Cleveland Sign is in Edgewater Park. "Tourists love to get their pictures at the iconic [italic type]Cleveland Sign[roman type] with the lake and the city skyline in the background. The sign blocks you from going further west."
+
+Instead of swimming in Lake Erie:
+	say "You take your shoes off and wade into the cool water. The sand between your toes and the water feels good as the sun shines down on you. After a moment, you step back out of the water, dry off and put your shoes back on."
 
 Figure of cleveland_image is the file “cleveland.png”
 
@@ -1292,7 +1331,7 @@ Instead of examining the Cleveland Sign:
 	
 The read text of Cleveland Sign is "Surprisingly, it reads Cleveland."
 
-The Beach is scenery in Edgewater Park. "The beach is a beautiful tan sand, easy to dig, and not too crowded. The waves lap against the shore."
+The Beach is scenery in Edgewater Park. "The beach is a beautiful tan sand, easy to dig, and not too crowded. The waves lap against the shore. A yoga class is going on near the concession stand. This beach would be perfect for a proposal."
 
 Chapter 8 Tardis / Outerspace
 
@@ -1433,9 +1472,9 @@ The printed name of Arusha Airport is "Maasai Encampment".
 
 Stars is scenery. The stars are in Arusha Airport. The description is "The stars stretch out overhead for as far as the eye can see... they are like diamonds on an endless black velvet sea."
 
-Ngorogoro Crater is south of Arusha Airport. "Spectacular Ngorongoro Crater is the world’s largest inactive volcanic caldera. The crater is two thousand feet deep and covers almost a hundred square miles. The [italic type]sunrise[roman type] over Ngorongoro Crater pours rays of sunlight out over the massive crater. The tawny grasses of the plain in the center of the crater glow as the sunlight cascades down from the clouds. The edge of the [italic type]lake[roman type] in the center of the crater is pink.[paragraph break]Lalibela, Ethiopia lies to the west, the airport is to the north."
+Ngorogoro Crater is south of Arusha Airport. "Spectacular Ngorongoro Crater is the world’s largest inactive volcanic caldera. The crater is two thousand feet deep and covers almost a hundred square miles. The [italic type]sunrise[roman type] over Ngorongoro Crater pours rays of sunlight out over the massive crater. The tawny grasses of the plain in the center of the crater glow as the sunlight cascades down from the clouds. The edge of the [italic type]water[roman type] in the center of the crater is pink.[paragraph break]Lalibela, Ethiopia lies to the west, the airport is to the north."
 
-The Lake is scenery. The Lake is in Ngorogoro Crater. "The edge of the lake appears pink from this distance because of the thousands of pink flamingos that make their home there."
+The water is scenery. The water is in Ngorogoro Crater. "The edge of the lake appears pink from this distance because of the thousands of pink flamingos that make their home there."
 
 The Sunrise is scenery. The Sunrise is in Ngorogoro Crater. "The sun rays burst over the ancient caldera which covers almost a hundred square miles."
 
@@ -1643,7 +1682,9 @@ Understand "gargoyles" as grotesque.
 
 The West Rose Window is scenery in the National Cathedral. "Both President Jimmy Carter and Queen Elizabeth II were present for its dedication. It appears as if it would be good at refracting light. It was after all created in reference to God's line 'Let there be light'"
 
-The Chapel is west of the National Cathedral. "You wander into a small chapel that might hold 8 people. A perfect place to meditate or pray."
+The Chapel is west of the National Cathedral. "You wander into a small chapel that might hold 8 people. A perfect place to meditate or pray. There is a small wooden [italic type]pew[roman type] here."
+
+The Pew is a chair in the Chapel. "A modest wooden pew."
 
 The laser is a device. "A laser has popped up through a stone floor tile. It is mounted on an exquisitly carved wooden stand."
 The laser can be energized or notenergized. The laser is nowhere. The laser is notenergized. The laser can be scored or unscored.
@@ -1714,7 +1755,7 @@ The sky is a backdrop. It is in DC. The description is "A beautiful blue sky day
 Praying is an action applying to nothing. Understand "pray" as praying. 
 Check praying:
 if the player is in the National Cathedral, say "Your prayers are heard." instead;
-if the player is not in The Chapel, say "Your prayers are sent toward the heavens." instead;
+if the player is not seated on the pew in The Chapel, say "Your prayers are sent toward the heavens." instead;
 
 Carry out praying:
 	say "From the distance the sound of a lone trumpet is heard. You can faintly hear a song bird until a loud clunk disturbs your prayer.";
@@ -1943,7 +1984,7 @@ Instead of launching when the countdown begun is false:
 
 [flying... concept and portions adapted from "House of Dream of Moon" by The IF Whispers Team]
 
-Flying Through the Air is a room. "The SpaceX rocket shudders as it lifts off the pad toward the [italic type]final frontier[roman type]! You glance out the window as you race upward, the G forces pulling you deep into your seat. You can only watch as the [italic type]earth[roman type] moves away from you at a rapid clip. You start to wonder what you have done."
+Flying Through the Air is a room. "The SpaceX rocket shudders as it lifts off the pad toward the [italic type]final frontier[roman type]! You glance out the window as you race upward, the G forces pulling you deep into your seat. You can only watch as the [italic type]earth[roman type] moves away from you at a rapid clip."
 
 Instead of going north in Flying Through the Air:
 	say "You are held to your seat by the G forces of the launch.";
@@ -1967,7 +2008,7 @@ The flying counter is a number that varies. The Flying Counter is 0.
 
 Table of Flying
 message
-"Your life flashes before your eyes as you contemplate the speed at which you are leaving your world behind!"
+"Your life flashes before your eyes as you contemplate the speed at which you are leaving your world behind! You start to wonder what you have done."
 "You consider screaming, but realize noone is listening, except maybe TARDIS."
 "As the rocket races to the stars, the atmosphere thins and you begin transitioning to the inky blackness of space."
 "You continue your ascent into the atmosphere, and stars start to blink into view. Is that because you are passing out, or because you are leaving the atmosphere, you aren't sure."
@@ -1979,7 +2020,7 @@ message
 
 The earth is scenery in Flying Through the Air. It has description "The objects on the ground are getting smaller. Cars look like the matchbox cars of your childhood." 
 The clouds are scenery in Flying Through the Air. They have description "The clouds disappear as fast as they appear." Understand "air" as clouds. 
-The final frontier is scenery in Flying Through the Air. It has description "The transition to the inky blackness of space begins. It is a deep, soulless black, that is until the stars start to fade into view." 
+The final frontier is scenery in Flying Through the Air. It has description "To boldly go where noone has gone before. Maybe there is a reason noone has gone here before?" 
 
 Understand "outer space" or "ink" or "inky blackness" as the final frontier.
 
@@ -2537,7 +2578,7 @@ Instead of taking the Mirrored Ball:
 		say "The mirrored ball needs to stay where it is.";
 	else if Mirrored Ball is not in the location:
 		say "What Mirrored Ball?";
-	else if the Mirrored Ball is in the Old Barn and the Player is not on a chair:
+	else if the Mirrored Ball is in the Old Barn and the Player is not standing on a chair:
 		say "The Mirrored Ball is too high to reach!";
 	otherwise:
 		continue the action.
@@ -3174,6 +3215,11 @@ Instead of attacking Martin:
 	say "You awaken in a small town jail cell in North Dakota. Your memory has been erased.";
 	end the story.
 	
+Instead of attacking Sarah:
+	say "Your attack is easily blocked as she flips you to the ground and karate chops you in the neck. You find your consiousness drifting away.[paragraph break]";
+	say "You awaken in the Abyss prison in Gore, Ethiopia. Your memory has been erased.";
+	end the story.
+	
 Instead of attacking The President:
 	say "Your attack is pointless. You find yourself on the floor with your consiousness drifting away.[paragraph break]";
 	say "You awaken in a Maximum Security Prison.";
@@ -3182,6 +3228,13 @@ Instead of attacking The President:
 Instead of attacking The Prime Minister:
 	say "The Prime Minister easily blocks your attack and you find yourself in pain on the floor with your consiousness drifting away.[paragraph break]";
 	say "You awaken in a small prison cell in the Tower of London.";
+	end the story.
+	
+Instead of attacking Cassie:
+	say "A laser guided dart shoots you in the neck. You fall fast asleep.[paragraph break]";
+	say "You awaken in on a dirt trail in Oregon in 1848. Two weeks later:[paragraph break]";
+	say fixed letter spacing;
+	say "You die from dysentary.*[roman type][paragraph break][italic type]          * in honor of Oregon Trail.";
 	end the story.
 	
 Chapter 2  Showing / Giving / Screaming 
@@ -3200,118 +3253,131 @@ Instead of giving the Jagged Piece to Martin:
 	now Martin is in Martin's office;
 	
 Instead of showing the light saber to Cassie:
-	say "[line break]That looks like that would work perfectly as an energy source for my console.";
+	say "[line break]Cassie's eyes brighten, 'That looks like that would work perfectly as an energy source for my console.'";
 	
 Instead of giving the light saber to Cassie:
-	say "[line break]I'll need you to place it in the console while I calibrate it.";
+	say "[line break]Cassie stops you. 'I'll need you to place it in the console while I calibrate it.'";
 	
 Instead of showing the Crystal to Cassie:
-	say "[line break]We need some way to contain it's power.";
+	say "[line break]Cassie's piercing blue eyes capture you as she says, 'We need some way to contain it's power.'";
 	
 Instead of giving the Crystal to Cassie:
-	say "[line break]You keep it. We need some way to contain it's power before it is of use to me.";
+	say "[line break]Cassie shakes her head, 'You keep it. We need some way to contain it's power before it is of use to me.'";
 	
 Instead of showing the Crystal to [person]:
-	say "[line break]Wow, you got the Crystal. You need to get that to Cassie right away!";
+	say "[line break]'Wow, you got the Crystal. You need to get that to Cassie right away!'";
 			
 Instead of showing the light saber to [person]:
-	say "[line break]Wow, a light saber!";
+	say "[line break]'Wow, a light saber!'";
 	
 Instead of giving the light saber to [person]:
-	say "[line break]Wow, a light saber! you should keep it.";
+	say "[line break]'Wow, a light saber! you should keep it.'";
 	
 Instead of showing the tube to Sarah:
-	say "[line break]The Engineers at Nela have been doing undercover work for the US government for years. They are trying to make a glass tube capable of containing a great power source.";
+	say "[line break]Sarah looks closely at the tube. 'The Engineers at Nela have been doing undercover work for the US government for years. They are trying to make a glass tube capable of containing a great power source. Maybe this is their work?'";
 	
 Instead of giving the tube to Sarah:
-	say "[line break]You keep it. The Engineers at Nela have been doing undercover work for the US government for years. They are trying to make a glass tube capable of containing a great power source.";
+	say "[line break]Sarah stops you. 'You keep it. The Engineers at Nela have been doing undercover work for the US government for years. They are trying to make a glass tube capable of containing a great power source.'";
 	
 Instead of showing the tube to [person]:
-	say "[line break]Did that come from the Lighting research lab in Cleveland? Maybe it can be used to make a light? You should show it to Sarah.";
+	say "[line break]'Did that come from the Lighting research lab in Cleveland? Maybe it can be used to make a light? You should show it to Sarah.'";
 	
 Instead of showing the Tranquilizer Gun to Florin:
-	say "[line break]That looks just like my gun. Now you can stop Robert!";
+	say "[line break]Florin jumps back, 'That looks just like my gun. Now you can stop Robert!'";
 	
 Instead of showing the Tranquilizer Gun to Robert Clayton:
-	say "[line break]Nice piece. Want to see my knife up close?";
+	say "[line break]Robert scowls at you. 'Nice piece. Want to see my knife up close?'";
 	
 Instead of giving the Tranquilizer Gun to Florin:
-	say "[line break]Nah, you keep it. You are a spy now. You can stop Robert!";
+	say "[line break]Florin shakes his head and pushes the gun away. 'Nah, you keep it. You are a spy now. You can stop Robert!'";
 	
 Instead of showing the Tranquilizer Gun to [person]:
-	say "[line break]I think Florin was looking for that.";
+	say "[line break]'I think Florin was looking for that.'";
 	
 Instead of giving the Tranquilizer Gun to [person]:
-	say "[line break]I'm good, thanks. Maybe Florin needs it.";
+	say "[line break]'I'm good, thanks. Maybe Florin needs it.'";
 	
 Instead of showing the map to Sarah:
-	say "[line break]Yes, I know where our secret airbases are, do you?";
+	say "[line break]'Yes, I know where our secret airbases are, do you?'";
 	
 Instead of showing the map to Jack:
-	say "[line break]Are you lost?";
+	say "[line break]'Are you lost?'";
 	
 Instead of showing the map to [person]:
-	say "[line break]Did you look at it?";
+	say "[line break]'Did you look at it?'";
 	
 Instead of showing the Mirrored Ball to Sarah:
-	say "[line break]Awesome! Put on some tunes and let's dance!";
+	say "[line break]Sarah brightens up, 'Awesome! Put on some tunes and let's dance!'";
 	
 Instead of showing the Pretzel to [person]:
-	say "[line break]A Lawson Pretzel! Magnifique!";
+	say "[line break]'A Lawson Pretzel! Magnifique!'";
 	
 Instead of showing the Scone to [person]:
-	say "[line break]That looks delicious!";
+	say "[line break]'That looks delicious!'";
 	
 Instead of showing the chocolate-covered strawberry to [person]:
-	say "[line break]That is exquisite! A perfect blend of chocolate and strawberry!";
+	say "[line break]'That is exquisite! A perfect blend of chocolate and strawberry!'";
 	
 Instead of giving the Pretzel to [person]:
-	say "[line break]A Lawson Pretzel! Magnifique!";
+	say "[line break]'A Lawson Pretzel! Magnifique!'";
 	
 Instead of giving the Scone to [person]:
-	say "[line break]Ummm, this is good!";
+	say "[line break]'Ummm, this is good!'";
 	
 Instead of giving the chocolate-covered strawberry to [person]:
-	say "[line break]Thanks, these are my favorite!";
+	say "[line break]'Thanks, these are my favorite!'";
 	
 Instead of showing the 3-way Chili to [person]:
-	say "[line break]That looks delicious!";
+	say "[line break]'That looks delicious!'";
 	
 Instead of showing the Mountain Dew to [person]:
-	say "[line break]That always gets me moving!";
+	say "[line break]'That always gets me moving!'";
 	
 Instead of giving the 3-way Chili to [person]:
-	say "[line break]Thanks. I'm hungry!";
+	say "[line break]'Thanks. I'm hungry!'";
 	
 Instead of giving the Mountain Dew to [person]:
-	say "[line break]Glug, Glug... Ummm, Good!";
+	say "[line break]'Glug, Glug... Ummm, Good!'";
 	
 Instead of showing the Mirrored Ball to [person]:
-	say "[line break]Cool! Where you get that? You should show it to Sarah, she'd get a kick out of it.";
+	say "[line break]'Cool! Where you get that? You should show it to Sarah, she'd get a kick out of it.'";
 	
 Instead of showing the Tardis Communicator to Jack:
-	say "[line break]The TARDIS Communicator can be very helpful. Every time you examine it, TARDIS will talk to you. Unfortunately, it's version 1.0, so it's a one way connection. You can't give TARDIS any commands.";
+	say "[line break]'The TARDIS Communicator can be very helpful. Every time you examine it, TARDIS will talk to you. Unfortunately, it's version 1.0, so it's a one way connection. You can't give TARDIS any commands.'";
 	
 Instead of showing the Tardis Communicator to Martin:
-	say "[line break]The TARDIS Communicator is useful. Every time you examine it, TARDIS will talk to you. Since it's version 1.0, it's a one way connection. You can't give TARDIS any commands.";
+	say "[line break]'The TARDIS Communicator is useful. Every time you examine it, TARDIS will talk to you. Since it's version 1.0, it's a one way connection. You can't give TARDIS any commands.'";
 	
 Instead of showing the Tardis Communicator to Desmond:
-	say "[line break]Like I said, I'm just here for the s'mores. That looks like a spy thing.";
+	say "[line break]Desmond tilts his head and looks at you with a smirk, 'Like I said, I'm just here for the s'mores. That looks like a spy thing.'";
 	
 Instead of showing the Tardis Communicator to [person]:
-	say "[line break]Oh, and old TARDIS Communicator! I haven't seen one of those in years.";
+	say "[line break]'Oh, and old TARDIS Communicator! I haven't seen one of those in years.'";
+	
+Instead of showing the Ancient Pendant to Kara:
+	if Ancient Pendant is polished:
+		say "[line break]Kara smiles, 'The pendant's finish is like a mirror. It reminds me of the one Lancelot is wearing in the tapestry.'[if the player is not wearing the pendant]'Perhaps you should put it on?'[end if]";
+	otherwise:
+		say "[line break]Kara frowns, 'The pendant is rusty. I think you need to polish it.'";
+		
+Instead of giving the Ancient Pendant to Kara:
+	if Ancient Pendant is polished:
+		say "[line break]Kara smiles, 'You should keep it. The pendant's finish is so brilliant. It reminds me of the one Lancelot is wearing in the tapestry.'[if the player is not wearing the pendant]'Perhaps you should put it on?'[end if]";
+	otherwise:
+		say "[line break]Kara frowns, 'You should keep it. The pendant is rusty. I think you need to polish it.'";
+
 	
 Instead of showing the Ancient Pendant to [person]:
 	if Ancient Pendant is polished:
-		say "[line break]The pendant's finish is like a mirror. It reminds me of the one Lancelot is wearing in the tapestry. [if the player is not wearing the pendant]Perhaps you should put it on?[end if]";
+		say "[line break]'The pendant's finish is like a mirror. It reminds me of the one Lancelot is wearing in the tapestry.'[if the player is not wearing the pendant]'Perhaps you should put it on?'[end if]";
 	otherwise:
-		say "[line break]The pendant is rusty. I think you need to polish it.";
+		say "[line break]'The pendant is rusty. I think you need to polish it.'";
 		
 Instead of giving the Ancient Pendant to [person]:
 	if Ancient Pendant is polished:
-		say "[line break]You should keep it. The pendant's finish is like a mirror. It reminds me of the one Lancelot is wearing in the tapestry.[if the player is not wearing the pendant]Perhaps you should put it on?[end if]";
+		say "[line break]'You should keep it. The pendant's finish is so brilliant. It reminds me of the one Lancelot is wearing in the tapestry.'[if the player is not wearing the pendant]'Perhaps you should put it on?'[end if]";
 	otherwise:
-		say "[line break]You should keep it. The pendant is rusty. I think you need to polish it.";
+		say "[line break]'You should keep it. The pendant is rusty. I think you need to polish it.'";
 
 Instead of screaming:
 	if the player is in Duke Humfreys Library:
@@ -3851,13 +3917,13 @@ The Bodleian Library is south of the Sheldonian Theatre.
 The Clarendon Building is east of the Broad Street.
 The Convocation House is west of Radcliffe Square.
 The Convocation House is south of The Divinity School.
-The Divinity School is west of the Bodleian Library.
+The Divinity School is southwest of the Bodleian Library.
 The Radcliffe Square is south of the Bodleian Library.
 The Radcliffe Camera is south of the Radcliffe Square.
 The Vaults_Garden is south of the the Radcliffe Camera.
 The Narnia Lamp is southwest of the Radcliffe Camera.
 The Narnia Lamp is west of the Vaults_Garden.
-The Duke Humfreys Library is east of The Bodleian Library.
+The Duke Humfreys Library is northwest of The Bodleian Library.
 The Cassie's Office is east of the Clarendon Building.
 The Cassie's Office is northeast of Turf Tavern.
 The Wooden door is north of Cassie's Office.

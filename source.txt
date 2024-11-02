@@ -137,20 +137,25 @@ Hinting is an action out of world.
 Understand "hint" or "hints" or "clue" or "clues" as hinting.
 
 Carry out hinting:
-	say "Your best chance for context sensitive hints is to find the TARDIS communicator and examine it. It will talk to you every time you examine it, and it will say different things in different areas of the game.[paragraph break]Your one hint is that the Tardis communicator is near the farmhouse, so I'd recommend you find it before flying off to far away places! Good luck and enjoy the journey!";
+	say "Your best chance for context sensitive hints is to find the TARDIS communicator and examine it. It will talk to you every time you examine it, and it will say different things in different areas of the game.[paragraph break]Your only hints are that the Tardis communicator is near the farmhouse, and the flashlight is near where you started. I'd recommend you find both before flying off to far away places! Good luck and enjoy the journey!";
 	say "For basic help, type HELP.";
+
+Definition: A container is empty if it does not enclose anything.
 
 Reviewing the game world is an action out of world.
 
 Carry out reviewing the game world:
-	say "Room and Object Report:";
-	repeat with location running through rooms:
-		say "[line break][bold type][location][roman type] - [description of location][paragraph break]";
-		repeat with item running through things in location:
-			if the item is scenery:
-				say "    - Scenery: [bold type][item][roman type] - [description of item][line break]";
-			otherwise:
-				say "    - Object: [bold type][item][roman type] - [description of item][line break]".
+	Repeat with current room running through rooms:
+		say "[bold type][Current Room][roman type][line break]";
+		say "[Description of current room][paragraph break]";
+		repeat with current item running through things which are enclosed by the current room:
+			say "[italic type][Current item][roman type][line break]";
+			say "[Description of current item][paragraph break]";
+	If a thing is not enclosed by a room:
+		say "[bold type]Things that are not enclosed by a room:[roman type][paragraph break]";
+		repeat with current item running through things which are not enclosed by a room:
+			say "[italic type][Current item][roman type][line break]";
+			say "[Description of current item][paragraph break]".
 
 Understand "review world" as reviewing the game world.
 
@@ -364,7 +369,7 @@ After going to the Hyperloop Station for the first time:
 	if the player has the Tardis Communicator:
 		continue the action;
 	else:
-		say "A text message arrives on your watch. It is from Martin.[line break][italic type]You should take the Tardis communicator with you if you leave HQ. It's around the farmhouse somwhere.[roman type][paragraph break]";
+		say "A text message arrives on your watch. It is from Martin.[line break][italic type]You should take the Tardis communicator with you if you leave HQ. It's around the farmhouse somewhere.[roman type][paragraph break]";
 		continue the action.
 
 After taking the flashlight for the first time:
@@ -481,7 +486,7 @@ The Zebra Head is scenery in the Kitchen. "The zebra head is mounted as you migh
 
 The River Rock Fireplace is scenery in the Kitchen. "The fireplace is made up of smooth, gray river rocks. The edges of the rocks protrude from the light-colored mortar. A stunning piece of art and craftsmanship in its own right.".
 
-Old Cellar is a room below The Headquarters Entrance. "On the side of the house, two old-fashioned cellar doors angle off the ground. After humming a quick tune and smiling for the hidden cameras, the vault-like locks on the doors release. Heavy tempered steel doors swing open to reveal rickety steps leading down to an old brick and moss-lined cellar.[paragraph break]You cautiously head down into the cellar."
+Old Cellar is a room below The Headquarters Entrance. "[if the player was in Headquarters Entrance]On the side of the house, two old-fashioned cellar doors angle off the ground. After humming a quick tune and smiling for the hidden cameras, the vault-like locks on the doors release. Heavy tempered steel doors swing open to reveal rickety steps leading down to an old brick and moss-lined cellar.[paragraph break]You cautiously head down into the cellar.[otherwise]You are in an old moss-lined cellar."
 
 Paint cans are things in the Old Cellar. "Two old [italic type]paint cans[roman type] are here side-by-side like a set of dilapidated bongos."
 The Paint cans are fixed in place.
@@ -489,7 +494,7 @@ Understand "cans" as Paint cans.
 Understand "can" as Paint cans.
 The description of the paint cans is "These look like they'd make drum sounds if you tapped on them.".
 
-Set of Shelves is a lockable door. "[if location is old cellar]An old set of [italic type]shelves[roman type] is here, filled with [italic type]seashells[roman type].[else]You see the back of a set of shelves."
+Set of Shelves is a lockable door. "[if the location is old cellar and Set of Shelves is closed]An old set of [italic type]shelves[roman type] is here, filled with [italic type]seashells[roman type].[otherwise if the the location is old cellar and Set of Shelves is open]The set of shelves has sild to the side revealing a passage down.[otherwise]You see the back of a set of shelves."
 Set of Shelves is below the old cellar and above the Secret Passage. Set of Shelves is locked. The description is "A heavy set of shelves that looks like it might conceal something."
 
 The Seashells are a scenery in the old cellar. "A beautiful selection of old conch shells, lightning whelks, alphabet cones and lion's paws."
@@ -578,13 +583,13 @@ Instead of sitting on the leather chair:
 
 The photo is scenery in the Martin's Office. "This photo appears to be of the hatch from the TV Show Lost. [italic type]Perhaps inspiration for a code?[roman type]"
 
-Hallway is west of the Conference Room. "A stark hallway, with a modern flair and a captivating [italic type]abstract painting[roman type]. You can go south, east, or west."
+Hallway is west of the Conference Room. "A stark hallway, with a modern flair and a captivating [italic type]abstract painting[roman type].[paragraph break]You can go south, east, or west."
 
 The abstract painting is scenery in the Hallway. "It is a beautiful painting with bright teal and orange accents. Some say it reminds them of a skyline. Whether it is the skyline of a city, or a type of chili is unknown."
 
-Medical Center is south of The Hallway. "A facility for treating injuries and conducting medical research."
+Medical Center is south of The Hallway. "A facility for treating injuries and conducting medical research.[paragraph break]You can only go north from here."
 
-Hyperloop Station is west of The Hallway. "A sleek, futuristic station with a pod that can whisk agents to distant locations in minutes. The hyperloop connects to a secluded airstrip, ensuring rapid deployment for urgent missions."
+Hyperloop Station is west of The Hallway. "A sleek, futuristic station with a pod that can whisk agents to distant locations in minutes. The hyperloop connects to a secluded airstrip, ensuring rapid deployment for urgent missions.[paragraph break]You can return to the east, or enter the Pod."
 
 Airstrip is a port. "This hidden airstrip is exclusively for Quotient. The Quotient Jet is housed here. It is the fastest non-military jet in the world."
 
@@ -614,8 +619,8 @@ The steel striker is wearable.
 
 pile of leaves is a thing in The Gate. The description of the pile of leaves is "Um, a pile of leaves, do you want to count them?" 
 
-smore is a thing. the smore is nowhere. The scent of the smore is "Yum, melted chocolate and gooey marshmellow."
-The description of the smore is "The golden brown marshmellow has been smashed into the melted chocolate with two graham cracker slabs, creating the perfect backyard campfire delicacy.".
+smore is a thing. the smore is nowhere. The scent of the smore is "Yum, melted chocolate and gooey marshmallow."
+The description of the smore is "The golden-brown marshmallow has been smashed into the melted chocolate with two graham cracker slabs, creating the perfect backyard campfire delicacy.".
 Understand "s'more" as smore.
 
 Counter_smore is a number that varies. Counter_smore is initially 0.
@@ -644,15 +649,13 @@ Instead of attacking the flint when the steel striker is worn and the leaves are
 
 Instead of attacking the flint:
 	now the leaves are glowing;
-	say "You strike the flint against the steel striker and throw sparks onto the leaves; they make tiny circles of orange there, which will only prosper if blown into flame."
+	say "You strike the flint against the steel striker and throw sparks onto the leaves; they make tiny circles of orange there. You can help the fire grow by blowing on the leaves."
 	
 Instead of burning the whole leaves:
 	say "How?";
 	
 Instead of burning the leaves when the leaves are glowing:
 	say "You need to blow on the leaves to get them flaming."
-
-[Realistically, we ought to attach a randomization to this so that each step of the fire-starting has a good chance of failure. But because our player may not be as patient as someone who actually needs a fire started, we allow him to succeed the first time in every case.]
 
 Ignition is a kind of value. The ignitions are whole, glowing, flaming. A thing has an ignition.
 
@@ -665,7 +668,7 @@ Instead of blowing on the leaves:
 
 Instead of blowing on the glowing leaves:
 	now the leaves are flaming;
-	say "You blow on the faint sparks on the leaves and turn them into the beginnings of flame."
+	say "You blow on the faint sparks on the leaves and turn them into the beginnings of flame. Now you need to burn something bigger!"
 	
 Instead of blowing on the flaming leaves:
 	now the leaves are flaming;
@@ -689,7 +692,7 @@ Instead of burning the whole kindling:
 [----------End of bonfire making -------]
 
 
-Smokehouse is west of the Yard. "An old ivy-covered smokehouse surrounded by a [italic type]bowling ball[roman type] garden. You can go east, west, or south. (or just type EXITS at any time to see which way you can go.)"
+Smokehouse is west of the Yard. "An old ivy-covered smokehouse surrounded by a [italic type]bowling ball[roman type] garden.[paragraph break]You can go east, west, or south. (or just type EXITS at any time to see which way you can go.)"
 
 The Shovel is an object. It is in the Smokehouse. "A rusty shovel is here. It looks like it would only work in sand."
 The description of the Shovel is "Looks like an ordinary shovel to me.".
@@ -701,7 +704,7 @@ Instead of taking the bowling balls:
 
 Understand "bowling ball" or "bowling ball garden" as Bowling balls.
 
-Fire Pit is south of The Smokehouse. "[if the player was in Parking]You pass by the back of the house and stumble upon a fire pit surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go north or return south to parking.[else]A fire pit is surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go back to the Smoke House to the north or you can go south.[end if]"
+Fire Pit is south of The Smokehouse. "[if the player was in Parking]You pass by the back of the house and stumble upon a fire pit surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go north or return south to parking.[else]A fire pit is surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go north to the Smoke House or you can go south to parking.[end if]"
 
 The Fairy is scenery in The Fire Pit. "The inanimate, ornamental fairy appears to be twirling around, dancing, and enjoying life."
 
@@ -886,7 +889,7 @@ A cannon is scenery in Cassie's office.
 The description of the cannon is "Every time you look at the cannon, it sprays you in the face!".
 
 The hanging hammock chair is a chair in Cassie's office. "A free-swinging hammock chair is here."
-The description of the hanging hammock chair is "A free swinging handwoven cotton hammock chair with oak handles.".
+The description of the hanging hammock chair is "A free-swinging, handwoven, cotton hammock chair with oak handles.".
 
 Instead of sitting on the hanging hammock:
 	say "Wow... what a great chair, I could read here for a long time.";
@@ -925,7 +928,7 @@ The countertop is scenery in Cassie's Lab. It is a supporter. "The countertop ha
 
 The equipment is scenery on the countertop. "Delicate scales and glass test tubes, lasers, vacuum vessels, and other interconnected things you do not recognize." 
 
-Convocation House is a room. "The Convocation house is primarily used for events. It was once used as a meeting place for the House of Commons. Its stone vaulted ceiling dates back to 1758-1759.[paragraph break]You can go north or east."
+Convocation House is a room. "The Convocation house is primarily used for events. It was once used as a meeting place for the House of Commons. Its stone-vaulted ceiling dates back to 1758-1759.[paragraph break]You can go north or east."
 
 The Turf Tavern is a room. "[if the player was in Cassie's Office]You enter the 12th Century inn, Turf Tavern, from the front. It is very popular with Oxford Students.[paragraph break]You can go northeast or west.[otherwise]You head down New College Lane and shuffle past the tourists posing for pictures under the Hertford Bridge, or the Bridge of Sighs, so called for its similarity to the famous bridge in Venice. After passing under the bridge, you ducked into the very narrow alleyway known as St. Helen’s Passage. It is marked by a green street sign affixed to the wall, or you could easily miss it. Following the winding cobblestone passage leads you to the entrance of the pub where many famous alumni have enjoyed a drink or dinner. They built the Turf Tavern just outside the city walls in order to avoid jurisdiction of the colleges. It was a fitting place to discuss Quotient business.[paragraph break]You can go northeast or west."
 
@@ -1003,7 +1006,28 @@ The description of the gold key is "The key is a unique shape. It has a cylindar
 The gold key is in the treat cupboard.
 
 The intelligence papers are in the Old Safe. Understand "intel" or "paper" or "records" or "record" as the intelligence papers. The description is "These records are some old intelligence papers on The Quantum Contingent and Quotient. You should be able to consult these on different topics. It might give you some background that is useful.".
-The read text of the intelligence papers is "You may consult these intelligence papers about many topics. 'consult intel about TOPIC'"
+The read text of the intelligence papers is "You may consult these intelligence papers about many topics. Use the command: 'consult intel about TOPIC'. Here is an index of the topics covered within.[paragraph break]
+[bold type]INDEX[roman type][line break]
+Contingent/Quantum Contingent[line break]
+Crystal/Kyber Crystal[line break]
+Desmond[line break]
+Florin/Florin Ardelean[line break]
+Frank[line break]
+Jack/Jack Alexander[line break]
+Kara[line break]
+Light saber/light sabre/saber/sabre[line break]
+Martin[line break]
+Nela Park/Nela[line break]
+Pendant[line break]
+President/Bridget[line break]
+Prime Minister/Jason/Jason Stephenson[line break]
+Professor Cassandra Eaton/Professor Eaton/prof/professor/cassandra/cassie/eaton[line break]
+Metaverse[line break]
+Mt dew/mtn dew/Mountain Dew[line break]
+Tardis/Quotient Computer/Computer[line break]
+Quotient[line break]
+Robert Clayton/lion/Robert/Clayton[line break]
+Sarah[line break]"
 
 Instead of taking the papers:
 	say "The intelligence papers must stay here, but you may consult them while you are here."
@@ -1026,10 +1050,10 @@ topic	reply
 "crystal" or "Kyber Crystal"	"The Crystal or Kyber Crystal is of unknown origin. It contains immense power that can only be harnessed with the right type of glass enclosure. Cassie Eaton was experimenting with it in her lab until it was recently stolen."
 "frank"	"Frank Sutherbee was thought to have been a member of the Quantum Contingent. (That's the Frank you were asking about, right?)"
 "Quotient"	"Quotient is a global independent spy agency. Their headquarters is hidden somewhere in the United States. They appear to have powerful ties to the current US Administration, specifically President Bridget O'Connor."
-"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient."
+"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
 "lancelot"	"Our intel suggests that Lancelot existed, and during his time, he had a pendant and a crystal which gave him special powers. This is believed to be the same crystal Professor Cassandra Eaton has been using in time experiments."
-"prof/professor/cassandra/cassie/eaton"	"Professor Cassandra Eaton is a distinguised Professor of Quantum Studies at Oxford. She has been working on understanding the dimension of time for almost three decades."
-"professor cassandra eaton" or "professor eaton"	"Professor Cassandra Eaton is a distinguised Professor of Quantum Studies at Oxford. She has been working on understanding the dimension of time for almost three decades."
+"prof/professor/cassandra/cassie/eaton"	"Professor Cassandra Eaton is a distinguised Professor of Quantum Studies at Oxford. She has been working on understanding the dimension of time for almost three decades. She is thought to have a close relationship with Martin, the head of Quotient."
+"professor cassandra eaton" or "professor eaton"	"Professor Cassandra Eaton is a distinguised Professor of Quantum Studies at Oxford. She has been working on understanding the dimension of time for almost three decades. She is thought to have a close relationship with Martin, the head of Quotient."
 "pendant"	"The mysterious pendant of lancelot has been lost. It was believed to have surfaced at Oxford in 1730, but has not been seen since. Some consider it's existance nothing more than a myth."
 "Tardis/computer" or "Quotient Computer"	"The Quotient Computer is housed in a boxy space station and is affectionately called TARDIS. This is due to the space station's resemblance in shape to a 1960s London police box like Dr. Who’s time machine, only much larger. Quotient even painted it TARDIS blue. The Quotient Computer is, by far, the most powerful quantum computer in the world, and is capable of breaking almost any encryption, giving Quotient a huge advantage in the spy game.[paragraph break]The quantum computer is in the space station because space is: [paragraph break]
 [bold type]Cold[roman type]: Space is about 2.7 kelvin or -270 degrees Celsius, only slightly above absolute zero, and for a good quantum computer, you need to get as close to absolute zero as possible.[paragraph break]
@@ -1043,11 +1067,11 @@ topic	reply
 "desmond"	"Husband of Sarah, one of quotient's top agents. Desmond is not believed to be part of quotient. He is currently CEO of a LEO satellite company."
 "Jack" or "Jack Alexander"	"Jack was the original designer of the Quotient Quantum Computer and is now assumed to be an agent for Quotient."
 "Bridget" or "President"	"President Bridget O'Connor has deep connections to the intelligence agencies having once run the NSA. It is assumed she has some knowledge of Quotient's capabilities."
-"Jason Stephenson" or "Prime Minister" or "Jason"	"Jason Stephenson is our Prime Minister."
-"Cassie" or "Professor Eaton"	"Cassie seems to have a past personal relationship with Martin. She is the world's foremost expert on quantum mechanics and time."
-"light saber" or "saber/sabre" or "light sabre"	"Scientists have been working on creating a light saber using a crystal, but it's energy has been hard to contain."
+"Jason Stephenson" or "Prime Minister" or "Jason"	"Jason Stephenson is our Prime Minister. His martial arts skills are unmatched."
+"light saber" or "saber/sabre" or "light sabre"	"Engineers have been working on creating a light saber using a crystal, but it's energy has been hard to contain."
 "mt dew" or "mtn dew" or "Mountain Dew"	"A powerful liquid subject, often ingested by agents for energy, or just because it tastes good."
-"metaverse"	"Professor Cassie Eaton has a VR lab where she is experimenting with simulating different versions of the future. She is our foremost expert on time."	
+"metaverse"	"Professor Cassie Eaton has a VR lab where she is experimenting with simulating different versions of the future. She is our foremost expert on time."
+"nela park" or "nela"	"Nela Park was home to GE Lighting. It is now thought to be a cover operation for US Government research on light sabers."	
 
 Chapter 5 Metaverse 
 
@@ -1076,7 +1100,7 @@ Instead of talking to Yoga Master:
 		say "The Yoga Master simply breaths out. And then in. Their breathing is slow and rhythmic. They do not even open their eyes when you talk to them."
 
 Yoga Mat is a thing. It is nowhere. "A beautiful yoga mat is here. Its color oscillates gently."
-The description of the Yoga Mat is "it is a large yoga mat, thicker than most. It is soft, but not in a rubbery way, it feels more like lying on a thick bed of pine needles, covered with cloth. It's color is changing constantly.".
+The description of the Yoga Mat is "It is a large yoga mat, thicker than most. It is soft, but not in a rubbery way, it feels more like lying on a thick bed of pine needles, covered with cloth. Its color is changing constantly.".
 
 Meditating is an action applying to nothing. Understand "meditate" as Meditating. 
 
@@ -1135,7 +1159,7 @@ The Cincinnati Area is a region. The Lunken Airport, Cincinnati Museum Center, T
 
 Lunken Airport is a port. It is east of Cincinnati Museum Center. "A small private airfield close to downtown Cincinnati. The 1000-acre airfield was the largest municipal airfield in the world when it opened in 1925.[paragraph break]From here, you can head west to the Cincinnati Museum Center or south to Skyline Chili."
 
-Cincinnati Museum Center is north of Smale RIverfront Park. "This extravagant art déco passenger train station was built between 1929 and 1933 and has carvings of the [italic type]Greek God Mercury[roman type] on each side of its immense arched facade. It was the inspiration of the Hall of Justice in the DC comic universe. (So, I guess this means you are a DC hero instead of Marvel) The dramatic ceiling over the [italic type]rotunda lobby[roman type] is awe-inspiring. The one hundred and six feet tall, one hundred and eighty feet wide, half dome entrance is the second largest in the world, behind only the Sydney Opera House.[paragraph break]There is a Skyline Chile south of here. The IMAX Theater is to the west. A staircase leads down. You can return to the airport to the east."
+Cincinnati Museum Center is north of Smale RIverfront Park. "This extravagant art déco passenger train station was built between 1929 and 1933 and has carvings of the [italic type]Greek God Mercury[roman type] on each side of its immense arched facade. It was the inspiration of the Hall of Justice in the DC comic universe. (So, I guess this means you are a DC hero instead of Marvel) The dramatic ceiling over the [italic type]rotunda lobby[roman type] is awe-inspiring. The one hundred and six feet tall, one hundred and eighty feet wide, half dome entrance is the second largest in the world, behind only the Sydney Opera House.[paragraph break]There is a park on the river south of here. The IMAX Theater is to the west. A staircase leads down. You can return to the airport to the east."
 
 
 The Greek God Mercury is scenery in the Museum Center. "The tall carvings stand guard on each side of the massive dome."
@@ -1316,7 +1340,7 @@ The description of Chewbacca is "Hairy little guy isn't he."
 
 Edgewater Park is a room. It is west of Burke Lakefront. "This is the [italic type]beach[roman type] on the 'North Coast'... sand, sun and fun! [italic type]Lake Erie[roman type] stretches on for as far as the eye can see. The sand feels good between your toes."
 
-Lake Erie is scenery in Edgewater Park. "Kids are splashing in the water. A large barge in the distance looks small. A pleasure boat is docked not too far off shore."
+Lake Erie is scenery in Edgewater Park. "Kids are splashing in the water. A large barge in the distance looks small. A pleasure boat is docked not too far offshore."
 
 The Cleveland Sign is in Edgewater Park. "Tourists love to get their pictures at the iconic [italic type]Cleveland Sign[roman type] with the lake and the city skyline in the background. The sign blocks you from going further west."
 
@@ -2003,13 +2027,16 @@ Instead of going up in Flying Through the Air:
 	
 Instead of going down in Flying Through the Air:
 	say "Don't you wish...";
+	
+Instead of attacking in Flying Through the Air:
+	say "Relax, you are almost there!";
 
 The flying counter is a number that varies. The Flying Counter is 0.
 
 Table of Flying
 message
 "Your life flashes before your eyes as you contemplate the speed at which you are leaving your world behind! You start to wonder what you have done."
-"You consider screaming, but realize noone is listening, except maybe TARDIS."
+"You consider screaming, but realize no one is listening, except maybe TARDIS."
 "As the rocket races to the stars, the atmosphere thins and you begin transitioning to the inky blackness of space."
 "You continue your ascent into the atmosphere, and stars start to blink into view. Is that because you are passing out, or because you are leaving the atmosphere, you aren't sure."
 "You are almost there, stay awake!"
@@ -2020,7 +2047,7 @@ message
 
 The earth is scenery in Flying Through the Air. It has description "The objects on the ground are getting smaller. Cars look like the matchbox cars of your childhood." 
 The clouds are scenery in Flying Through the Air. They have description "The clouds disappear as fast as they appear." Understand "air" as clouds. 
-The final frontier is scenery in Flying Through the Air. It has description "To boldly go where noone has gone before. Maybe there is a reason noone has gone here before?" 
+The final frontier is scenery in Flying Through the Air. It has description "To boldly go where no one has gone before. Maybe there is a reason no one has gone here before?" 
 
 Understand "outer space" or "ink" or "inky blackness" as the final frontier.
 
@@ -2055,6 +2082,9 @@ Instead of going up in Flying Through Space:
 	
 Instead of going down in Flying Through Space:
 	say "What goes up, must come down, but not yet!";
+	
+Instead of attacking in Flying Through Space:
+	say "Relax, you are almost there!";
 
 Flying Through Space is a room. "The first stage separates, and you feel the engines of the orbiter kick in. The roar of the engines is non-existent because of the vacuum of space, but their power can still be felt in the forceful jolts of the ship." 
 
@@ -3003,7 +3033,7 @@ Understand "search" as studying the vicinity.
 Dancing is an action applying to nothing. Understand "dance" or "boogie" or "jitterbug" as dancing.
 
 Report dancing:
-    say "You begin to dance like noone is watching."
+    say "You begin to dance like no one is watching."
 
 Rocking is an action applying to nothing. Understand "rock" as rocking.
 
@@ -3867,7 +3897,7 @@ Christmas Day is a memory. It is suggested by the vr suit. The description is "W
 
 Germany is a memory. It is suggested by the Pretzel. The description is "Ahhhh, baking Pretzels in Germany was a treat, but I'm not sure this memory will help me in my mission at all!”
 
-campfires is a memory. It is suggested by the Smore. The description is "Shoot, my mind keeps wandering, but yes, those s'more's over the camprfire were tasty!"
+campfires is a memory. It is suggested by the Smore. The description is "Shoot, my mind keeps wandering, but yes, those s'mores over the campfire were tasty!"
 
 Family is a memory. It is suggested by Sarah. The description is "Sarah does remind me of my family, must be the hair. According to the briefing I read before I came, her brother is Jack... MUST focus."
 

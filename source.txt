@@ -480,13 +480,13 @@ Check taking the rug: say "The rug is too heavy to lift." instead.
 After pushing or pulling the rug for the first time: say "With a great effort, the rug is moved to one side of the room. With the rug moved, the dusty cover of an escape tunnel appears."; now the Escape Tunnel is revealed.
 After pushing or pulling the rug: say "Having moved the carpet previously, you find it impossible to move it again."
 
-The Kitchen is west of the Farmhouse. "A large kitchen with attached family room. A [italic type]zebra head[roman type] is mounted over a [italic type]river rock fireplace[roman type]."
+The Kitchen is west of the Farmhouse. "A large kitchen with attached family room. A [italic type]zebra head[roman type] is mounted over a [italic type]river rock fireplace[roman type].[paragraph break]You exit to the east."
 
 The Zebra Head is scenery in the Kitchen. "The zebra head is mounted as you might expect a wild animal head might be mounted in a game lodge. Surprisingly, this one appears to have a smile.".
 
 The River Rock Fireplace is scenery in the Kitchen. "The fireplace is made up of smooth, gray river rocks. The edges of the rocks protrude from the light-colored mortar. A stunning piece of art and craftsmanship in its own right.".
 
-Old Cellar is a room below The Headquarters Entrance. "[if the player was in Headquarters Entrance]On the side of the house, two old-fashioned cellar doors angle off the ground. After humming a quick tune and smiling for the hidden cameras, the vault-like locks on the doors release. Heavy tempered steel doors swing open to reveal rickety steps leading down to an old brick and moss-lined cellar.[paragraph break]You cautiously head down into the cellar.[otherwise]You are in an old moss-lined cellar."
+Old Cellar is a room below The Headquarters Entrance. "[if the player was in Headquarters Entrance]On the side of the house, two old-fashioned cellar doors angle off the ground. After humming a quick tune and smiling for the hidden cameras, the vault-like locks on the doors release. Heavy tempered steel doors swing open to reveal rickety steps leading down to an old brick and moss-lined cellar. You cautiously head down into the cellar[paragraph break]You return outside by going back up the stairs.[otherwise]You are in an old moss-lined cellar.[paragraph break]You return outside by going back up the stairs."
 
 Paint cans are things in the Old Cellar. "Two old [italic type]paint cans[roman type] are here side-by-side like a set of dilapidated bongos."
 The Paint cans are fixed in place.
@@ -494,7 +494,7 @@ Understand "cans" as Paint cans.
 Understand "can" as Paint cans.
 The description of the paint cans is "These look like they'd make drum sounds if you tapped on them.".
 
-Set of Shelves is a lockable door. "[if the location is old cellar and Set of Shelves is closed]An old set of [italic type]shelves[roman type] is here, filled with [italic type]seashells[roman type].[otherwise if the the location is old cellar and Set of Shelves is open]The set of shelves has sild to the side revealing a passage down.[otherwise]You see the back of a set of shelves."
+Set of Shelves is a lockable door. "[if the location is old cellar and Set of Shelves is closed]An old set of [italic type]shelves[roman type] is here, filled with [italic type]seashells[roman type].[otherwise if the the location is old cellar and Set of Shelves is open]The set of shelves has slid to the side revealing a passage down.[otherwise]You see the back of a set of shelves."
 Set of Shelves is below the old cellar and above the Secret Passage. Set of Shelves is locked. The description is "A heavy set of shelves that looks like it might conceal something."
 
 The Seashells are a scenery in the old cellar. "A beautiful selection of old conch shells, lightning whelks, alphabet cones and lion's paws."
@@ -561,7 +561,7 @@ Instead of sitting on the meeting chair:
 	say "You sit in the chair and take in the view of the conference room. It's quite a room!";
 	continue the action.
 
-Martin's Office is north of the Conference Room. "This is Martin's office. Martin is the founder of Quotient. The office contains a beautiful [italic type]teak desk[roman type] with a leather chair and has a built-in [italic type]bookcase[roman type]. The room has a [italic type]coffered ceiling[roman type]. There is a [italic type]photo[roman type] on the wall."
+Martin's Office is north of the Conference Room. "This is Martin's office. Martin is the founder of Quotient. The office contains a beautiful [italic type]teak desk[roman type] with a leather chair and has a built-in [italic type]bookcase[roman type]. The room has a [italic type]coffered ceiling[roman type]. There is a [italic type]photo[roman type] on the wall.[paragraph break]You may return to the conference room to the south."
 
 After going to Martin's Office:
 	try looking;
@@ -591,7 +591,7 @@ Medical Center is south of The Hallway. "A facility for treating injuries and co
 
 Hyperloop Station is west of The Hallway. "A sleek, futuristic station with a pod that can whisk agents to distant locations in minutes. The hyperloop connects to a secluded airstrip, ensuring rapid deployment for urgent missions.[paragraph break]You can return to the east, or enter the Pod."
 
-Airstrip is a port. "This hidden airstrip is exclusively for Quotient. The Quotient Jet is housed here. It is the fastest non-military jet in the world."
+Airstrip is a port. "This hidden airstrip is exclusively for Quotient. The Quotient Jet is housed here. It is the fastest non-military jet in the world.[paragraph break]The only way to leave the airstrip is via the jet or the hyperloop."
 
 Yard is north from The Headquarters Entrance. "A large yard with a hammock, [if bonfire is nowhere]and a place where a great bonfire once stood.[else] and a huge roaring bonfire.[end if][paragraph break]You can go west or south. A cornfield lies to the north." 
 

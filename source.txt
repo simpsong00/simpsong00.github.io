@@ -291,6 +291,7 @@ if the noun is the ground and the player is in Peaceful Meditation, say  "You ma
 if the noun is the ground and the player is not in Edgewater Park, say  "The ground is too hard for digging here.".
 
 A stack of zorkmid bills is nowhere. "On the ground sit 200 neatly stacked zorkmid bills." Understand "notes" or "banknotes" or "bank notes" or "zorkmids" as the bills. The description of the bills is "[banknotes]".
+The read text of the bills is "In Frobs We Trust".
 
 The ground is a backdrop. The ground is everywhere. Understand "sand" and "here" and "hole" and "land" as the ground. The description of the ground is "yep, that's the land we walk on.".
 
@@ -589,7 +590,7 @@ The abstract painting is scenery in the Hallway. "It is a beautiful painting wit
 
 Medical Center is south of The Hallway. "A facility for treating injuries and conducting medical research.[paragraph break]You can only go north from here."
 
-Hyperloop Station is west of The Hallway. "A sleek, futuristic station with a pod that can whisk agents to distant locations in minutes. The hyperloop connects to a secluded airstrip, ensuring rapid deployment for urgent missions.[paragraph break]You can return to the east, or enter the Pod."
+Hyperloop Station is west of The Hallway. "A sleek, futuristic station with a pod that can whisk agents to distant locations in minutes. The hyperloop connects to a secluded airstrip, ensuring rapid deployment for urgent missions.[paragraph break]You can return to the east or enter the Pod."
 
 Airstrip is a port. "This hidden airstrip is exclusively for Quotient. The Quotient Jet is housed here. It is the fastest non-military jet in the world.[paragraph break]The only way to leave the airstrip is via the jet or the hyperloop."
 
@@ -704,7 +705,7 @@ Instead of taking the bowling balls:
 
 Understand "bowling ball" or "bowling ball garden" as Bowling balls.
 
-Fire Pit is south of The Smokehouse. "[if the player was in Parking]You pass by the back of the house and stumble upon a fire pit surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go north or return south to parking.[else]A fire pit is surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go north to the Smoke House or you can go south to parking.[end if]"
+Fire Pit is south of The Smokehouse. "[if the player was in Parking]You pass by the back of the house and stumble upon a fire pit surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go north or return south to parking.[else]A fire pit is surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go north to the Smoke House, or you can go south to parking.[end if]"
 
 The Fairy is scenery in The Fire Pit. "The inanimate, ornamental fairy appears to be twirling around, dancing, and enjoying life."
 
@@ -937,12 +938,12 @@ The description of the Black Painted Board is "It looks like a chalkboard upon w
 The read text of the Black Painted Board is "Whilst here at Oxford University ---- in 1963 --- At the Turf Tavern, Bob Hawke, Former Austrailian Prime Minister entered the Guinness Book of Records after downing a Yard of Ale in 11 seconds.".
 Understand "board" as black painted board.
 
-Vaults_Garden is a room. "Vaults and Garden, is a beautiful cafe in the University Church of St. Mary the Virgin. There are outdoor tables here where people are enjoying some warm scones, raspberry jam, and traditional English tea. The smell of the fresh-baked scones is enchanting. [paragraph break]You can go west or north.”
+Vaults_Garden is a room. "Vaults and Garden is a beautiful cafe in the University Church of St. Mary the Virgin. There are outdoor tables here where people are enjoying some warm scones, raspberry jam, and traditional English tea. The smell of the fresh-baked scones is enchanting. [paragraph break]You can go west or north.”
 The printed name of Vaults_Garden is "Vaults and Garden's".
 
 Narnia Lamp is a room. "You stumble across a Narnia lamp post near an oaken door. The oaken door is framed with two [italic type]golden fauns[roman type]. An inspirational stop for C.S. Lewis. This is a dead end."
 
-Golden Fauns are scenery in the Narnia lamp. "The Faun is a half-goat, half-man creature from Greek and Roman mythology. In [italic type]The Chronicles of Narnia[roman type], by C.S.Lewis, the character, Tumnus, was a faun."
+Golden Fauns are scenery in the Narnia lamp. "The Faun is a half-goat, half-man creature from Greek and Roman mythology. In [italic type]The Chronicles of Narnia[roman type], by C.S. Lewis, the character, Tumnus, was a faun."
 
 Understand "faun" as Golden Fauns.
 
@@ -1002,13 +1003,14 @@ The old safe is an enterable closed openable container. The old safe is in the D
 The old safe is fixed in place.
 
 The gold key is a passkey. It unlocks the old safe. 
-The description of the gold key is "The key is a unique shape. It has a cylindar barrel with various bumps and protrusions."
+The description of the gold key is "The key is a unique shape. It has a cylinder barrel with various bumps and protrusions."
 The gold key is in the treat cupboard.
 
 The intelligence papers are in the Old Safe. Understand "intel" or "paper" or "records" or "record" as the intelligence papers. The description is "These records are some old intelligence papers on The Quantum Contingent and Quotient. You should be able to consult these on different topics. It might give you some background that is useful.".
 The read text of the intelligence papers is "You may consult these intelligence papers about many topics. Use the command: 'consult intel about TOPIC'. Here is an index of the topics covered within.[paragraph break]
 [bold type]INDEX[roman type][line break]
 Contingent/Quantum Contingent[line break]
+Continuum[line break]
 Crystal/Kyber Crystal[line break]
 Desmond[line break]
 Florin/Florin Ardelean[line break]
@@ -1063,6 +1065,7 @@ topic	reply
 "martin"	"Martin is the head of Quotient. Quotient was believed to have been founded out of a quantum computing effort Martin began many years ago. He has many connections in government and pulled Jack Alexander in to help with their quantum efforts. It is believed they successfully created a very powerful quantum computer, but it's existance is still unconfirmed."
 "kara"	"Kara worked at Nasa Glenn Research Center in Cleveland and is an expert on quantum networking. She has romantic ties to Jack Alexander and is now suspected to be a full fledged agent of Quotient."
 "sarah"	"Sarah Alexandar was believed to be recruited to Quotient when she was at Oxford. She is a perfect candidate due to her knowledge of multiple languages and her natural athleticism. She was trained by Florin Ardelean."
+"continuum"	"This is the lab where Professor Eaton runs her time experiments."
 "florin" or "florin ardelean"	"Florin Ardelean is former MI-6 and the European lead agent for Quotient. He trained Sarah Alexander-Silver when she was at Oxford."
 "desmond"	"Husband of Sarah, one of quotient's top agents. Desmond is not believed to be part of quotient. He is currently CEO of a LEO satellite company."
 "Jack" or "Jack Alexander"	"Jack was the original designer of the Quotient Quantum Computer and is now assumed to be an agent for Quotient."
@@ -1082,7 +1085,7 @@ The Metaverse is a room. "The most obvious clue that you are in the metaverse is
 Dystopian 2049 is east of the Metaverse. "The difference between a world where people are totally addicted to their metasuits and the 1999 movie, The Matrix, would be that people would voluntarily spend many, if not most, of their waking hours in a pod that removed them from reality. There wouldn't need to be a digital rebellion to put them there.[paragraph break]The metaverse was the device that philosopher Robert Nozick referred to as an 'experience machine' in the thought experiment from his book Anarchy, State and Utopia. A machine that would allow us to only experience bliss. Robert believed that most people would decide to not plug in since they would know the experience was not real. In this dystopian vision of 2049, Robert was mistaken. Perhaps he underestimated how dystopian 2049 would become.[paragraph break]In this idea of the future, augmented reality glasses became as common as smartphones in the 2020s. As a result, society morphed. Buildings were bland cubes. The beauty was only viewable through the AR glasses almost everyone wore. The same was true for clothing. People simply designed virtual wardrobes, and their glasses emitted a tag corresponding to which outfit they wanted people to see. A quick touch to the temple of their AR glasses and their outfit morphed. If you were to remove your AR glasses, everyone was walking around in black spandex, past plain white buildings. It made the AR effect work better, and it was comfortable.[paragraph break]Homes didn’t need landscaping; it was added by the AR glasses. Holiday decorations were easy. You could morph your home into a scary haunted house for Halloween or Santa’s workshop for Christmas.[paragraph break]This changed the physical world immensely. There was no need for street signs or lane markings on roads. The remaining signs were fading and in disrepair. Now, all signage, labeling, and advertising were augmented on top of the physical world. And it wasn’t just advertising and directions. The real world was becoming bland. AR eliminated the need for physical decorations, beautiful color schemes, or landscaping. The beauty of new city developments was all provided through augmentation.
 If you were one of the few that still wandered into a physical store, there were no labels. The QR code on the plain cardboard box caused the box to transform into an interactive ad for the product when viewing the product through your AR glasses. With no glasses, it was a shelf full of brown cardboard boxes with QR codes. With AR glasses, it was a shelf of gleaming digital icons, floating videos, and interactive product displays. It was hard to live and work in this world without using AR.[paragraph break]The design of the physical world was disappearing into the AR facade. Why make anything look particularly good if you could just slap a coat of AR paint on it instead? Textures and colors gave way to black (clothing), white (buildings), and specific Pantone colors for different types of objects. All cars were a specific shade of brown. It was easier to paint the AR world on top of this strange, bland, monotone world that had blossomed. The world was now one giant green screen. At least when you weren’t fully inside the metaverse.[paragraph break]In this projected future, dependence on AR led to a dramatic increase in the use of Virtual Reality in society. In 2049, people used VR the way people used TV earlier in the century. It was the primary form of home entertainment. Just as many of the prior generation fell asleep to TV, people often just fell asleep in their virtual world, happy to be lying in a fantasy world of their own creation, away from what was becoming a more and more bland physical world, and away from the connection of physical human relationships. This was the real downfall of dystopian 2049.[paragraph break]Of course, you might just end up sleeping here if you can't get that suit off."
 
-Utopian 2049 is west of the Metaverse. "Technology isn't inherently bad. It has to do with how we use it. In this projected future, AR still existed, but it was only to augment the beauty of the real world, not replace it entirely. It made you less likely to peer at a sporting event through the lens of your camera. Instead, you could watch the event and still have some brief real-time statistics appear in the lower left-hand corner of your field of vision. In Utopian 2049, the metaverse was here too. In this scenario, it was great for enhancing solo activities like working out or playing video games with your far-flung friends on the internet, but people still wanted to come back to their real world friends and live in the real world.[paragraph break]Too bad you might never be able to return!"
+Utopian 2049 is west of the Metaverse. "Technology isn't inherently bad. It has to do with how we use it. In this projected future, AR still existed, but it was only to augment the beauty of the real world, not replace it entirely. It made you less likely to peer at a sporting event through the lens of your camera. Instead, you could watch the event and still have some brief real-time statistics appear in the lower left-hand corner of your field of vision. In Utopian 2049, the metaverse was here too. In this scenario, it was great for enhancing solo activities like working out or playing video games with your far-flung friends on the internet, but people still wanted to come back to their real-world friends and live in the real world.[paragraph break]Too bad you might never be able to return!"
 
 Future National Park is north of the Metaverse. "For the few remaining Luddites that shunned this strange new metaverse world of the dystopian future scenario, at least they picked up a few advantages. The world’s most beautiful outdoor spaces weren’t overcrowded anymore. Most just visited these sites virtually.[paragraph break]You are now in the heart of a grove of Redwoods. They tower over you. Making you feel peaceful.[paragraph break]Maybe this virtual world isn't so bad?"
 
@@ -1124,9 +1127,10 @@ After asking the hologram about something:
 
 Table of Cassie_AV Replies
 Topic	Muse
-"mission"	"Reboot the computer and get to the Continum"
-"the mission"	"Reboot the computer and get to the Continum"
+"mission"	"Reboot the computer and get to the Continuum"
+"the mission"	"Reboot the computer and get to the Continuum"
 "computer"	"Tardis is our computer. It is in space."
+"continuum"	"The name of Cassie's lab."
 "tardis"	"Tardis is our computer. It is in space."
 "Jack"	"Jack is very special to me."
 "Sarah"	"Sarah is like a daughter to me."
@@ -1196,7 +1200,7 @@ Carry out vague swimming: say "Nah, not today."
 
 The Ohio River is scenery in Smale Riverfront Park. "The mighty Ohio."
 
-Cincinnati Skyline is scenery in Smale Riverfront Park. "The skyline is framed by the Bengals stadium on one side and the Great American Ballpark on the other. The tiara on top of the Great American Building is reminiscent of CIncinnati's nickname, The Queen City."
+Cincinnati Skyline is scenery in Smale Riverfront Park. "The skyline is framed by the Bengals stadium on one side and the Great American Ballpark on the other. The tiara on top of the Great American Building is reminiscent of Cincinnati's nickname, The Queen City."
 
 The Roebling Bridge is scenery in Smale Riverfront Park. "This stunning blue bridge was the prototype for the Brooklyn Bridge in NYC."
 
@@ -1327,11 +1331,11 @@ The description of the Light Saber is "An iconic blue light saber shimmers in yo
 
 Lighting Institute is a room. It is west of Nela Park. "Still in remarkable shape, thanks to its live-in caretaker, the building has a fountain and the main room you have entered is a circular room overlooking this fountain. What was once a beautiful green expanse lies beyond the fountain. To the side of the room, the next [italic type]National Christmas Tree[roman type] is being fashioned into existence."
 
-The National Christmas Tree is a supporter in The Lighting Institute. "The Christmas Tree is at least 30 feet tall and is covered with thousands of lights in the shape of different spaceships from Star Wars and Star Trek lore."
+The National Christmas Tree is scenery. It is a supporter in The Lighting Institute. "The Christmas Tree is at least 30 feet tall and is covered with thousands of lights in the shape of different spaceships from Star Wars and Star Trek lore."
 
 The Millenium Falcon is a thing. It is on the National Christmas Tree. "The [italic type]Millenium Falcon[roman type] is the crowning star on the tree. The classic Star Wars ship is adorned with blinking red lights and you can hear [italic type]Chewbacca[roman type] roar."
 
-The description of the Millenium Falcon is "The classic Star Wars ship is adorned with blinking red lights and if you listen to the ship you can hear [italic type]Chewbacca[roman type] roar."
+The description of the Millenium Falcon is "The classic Star Wars ship is adorned with blinking red lights and if you listen to the ship, you can hear [italic type]Chewbacca[roman type] roar."
 
 Understand "ship" as Millenium Falcon.
 
@@ -1361,7 +1365,7 @@ Chapter 8 Tardis / Outerspace
 
 Understand "Space" as the Tardis.
 
-The Outerspace Area is a region. Spaceport, Tardis, The Control Center, The Airbnb, The Quantum View, Flying through the Air, Flying through Space are in the Outerspace Area.
+The Outerspace Area is a region. Spaceport, Tardis, The Control Center, The Airbnb, The Quantum View, Flying through the Air are in the Outerspace Area.
 
 Spaceport is a port. "Starbase, Texas is the town that surrounds the SpaceX launch and landing site near South Padre Island. Elon Musk started the town when he was perfecting the Starship. It has since grown into a thriving metropolis with many of the trappings of an even larger city. It was designed from the ground up to be ecologically friendly and ultra-high tech. The entire town runs on solar power. [italic type]Battery backup and solar panels[roman type] are distributed across all homes and commercial facilities but managed cooperatively. It is one giant virtual power plant. [bold type]This is the Spaceport for launches into space.[roman type]"
 
@@ -1386,7 +1390,7 @@ The description of the shade door is "A large metal protective shade or shield."
 
 Instead of opening the shade door, say "The shade opens revealing the On a [italic type]Clear Day You can See Forever[roman type] window. It’s named after the old musical. The view was unimaginably beautiful. Space is the definition of dark. It makes the stars stand out like diamonds on velvet. Of course, the most amazing view is of our own blue marble, Earth. The drifting clouds created hazy, moving lines across the blue orb. Entire continents seemed small, our place in the universe seemed less important. We are but one planet in a vast sea of endless space. Lightning storms exploded in the clouds as they traversed land and sea. As former NASA astronaut Mike Massimino mused, 'How can something so beautiful be tolerated by human eyes.'"
 
-Clear Day is scenery in the Airbnb. "On a Clear Day You can See Forever is a 70's musical comedy drama, but I digress. On TARDIS, it's a cool window into the depths of space."
+Clear Day is scenery in the Airbnb. "On a Clear Day You Can See Forever is a 70's musical comedy drama, but I digress. On TARDIS, it's a cool window into the depths of space."
 
 Understand "see forever" or "forever" or "on a clear day" as Clear Day.
 
@@ -1662,7 +1666,7 @@ National Mall is a room. "[if aslan is magic]You are standing on the expansive l
 
 To say endgamemall:
 say "[paragraph break]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[line break]";
-say "[bold type]Congratulations! You have won the game.[paragraph break][roman type]Feel free to wander around, I have moved the Jet to Andrews Air Force base for your convenience.[line break]If you examine the older couple on the lawn, you notice they look like Cassie and Martin. Cassie managed to send a message back in time, asking Martin to marry her earlier in their lives. (that was the binary message you found in her lab)[paragraph break]He did, and thanks to a little Aslan magic (and a mysterious Lancelot pendant) you managed to travel forward in time to see them sitting on the National Mall. Oh, and by the way, you have been granted a scroll listing all of the treasures and their locations in case you want to go back and get one. I hope you enjoyed [italic type]Quotient, the Game![roman type]";
+say "[bold type]Congratulations! You have won the game.[paragraph break][roman type]Feel free to wander around, I have moved the Jet to Andrews Air Force base for your convenience.[line break]If you examine the older couple on the lawn, you notice they look like Cassie and Martin. Cassie managed to send a message back in time, asking Martin to marry her earlier in their lives. (that was the binary message you found in her lab)[paragraph break]He did, and thanks to a little Aslan magic (and a mysterious Lancelot pendant) you managed to travel forward in time to see them sitting on the National Mall. Oh, and by the way, you have been granted a scroll listing all of the treasures and their locations in case you want to go back and any you missed. I hope you enjoyed [italic type]Quotient, the Game![roman type]";
 say "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[line break]";
 
 
@@ -1675,7 +1679,7 @@ The White House is north of the Washington Monument. "You are quickly ushered in
 Armory Cabinet is an openable closed container in The White House. It is fixed in place. "A discreet armory cabinet is here."
 The description of the Armory Cabinet is "It is a sleek cabinet. Designed to not attract attention.".
 
-The Resolute Desk is scenery in the White House. "The resolute desk was designed by William Evenden and is 6 feet wide. It was made from oak from the HMS Resolute. Queen Victoria sent the desk to the White House in 1880. The HMS Resolute had been abandoned in the Arctic after being trapped in ice. It eventually sailed itself with the currents to the Davis strait, where it was discovered by an American whaling ship in 1855. The Americans returned the ship, and it was decomissioned in 1879. A second resolute desk sits in Buckingham Palace."
+The Resolute Desk is scenery in the White House. "The resolute desk was designed by William Evenden and is 6 feet wide. It was made from oak from the HMS Resolute. Queen Victoria sent the desk to the White House in 1880. The HMS Resolute had been abandoned in the Arctic after being trapped in ice. It eventually sailed itself with the currents to the Davis strait, where it was discovered by an American whaling ship in 1855. The Americans returned the ship, and it was decommissioned in 1879. A second resolute desk sits in Buckingham Palace."
 
 Understand "hms" or "hms resolute" as The Resolute Desk.
 
@@ -1708,7 +1712,7 @@ The West Rose Window is scenery in the National Cathedral. "Both President Jimmy
 
 The Chapel is west of the National Cathedral. "You wander into a small chapel that might hold 8 people. A perfect place to meditate or pray. There is a small wooden [italic type]pew[roman type] here."
 
-The Pew is a chair in the Chapel. "A modest wooden pew."
+The Pew is a chair in the Chapel. The Pew is scenery. "A modest wooden pew."
 
 The laser is a device. "A laser has popped up through a stone floor tile. It is mounted on an exquisitly carved wooden stand."
 The laser can be energized or notenergized. The laser is nowhere. The laser is notenergized. The laser can be scored or unscored.
@@ -1774,7 +1778,7 @@ Carry out switching off the laser:
 		now the laser is notenergized;
 		now the description of the sky is "That cloud looks like a dragon!";
 	
-The sky is a backdrop. It is in DC. The description is "A beautiful blue sky day in DC."
+The sky is a backdrop. It is in DC. The description is "A beautiful blue-sky day in DC."
 
 Praying is an action applying to nothing. Understand "pray" as praying. 
 Check praying:
@@ -1840,7 +1844,7 @@ Instead of entering the pod:
 
 Section 2 Plane
 
-The Quotient Jet is a vehicle in the Airstrip. The description of the Quotient Jet is "The Quotient Jet is a matte-black Gulfstream 950ER Superjet with a custom interior featuring a conference table with a holographic projection screen. It also has a bedroom and the treat cupboard is stocked with fresh chocolate-covered strawberries every time you board."
+The Quotient Jet is a vehicle in the Airstrip. The description of the Quotient Jet is "The Quotient Jet is a matte-black Gulfstream 950ER Superjet with a custom interior featuring a conference table with a holographic projection screen. It also has a bedroom, and the treat cupboard is stocked with fresh chocolate-covered strawberries every time you board."
 The Quotient Jet can be airborne or grounded. 
 The Quotient Jet is grounded.
 The top of the Quotient Jet is a supporter. The top of the Quotient Jet is part of the Quotient Jet.
@@ -1877,18 +1881,19 @@ Carry out flying to:
 		now the Quotient Jet is grounded.
 
 The player carries a map. The description of the map is "The map shows all of the places you can fly the Quotient jet to including:[paragraph break]
-> the Airstrip (HQ)[line break]
-> the Hidden Airbase (Oxford)[line break]
+> Airstrip (HQ)[line break]
 > Lunken Airport (Cincinnati or CVG)[line break]
 > Burke Lakefront Airport (Cleveland or CLE)[line break]
+> Andrews Air Force Base (DC)[line break]
 > Arusha Airport (Africa or ARK)[line break]
-> Andrews Air Force Base (DC), and the Spaceport.[line break]"
+> Hidden Airbase (Oxford)[line break]
+> Spaceport.[line break]"
 
 The read text of the map is "The map shows all of the places you can fly the Quotient jet to including the Airstrip (HQ), the Hidden Airbase (Oxford), Lunken Airport (Cincinnati or CVG), Burke Lakefront Airport (Cleveland or CLE), Arusha Airport (Africa or ARK), Andrews Air Force Base (DC), and the Spaceport."
 
 Section 3 SpaceX Rocket
 
-The SpaceX Rocket is a vehicle in the SpacePort. The description of the SpaceX Rocket is "The SpaceX StarHopper craft was the full-sized Starship that SpaceX built for Mars transport. It stood an astounding 420 feet high with the landing legs. It loomed large in the bright blue sky. For comparison, the Saturn V rocket that took the Apollo flights to the moon was 363 feet tall."
+The SpaceX Rocket is a vehicle in the SpacePort. The description of the SpaceX Rocket is "The SpaceX StarHopper craft is the full-sized Starship that SpaceX built for Mars transport. It stands an astounding 420 feet high with the landing legs. It looms large in the bright blue sky. For comparison, the Saturn V rocket that took the Apollo flights to the moon was 363 feet tall."
 The SpaceX Rocket can be airborne or grounded. 
 The SpaceX Rocket is grounded.
 
@@ -1931,8 +1936,6 @@ Instead of pushing the yellow button:
 		say "You can't push the button while outside the rocket.";
 	else if the rocket is in Flying through the Air:
 		say "You can't start the countdown while flying through the air!";
-	else if the rocket is in Flying through Space:
-		say "You can't start the countdown while flying through space!";
 	otherwise:
 		if the countdown begun is true:
 			say "The countdown is already in progress!";
@@ -1943,6 +1946,8 @@ Instead of pushing the yellow button:
 Instead of pulling the blue lever:
 	if player is not in rocket:
 		say "You can't pull the lever while outside the rocket.";
+	else if the rocket is in Flying through the Air:
+		say "The G Forces prevent you from reaching the lever while flying through the air!";
 	otherwise:
 		if the docking clamps are 0:
 			say "The docking clamps are now open!";
@@ -1992,8 +1997,6 @@ Instead of pushing the red button:
 			say "You cannot eject while docked at TARDIS.";
 		else if rocket is in Flying through the Air:
 			say "The G forces prevent you from operating any controls.";
-		else if rocket is in Flying through Space:
-			say "The G forces prevent you from operating any controls. You should slow soon and regain the ability to work the controls.";
 		otherwise:
 			say "[paragraph break][bold type]WHOOP WHOOP, Ejection System Activated![roman type] You are thrown out of the rocket, experiencing 3g's in the process. After being thrown clear, another explosion rocks your world as your parachute is blasted open, saving you from certain death as you drift the short distance back to the launch pad.";
 			move player to spaceport.
@@ -2008,7 +2011,11 @@ Instead of launching when the countdown begun is false:
 
 [flying... concept and portions adapted from "House of Dream of Moon" by The IF Whispers Team]
 
-Flying Through the Air is a room. "The SpaceX rocket shudders as it lifts off the pad toward the [italic type]final frontier[roman type]! You glance out the window as you race upward, the G forces pulling you deep into your seat. You can only watch as the [italic type]earth[roman type] moves away from you at a rapid clip."
+Flying Through the Air is a room. "You are currently being propelled upward by means of the giant explosion going on beneath your seat."
+
+After going to Flying Through the Air for the first time:
+	say "The SpaceX rocket shudders as it moves toward the [italic type]final frontier[roman type]! You glance out the window as you race upward, the G forces pulling you deep into your seat. You can only watch as the [italic type]earth[roman type] moves away from you at a rapid clip.[paragraph break]'";
+	try looking;
 
 Instead of going north in Flying Through the Air:
 	say "You are held to your seat by the G forces of the launch.";
@@ -2029,7 +2036,25 @@ Instead of going down in Flying Through the Air:
 	say "Don't you wish...";
 	
 Instead of attacking in Flying Through the Air:
-	say "Relax, you are almost there!";
+	say "Relax, you are almost there! (assuming you survive)";
+	
+Instead of exiting when the rocket is in Flying Through the Air:
+	say "Fortunately, you can't even get out of your seat. Exiting the rocket would be certain death.";
+	
+Instead of jumping in Flying Through the Air:
+	say "haha. Nice one. You understand that you are travelling at Mach 3 right?";
+	
+Instead of screaming in Flying Through the Air:
+	say "In the vacuum of space, no one can hear you scream!";
+	
+Instead of examining earth in Flying Through the Air:
+	say "The objects on the ground are getting smaller. Cars look like the matchbox cars of your childhood.";
+	
+Instead of examining final frontier in Flying Through the Air:
+	say "To boldly go where no one has gone before. Maybe there is a reason no one has gone here before?";
+	
+Instead of doing anything in Flying Through the Air:
+	say "The G forces prevent you from doing almost anything.";
 
 The flying counter is a number that varies. The Flying Counter is 0.
 
@@ -2042,7 +2067,7 @@ message
 "You are almost there, stay awake!"
 "You have now fully left the atmosphere and the shuddering climb is now a smooth arrow-like approach to your goal."
 "Thrusters kick in to slow you as you see TARDIS racing toward you."
-"You have slowed and feel weightless."
+"You have slowed and are starting to feel weightless."
 "You have stopped just outside of TARDIS. You notice a nutter-butter floating nearby. You meant to eat that before you took off."
 
 The earth is scenery in Flying Through the Air. It has description "The objects on the ground are getting smaller. Cars look like the matchbox cars of your childhood." 
@@ -2061,32 +2086,9 @@ Every turn while flying counter > 0:
 		try looking;
 	end if;
 	if flying counter is seven begin;
-		move the rocket to Flying Through Space;
-		try looking;
+		say "[bold type]The first stage separates[roman type], and you feel the engines of the orbiter kick in. The roar of the engines is non-existent because of the vacuum of space, but their power can still be felt in the forceful jolts of the ship. Keep going!";
 	end if.
 	
-Instead of going north in Flying Through Space:
-	say "You are beginning to get comfortable with the fact that you are hundreds of miles above the ground.";
-	
-Instead of going south in Flying Through Space:
-	say "Now I can see why they call it the Blue Marble.";
-	
-Instead of going east in Flying Through Space:
-	say "You can't go east when you are hurtling through space. What does east even mean in deep space?";
-	
-Instead of going west in Flying Through Space:
-	say "Someday, you'll look back at flight foundly.";
-	
-Instead of going up in Flying Through Space:
-	say "You were already going up. At a rapid pace at that!";
-	
-Instead of going down in Flying Through Space:
-	say "What goes up, must come down, but not yet!";
-	
-Instead of attacking in Flying Through Space:
-	say "Relax, you are almost there!";
-
-Flying Through Space is a room. "The first stage separates, and you feel the engines of the orbiter kick in. The roar of the engines is non-existent because of the vacuum of space, but their power can still be felt in the forceful jolts of the ship." 
 
 Book 5 - Things
 
@@ -2242,7 +2244,7 @@ Instead of examining the watch:
 	say "[time of day]".
 
 The SCIF is a device in the Conference Room. "A secure communication device, or SCIF, is here. It is used for connecting with the President."
-The description of the SCIF is "This secure communication device, or SCIF, is state of the art. It is not only secure, it also projects a holograms of people in the Oval Office into the conference room. It is primarily used for connecting with the President.".
+The description of the SCIF is "This secure communication device, or SCIF, is state of the art. It is not only secure, it also projects a hologram of people in the Oval Office into the conference room. It is primarily used for connecting with the President.".
 
 The SCIF can be switched on or switched off. The SCIF is switched off.
 The SCIF can be activated or unactivated. The SCIF is unactivated.
@@ -2674,6 +2676,8 @@ Understand "shelf" or "circular shelf" or "table" or "mounting shelf" or "mount"
 
 mount_var is a number that varies. mount_var is initially 0.
 mount_score is a number that varies. mount_score is initially 0.
+
+Instead of putting the succulent on the jet, try putting the succulent on top of the jet.
 
 Instead of putting the succulent on the top of the jet:
 	if mount_score is 0: 
@@ -3207,7 +3211,7 @@ Understand "prof" or "eaton" or "professor cassandra" or "cassandra" or "profess
 
 Instead of talking to Cassie:
 	if Cassie is in Cassie's lab:
-		say "[if the Quantum Console is activated] The entanglement is stable. Nice work! [Otherwise][one of]We need to get to keep the entanglement going. Check the console.[or]We need a powerful energy source get this thing going.[or]You'll need a password to open the console.[or]I really should have done my yoga in the metaverse before I came to the lab.[or]If you have something specific you want to know, ask me, otherwise, I'm going to get to work.[cycling]";
+		say "[if the Quantum Console is activated] The entanglement is stable. Nice work![paragraph break][Otherwise][one of]We need to get to keep the entanglement going. Check the console.[or]We need a powerful energy source get this thing going.[or]You'll need a password to open the console.[or]I really should have done my yoga in the metaverse before I came to the lab.[or]If you have something specific you want to know, ask me, otherwise, I'm going to get to work.[cycling]";
 	otherwise:
 		say "Cassie looks at you with a mix of curiosity and determination. 'Ready to get to work? I'm going to the lab' she says.[paragraph break][if the Quantum Computer is wonky]'Oh, and the computer appears to need a reboot' she says as she disappears[paragraph break]";
 		now Cassie is in Cassie's Lab.
@@ -3441,9 +3445,11 @@ topic	response
 "Jack"	"I love Jack. He happens to be an expert at quantum computing, and a great dancer."
 "Sarah"	"Sarah is my soon to be sister-in-law. Why do you ask about her? Do you know something I don't?"
 "Martin"	"He is like a father to me. His connections are legendary."
+"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
 "computer"	"Tardis is our computer. Jack built it."
 "the computer"	"Tardis is our computer. It is in space."
 "tardis"	"Tardis is our computer. Jack built it."
+"continuum"	"It is the name of Cassie's lab."
 "mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about."
 "the mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about."
 "Florin"	"Florin is gracious. A great agent. I heard he used to be MI-5."
@@ -3509,8 +3515,9 @@ topic	response
 "computer"	"Oh, I don't talk about such things."
 "the computer"	"Oh, I don't talk about such things."
 "tardis"	"Tardis is from Dr. Who isn't it?"
-"mission"	"I need to make the entanglement stable!Your mission is to help me do so. I need a power source and TARDIS needs to be rebooted. Jack is helping me with a laser in DC."
+"mission"	"I need to make the entanglement stable! Your mission is to help me do so. I need a power source and TARDIS needs to be rebooted. Jack is helping me with a laser in DC."
 "the mission"	"I need to make the entanglement stable! Your mission is to help me do so. I need a power source and TARDIS needs to be rebooted. Jack is helping me with a laser in DC."
+"continuum"	"The Continuum Is my lab."
 "Florin"	"Florin is a friend. I would recommend agents, he would develop them!"
 "President"	"President Bridget O'Connor is considered an outstanding leader."
 "Prime Minister"	"Martin always said he'd make a great Quotient Agent."
@@ -3559,6 +3566,8 @@ topic	response
 "Kara"	"I love Kara. She happens to be an expert at quantum communication, and a great dresser."
 "Sarah"	"Sarah is my sister. Why do you ask about her? Do you know something I don't?"
 "Martin"	"He is like a father to me."
+"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
+"continuum"	"It is the name of Cassie's lab."
 "computer"	"Tardis is our computer. I built it."
 "the computer"	"Tardis is our computer. It is in space."
 "tardis"	"Tardis is our computer. I built it."
@@ -3615,11 +3624,13 @@ topic	response
 "Kara"	"Kara is an expert at quantum communication."
 "Florin"	"Florin is a very capable agent. He trained me. He is a dear friend."
 "Martin"	"He is like a father to me. His connections are legendary."
+"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
 "computer"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
 "the computer"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
 "tardis"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
 "mission"	"We must get to the Continuum and power up the console. Anything else is an unknown at this point."
 "the mission"	"We must get to the Continuum and power up the console. Anything else is an unknown at this point."
+"continuum"	"The Continuum is what Cassie calls her lab."
 "Cassie"	"She's brilliant with time, but can't she see Martin is in love with her?"
 "President"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
@@ -3667,8 +3678,10 @@ After telling Martin about something:
 
 Table of Martin's Replies
 Topic	Muse
-"mission"	"We need to help Cassie with her experiment. That means, rebooting the computer and getting to the Continum to help her. There may be more steps required. We're not sure yet."
-"the mission"	"We need to help Cassie with her experiment. That means, rebooting the computer and getting to the Continum to help her with her quantum console. There may be other steps required. We're not sure yet."
+"mission"	"We need to help Cassie with her experiment. That means, rebooting the computer and getting to the Continuum to help her. There may be more steps required. We're not sure yet."
+"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
+"the mission"	"We need to help Cassie with her experiment. That means, rebooting the computer and getting to the Continuum to help her with her quantum console. There may be other steps required. We're not sure yet."
+"continuum"	"The name of Cassie's lab."
 "quantum console"	"You'll have to ask Cassie about that."
 "console"	"You'll have to ask Cassie about that."
 "computer"	"Tardis is our computer. It is in space."
@@ -3738,7 +3751,7 @@ Instead of talking to Robot:
 	say "[line break]I'm sorry Dave, I can't do that.[line break]"
 
 Instead of talking to Martin:
-        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if Martin is in The Hallway]Hello Agent, I'm glad you arrived. I'll brief you in my office, after you show me the puzzle piece.[else][one of]'Do you have any other suggestions?' you ask.[paragraph break]'Be careful out there, and take the Tardis Communicator.' His voice is clear as he looks you straight in the eye.[or]'I will,' you reply. 'What can you tell me about the time experiment?'[paragraph break]'Cassie is a genius when it comes to time. You'll need to see her. She calls her lab Continum.'[or]'Do you like Cassie?.[paragraph break]'That's a strange question for someone who has just started her, but I will say, I have always enjoyed Cassie's company.'[or]You decide against talking any further with Martin right now.[cycling]".
+        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if Martin is in The Hallway]Hello Agent, I'm glad you arrived. I'll brief you in my office, after you show me the puzzle piece.[else][one of]'Do you have any other suggestions?' you ask.[paragraph break]'Be careful out there, and take the Tardis Communicator.' His voice is clear as he looks you straight in the eye.[or]'I will,' you reply. 'What can you tell me about the time experiment?'[paragraph break]'Cassie is a genius when it comes to time. You'll need to see her. She calls her lab the Continuum.'[or]'Do you like Cassie?.[paragraph break]'That's a strange question for someone who has just started her, but I will say, I have always enjoyed Cassie's company.'[or]You decide against talking any further with Martin right now.[cycling]".
 
 Instead of talking to Sarah:
         say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if Sarah is in Nela Park][one of]'Hello again, what are you up to.' you say.[paragraph break]'I'm looking for some type of containment device, not sure exactly what kind yet, but the engineers at Nela are actually working undercover for the CIA.'[or]'Ahhh, ok. Good to know.'[paragraph break]'Thanks for your help on this mission. We were going to just do a fun training mission, but then the lion escaped and messed up our plans.'[or]'No problem. It's great to get to work with you and the quotient team.'[or]You decide against talking any further with Sarah right now.[cycling][else][one of]'Hi, there,' you say confidently.[paragraph break]'Hi, Welcome to the team.' she replies with a smile.[or]'I've been meaning to ask you about Martin,' you comment. 'What's he like?'[paragraph break]'Martin is legendary for his connections. He can call in favors from all over. And underneath that Marine-like exterior is a softie. He's like a father to me.'[or]'Thank you.[paragraph break]'Of course, Good luck.'[or]You decide against talking any further with Sarah right now.[cycling]".
@@ -3875,7 +3888,7 @@ Definition: a thing is charged if it suggests a memory which is in the subconsci
 
 Every turn when a charged thing (called the item) is visible: move the suggested memory of the item to emotional baggage; say "Something about [the item] reminds you of [the suggested memory of item].";
 
-The player carries an open transparent unopenable container called emotional baggage. The description of emotional baggage is "You'll collect old memories over time. You can think about them whenever you want. You imagine this as an old dufflebag."
+The player carries an open transparent unopenable container called emotional baggage. The description of emotional baggage is "You'll collect old memories over time. You can think about them whenever you want. You imagine this as an old duffle bag."
 
 Instead of doing anything other than examining when noun is emotional baggage or second noun is emotional baggage: say "It's not real... it is your subconscious."
 

@@ -32,6 +32,8 @@ Include Extended Grammar by Aaron Reed.
 Include Basic Screen Effects by Emily Short.
 Include Swearing Reloaded by Shin.
 Include Postures by Emily Short.
+Include Smarter Parser by Aaron Reed.
+Include Poor Man's Mistype by Aaron Reed.
 
 Chapter 3 Some helpful help tools from Emily Short's Bronze
 
@@ -202,6 +204,28 @@ Role
 "Book Inspiration........................The Quantum Contingent"
 "Second Book.............................Quantum Time"
 "Release.................................108.1b"
+
+[Inventory]
+
+[We first need to get rid of the standard way of listing inventory.]
+The print standard inventory rule is not listed in any rulebook.
+
+[Then we substitute our own.]
+Carry out taking inventory (this is the list-style inventory rule):
+	now everything that is a treasure is marked for listing;
+	now everything that is edible is not marked for listing;
+	now everything that is not a treasure is not marked for listing;
+	say “Treasures: [line break]";
+	list the contents of the player, listing marked items only, including all contents, with newlines, indented, with extra indentation;
+	now everything that is a treasure is not marked for listing;
+	now everything that is edible is marked for listing;
+	say "Treasured Food and Drink: [line break]";
+	list the contents of the player, listing marked items only, with newlines, indented, with extra indentation;
+	now everything that is a treasure is not marked for listing;
+	now everything that is edible is not marked for listing;
+	now everything that is not a treasure is marked for listing;
+	say “Everything else: [line break]";
+	list the contents of the player, listing marked items only, including all contents, with newlines, indented, with extra indentation;
 
 
 Chapter 7 Magic Movements, Xyzzy, Magic Words
@@ -620,7 +644,7 @@ The steel striker is wearable.
 
 pile of leaves is a thing in The Gate. The description of the pile of leaves is "Um, a pile of leaves, do you want to count them?" 
 
-smore is a thing. the smore is nowhere. The scent of the smore is "Yum, melted chocolate and gooey marshmallow."
+smore is an edible thing. the smore is nowhere. The scent of the smore is "Yum, melted chocolate and gooey marshmallow."
 The description of the smore is "The golden-brown marshmallow has been smashed into the melted chocolate with two graham cracker slabs, creating the perfect backyard campfire delicacy.".
 Understand "s'more" as smore.
 
@@ -633,7 +657,7 @@ Instead of eating the smore:
 		say "Ah, a s'more. Chidhood memories flood your mind. You can't help but take another one.";
 	otherwise:
 		increase counter_smore by 1;
-		say "Yum, I've eaten [counter_smore] of these, and each one is as good as the last. You immediately take another!"
+		say "Yum, I've eaten [counter_smore] of these, and each one is as good as the last. Don't worry, you took more than one!"
 
 	
 Instead of attacking the flint when the steel striker is not worn by the player:
@@ -1333,15 +1357,6 @@ Lighting Institute is a room. It is west of Nela Park. "Still in remarkable shap
 
 The National Christmas Tree is scenery. It is a supporter in The Lighting Institute. "The Christmas Tree is at least 30 feet tall and is covered with thousands of lights in the shape of different spaceships from Star Wars and Star Trek lore."
 
-The Millenium Falcon is a thing. It is on the National Christmas Tree. "The [italic type]Millenium Falcon[roman type] is the crowning star on the tree. The classic Star Wars ship is adorned with blinking red lights and you can hear [italic type]Chewbacca[roman type] roar."
-
-The description of the Millenium Falcon is "The classic Star Wars ship is adorned with blinking red lights and if you listen to the ship, you can hear [italic type]Chewbacca[roman type] roar."
-
-Understand "ship" as Millenium Falcon.
-
-Chewbacca is thing. It is part of the Millenium Falcon. 
-The description of Chewbacca is "Hairy little guy isn't he."
-
 Edgewater Park is a room. It is west of Burke Lakefront. "This is the [italic type]beach[roman type] on the 'North Coast'... sand, sun and fun! [italic type]Lake Erie[roman type] stretches on for as far as the eye can see. The sand feels good between your toes."
 
 Lake Erie is scenery in Edgewater Park. "Kids are splashing in the water. A large barge in the distance looks small. A pleasure boat is docked not too far offshore."
@@ -1687,6 +1702,11 @@ Reflecting Pool is west of the Washington Monument. "The Reflecting Pool is a lo
 
 Ducks are scenery in the Reflecting Pool. "They are just cruising around on top of the water like normal ducks."
 
+Understand "duck" as Ducks.
+
+Instead of taking Ducks:
+	say "They are wet and fast... you can't catch them.";
+
 Understand "talk to ducks" as a mistake ("The ducks look at you as if you are crazy.")
 
 Lincoln Memorial is west of the Reflecting Pool. "The Lincoln Memorial sits majestically at the western end of the National Mall, a tribute to the 16th President of the United States. The [italic type]Statue of Lincoln[roman type] is seated here in contemplation.[paragraph break]The Reflecting Pool stretches out to the east, leading back to the National Mall. The National Cathedral is a few miles north of here. West returns to Andrews AirForce Base."
@@ -1909,7 +1929,7 @@ Check entering rocket:
 	if the noun is the location, say "You are already in [the noun]." instead.
 	
 The cockpit is a thing in the rocket. It is fixed in place. "The rocket has a cockpit containing buttons and a single blue lever."
-The description of the cockpit is "The cockpit is a very simple layout. A yellow button is on your left, next to a clock, the black button is right in front of you, the red button is above you, and the blue lever is to the right side.".
+The description of the cockpit is "[if the player is in the rocket]The cockpit is a very simple layout. A yellow button is on your left, next to a clock, the black button is right in front of you, the red button is above you, and the blue lever is to the right side.[otherwise]It is hard to make out the details of the cockpit through the window.".
 
 buttons is part of the cockpit. "There are three buttons on the cockpit."
 The description of the buttons is "There is a yellow button, a black button and a red button.".
@@ -2002,9 +2022,6 @@ Instead of pushing the red button:
 			move player to spaceport.
 
 The Blackness of Space is a room. The Blackness of Space is part of the Outerspace Area. "[if player is in rocket]You are in the vastness of space, having successfully launched from the Earth. You can see the docking ring of TARDIS nearby, and the blue marble you call home off in the distance.[else]You are spacewalking in space... be careful not to drift away! You can see the docking ring of TARDIS as well as your favorite planet, Earth."
-
-Nutter butter is an edible thing in Blackness of Space. "A nutter butter is floating here."
-The description of the Nutter butter is "The classic, peanut-shaped, cookie."
 
 Instead of launching when the countdown begun is false:
     say "The rocket can't launch yet. The countdown hasn't started.";
@@ -2394,7 +2411,7 @@ Instead of eating the chocolate-covered strawberry:
 		say "Yum! You can't help but take another one.";
 	otherwise:
 		increase counter_var by 1;
-		say "Yum, I've eaten [counter_var] of these, and each one is as good as the last. You immediately take another!"
+		say "Yum, I've eaten [counter_var] of these, and each one is as good as the last. Don't worry, you took more than one!"
 	
 A light source is a kind of device. Carry out switching on a light source: now the noun is lit. Carry out switching off a light source: now the noun is unlit.
 The flashlight is a light source. The Flashlight is in the Cemetery.
@@ -2575,20 +2592,21 @@ Instead of examining the scroll of treasure:
 [italic type]Italic items contain hints[roman type][line break]
 Food is usually just there because spies get hungry![paragraph break]
 [italic type]Book (Martin's Office)[roman type][line break]
-[italic type]Digital Notepad (Conference Room)[roman type][line break]
 [bold type]Succulent (Clearing)[roman type][line break]
-[italic type]TARDIS Communicator (Cemetary)[roman type][line break]
+[italic type]TARDIS Communicator (Fire Pit)[roman type][line break]
 [italic type]Deck of Cards (Farmhouse)[roman type][line break]
 Rediwhip (Kitchen)[line break]
 [bold type]Mirrorball (Old Barn)[roman type][line break]
+Pimms (Turf Tavern)[line break]
 [italic type]Paperback (Duke Humfrey's LIbrary)[roman type][line break]
-[italic type]Hardcover Novel (Duke Humfrey's Library)[roman type][line break]
 [Italic type]Graduation Program (Under Throne in Sheldonian Theatre, must examine)[roman type][line break]
 Scone (Vaults and Garden's[line break]
 [italic type]Figurine (Narnia Lamp)[roman type][line break]
 [italic type]Medal (Caves)[roman type][line break]
 3-way Chili (Skyline Chili)[line break]
 [bold type]Mountain Dew (Skyline Chili)[roman type][line break]
+[italic type]Millenium Falcon (Lighting Institute)[roman type][line break]
+Nutter Butter (Blackness of Space)[line break]
 [italic type]Gazette (Smithsonian Castle)[roman type][line break]
 Pretzel (Lawson’s Deli)[line break]";
 	
@@ -2617,7 +2635,7 @@ Instead of taking the Mirrored Ball:
 		
 [-----]
 	
-The Pimms are a treasure. The Pimms are in the Turf Tavern.
+The Pimms are an edible treasure. The Pimms are in the Turf Tavern.
 The description of the Pimms is "It's a glass of Pimms, you drink it!".
 
 Instead of drinking the Pimms:
@@ -2625,10 +2643,21 @@ Instead of drinking the Pimms:
 	say "Nothing is as refreshing as a Pimms on a hot summer day in Oxford!"
 	
 Understand "beer" or "alcohol" or "lemonade" as Pimms.
+
+[--------]
+
+The Millenium Falcon is a treasure. It is on the National Christmas Tree. "The [italic type]Millenium Falcon[roman type] is the crowning star on the tree. The classic Star Wars ship is adorned with blinking red lights and you can hear [italic type]Chewbacca[roman type] roar."
+
+The description of the Millenium Falcon is "The classic Star Wars ship is adorned with blinking red lights and if you listen to the ship, you can hear [italic type]Chewbacca[roman type] roar.[if player has light saber] It goes well with your light saber![otherwise] Now if only you had a light saber!"
+
+Understand "ship" as Millenium Falcon.
+
+Chewbacca is thing. It is part of the Millenium Falcon. 
+The description of Chewbacca is "Hairy little guy isn't he."
 	
 [-------]
 	
-A pretzel is a treasure. The pretzel is in Lawsons Deli. 
+A pretzel is an edible treasure. The pretzel is in Lawsons Deli. 
 The description of the pretzel is "A perfectly browned knot with just the right amount of large salt crystals.".
 
 Counter_pretzel is a number that varies. Counter_pretzel is initially 0.
@@ -2640,31 +2669,49 @@ Instead of eating the pretzel:
 		say "Delicious!! Lawson's makes the best pretzels! (Rumor has it they use LYE!)!";
 	otherwise:
 		increase counter_pretzel by 1;
-		say "Yum, I've eaten [counter_pretzel] of these, and each one is as good as the last. You immediately take another!"
+		say "Yum, I've eaten [counter_pretzel] bites of this pretzel, and each one is as good as the last. Each of my bites is half of what is left. I can do this forever!"
 			
 [-----]
 	
-The rediwhip is a treasure. The rediwhip is in the kitchen. "You see classic all american rediwhip here."
-The description of the rediwhip is "It's the classic spray can of Whipped Cream.".
+The can of rediwhip is an edible treasure. The can of rediwhip is in the kitchen. "You see classic all american rediwhip here."
+The description of the can of rediwhip is "It's the classic spray can of Whipped Cream.".
 
-Instead of drinking the rediwhip:
-	if player does not have pretzel, try taking the pretzel;
+Instead of drinking the can of rediwhip:
+	if player does not have the can of rediwhip, try taking the can of rediwhip;
 	say "You shoot the can of rediwhip directly into your mouth. Ahhhh, the classics."
 	
-Instead of eating the rediwhip:
-	if player does not have rediwhip, try taking the rediwhip;
+Instead of eating the can of rediwhip:
+	if player does not have can of rediwhip, try taking the can of rediwhip;
 	say "You shoot the can of rediwhip directly into your mouth. Ahhhh, the classics."
 	
 Instead of tasting the noun:
 	try eating the noun;
 	
-Understand "whipped cream" or "cream" or "whip" as rediwhip.
+Understand "whipped cream" or "cream" or "whip" as the can of rediwhip.
 	
 [-----]
 	
 The medal is a treasure. The medal are in Cave5.
 The description of the medal is "A solid gold medal on a ribbon! There is writing on the front of the medal and an image of a fractured sphere reflecting red light all around it on the back."
 The read text of the medal is "First Class Spelunker Agent!"
+
+[-----]
+
+Nutter butter is an edible treasure in Blackness of Space. "A nutter butter is floating here."
+The description of the Nutter butter is "The classic, peanut-shaped, cookie."
+
+Instead of eating the Nutter Butter:
+	if player does not have the Nutter Butter, try taking the Nutter Butter;
+	if counter_scone is 0:
+		increase counter_scone by 1;
+		say "Delicious!! I could use some protein!";
+	otherwise if counter_scone is 1:
+		increase counter_scone by 1;
+		say "Yum, I've eaten [counter_scone] bite of this, and each one is as good as the last!";
+	otherwise:
+		increase counter_scone by 1;
+		say "Yum, I've eaten [counter_scone] bites of this. I just keep eating half of what remains. I could do this forever!";
+
 
 [-----]
 
@@ -2710,7 +2757,7 @@ Understand "dreamcatchers" or "dream" or "catchers" or "dream catchers" as book.
 
 [-----]
 
-A hardcover novel is a treasure. The hardcover novel is in the Duke Humfreys Library. 
+A hardcover novel is a thing. The hardcover novel is in the Duke Humfreys Library. 
 
 The read text of the hardcover novel is "CS Lewis imagined the Narnia Lamp post as a magical gateway to someplace far away where time works differently."
 
@@ -2722,11 +2769,18 @@ Understand "cs lewis" as hardcover novel.
 
 A paperback is a treasure. The paperback is in the Duke Humfreys Library. 
 
+[cool little renaming trick using the say command, learned at intfiction]
+
 The read text of the paperback is "Thirteen-year-old Allie loves capturing her dreams in her dream journal until one morning when she wakes up to realize she hasn't dreamed in weeks. In order to rescue her dreams, she must go looking in the place where they are born— Neverland.
 
-[italic type]Dreamcatchers[roman type] is a middle grade novel perfect for kids, or for anyone who never wants to grow up"
+[italic type]Dreamcatchers[roman type][renamebook] is a middle grade novel perfect for kids, or for anyone who never wants to grow up"
 
 The description of the paperback is "It's the book [italic type]Dreamcatchers[roman type], by Bridget Simpson. (Rumor has it, some of it was written in The Lost Lodge.)".
+
+To say renamebook:
+	now the printed name of paperback is "paperback, [italic type]Dreamcatchers[roman type]";
+	
+Understand "dreamcatchers" as paperback.
 
 [-----]
 
@@ -2740,7 +2794,7 @@ Understand "news" or "newspaper" as gazette.
 
 [-----]
 
-A digital notepad is a treasure. The digital notepad can be switched on or switched off. The digital notepad is in the Conference Room. "A digital notepad is here." 
+A digital notepad is a thing. The digital notepad can be switched on or switched off. The digital notepad is in the Conference Room. "A digital notepad is here." 
 
 The digital notepad is switched on.
 Understand "ipad"  or "pad" as digital notepad.
@@ -2751,7 +2805,7 @@ The description of the digital notepad is "It's an iPad mini. It is on and someo
 		
 [-----]
 
-A scone is a treasure. The scone is in Vaults_Garden. 
+A scone is a an edible treasure. The scone is in Vaults_Garden. 
 The description of the scone is "A delicious scone with raspberry jam".
 
 Understand "scones" as scone.
@@ -2765,7 +2819,7 @@ Instead of eating the scone:
 		say "Delicious!! I love a warm scone at any time of day!";
 	otherwise:
 		increase counter_scone by 1;
-		say "Yum, I've eaten [counter_scone] of these, and each one is as good as the last. You immediately take another!"
+		say "Yum, I've eaten [counter_scone] of these, and each one is as good as the last. Don't worry, you took more than one!"
 	
 [-----]
 
@@ -2791,7 +2845,7 @@ Understand "shuffle deck" as a mistake ("You don't have time to play cards, you 
 
 [-----]
 
-A 3-way Chili is a treasure. The 3-way Chili is in Skyline Chili. 
+A 3-way Chili is an edible treasure. The 3-way Chili is in Skyline Chili. 
 The description of the 3-way Chili is "Beautiful oval ceramic plate, carefully placed spaghetti noodles, bathed in the secretive chili and piled high with finely shredded cheese.".
 
 
@@ -2810,7 +2864,7 @@ Understand "chili" or "manna" or "wonderous food" as 3-way Chili.
 
 [-----]
 
-A Mountain Dew is a treasure. The Mountain Dew is in Skyline Chili. The Mountain Dew can be drank or notdrank. The Mountain Dew is notdrank.
+A Mountain Dew is an edible treasure. The Mountain Dew is in Skyline Chili. The Mountain Dew can be drank or notdrank. The Mountain Dew is notdrank.
 The description of the Mountain Dew is "Yahoo, the neon green Mountain Dew is here.".
 The read text of Mountain Dew is "Ingredients are all Natural... Just kidding. Yahoo!".
 Understand "mt dew" as Mountain Dew.
@@ -3487,6 +3541,58 @@ Section 3 - Florin
 Instead of asking Florin about something:
 	say "I need to find my gun!"
 	
+After asking the Florin about a topic listed in the Table of Florin's responses, say "[if robert clayton is asleep]You got Robert, You got the Crystal! Stop talking to me and help Cassie power up the console![else][line break][response entry][line break]".
+
+After asking the Florin about something:
+	if the topic understood is not a topic listed in the Table of Florin's responses:
+		say "[line break][if robert clayton is asleep]You got him![else][one of]I need to find my gun![or]Sorry, I'm not sure.[or]We need to stop talking and stop Robert![or]Florin looks over his shoulder and says, 'Did you hear a lion?'[cycling]"
+		
+After telling the Florin about a topic listed in the Table of Florin's responses, say "[line break][response entry][line break]".
+
+After telling the Florin about something:
+	if the topic understood is not a topic listed in the Table of Florin's responses:
+		say "[line break][if robert clayton is asleep]You got him![else][one of]Florin looks at you quizzically, 'I don't know much about that.[or]Sorry, I'm not sure.[or]We need to stop talking and stop Robert![or]I need my gun!'[at random]"
+
+
+Table of Florin's responses
+topic	response
+"desmond"	"He's my Sarah's husband. He's a great guy, but he's not a spy."
+"Jack"	"Jack's great. He happens to be an expert at quantum computing. That's why we recruited him."
+"Sarah"	"Sarah and I go way back. I trained her."
+"Martin"	"Martin and I competed in sports in college!"
+"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
+"computer"	"Tardis is our computer. Jack built it."
+"the computer"	"Tardis is our computer. It is in space."
+"tardis"	"Tardis is our computer. Jack built it."
+"continuum"	"It is the name of Cassie's lab."
+"mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about. My job is to find the Crystal. I've tracket Robert down before."
+"the mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about. My job is to track down Robert. I've done that before."
+"Florin"		"Uh, that's me."
+"Cassie"	"She's brilliant with time, but can't she see Martin is in love with her?"
+"President"	"President Bridget O'Connor is a great leader."
+"Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
+"Bridget"	"President Bridget O'Connor is a great leader."
+"Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
+"Greg"	"I heard he's an author?"
+"Karen"	"Did you mean Kara or Cassie?"
+"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
+"chili/skyline/skyline/scone/pretzel"	"Yum! Delicious."
+"skyline chili"	"Yum! Delicious."
+"dew/Pimms/beer/water/pop"	"Refreshing!"
+"laser/lasers"	"Cassie said there is a special laser in the US that she needs to have turned on for her experiment to work."
+"crystal"	"Cassie needs it to power something."
+"metaverse/vr/meta"	"I know Cassie has a great VR lab."
+"virtual reality"	"I know Cassie has a great VR lab."
+"pendant"	"It has something to do with Cassie's time experiment, but I'm not sure what."
+"the lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
+"lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
+"abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"the abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"robert clayton"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
+"clayton/robert"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
+"password/passcode"	"I don't know. You'd have to ask Cassie."
+"pendant"	"The legend is that Lancelot could do unbelievable things if he was wearing this pendant. It had a mirror-like finish. He polished it every day."
+	
 Section 4 - Server
 
 Instead of asking the server about something:
@@ -3649,8 +3755,8 @@ topic	response
 "the lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
 "lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
 "abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
-"key/cage"	"Feel free to search my office. It's part of your test."
-"iron cage"	"Feel free to search my office. It's part of your test."
+"key/cage"	"Feel free to search Martin's office. It's part of your test."
+"iron cage"	"Feel free to search Martin's office. It's part of your test."
 "the abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
 "robert clayton"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "clayton/robert"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."

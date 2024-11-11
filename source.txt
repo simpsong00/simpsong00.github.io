@@ -565,7 +565,7 @@ Conference Room is west of The Inner Sanctum. "A stark polished [italic type]sta
 
 The monitors are scenery in the Conference room. "The monitors show many different things. One shows a map of the world with markers on different points around the globe. The other shows a 24-hour news station. A third is streaming Rocket League; the car with the succulent on top just scored!"
 
-The stainless-steel table is scenery in the Conference room. "Highly polished and pristine. Otherwise, it's just a table."
+The stainless-steel table is a scenery supporter in the Conference room. "Highly polished and pristine. Otherwise, it's just a table."
 
 Understand "stainless steel table" as stainless-steel table.
 
@@ -1176,7 +1176,7 @@ Topic	Muse
 Of course, hackers will alter metaverse programs to remove both safety features. With no blinking-eye exit, and no id mark, it would be hard to tell what is real and what is meta. With the appropriate setup, you could trap a person in the metaverse, and make them think it’s real. "
 "the metaverse"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
 Of course, hackers will alter metaverse programs to remove both safety features. With no blinking-eye exit, and no id mark, it would be hard to tell what is real and what is meta. With the appropriate setup, you could trap a person in the metaverse, and make them think it’s real. "
-
+"entanglement/tanglement/tangle/stablize/time" or "quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But what if I told you, I found a way to force a state without breaking entanglement"
 		
 Chapter 6 Cincinnati 
 
@@ -1263,7 +1263,7 @@ The Cavern is a dark room below the Cincinnati Museum Center. "The cave is narro
 
 Cincinnati Museum Center is above the Cavern.
 
-A cave room is a kind of room. All cave rooms are in the Cincinnati Area.
+A cave room is a kind of dark room. All cave rooms are in the Cincinnati Area. 
 The printed name of a cave room is usually “Cave”.
 The description of a cave room is usually “A twisty maze of passages all alike.”
 There is a cave room called Cave1.
@@ -1313,11 +1313,24 @@ Nimrods are scenery in Nela Park. "Nimrod was an affectionate term used for the 
 
 Understand "nimrod" or "engineers" or "engineer" as Nimrods.
 
-Building 336 is a room. It is east of Nela Park. "This was a research lab during the peak of Lighting work at Nela Park. Scientists worked on many elaborate devices in these labs. The lab is lined with cabinets."
+Building 336 is a room. It is east of Nela Park. "This was a research lab during the peak of Lighting work at Nela Park. Scientists worked on many elaborate devices in these labs. The lab is lined with [italic type]cabinets[roman type]. An old, [italic type]golden 3-hole punch[roman type] is affixed to a counter."
 
-The Cabinet is scenery in building 336. It is an openable container. It is closed. The description of the cabinet is "A non-descript lab cabinet."
+The Cabinet is scenery in building 336. It is an openable container. It is closed. The description of the cabinet is "Non-descript lab cabinets."
+
+Understand "cabinets" as cabinet.
+
+The Red Couch is a chair in Building 336. "A bright red couch is up against one wall."
+The description of the Red Couch is "It is like something from the 1970's. Bright, soft, and out of place."
 
 Fluorescent Tube is a container in Building 336. "The fluorescent tube on the cabinet reminds you of a light saber. (except it doesn't light up)"
+
+The golden 3-hole punch is scenery in Building 336. "A beautiful, gold-plated 3-hole punch. Unfortuntately, it is super-glued to the counter."
+
+Instead of pushing the 3-hole punch:
+	say "The punch makes a satisfying sound as it punches holes in the air.";
+	
+Instead of taking the 3-hole punch:
+	say "It is a memorial and will never leave this place.";
 
 The description of the Fluorescent Tube is "The fluorescent tube reminds you of a light saber, but it needs something to light it up."
 
@@ -2794,14 +2807,16 @@ Understand "news" or "newspaper" as gazette.
 
 [-----]
 
-A digital notepad is a thing. The digital notepad can be switched on or switched off. The digital notepad is in the Conference Room. "A digital notepad is here." 
+A digital notepad is a writable thing. The digital notepad can be switched on or switched off. The digital notepad is on the stainless-steel table. The description of the digital notepad is "It's like an iPad. Someone has used it to take notes. You can use it for notes too. Use the READ command to read the notes."
 
 The digital notepad is switched on.
 Understand "ipad"  or "pad" as digital notepad.
 
-The read text of the digital notepad is "[if switched on]Cassie's crystal stolen.... Last known whereabouts, Africa. Suspect the Lion.[else]It appears to be off."
+A writing tool called a stylus is on the stainless-steel table. The description is "A stylus for taking notes on a digital notepad. You can write your investigative notes on the ipad for reference. (WRITE clue I found ON IPAD and READ IPAD)";
 
-The description of the digital notepad is "It's an iPad mini. It is on and someone has used it to take notes.".
+Understand "pen" as stylus.
+
+The read text of the digital notepad is "Cassie's crystal stolen.... Last known whereabouts, Africa. Suspect the Lion."
 		
 [-----]
 
@@ -3650,6 +3665,13 @@ topic	response
 "tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
 "light saber"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
 "light sabre"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
+"metaverse/vr/exit"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
+Of course, hackers will alter metaverse programs to remove both safety features. With no blinking-eye exit, and no id mark, it would be hard to tell what is real and what is meta. With the appropriate setup, you could trap a person in the metaverse, and make them think it’s real. "
+"the metaverse"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
+Of course, hackers will alter metaverse programs to remove both safety features. With no blinking-eye exit, and no id mark, it would be hard to tell what is real and what is meta. With the appropriate setup, you could trap a person in the metaverse, and make them think it’s real. "
+"entanglement/tanglement/tangle/stablize/time" or "quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But what if I told you, I found a way to force a state without breaking entanglement"
+		
+
 	
 Section 6 - Jack
 
@@ -3972,7 +3994,8 @@ The sound of the mirrored ball is "a distance song. It sounds like it is bouncin
 The sound of the succulent is "the Taylor Swift Folklore album".
 The sound of the Greek God Mercury is "Just do it!".
 The sound of the tranquilizer gun is "Kapooooeee".
-The sound of the Millenium Falcon is "Rrrraaaaaaaaagggghhhhh".
+The sound of the Millenium Falcon is "Whooo.... (Rattle, Rattle) ...oooooosh".
+The sound of the Chewbacca is "Rrrraaaaaaaaagggghhhhh".
 
 Chapter 5 - Creating and Recalling Memories [modified from Sand-Dancer by Aaron Reed and Alexei Othenin-Girard]
 

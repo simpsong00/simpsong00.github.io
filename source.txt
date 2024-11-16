@@ -162,7 +162,7 @@ Carry out reviewing the game world:
 Understand "review world" as reviewing the game world.
 
 	
-Chapter 6 Credits / About 
+Chapter 6 Credits / About / Inventory 
 
 Understand "about" or "info" or "information" as showing about.
 
@@ -178,8 +178,7 @@ Understand "points" as showing points.
 Showing points is an action out of world.
 
 Carry out showing points:
-	say "You can score 107 points by collecting treasures and solving the puzzles leading to the endgame. You get another 107 points when you take the final move to win the game.[paragraph break]Treasures are worth 2 points. There are a few actions that are not required to win the game but may provide hints, or are just fun asides that are worth 2-5 points. Puzzles to win are worth 5-10 points. Generally speaking, all treasures provide a [italic type]hint[roman type] unless it is a food/drink. Most food and drink is just for fun, but not all![paragraph break]Good Luck!";
-
+	say "You can score 107 points by collecting treasures and solving the puzzles leading to the endgame. You get another 107 points when you take the final move to win the game.[paragraph break]There are twenty treasures worth 2 points each. There are a few actions that are not required to win the game but may provide hints, or are just fun asides that are worth 2-3 points. Puzzles to win are worth 5-10 points. Generally speaking, all treasures provide a [italic type]hint[roman type] unless it is a food/drink. Most food and drink is just for fun, but not all![paragraph break]Good Luck!";
 
 Understand "credits" or "credit" as showing the credits.
 
@@ -203,7 +202,7 @@ Role
 "Game Inspiration........................Zork"
 "Book Inspiration........................The Quantum Contingent"
 "Second Book.............................Quantum Time"
-"Release.................................108.1b"
+"Release.................................108.1s"
 
 [Inventory]
 
@@ -436,7 +435,7 @@ Chapter 1 Farmstead
 
 Farmstead Area is a region. Security Checkpoint, Lane, The Kitchen, The Gate, Headquarters Entrance, The Farmhouse, Old Cellar, Yard, Smokehouse, Fire Pit, Old Barn, Parking are in the Farmstead Area.
 
-Security Checkpoint is a room. "The facial recognition [italic type]cameras[roman type] at the perimeter of the property scan visitors meticulously. Hidden defenses lower as you pass.[paragraph break]This allows you to proceed casually up the lane to the west."
+Security Checkpoint is a room. "You've arrived at the address you received in your invite. It's a long gravel lane. You can barely make out an old farmhouse in the distance. The facial recognition [italic type]cameras[roman type] at the perimeter of the property scan you meticulously. They must be expecting you, because the old gate, with its hidden defenses, disappears into the ground as you walk up.[paragraph break]This allows you to proceed casually up the lane to the west."
 
 The cameras are scenery in the Security Checkpoint. "These cameras are state-of-the-art. Infrared, motion detecting, high res, any buzz word you can think of, these have it.";
 
@@ -643,22 +642,6 @@ The description of the steel striker is "It is curved so you can wear it over th
 The steel striker is wearable. 
 
 pile of leaves is a thing in The Gate. The description of the pile of leaves is "Um, a pile of leaves, do you want to count them?" 
-
-smore is an edible thing. the smore is nowhere. The scent of the smore is "Yum, melted chocolate and gooey marshmallow."
-The description of the smore is "The golden-brown marshmallow has been smashed into the melted chocolate with two graham cracker slabs, creating the perfect backyard campfire delicacy.".
-Understand "s'more" as smore.
-
-Counter_smore is a number that varies. Counter_smore is initially 0.
-
-Instead of eating the smore:
-	if player does not have the smore, try taking the smore;
-	if counter_smore is 0:
-		increase counter_smore by 1;
-		say "Ah, a s'more. Chidhood memories flood your mind. You can't help but take another one.";
-	otherwise:
-		increase counter_smore by 1;
-		say "Yum, I've eaten [counter_smore] of these, and each one is as good as the last. Don't worry, you took more than one!"
-
 	
 Instead of attacking the flint when the steel striker is not worn by the player:
 	say "You must wear the steel striker over your knuckles, in order to hit the flint at the best angle."
@@ -712,7 +695,7 @@ Instead of burning the whole kindling:
 		say "You succeed in lighting Desmond a proper bonfire. Congratulations. Unfortunately, this is only good for s'mores and points. It's not really a secret agent kind of thing, but Desmond is much happier.";
 		say "[paragraph break]'Thanks! Help yourself to a s'more' says Desmond, smiling.";
 		now the smore is in the yard;
-		increase score by 2;
+		increase score by 0;
 		
 [----------End of bonfire making -------]
 
@@ -1253,7 +1236,7 @@ After waiting when the player is in the IMAX Theater:
 	if the player is in the IMAX Theater and the IMAX waiting count is 2:
 		now preview is 0;
 		say "The main feature finally starts!! Professor Eaton is on the screen in her lab. The camera zooms in and she says 'What if we could send messages across time. My console requires an enormous amount of energy to enable entanglement stabilization by means of the quantum Zeno effect. It'[paragraph break]     ... CRASH... a loud noise interrupts and the movie stops. House lights are turned on, and an employee announces over the speakers: [paragraph break]'Sorry folks, the film broke, the movie is now over.'";
-		increase the score by 5.
+		increase the score by 3.
 
 A theater poster is a thing in the IMAX Theater. It is fixed in place. "A theater poster, featuring Professer Cassandra Eaton is mounted at the doorway."
 The description of the theater poster is "It's a large teal movie poster showing the beautiful Cassandra Eaton, with equations spinning around her head. It almost glows from the poster backlighting.".
@@ -1276,11 +1259,13 @@ A cave room called Cave6 is north of Cave2.
 Cave3 is west of Cave6.
 
 
-Skyline Chili is south of Lunken Airport. "This is a staple of Cincinnati, the way cheesesteak is a staple of Philly, and music is a staple of Nashville. Whenever Jack and Sarah were in Cincinnati, they had to stop at Skyline. The old-fashion diner with its 50s style counter and iconic [italic type]clock[roman type] was a comforting throwback to two spies with a job that could often be uncomfortable.[paragraph break]The server passes out plastic circular dishes with oyster crackers and smiles as she walks away. The server heads back to the corral where the local delicacy is assembled. The [italic type]stainless-steel slab[roman type] in the middle of the corral is covered with mini hot dogs and a mound of shredded cheese. A large vat of chili is recessed in the middle of the island. The walls are decorated with [italic type]sports photos[roman type] of local teams.[paragraph break]You can go west to Smale Park or north to Lunken Airport."
+Skyline Chili is south of Lunken Airport. "This is a staple of Cincinnati, the way cheesesteak is a staple of Philly, and music is a staple of Nashville. Whenever Jack and Sarah were in Cincinnati, they had to stop at Skyline. The old-fashion diner with its 50s style counter and iconic [italic type]clock[roman type] was a comforting throwback to two spies with a job that could often be uncomfortable.[paragraph break]The server puts out a little plastic [italic type]circular dish[roman type] with [italic type]oyster crackers[roman type] and smiles as she walks away. The server heads back to the corral where the local delicacy is assembled. The [italic type]stainless-steel slab[roman type] in the middle of the corral is covered with mini hot dogs and a mound of shredded cheese. A large vat of chili is recessed in the middle of the island. The walls are decorated with [italic type]sports photos[roman type] of local teams.[paragraph break]You can go west to Smale Park or north to Lunken Airport."
 
 The stainless-steel slab is scenery in the Skyline Chili. "Looking at the slab makes your mouth water."
 
 Understand "stainless steel slab" as stainless-steel slab.
+
+The Circular Dish is a scenery container in skyline chili. "Just a little plastic dish."
 
 The Sports Photos are scenery in Skyline Chili. "Old photos of the Cincinnati pro sports teams, FCC Cincinnati, the Reds, and the Bengals. Some photos were more than a decade old."
 
@@ -1445,7 +1430,7 @@ Rebooting the Quantum Computer is an action applying to nothing.
 
 Check rebooting the Quantum Computer:
 	if the player is not in The Quantum View, say "You can only reboot when you can view the computer." instead;
-	if the Quantum Computer is rebooted, say "The computer has already rebooted." instead.
+	if the Quantum Computer is rebooted, say "The voice of TARDIS bellows out of nowhere. 'Yoo hoo, You already rebooted me. I'm all good now. I don't need you to re-reboot me.'" instead.
 
 Carry out rebooting the Quantum Computer:
 	now the Quantum Computer is rebooted;
@@ -1919,8 +1904,8 @@ The player carries a map. The description of the map is "The map shows all of th
 > Burke Lakefront Airport (Cleveland or CLE)[line break]
 > Andrews Air Force Base (DC)[line break]
 > Arusha Airport (Africa or ARK)[line break]
-> Hidden Airbase (Oxford)[line break]
-> Spaceport.[line break]"
+> Spaceport.[line break]
+> Hidden Airbase (Oxford)[line break]"
 
 The read text of the map is "The map shows all of the places you can fly the Quotient jet to including the Airstrip (HQ), the Hidden Airbase (Oxford), Lunken Airport (Cincinnati or CVG), Burke Lakefront Airport (Cleveland or CLE), Arusha Airport (Africa or ARK), Andrews Air Force Base (DC), and the Spaceport."
 
@@ -1989,8 +1974,9 @@ Instead of pulling the blue lever:
 			if the rocket is in the Blackness of Space:
 				say "You have successfully docked at TARDIS[paragraph break]";
 				move the rocket to TARDIS;
+				now the player is in the location of the rocket;
 				now the docking clamps are 0;
-				try looking;
+				say "You exit the rocket and enter the airlock";
 			otherwise:
 				say "The docking clamps are now closed.";
 				now the docking clamps are 0.
@@ -2012,7 +1998,7 @@ Instead of pushing the black button:
 				otherwise:
 					move the rocket to Flying through the Air;
 					now the flying counter is 1;
-					say "The thundering sound of the Raptor engines could be heard for miles as your extreme Uber ride lifted off. The giant SpaceX Starship lifted off through a cloud of smoke and arched over the ocean as you yell 'To infinity and beyond!'[paragraph break]”;
+					say "[paragraph break]The thundering sound of the Raptor engines could be heard for miles as your extreme Uber ride lifted off. The giant SpaceX Starship lifted off through a cloud of smoke and arched over the ocean as you yell 'To infinity and beyond!'[paragraph break]”;
 					try looking;
 					now the countdown begun is false;
 			otherwise:
@@ -2060,7 +2046,7 @@ Instead of going west in Flying Through the Air:
 	say "Wild Wild West... Sorry, the only way you can go is up.";
 	
 Instead of going up in Flying Through the Air:
-	say "Ok, you continue to rush upward at an unbelievable rate!";
+	say "Ok, you continue upward if that's what you really want!";
 	
 Instead of going down in Flying Through the Air:
 	say "Don't you wish...";
@@ -2082,6 +2068,9 @@ Instead of examining earth in Flying Through the Air:
 	
 Instead of examining final frontier in Flying Through the Air:
 	say "To boldly go where no one has gone before. Maybe there is a reason no one has gone here before?";
+	
+Instead of looking in Flying Through the Air:
+	say "[first time]The SpaceX rocket shudders as it moves toward the [italic type]final frontier[roman type]! You glance out the window as you race upward, the G forces pulling you deep into your seat. You can only watch as the [italic type]earth[roman type] moves away from you at a rapid clip.[paragraph break][only][one of] [or]You are currently being propelled upward by means of the giant explosion going on beneath your seat.[cycling]";	
 	
 Instead of doing anything in Flying Through the Air:
 	say "The G forces prevent you from doing almost anything.";
@@ -2605,6 +2594,7 @@ Instead of examining the scroll of treasure:
 [italic type]Italic items contain hints[roman type][line break]
 Food is usually just there because spies get hungry![paragraph break]
 [italic type]Book (Martin's Office)[roman type][line break]
+S'more (Yard, after Bonfire is lit)[line break]
 [bold type]Succulent (Clearing)[roman type][line break]
 [italic type]TARDIS Communicator (Fire Pit)[roman type][line break]
 [italic type]Deck of Cards (Farmhouse)[roman type][line break]
@@ -2618,6 +2608,7 @@ Scone (Vaults and Garden's[line break]
 [italic type]Medal (Caves)[roman type][line break]
 3-way Chili (Skyline Chili)[line break]
 [bold type]Mountain Dew (Skyline Chili)[roman type][line break]
+Oyster cracker (Skyline Chili)[line break]
 [italic type]Millenium Falcon (Lighting Institute)[roman type][line break]
 Nutter Butter (Blackness of Space)[line break]
 [italic type]Gazette (Smithsonian Castle)[roman type][line break]
@@ -2626,6 +2617,46 @@ Pretzel (Lawson’s Deli)[line break]";
 The read text of the scroll of treasure is "Examine me in order to read me."
 
 [-----]
+
+A smore is an edible treasure. the smore is nowhere. The scent of the smore is "Yum, melted chocolate and gooey marshmallow."
+The description of the smore is "The golden-brown marshmallow has been smashed into the melted chocolate with two graham cracker slabs, creating the perfect backyard campfire delicacy.".
+Understand "s'more" as smore.
+The printed name of the smore is "s'more".
+
+Counter_smore is a number that varies. Counter_smore is initially 0.
+
+Instead of eating the smore:
+	if player does not have the smore, try taking the smore;
+	if counter_smore is 0:
+		increase counter_smore by 1;
+		say "Ah, a s'more. Chidhood memories flood your mind. You can't help but take another one.";
+	otherwise:
+		increase counter_smore by 1;
+		say "Yum, I've eaten [counter_smore] of these, and each one is as good as the last. Don't worry, you took more than one!"
+
+[------]
+
+The Oyster cracker is an edible treasure in the Circular Dish. 
+The description of the Oyster cracker is "It is a small hexagonal cracker... it's like it started as a two dimentional flat cracker but then was inflated with air. They go great with chili." 
+
+counter_cracker is a number that varies. counter_cracker is 0.
+
+Instead of eating the oyster cracker:
+	if player does not have the oyster cracker, try taking the oyster cracker;
+	if counter_cracker is 0:
+		increase counter_cracker by 1;
+		say "I could eat a million of these little crackers. You immediately take another.";
+	otherwise if counter_cracker is 23:
+		increase counter_cracker by 1;
+		say "Yum, I've eaten [counter_cracker] crackers, and each one is as good as the last! You immediately take another.[line break]";
+		say "The server refills the dish as needed.[line break]";
+	otherwise:
+		increase counter_cracker by 1;
+		say "Yum, I've eaten [counter_cracker] crackers, and each one is as good as the last! You immediately take another[line break]"
+
+Understand "crackers" or "oyster crackers" or "hexagon" as Oyster Cracker.
+
+[------]
 
 The Mirrored Ball is a treasure. The Mirrored Ball is in the old barn. "Small shards of sunlight shine down from the mirrored ball hanging high up in the rafters."
 The description of the Mirrored Ball is "This mirrored ball reflects the light of a thousand dreams!".
@@ -2760,13 +2791,16 @@ Understand "plant"  or "green" as succulent.
 
 A book is a treasure. The book is in Martin's Office. 
 
-The read text of the book is "Thirteen-year-old Allie loves capturing her dreams in her dream journal until one morning when she wakes up to realize she hasn't dreamed in weeks. In order to rescue her dreams, she must go looking in the place where they are born— Neverland.
+The read text of the book is "Thirteen-year-old Allie loves capturing her dreams in her dream journal until one morning when she wakes up to realize she hasn't dreamed in weeks. [renamethebook]In order to rescue her dreams, she must go looking in the place where they are born— Neverland.
 
-[italic type]Dreamcatchers[roman type] is a middle grade novel perfect for kids, or for anyone who never wants to grow up"
+[italic type]Dreamcatchers[roman type] is a middle grade novel perfect for kids, or for anyone who never wants to grow up";
 
 The description of the book is "It's the book [italic type]Dreamcatchers[roman type], by Bridget Simpson. (Rumor has it, some of it was written in The Lost Lodge.)".
 
 Understand "dreamcatchers" or "dream" or "catchers" or "dream catchers" as book.
+
+To say renamethebook:
+	now the printed name of the book is "book, [italic type]Dreamcatchers[roman type]";
 
 [-----]
 
@@ -2774,9 +2808,12 @@ A hardcover novel is a thing. The hardcover novel is in the Duke Humfreys Librar
 
 The read text of the hardcover novel is "CS Lewis imagined the Narnia Lamp post as a magical gateway to someplace far away where time works differently."
 
-The description of the hardcover novel is "It's[italic type] The Lion, the Witch and the Wardrobe[roman type], by C.S. Lewis.".
+The description of the hardcover novel is "It's[italic type] The Lion, the Witch [renamecslewis]and the Wardrobe[roman type], by C.S. Lewis.".
 
 Understand "cs lewis" as hardcover novel.
+
+To say renamecslewis:
+	now the printed name of the hardcover novel is "hardcover novel, [italic type]The Lion, The Witch, and the Wardrobe.[roman type]";
 		
 [-----]
 
@@ -3553,9 +3590,6 @@ Section 2 - Desmond
 	
 Section 3 - Florin
 	
-Instead of asking Florin about something:
-	say "I need to find my gun!"
-	
 After asking the Florin about a topic listed in the Table of Florin's responses, say "[if robert clayton is asleep]You got Robert, You got the Crystal! Stop talking to me and help Cassie power up the console![else][line break][response entry][line break]".
 
 After asking the Florin about something:
@@ -3699,8 +3733,8 @@ topic	response
 "computer"	"Tardis is our computer. I built it."
 "the computer"	"Tardis is our computer. It is in space."
 "tardis"	"Tardis is our computer. I built it."
-"mission"	"We must get to the Continuum and power up the console."
-"the mission"	"We must get to the Continuum and power up the console."
+"mission"	"We must get to the Continuum and power up the console. As for me, Cassie wants me to do something with a laser in DC. That's all I know right now."
+"the mission"	"We must get to the Continuum and power up the console. As for me, Cassie wants me to do something with a laser in DC. That's all I know right now."
 "Florin"	"Florin is great. He saved my butt more than once!"
 "Cassie"	"She's brilliant with time, but can't she see Martin is in love with her?"
 "President"	"President Bridget O'Connor is one of the finest women I have ever known."
@@ -3756,8 +3790,8 @@ topic	response
 "computer"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
 "the computer"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
 "tardis"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
-"mission"	"We must get to the Continuum and power up the console. Anything else is an unknown at this point."
-"the mission"	"We must get to the Continuum and power up the console. Anything else is an unknown at this point."
+"mission"	"We must get to the Continuum and power up the console. I'm going to Cleveland to look for a way to contain a powerful energy source to power the console. Anything else is an unknown at this point."
+"the mission"	"We must get to the Continuum and power up the console. I'm going to Cleveland to look for a way to contain a powerful energy source to power the console. Anything else is an unknown at this point."
 "continuum"	"The Continuum is what Cassie calls her lab."
 "Cassie"	"She's brilliant with time, but can't she see Martin is in love with her?"
 "President"	"President Bridget O'Connor is one of the finest women I have ever known."
@@ -3806,24 +3840,19 @@ After telling Martin about something:
 
 Table of Martin's Replies
 Topic	Muse
-"mission"	"We need to help Cassie with her experiment. That means, rebooting the computer and getting to the Continuum to help her. There may be more steps required. We're not sure yet."
 "Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
-"the mission"	"We need to help Cassie with her experiment. That means, rebooting the computer and getting to the Continuum to help her with her quantum console. There may be other steps required. We're not sure yet."
+"the mission" or "mission"	"We need to help Cassie with her experiment. That means, rebooting the computer and getting to the Continuum to help her with her quantum console. Jack, Sarah and Kara are working on some other things required for the experiment to work. Only Cassie understands everything."
 "continuum"	"The name of Cassie's lab."
-"quantum console"	"You'll have to ask Cassie about that."
-"console"	"You'll have to ask Cassie about that."
-"computer"	"Tardis is our computer. It is in space."
-"the computer"	"Tardis is our computer. It is in space."
+"quantum console" or "console"	"You'll have to ask Cassie about that."
+"computer" or "the computer"	"Tardis is our computer. It is in space."
 "tardis"	"Tardis is our computer. It is in space."
 "Jack"	"Jack is like a son to me."
 "Sarah"	"Sarah is like a daughter to me."
 "Kara"	"Kara really proved herself during The Quantum Contingent Mission"
 "Florin"	"Florin is a very capable agent, and a long time friend."
 "Cassie"	"Cassie is very dear to me. I've known her since I was her student at Oxford."
-"President"	"President Bridget O'Connor is one of the finest women I have ever known."
-"Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
-"Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
+"President" or "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
+"Prime Minister" or "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Greg"	"I heard he's an author?"
 "Karen"	"Did you mean Kara or Cassie?"
 "Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
@@ -3831,20 +3860,15 @@ Topic	Muse
 "skyline chili"	"Yum! Delicious."
 "dew/Pimms/beer/water/pop"	"Refreshing!"
 "metaverse/vr/meta"	"The metaverse is entertaining, but not something I know a lot about. I do know that Cassie has a VR lab."
-"escape hatch"	"It's right over your head."
+"escape hatch" or "the escape hatch"	"It's right over your head."
 "escape"	"Did you try up?"
 "tapestry"	"I don't know anything about the tapestry. Maybe you should ask Cassie."
-"the escape hatch"	"It's right over your head."
-"the lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
-"the abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"the lion" or "lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
+"abyss" or "the abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
 "robert clayton"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "clayton/robert"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
-"light saber"	"A light saber requires tremendous energy to operate."
-"light sabre"	"A light saber requires tremendous energy to operate."
-"tardis communicator"	"The TARDIS communicator will allow TARDIS to talk to you while you are on your mission. It can be very helpful in the field."
-"communicator/comm/comms"	"The TARDIS communicator will allow TARDIS to talk to you while you are on your mission. It can be very helpful in the field."
+"light saber" or "light sabre"	"A light saber requires tremendous energy to operate."
+"communicator/comm/comms" or "tardis communicator"	"The TARDIS communicator will allow TARDIS to talk to you while you are on your mission. It can be very helpful in the field."
 
 Section 9 - Robot
 
@@ -3859,14 +3883,10 @@ After asking the Robot about something:
 Table of Robot's Replies
 Topic	r2d2
 "pod bay doors"	"I'm sorry Dave, I can't do that."
-"doors"	"I'm sorry Dave, I can't do that."
-"pod"	"I'm sorry Dave, I can't do that."
-"pod bay"	"I'm sorry Dave, I can't do that."
-"bay"	"I'm sorry Dave, I can't do that."
-"light bulbs"	"Fluorescent bulbs will always have dark ends."
-"light"	"Fluorescent bulbs will always have dark ends."
-"tree"	"I will decorate the tree. You are not needed."
-"christmas tree"	"I will decorate the tree. You are not needed."
+"doors" or "bay"	"I'm sorry Dave, I can't do that."
+"pod" or "pod bay"	"I'm sorry Dave, I can't do that."
+"light bulbs" or "light"	"Fluorescent bulbs will always have dark ends."
+"christmas tree" or "tree"	"I will decorate the tree. You are not needed."
 "chili/skyline/skyline/scone/pretzel"	"Yum! Delicious."
 "skyline chili"	"Yum! Delicious."
 "dew/Pimms/beer/water/pop"	"Refreshing!"
@@ -3939,10 +3959,12 @@ The scent of the bonfire is "It smells like smoke... not unusual for a fire!"
 The scent of the succulent is "It has the smell of a beautiful rainforest, all in less than the size of a bowling ball."
 The scent of the strawberry is "A brief but satisfying hint of berry with a deep enveloping smell of cocoa."
 The scent of Chewbacca is "He smells like Old Spice."
+The scent of the Oyster Cracker is "The smell is briny, but dry, like a ocean breeze."
+The scent of bread is "deliciously calming, like meditation with carbs."
 
 [Bread cutting... I really should move this somewhere else]
 
-The loaf of bread is in the Kitchen. The scent of the bread is "Ah -- fresh-baked bread.”
+The loaf of bread is in the Kitchen.
 The description of the loaf of bread is "It looks freshly baked!".
 
 Instead of eating the bread:
@@ -3996,6 +4018,7 @@ The sound of the Greek God Mercury is "Just do it!".
 The sound of the tranquilizer gun is "Kapooooeee".
 The sound of the Millenium Falcon is "Whooo.... (Rattle, Rattle) ...oooooosh".
 The sound of the Chewbacca is "Rrrraaaaaaaaagggghhhhh".
+The sound of the Oyster Cracker is "crunch"
 
 Chapter 5 - Creating and Recalling Memories [modified from Sand-Dancer by Aaron Reed and Alexei Othenin-Girard]
 

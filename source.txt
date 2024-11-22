@@ -186,7 +186,7 @@ Understand "credits" or "credit" as showing the credits.
 Showing the credits is an action out of world.
 
 Carry out showing the credits:
-	say "[italic type]Quotient, The Game[roman type] is written in Inform7. Inform7 is the work of Graham Nelson. First a shout-out to the people on Intfiction.org. They were enormously helpful. If I ever got stuck on how to code something, they would help me out! I also experimented with using ChatGPT to help me figure out some coding challenges. It did pretty well, but the people at Intfiction.org were better. Also a big shout out to my beta testers! In addition to family, that includes some great help from people that found the game through intfiction and discord. [paragraph break]Many of the description passages were adapted from my books. This game is a tongue-in-cheek adaptation of that world and it's characters. I took the cover photo of the Rock Church of St. George in Ethiopia and then used smartphone app Prisma to give it the wild color look. All other in game photos are personal photos that I took. (there are only 9 others, it's a 'text' adventure.)[paragraph break]This was my first Inform7 creation. I enjoyed making it and I hope you enjoy playing it. Now let's get adventuring![paragraph break]
+	say "[italic type]Quotient, The Game[roman type] is written in Inform7. Inform7 is the work of Graham Nelson. First, a shout-out to the people on Intfiction.org. They were enormously helpful. If I ever got stuck on how to code something, they would help me out! I also experimented with using ChatGPT to help me figure out some coding challenges. It did pretty well, but the people at Intfiction.org were better. Also a big shout out to my beta testers! In addition to family, that includes some great help from people that found the game through intfiction and discord. [paragraph break]Many of the description passages were adapted from my books. This game is a tongue-in-cheek adaptation of that world and it's characters. I took the cover photo of the Rock Church of St. George in Ethiopia and then used smartphone app Prisma to give it the wild color look. All other in game photos are personal photos that I took. (there are only 9 others, it's a 'text' adventure.)[paragraph break]This was my first Inform7 creation. I enjoyed making it and I hope you enjoy playing it. Now let's get adventuring![paragraph break]
 [bold type]Imagine a slow scrolling set of credits now![roman type][paragraph break]";
 	repeat through the Table of Credits:
 		say fixed letter spacing;
@@ -373,7 +373,7 @@ Book 2 - Play Begins
 Chapter 1 When Play Begins
 
 When play begins:
-	say "Do you want to become an agent of Quotient, the global, independent spy agency? You are at the entrance to their top secret headquarters. Proceed down the lane to begin your mission and earn the rank of Secret Agent! If this is your first text adventure, just type [bold type]help[roman type]."
+	say "Do you want to become an agent of Quotient, the global, independent spy agency? You are at the entrance to their top-secret headquarters. Proceed down the lane to begin your mission and earn the rank of Secret Agent! If this is your first text adventure, just type [bold type]help[roman type]."
 
 Chapter 2 - Ports and Chairs
 
@@ -1323,7 +1323,7 @@ The description of the Red Couch is "It is like something from the 1970's. Brigh
 
 Fluorescent Tube is a container in Building 336. "The fluorescent tube on the cabinet reminds you of a light saber. (except it doesn't light up)"
 
-The golden 3-hole punch is scenery in Building 336. "A beautiful, gold-plated 3-hole punch. Unfortuntately, it is super-glued to the counter."
+The golden 3-hole punch is scenery in Building 336. "A beautiful, gold-plated 3-hole punch. Unfortunately, it is super-glued to the counter."
 
 Instead of pushing the 3-hole punch:
 	say "The punch makes a satisfying sound as it punches holes in the air.";
@@ -1912,7 +1912,7 @@ Carry out flying to:
 		try looking;
 		now the Quotient Jet is grounded.
 
-The player carries a map. The description of the map is "The map shows all of the places you can fly the Quotient jet to including:[paragraph break]
+The player carries a map. The description of the map is "The map shows all the places you can fly the Quotient jet to including:[paragraph break]
 > Airstrip (HQ)[line break]
 > Lunken Airport (Cincinnati or CVG)[line break]
 > Burke Lakefront Airport (Cleveland or CLE)[line break]
@@ -1921,7 +1921,7 @@ The player carries a map. The description of the map is "The map shows all of th
 > Spaceport.[line break]
 > Hidden Airbase (Oxford)[line break]"
 
-The read text of the map is "The map shows all of the places you can fly the Quotient jet to including the Airstrip (HQ), the Hidden Airbase (Oxford), Lunken Airport (Cincinnati or CVG), Burke Lakefront Airport (Cleveland or CLE), Arusha Airport (Africa or ARK), Andrews Air Force Base (DC), and the Spaceport."
+The read text of the map is "The map shows all the places you can fly the Quotient jet to including the Airstrip (HQ), the Hidden Airbase (Oxford), Lunken Airport (Cincinnati or CVG), Burke Lakefront Airport (Cleveland or CLE), Arusha Airport (Africa or ARK), Andrews Air Force Base (DC), and the Spaceport."
 
 Section 3 SpaceX Rocket
 
@@ -2664,7 +2664,7 @@ Instead of eating the smore:
 [------]
 
 The Oyster cracker is an edible treasure in the Circular Dish. 
-The description of the Oyster cracker is "It is a small hexagonal cracker... it's like it started as a two dimentional flat cracker but then was inflated with air. They go great with chili." 
+The description of the Oyster cracker is "It is a small hexagonal cracker... it's like it started as a two-dimensional flat cracker but then was inflated with air. They go great with chili." 
 
 counter_cracker is a number that varies. counter_cracker is 0.
 

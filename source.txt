@@ -134,13 +134,36 @@ Understand "help" as helping.
 
 
 Carry out helping:
-	say "[story title] understands commands, such as '[command prompt]examine [a random thing that can be seen by the player]'. You can get some information about the current game state with commands such as LOOK, EXAMINE, INVENTORY and the special commands PLACES and OBJECTS.[paragraph break]Commands are typically in the format of VERB, VERB NOUN, or VERB with/to NOUN. As in TAKE, TAKE THE SHOVEL, or TALK TO SARAH. In some cases, you may do something more complex like this. >HIT THE NAIL WITH THE HAMMER, or >ASK MARTIN ABOUT THE COMPUTER.[paragraph break]In [italic type]Quotient the Game[roman type], if you take an item, it will automatically be examined for you. (but not read) In this fictional world, based on real places, you move around with commands like NORTH, SOUTH, UP, etc. If you are ever unsure of the ways you can go, just type EXITS.[paragraph break]If you stumble across the TARDIS communicator, take it! You can examine it again [italic type]and again[roman type] to hear the Quotient quantum computer talk to you about things that might be of interest near you. If you examine it enough, it will give you some hints based on the region you are currently in. You can also ask it questions. If you need a starting hint, type HINT.[line break]And remember, commands can be abbreviated. For example, n is NORTH and x is EXAMINE.[paragraph break]Scenery that can be examined in a room will be shown in [italic type]italics.[roman type] 'Things' that can be examined or taken are listed in a paragraph below the room description, and the directions to exit are listed in a separate paragraph as well.[paragraph break]You get points from collecting treasures and solving puzzles. As your points go higher, so does your rank! Type POINTS for more info, or SCORE to see your score. You should figure out the true mission of the game as you go along. [paragraph break]Remember, in addition to EXAMINE, you can READ certain objects as well. It is helpful to read things if they can be read. Finally, ABOUT will tell you what the game is based on, and CREDITS gives credit where credit is due![paragraph break]Now, let's get adventuring!";
+	say "[story title] understands commands, such as '[command prompt]examine [a random thing that can be seen by the player]'. You can get some information about the current game state with commands such as LOOK, EXAMINE, INVENTORY, TAKE, etc. Commands are typically in the format of VERB, VERB NOUN, or VERB with/to NOUN. As in TAKE, TAKE THE SHOVEL, or TALK TO SARAH. In some cases, you may do something more complex like this. >HIT THE NAIL WITH THE HAMMER, or >ASK MARTIN ABOUT THE COMPUTER.[paragraph break]In [italic type]Quotient the Game[roman type], if you take an item, it will automatically be examined for you. (but not read) In this fictional world, based on real places, you move around with commands like NORTH, SOUTH, UP, etc. If you are ever unsure of the ways you can go, just type EXITS.[paragraph break]There are a few special commands: PLACES, OBJECTS, SONG, and PLAYLIST (oh and FUN). The places and objects commands list either the places you've been or the objecsts you've seen. The song command tells you the song associated with the location you are in, and finally, the playlist command creates a special playlist for you by listing all of the songs associated with the rooms you have traversed in your adventure. FUN tells you some fun things to do, although some of them could be considere minor spoilers, so beware![paragraph break]If you stumble across the TARDIS communicator, take it! You can examine it again [italic type]and again[roman type] to hear the Quotient quantum computer talk to you about things that might be of interest near you. If you examine it enough, it will give you some hints based on the region you are currently in. You can also ask it questions. If you need a starting hint, type HINT.[line break]And remember, commands can be abbreviated. For example, n is NORTH and x is EXAMINE.[paragraph break]Scenery that can be examined in a room will be shown in [italic type]italics.[roman type] 'Things' that can be examined or taken are listed in a paragraph below the room description, and the directions to exit are listed in a separate paragraph as well.[paragraph break]You get points from collecting treasures and solving puzzles. As your points go higher, so does your rank! Type POINTS for more info, or SCORE to see your score. You should figure out the true mission of the game as you go along. [paragraph break]Remember, in addition to EXAMINE, you can READ certain objects as well. It is helpful to read things if they can be read. Finally, ABOUT will tell you what the game is based on, and CREDITS gives credit where credit is due![paragraph break]Now, let's get adventuring!";
 
 Hinting is an action out of world.
 Understand "hint" or "hints" or "clue" or "clues" as hinting.
 
 Carry out hinting:
 	say "Your best chance for context sensitive hints is to find the TARDIS communicator and examine it. It will talk to you every time you examine it, and it will say different things in different areas of the game. You are also able to ask the TARDIS communicator questions, as in: ASK TARDIS ABOUT TOPIC. Example topics could be entanglement, or mission.[paragraph break]Your only hints are that the Tardis communicator is near the farmhouse, and the flashlight is near where you started. I'd recommend you find both before flying off to far away places! Good luck and enjoy the journey!";
+	say "For basic help, type HELP.";
+	
+Funing is an action out of world.
+Understand "fun" or "feelies" or "just for fun" as funing.
+
+Carry out funing:
+	say "Here are some fun things you might try. You can scream, dance, or even say Leviosa! Rooms have songs associated with them (just for fun), and a playlist is available for all of the songs associated with the rooms you've been through. Just type Playlist. Besides the usual of examining people, asking People about things, and examining objects and scenery (Scenery is in Italic print) Here are some other things to try: [paragraph break](Warning: POTENTIAL MINOR SPOILERS BELOW)[paragraph break]
+- READ things... eg: books, mountain dew, and many more items can be read in addition to being examined.[line break]
+- EXAMINE TARDIS COMMUNICATOR twelve times in a regions. (you get different responses in different regions)[line break]
+- EXAMINE JACK more than once to get to know him[line break]
+- REMEMBER your emotional baggage, some of them have hints[line break]
+- Light the Bonfire to have S’MOREs with Desmond[line break]
+- Find the Cave Map (it’s in a cob)[line break]
+- ASK ROBOT ABOUT POD BAY DOORS (or Light Bulbs)[line break]
+- Scream in the library[line break]
+- Explore the Metaverse[line break]
+- Watch TV, there are at least 5 channels (and some good hints)[line break]
+- Consult intel on Tardis/Martin etc (Using the papers in the Library)[line break]
+- Don’t attack people (especially Cassie!)[line break]
+- Decode the binary message from the console![line break]
+- TURN ON THE SCIF in the conference room[line break]
+- Watch the feature presentation at the IMAX (3 points)[line break]
+- Note there are at least 9 viewable photos in the game. (Eg: Lane Sign, Cleveland Sign, Radcam, and more)[paragraph break]";
 	say "For basic help, type HELP.";
 
 Definition: A container is empty if it does not enclose anything.
@@ -375,13 +398,25 @@ Chapter 1 When Play Begins
 When play begins:
 	say "Do you want to become an agent of Quotient, the global, independent spy agency? You are at the entrance to their top-secret headquarters. Proceed down the lane to begin your mission and earn the rank of Secret Agent! If this is your first text adventure, just type [bold type]help[roman type]."
 
-Chapter 2 - Ports and Chairs
+Chapter 2 - Ports and Chairs and Songs for Rooms
 
 A port is a kind of room. Definition: a room is unflyable if it is not an port.
 Instead of going by a vehicle (called the flight) to somewhere unflyable:
     say "You can't drive the [the flight] off-road."
 
 A chair is a kind of supporter. A chair is always enterable. Every chair allows seated and standing. A chair is usually seated.
+
+A room has some text called song title. 
+
+Understand "song" or "what song" as requesting a song title to default.
+
+Requesting a song title to default is an action applying to nothing. Understand "song" or "what song" as requesting a song title to default.
+		
+Carry out requesting a song title to default:
+	if song title of the location is "":
+		say "Sorry, no song for this room.";
+	otherwise:
+		say "The song for this room ([the location]) is '[song title of the location]'.";
 
 Chapter 3 - player marks, initals on foot if in metaverse
 
@@ -708,8 +743,8 @@ Instead of burning the whole kindling:
 
 Smokehouse is west of the Yard. "An old ivy-covered smokehouse surrounded by a [italic type]bowling ball[roman type] garden.[paragraph break]You can go [bt]east[rt], [bt]west[rt], or [bt]south[rt]. (or just type EXITS at any time to see which way you can go.)"
 
-The Shovel is an object. It is in the Smokehouse. "A rusty shovel is here. It looks like it would only work in sand."
-The description of the Shovel is "Looks like an ordinary shovel to me.".
+The shovel is an object. It is in the Smokehouse. "A rusty shovel is here. It looks like it would only work in sand."
+The description of the shovel is "Looks like an ordinary shovel to me.".
 
 Bowling balls are scenery in the Smokehouse. "The bowling balls are many different colors."
 
@@ -927,9 +962,9 @@ The metal sign is fixed in place.
 The read text of the metal sign is "Caution! VR Simulations can be very lifelike. The floor will automatically release when the VR suit is turned on. It will return to its locked state when the VR suit is turned off.".
 The description of the metal sign is "The sign is a large rectangular sign. It has writing on it.".
 
-The VR Suit is a wearable device in the Virtual Reality Lab. The description is "A sleek, futuristic Virtual reality headset, not much bigger than a normal set of eyeglasses as well as something that looks like a vest and gloves." The VR Suit can be activated or unactivated.
+The VR suit is a wearable device in the Virtual Reality Lab. The description is "A sleek, futuristic Virtual reality headset, not much bigger than a normal set of eyeglasses as well as something that looks like a vest and gloves." The VR suit can be activated or unactivated.
 
-Instead of taking off the VR Suit when the VR Suit is activated:
+Instead of taking off the VR suit when the VR suit is activated:
 	say "You try to remove it, but you can't even tell you have it on.";
 	stop the action;
 
@@ -1204,9 +1239,9 @@ Instead of examining the Rotunda:
 	say "The magnificent golden ceiling is awe-inspiring. The glass mosaic murals around the sides are by Winold Reiss. They depict a timeline in America and a timeline in Cincinnati. Reiss's art eventually covered 11,908 square feet."
 
 A small credenza is a supporter in the Cincinnati Museum Center. The description of the small credenza is "I'd describe the credenza as being rather non-descript.".
-On the small credenza is a copy of the Museum Guide. The description of Museum Guide is "Today we have a special IMAX movie on Quantum Entanglement at 3 p.m. There are also advertisements and photos on the guide." 
-Some advertisements and some photos are part of Museum Guide. The description of the photos is "You look at the first photo accompanying the Skyline Chili ad, and your mouth starts watering." The description of the advertisements is "Skyline Chili, now featuring Mountain Dew, the drink of Astronauts." The read text of the advertisements is "Skyline Chili, now featuring Moutain Dew, the drink of Astronauts."
-The read text of the Museum Guide is "Today we have a special IMAX movie on Quantum Entanglement at 3 p.m. There are also advertisements and photos on the guide."
+On the small credenza is a copy of the museum guide. The description of museum guide is "Today we have a special IMAX movie on Quantum Entanglement at 3 p.m. There are also advertisements and photos on the guide." 
+Some advertisements and some photos are part of museum guide. The description of the photos is "You look at the first photo accompanying the Skyline Chili ad, and your mouth starts watering." The description of the advertisements is "Skyline Chili, now featuring Mountain Dew, the drink of Astronauts." The read text of the advertisements is "Skyline Chili, now featuring Moutain Dew, the drink of Astronauts."
+The read text of the museum guide is "Today we have a special IMAX movie on Quantum Entanglement at 3 p.m. There are also advertisements and photos on the guide."
 
 Understand "ad" as the advertisements.
 Understand "ads" as the advertisements.
@@ -1511,7 +1546,7 @@ Every turn when a random chance of 1 in 3 succeeds and player is in Africa Area:
 Understand "Africa" as the Arusha Airport.
 Understand "ARK" as the Arusha Airport.
 
-The Africa Area is a region. Arusha Airport, Ngorogoro Crater, Lalibela Ethiopia, Rock Church St George are in the Africa Area.
+The Africa Area is a region. Arusha Airport, Ngorongoro Crater, Lalibela Ethiopia, Rock Church St George are in the Africa Area.
 
 Arusha Airport is a port. "Flying to Tanzania is not like flying into Chicago’s O’Hare Airport. First you flew into Arusha Airport, close to Mount Kilimanjaro. Then you took a bush flight out to a dusty airstrip in the savanna. From there, you took a pop-top safari jeep with a Maasai warrior guide. The rough roads provided a complimentary ‘African massage’, jostling you as you sped toward your destination, a Maasai encampment. Nighttime on the plains of Africa can be dangerous. Lions roam these parts freely. To protect against the lions, the Maasai encampment is a tight circle of mud and stick huts with a large campfire at the center. Guards take shifts at the perimeter. [paragraph break][italic type]Stars[roman type] stretch out overhead for as far as the eye can see. Normally, this is a place for wealthy adventure campers to get a true Maasai warrior camp experience. Today, you decided to fly here. Why? I'm not sure.[paragraph break]The camp is on a hill overlooking the spectacular Ngorongoro Crater to the [bt]south[rt], the world’s largest inactive volcanic [italic type]caldera[roman type]."
 
@@ -1527,17 +1562,17 @@ The printed name of Arusha Airport is "Maasai Encampment".
 
 Stars is scenery. The stars are in Arusha Airport. The description is "The stars stretch out overhead for as far as the eye can see... they are like diamonds on an endless black velvet sea."
 
-Ngorogoro Crater is south of Arusha Airport. "Spectacular Ngorongoro Crater is the world’s largest inactive volcanic caldera. The crater is two thousand feet deep and covers almost a hundred square miles. The [italic type]sunrise[roman type] over Ngorongoro Crater pours rays of sunlight out over the massive crater. The tawny grasses of the plain in the center of the crater glow as the sunlight cascades down from the clouds. The edge of the [italic type]water[roman type] in the center of the crater is pink.[paragraph break]Lalibela, Ethiopia lies to the [bt]west[rt], the airport is to the [bt]north[rt]."
+Ngorongoro Crater is south of Arusha Airport. "Spectacular Ngorongoro Crater is the world’s largest inactive volcanic caldera. The crater is two thousand feet deep and covers almost a hundred square miles. The [italic type]sunrise[roman type] over Ngorongoro Crater pours rays of sunlight out over the massive crater. The tawny grasses of the plain in the center of the crater glow as the sunlight cascades down from the clouds. The edge of the [italic type]water[roman type] in the center of the crater is pink.[paragraph break]Lalibela, Ethiopia lies to the [bt]west[rt], the airport is to the [bt]north[rt]."
 
-The water is scenery. The water is in Ngorogoro Crater. "The edge of the lake appears pink from this distance because of the thousands of pink flamingos that make their home there."
+The water is scenery. The water is in Ngorongoro Crater. "The edge of the lake appears pink from this distance because of the thousands of pink flamingos that make their home there."
 
-The Sunrise is scenery. The Sunrise is in Ngorogoro Crater. "The sun rays burst over the ancient caldera which covers almost a hundred square miles."
+The Sunrise is scenery. The Sunrise is in Ngorongoro Crater. "The sun rays burst over the ancient caldera which covers almost a hundred square miles."
 
 Instead of examining the sunrise:
 	Display the figure of crater_image;
 	say "The sun rays burst over the ancient caldera which covers almost a hundred square miles."
 
-Lalibela Ethiopia is west of the Ngorogoro Crater. "Lalibela is the home of eleven medieval rock-hewn churches. The rock churches were carved into [italic type]single blocks of rock[roman type] around the 13th century.[paragraph break]One of these churches is to the [bt]west[rt]. The crater lies to the [bt]east[rt]."
+Lalibela Ethiopia is west of the Ngorongoro Crater. "Lalibela is the home of eleven medieval rock-hewn churches. The rock churches were carved into [italic type]single blocks of rock[roman type] around the 13th century.[paragraph break]One of these churches is to the [bt]west[rt]. The crater lies to the [bt]east[rt]."
 
 The single blocks of rock are scenery in Lalibela Ethiopia. "The mammoth blocks of red volcanic scoria stone looked almost like they were placed here by giants. They were created by King Lalibela, who set out to create a ‘new Jerusalem’ to eliminate the dangerous trek pilgrims made to Jerusalem."
 
@@ -1613,7 +1648,7 @@ Instead of shooting Robert Clayton with the gun:
 	otherwise:
 		say "Robert laughs and runs away.";
 		if Robert Clayton is in The Rock Church St George:
-			Move Robert Clayton to Ngorogoro Crater;
+			Move Robert Clayton to Ngorongoro Crater;
 		otherwise:
 			Move Robert Clayton to The Rock Church St George;
 			continue the action.
@@ -1623,11 +1658,11 @@ A person is either awake or asleep. A person is usually awake.
 A person can be spoken or unspoken. A person is usually unspoken.
 
 A weapon is a kind of thing.
-The Tranquilizer Gun is in The Armory Cabinet. "A nicely designed tranquilizer gun."
-The Tranquilizer Gun is a weapon.
-The description of the Tranquilizer gun is "It's a handgun, but it's a little bigger than what one would think of when they think of a handgun. That's because it fires tranquilizer darts.".
-Understand "tranquilizer" as The Tranquilizer Gun.
-Understand "gun" as The Tranquilizer Gun.
+The tranquilizer gun is in The Armory Cabinet. "A nicely designed tranquilizer gun."
+The tranquilizer gun is a weapon.
+The description of the tranquilizer gun is "It's a handgun, but it's a little bigger than what one would think of when they think of a handgun. That's because it fires tranquilizer darts.".
+Understand "tranquilizer" as The tranquilizer gun.
+Understand "gun" as The tranquilizer gun.
 
 Instead of taking the Crystal:
 	if Crystal is not in the location:
@@ -1635,7 +1670,7 @@ Instead of taking the Crystal:
 	else if the Player does not have the Tranquilizer Gun:
 		say "Robert laughs and runs away.";
 		if Robert Clayton is in The Rock Church St George:
-			Move Robert Clayton to Ngorogoro Crater;
+			Move Robert Clayton to Ngorongoro Crater;
 		otherwise:
 			Move Robert Clayton to The Rock Church St George;
 	otherwise:
@@ -1656,7 +1691,7 @@ Instead of Attacking Robert Clayton:
 	otherwise:
 		say "Robert laughs and runs away.";
 		if Robert Clayton is in The Rock Church St George:
-			Move Robert Clayton to Ngorogoro Crater;
+			Move Robert Clayton to Ngorongoro Crater;
 		otherwise:
 			Move Robert Clayton to The Rock Church St George;
 			continue the action.
@@ -1667,14 +1702,14 @@ Instead of examining Robert Clayton:
 Instead of asking Robert Clayton about something:
 	say "I need to be going, and you won't stop me.";
 	if Robert Clayton is in The Rock Church St George:
-		Move Robert Clayton to Ngorogoro Crater;
+		Move Robert Clayton to Ngorongoro Crater;
 	otherwise:
 		Move Robert Clayton to The Rock Church St George;
 
 Instead of telling Robert Clayton about something:
 	say "I need to be going, and you won't stop me.";
 	if Robert Clayton is in The Rock Church St George:
-		Move Robert Clayton to Ngorogoro Crater;
+		Move Robert Clayton to Ngorongoro Crater;
 	otherwise:
 		Move Robert Clayton to The Rock Church St George;
 	
@@ -1907,7 +1942,7 @@ Carry out flying to:
 		say "Sorry, we are only letting Rocket League fans land today due to the big tournament. I can tell by looking that you don't qualify! Sorry.";
 	otherwise:
 		say "You take off from [the location] and fly to [the noun]. (it's fast)[paragraph break]";
-		if the noun is Spaceport, say "Nice hat on that jet!";
+		if the noun is Spaceport, say "Nice hat on that jet! You are cleared for landing!";
 		move the Quotient Jet to the noun;
 		try looking;
 		now the Quotient Jet is grounded.
@@ -2004,9 +2039,11 @@ Instead of pushing the black button:
 				if rocket is in the blackness of space:
 					move the rocket to spaceport;
 					say "The thundering sound of the Raptor engines could not be heard since you are in space, but it still does the trick... taking you home.[paragraph break]”;
+					now the countdown begun is true;
 					try looking;
 				else if rocket is in the Tardis:
 					move the rocket to spaceport;
+					now the countdown begun is true;
 					say "The thundering sound of the Raptor engines could not be heard since you are in space, but it still does the trick... taking you home.[paragraph break]”;
 					try looking;
 				otherwise:
@@ -2116,6 +2153,7 @@ Every turn while flying counter > 0:
 	say "[message entry][paragraph break]";
 	if flying counter is zero begin;
 		move the rocket to Blackness of Space;
+		move the nutter butter to the rocket;
 		try looking;
 	end if;
 	if flying counter is seven begin;
@@ -2397,8 +2435,8 @@ Instead of going through the Escape Tunnel:
 		
 The Trap Door is scenery in Martin's office. "It's a ceiling... maybe just go up?"
 
-The Cold Suit is a wearable thing. "A cold suit in your size is here."
-The Cold Suit is in the Hallway.
+The cold suit is a wearable thing. "A cold suit in your size is here."
+The cold suit is in the Hallway.
 The description of the Cold Suit is "The cold suit looks a lot like a diver's wetsuit, but it makes you appear to be the same temperature as the ambient air around you. This renders you invisible to infrared sensors.".
 The read text of the Cold Suit is "Cold Suits R US"
 
@@ -2634,7 +2672,7 @@ The read text of the scroll of treasure is "Examine me in order to read me."
 
 [-----]
 
-A stack of zorkmid bills is a treasure. The stack of zorkmid bills are nowhere. "On the ground sit 200 neatly stacked zorkmid bills." Understand "notes" or "banknotes" or "bank notes" or "zorkmids" as the bills. The description of the bills is "[banknotes]".
+A stack of Zorkmid Bills is a treasure. The stack of zorkmid bills are nowhere. "On the ground sit 200 neatly stacked zorkmid bills." Understand "notes" or "banknotes" or "bank notes" or "zorkmids" as the bills. The description of the bills is "[banknotes]".
 The read text of the bills is "In Frobs We Trust".
 
 [-----]
@@ -2645,10 +2683,10 @@ The read text of the Yoga Mat is "A small tag in the corner says 'Anagrams make 
 
 [-----]
 
-A smore is an edible treasure. the smore is nowhere. The scent of the smore is "Yum, melted chocolate and gooey marshmallow."
+A Smore is an edible treasure. the Smore is nowhere. The scent of the smore is "Yum, melted chocolate and gooey marshmallow."
 The description of the smore is "The golden-brown marshmallow has been smashed into the melted chocolate with two graham cracker slabs, creating the perfect backyard campfire delicacy.".
 Understand "s'more" as smore.
-The printed name of the smore is "s'more".
+The printed name of the smore is "S'more".
 
 Counter_smore is a number that varies. Counter_smore is initially 0.
 
@@ -2663,8 +2701,8 @@ Instead of eating the smore:
 
 [------]
 
-The Oyster cracker is an edible treasure in the Circular Dish. 
-The description of the Oyster cracker is "It is a small hexagonal cracker... it's like it started as a two-dimensional flat cracker but then was inflated with air. They go great with chili." 
+The Oyster Cracker is an edible treasure in the Circular Dish. 
+The description of the Oyster Cracker is "It is a small hexagonal cracker... it's like it started as a two-dimensional flat cracker but then was inflated with air. They go great with chili." 
 
 counter_cracker is a number that varies. counter_cracker is 0.
 
@@ -2728,7 +2766,7 @@ The description of Chewbacca is "Hairy little guy isn't he."
 	
 [-------]
 	
-A pretzel is an edible treasure. The pretzel is in Lawsons Deli. 
+A Pretzel is an edible treasure. The Pretzel is in Lawsons Deli. 
 The description of the pretzel is "A perfectly browned knot with just the right amount of large salt crystals.".
 
 Counter_pretzel is a number that varies. Counter_pretzel is initially 0.
@@ -2744,7 +2782,7 @@ Instead of eating the pretzel:
 			
 [-----]
 	
-The can of rediwhip is an edible treasure. The can of rediwhip is in the kitchen. "You see classic all american rediwhip here."
+The Can of Rediwhip is an edible treasure. The can of rediwhip is in the kitchen. "You see classic all american rediwhip here."
 The description of the can of rediwhip is "It's the classic spray can of Whipped Cream.".
 
 Instead of drinking the can of rediwhip:
@@ -2762,14 +2800,14 @@ Understand "whipped cream" or "cream" or "whip" as the can of rediwhip.
 	
 [-----]
 	
-The medal is a treasure. The medal are in Cave5.
+The Medal is a treasure. The Medal is in Cave5.
 The description of the medal is "A solid gold medal on a ribbon! There is writing on the front of the medal and an image of a fractured sphere reflecting red light all around it on the back."
 The read text of the medal is "First Class Spelunker Agent!"
 
 [-----]
 
-Nutter butter is an edible treasure in Blackness of Space. "A nutter butter is floating here."
-The description of the Nutter butter is "The classic, peanut-shaped, cookie."
+Nutter Butter is an edible treasure. It is nowhere. "A nutter butter is floating here."
+The description of the Nutter Butter is "The classic, peanut-shaped, cookie."
 
 Instead of eating the Nutter Butter:
 	if player does not have the Nutter Butter, try taking the Nutter Butter;
@@ -2786,7 +2824,7 @@ Instead of eating the Nutter Butter:
 
 [-----]
 
-The succulent is a treasure. The succulent is in The Clearing.
+The Succulent is a treasure. The succulent is in The Clearing.
 The description of the Succulent is "A small, green succulent, suitable for placing on a shelf or even on top of a sleek, fast-flying jet.".
 The read text of the succulent is "eeeeeee!"
 
@@ -2827,7 +2865,7 @@ The description of the book is "It's the book [italic type]Dreamcatchers[roman t
 Understand "dreamcatchers" or "dream" or "catchers" or "dream catchers" as book.
 
 To say renamethebook:
-	now the printed name of the book is "book, [italic type]Dreamcatchers[roman type]";
+	now the printed name of the book is "Book, [italic type]Dreamcatchers[roman type]";
 
 [-----]
 
@@ -2855,19 +2893,19 @@ The read text of the paperback is "Thirteen-year-old Allie loves capturing her d
 The description of the paperback is "It's the book [italic type]Dreamcatchers[roman type], by Bridget Simpson. (Rumor has it, some of it was written in The Lost Lodge.)".
 
 To say renamebook:
-	now the printed name of paperback is "paperback, [italic type]Dreamcatchers[roman type]";
+	now the printed name of paperback is "Paperback, [italic type]Dreamcatchers[roman type]";
 	
 Understand "dreamcatchers" as paperback.
 
 [-----]
 
-A gazette is a treasure. The gazette is in the Smithsonian Castle. "A gazette is on display." 
+A Gazette is a treasure. The gazette is in the Smithsonian Castle. "A gazette is on display." 
 
 The read text of the gazette is "[if aslan is magic]Long ago, Quotient saved the future by retrieving the crystal from the fugative Robert Clayton.[else]The fugitive Robert Clayton was last seen in Africa and is rumored to be carrying an ancient Crystal he stole from Professor Cassandra Eaton, Lucasian Professor of Mathematics and head of all quantum studies at Oxford."
 
-The description of the gazette is "It is kind of like a newspaper. Maybe you should read it instead.".
+The description of the Gazette is "It is kind of like a newspaper. Maybe you should read it instead.".
 
-Understand "news" or "newspaper" as gazette.
+Understand "news" or "newspaper" as Gazette.
 
 [-----]
 
@@ -2884,7 +2922,7 @@ The read text of the digital notepad is "Cassie's crystal stolen.... Last known 
 		
 [-----]
 
-A scone is a an edible treasure. The scone is in Vaults_Garden. 
+A Scone is a an edible treasure. The scone is in Vaults_Garden. 
 The description of the scone is "A delicious scone with raspberry jam".
 
 Understand "scones" as scone.
@@ -2902,7 +2940,7 @@ Instead of eating the scone:
 	
 [-----]
 
-A figurine is a treasure. The figurine is in the Narnia Lamp. 
+A Figurine is a treasure. The Figurine is in the Narnia Lamp. 
 The description of the figurine is "It's a figurine of Tumnus, a faun. There is writing on the bottom.".
 The read text of the figurine is "Handcrafted in The Lost Lodge, 2001."
 
@@ -2910,9 +2948,9 @@ Understand "figure" or "doll" or "tumnus" as Figurine.
 		
 [-----]
 
-A deck of cards is a treasure. The deck of cards is in the Farmhouse. 
+A Deck of Cards is a treasure. The Deck of Cards is in the Farmhouse. 
 
-Instead of examining the deck of cards:
+Instead of examining the Deck of Cards:
 		say "It's a regular deck of cards with Star Wars themed backs.[paragraph break]";
 		say "The top four cards are:[line break]A King holding a blue light saber.[line break]A Queen, petting a Lion underneath a deep red sky.[line break]A Jack wearing a brightly polished pendant.[line break]And an Ace, adorned with the face of a shimmering clock.[line break]";
 	
@@ -3047,11 +3085,11 @@ index	quip_string1
 Table of tardis_space_quips
 index	quip_string1
 1	"Isn't Outer Space Cool!!!!?"
-2	"Remember when all else fails: control-alt-delete"
+2	"REBOOT ME? You want to REBOOT ME???"
 3	"You can even space walk!"
 4	"Always open the shade. The view is amazing!"
-5	"REBOOT ME? You want to REBOOT ME???"
-6 	"The lever is for docking and undocking only!"
+5	"Remember when all else fails: control-alt-delete"
+6	"The lever is for docking and undocking only!"
 7	"I'm sorry Dave, I can't do that... hahahahaha..."
 8	"So, how's it going? Do I need to provide better hints?"
 9	"You aren't allowed to touch the touch controls. You aren't qualified. Oh that's right, you can't talk to me... this is a one way conversation."
@@ -3324,17 +3362,17 @@ Instead of asking Desmond about something:
 		
 Chapter 7 - Florin
 
-Florin is a man. He is in the Ngorogoro Crater. "Florin, an outstanding Quotient agent, and a former MI-5 agent, is strolling around. He looks anxious, like he lost something important."
+Florin is a man. He is in the Ngorongoro Crater. "Florin, an outstanding Quotient agent, and a former MI-5 agent, is strolling around. He looks anxious, like he lost something important."
 
 Understand "flo" as Florin.
 
 Instead of examining Florin:
-	if Florin is in Ngorogoro Crater:
+	if Florin is in Ngorongoro Crater:
 		say "Florin, an outstanding Quotient agent, and a former MI-5 agent, is running around Africa trying to catch Robert Clayton. --- Off he goes again.";
 		now Florin is in Lalibela Ethiopia;
 	otherwise: 
 		say "'I'm off to the crater' he says.";
-		now Florin is in the Ngorogoro Crater;
+		now Florin is in the Ngorongoro Crater;
 
 Chapter 8 - Cassie
 
@@ -3451,13 +3489,22 @@ Instead of showing the tube to [person]:
 	say "[line break]'Did that come from the Lighting research lab in Cleveland? Maybe it can be used to make a light? You should show it to Sarah.'";
 	
 Instead of showing the Tranquilizer Gun to Florin:
-	say "[line break]Florin jumps back, 'That looks just like my gun. Now you can stop Robert!'";
+	if Robert Clayton is asleep:
+		say "[line break]Florin looks at you with admiration. 'You got him!'";
+	otherwise:
+		say "[line break]Florin jumps back, 'That looks just like my gun. Now you can stop Robert!'";
 	
 Instead of showing the Tranquilizer Gun to Robert Clayton:
-	say "[line break]Robert scowls at you. 'Nice piece. Want to see my knife up close?'";
+	if Robert Clayton is asleep:
+		say "[line break]'zzzzz''";
+	otherwise:
+		say "[line break]Robert scowls at you. 'Nice piece. Want to see my knife up close?'";
 	
 Instead of giving the Tranquilizer Gun to Florin:
-	say "[line break]Florin shakes his head and pushes the gun away. 'Nah, you keep it. You are a spy now. You can stop Robert!'";
+	if Robert Clayton is asleep:
+		say "[line break]Florin looks at you with admiration. 'You got him!'";
+	otherwise:
+		say "[line break]Florin shakes his head and pushes the gun away. 'Nah, you keep it. You are a spy now. You can stop Robert!'";
 	
 Instead of showing the Tranquilizer Gun to [person]:
 	say "[line break]'I think Florin was looking for that.'";
@@ -3751,18 +3798,21 @@ topic	response
 "desmond"	"Desmond is Sarah's husband. Not a spy, but a nice guy who like s'mores."
 "Kara"	"Kara is an expert at quantum communication, and has been very good for my personal development. I'm much better at communicating that I used to be!"
 "Sarah"	"Sarah is the penultimate agent. If you couldn't pick me to be on your team, you'd pick Sarah."
-"jack"	"He is my creator."
-"Martin"	"He's the boss."
-"computer/tardis"	"Who me?."
+"jack"	"He is my creator. He is probably the second best Quantum scientist in the world. Second only to Professor Cassandra Eaton, or Cassie as we call her."
+"cassie/cassandra/prof/professor"	"She is a Professor at Oxford university, a brilliant Quantum Scientist and an world renowned expert on time, as in the time continuum. In fact, she calls her lab the continuum."
+"professor eaton"	"She is a Professor at Oxford university, a brilliant Quantum Scientist and an world renowned expert on time, as in the time continuum. In fact, she calls her lab the continuum."
+"Martin"	"He's the boss. A very capable fellow who has connections around the world, including at the White House. He and Cassie used to go out, but the whole human emotion thing is beyond my programming."
+"computer/tardis"	"Who me?"
 "the computer"	"Who me?"
+"continuum"	"It's the name of Cassie's Time Lab."
+"the continuum"	"It's the name of Cassie's Time Lab."
 "mission"	"You need to make the entanglement stable! Cassie will need a power source and Jack is doing somethig with a laser in DC."
 "the mission"	"You need to make the entanglement stable! Cassie will need a power source and Jack is doing somethig with a laser in DC."
-"continuum"	"The Continuum Cassie's lab."
 "Florin"	"Florin is a friend. I would recommend agents, he would develop them!"
 "President"	"President Bridget O'Connor is considered an outstanding leader."
 "Prime Minister"	"Martin always said he'd make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is known as a great leader."
-"Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
+"Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent. There are a lot of great Jason's... There's Jason Bourne, the spy, Jason, leader of the Argonauts, just to name a couple. Did you have another Jason in mind?"
 "Greg"	"I heard he's an author?"
 "Karen"	"Did you mean Kara or Cassie?"
 "Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
@@ -3979,7 +4029,7 @@ Instead of talking to Martin:
         say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if Martin is in The Hallway]Hello Agent, I'm glad you arrived. I'll brief you in my office, after you show me the puzzle piece.[else][one of]'Do you have any other suggestions?' you ask.[paragraph break]'Be careful out there, and take the Tardis Communicator.' His voice is clear as he looks you straight in the eye.[or]'I will,' you reply. 'What can you tell me about the time experiment?'[paragraph break]'Cassie is a genius when it comes to time. You'll need to see her. She calls her lab the Continuum.'[or]'Do you like Cassie?.[paragraph break]'That's a strange question for someone who has just started her, but I will say, I have always enjoyed Cassie's company.'[or]You decide against talking any further with Martin right now.[cycling]".
 
 Instead of talking to Sarah:
-        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if Sarah is in Nela Park][one of]'Hello again, what are you up to.' you say.[paragraph break]'I'm looking for some type of containment device, not sure exactly what kind yet, but the engineers at Nela are actually working undercover for the CIA.'[or]'Ahhh, ok. Good to know.'[paragraph break]'Thanks for your help on this mission. We were going to just do a fun training mission, but then the lion escaped and messed up our plans.'[or]'No problem. It's great to get to work with you and the quotient team.'[or]You decide against talking any further with Sarah right now.[cycling][else][one of]'Hi, there,' you say confidently.[paragraph break]'Hi, Welcome to the team.' she replies with a smile.[or]'I've been meaning to ask you about Martin,' you comment. 'What's he like?'[paragraph break]'Martin is legendary for his connections. He can call in favors from all over. And underneath that Marine-like exterior is a softie. He's like a father to me.'[or]'Thank you.[paragraph break]'Of course, Good luck.'[or]You decide against talking any further with Sarah right now.[cycling]".
+        say "[if aslan is magic]You've completed your mission. Congratulations, Agent.[else if the player has the tube]That tube looks like the containment device the engineers were working on. Good work.[else if Sarah is in Nela Park][one of]'Hello again, what are you up to.' you say.[paragraph break]'I'm looking for some type of containment device, not sure exactly what kind yet, but the engineers at Nela are actually working undercover for the CIA.'[or]'Ahhh, ok. Good to know.'[paragraph break]'Thanks for your help on this mission. We were going to just do a fun training mission, but then the lion escaped and messed up our plans.'[or]'No problem. It's great to get to work with you and the quotient team.'[or]You decide against talking any further with Sarah right now.[cycling][else][one of]'Hi, there,' you say confidently.[paragraph break]'Hi, Welcome to the team.' she replies with a smile.[or]'I've been meaning to ask you about Martin,' you comment. 'What's he like?'[paragraph break]'Martin is legendary for his connections. He can call in favors from all over. And underneath that Marine-like exterior is a softie. He's like a father to me.'[or]'Thank you.[paragraph break]'Of course, Good luck.'[or]You decide against talking any further with Sarah right now.[cycling]".
 
 Instead of talking to Desmond:
         say "[if the bonfire is in the Yard]These s'mores are great! Help yourself![else][one of]'Hey,' you say casually.[paragraph break]'Hello, Beautiful day eh?' he replies seemingly distracted.[or]'I've been meaning to ask you about the mission,' you comment. 'What do we do?'[paragraph break]'That's a question for an agent.'[or]'What are you doing out here?.[paragraph break]'I just want to make some s'mores while I wait for my wife, but I'm having trouble getting the fire started.'[or]You decide against talking any further with Desmond right now.[cycling]".
@@ -4142,7 +4192,7 @@ Christmas Day is a memory. It is suggested by the vr suit. The description is "W
 
 Germany is a memory. It is suggested by the Pretzel. The description is "Ahhhh, baking Pretzels in Germany was a treat, but I'm not sure this memory will help me in my mission at all. Must FOCUS!”
 
-campfires is a memory. It is suggested by the Smore. The description is "Shoot, my mind keeps wandering, but yes, those s'mores over the campfire were tasty!"
+campfires is a memory. It is suggested by the Smore. The description is "I remember eating these s'mores over the campfire when I was a kid. Then we'd play in the cornfield north of the bonfire."
 
 Family is a memory. It is suggested by Sarah. The description is "Sarah does remind me of my family, must be the hair. According to the briefing I read before I came, her brother is Jack..."
 
@@ -4153,6 +4203,121 @@ days gone by is a memory. It is suggested by deck of cards. The description is "
 college is a Memory. It is suggested by Mountain Dew. The description is "I remember getting through many long study sessions in college with Mountain Dew. It is great for when you need energy to go the extra mile."
 
 Understand "focus" as a mistake ("Ok... that's better. Let's get on with the mission.");
+
+Section 2 - Song Titles
+
+[Farmstead]
+The song title of the Security Checkpoint is "[italic type]Saturday In the Park[roman type], Chicago".
+The song title of the Lane is "[italic type]Take Me Home, Country Road[roman type], John Denver".
+The song title of the Gate is "[italic type]The Long and Winding Road[roman type], The Beatles".
+The song title of the Headquarters Entrance is "[italic type]Can't Stop the Feeling[roman type], Justin Timberlake".
+The song title of the Farmhouse is "[italic type]Castle on the Hill[roman type], Ed Sheeran".
+The song title of the Parking is "[italic type]Big Yellow Taxi[roman type], Counting Crows, Vanessa Carlton".
+The song title of the Old Barn is "[italic type]Shut Up and Dance[roman type], WALK THE MOON". [mirror ball]
+The song title of the Yard is "[italic type]We Didn't Start the Fire[roman type], Billy Joel".
+The song title of the Kitchen is "[italic type]Waffle House[roman type], Jonas Brothers".
+The song title of the Smokehouse is "[italic type]Wagon Wheel[roman type], Darius Rucker". 
+The song title of the Old Cellar is "[italic type]Down Under[roman type], Men At Work".
+The song title of the Fire Pit is "[italic type]Shivers[roman type], Ed Sheeran".
+
+[Cornfield]
+The song title of the Clearing is "[italic type]Getaway Car[roman type], Taylor Swift". [succulent like rocket league car]
+The song title of the Corn Maze is "[italic type]Cornelia Street[roman type], Taylor Swift".
+The song title of the Dead End is "[italic type]Where Are You Now?[roman type], Lost Frequencies, Calum Scott".
+The song title of the Hidden Path is "[italic type]Maybe You're the Problem[roman type], Ava Max".
+The song title of the Secret Path is "[italic type]I Know Places[roman type], Taylor Swift".
+The song title of the Cemetery is "[italic type]Cemetery Drive[roman type], My Chemical Romance".
+
+[HQ]
+The song title of the Conference Room is "[italic type]Sara Smile[roman type], Daryl Hall & John Oats".
+The song title of the Inner Sanctum is "[italic type]Theme from Get Smart[roman type], ??".
+The song title of the Martin's Office is "[italic type]When I Kissed the Teacher[roman type], Abba".
+The song title of the Secret Passage is "[italic type]Secrets[roman type], The Weeknd".
+The song title of the Hallway is "[italic type]I Can See You[roman type], Taylor Swift".
+The song title of the Medical Center is "[italic type]Bad Case of Loving You (Doctor, Doctor)[roman type], Robert Palmer".
+The song title of the Hyperloop Station is "[italic type]Long Train Runnin[roman type], Doobie Brothers".
+The song title of the Airstrip is "[italic type]Getaway Car[roman type], Taylor Swift".
+
+[Cincinnati]
+The song title of the Skyline Chili is "[italic type]Chili Blues[roman type], Cincinnati Dancing Pigs".
+The song title of the Cincinnati Museum Center is "[italic type]Come Together[roman type], The Beatles". [This was a song from the Justice League movie, performed by a different group... The CMC was the model for the Justice League HQ]
+The song title of the Cavern is "[italic type]Molossus[roman type], Hanz Zimmer". [from the dark knight trilogy]
+The song title of the IMAX Theater is "[italic type]Don't Stop Believing[roman type], Journey".
+The song title of the Smale Riverfront Park is "[italic type]Reminiscing[roman type], Little River Band".
+The song title of the Lunken Airport is "[italic type]Born to Run[roman type], Bruce Springsteen". 
+
+[VR Area]
+The song title of the Peaceful Meditation is "[italic type]Wildest Dreams, Taylor's Version[roman type], Taylor Swift".
+The song title of the Dystopian 2049 is "[italic type]Till the World Ends[roman type], Britney Spears".
+The song title of the Metaverse is "[italic type]Hotel California[roman type], The Eagles".
+
+[Oxford]
+The song title of the Broad Street is "[italic type]London Boy[roman type], Taylor Swift".
+The song title of the Radcliffe Square is "[italic type]Dancing in the Moonlight[roman type], Jubel, NEIMY".
+The song title of the Cassie's Lab is "[italic type]Does Anybody Really Know What Time It Is[roman type], Chicago".
+The song title of the Hidden Airbase is "[italic type]Defying Gravity[roman type], Cynthia Erivo, Ariana Grande". 
+The song title of the Radcliffe Camera is "[italic type]Popular[roman type], Ariana Grande". 
+[
+The song title of the Sheldonian Theatre is "[italic type]TBD[roman type], ??". 
+The song title of the Bodleian Library is "[italic type]TBD[roman type], ??". 
+The song title of the Clarendon Building is "[italic type]TBD[roman type], ??". 
+The song title of the Cassie's Office is "[italic type]TBD[roman type], ??". 
+The song title of the Turf Tavern is "[italic type]TBD[roman type], ??". 
+The song title of the Vaults_Garden is "[italic type]TBD[roman type], ??".
+]
+The song title of the Narnia Lamp is "[italic type]Back in Time[roman type], Huey Lewis and the News". 
+
+[Space]
+The song title of the Spaceport is "[italic type]Fly Me to the Moon[roman type], Frank Sinatra".
+The song title of the Flying through the Air is "[italic type]Levitating[roman type], Dua Lipa".
+The song title of the Tardis is "[italic type]Rocket Man[roman type], Elton John".
+The song title of the The Control Center is "[italic type]Free Fallin[roman type], Tom Petty".
+The song title of the The Airbnb is "[italic type]On a Clear Day[roman type], Barbara Streisand". [the shade]
+The song title of the Blackness of Space is "[italic type]Hooked on a Feeling[roman type], Blue Suede, Bjorn Skifs".
+The song title of the Quantum View is "[italic type]Spirit in the Sky[roman type], Norman Greenbaum".
+
+[Cleveland]
+The song title of the Burke Lakefront is "[italic type]Dance the Night Away[roman type], Dua Lipa". [proposal]
+The song title of the Building 336 is "[italic type]Duel of the Fates[roman type], The London Voices, The London Symphony Orchestra".
+The song title of the Edgewater Park is "[italic type]L-O-V-E[roman type], Nat King Cole".
+
+[DC]
+The song title of the Lincoln Memorial is "[italic type]Birthday[roman type], Katy Perry". [jack's birthday, and he is here]
+The song title of the White House is "[italic type]Woman in the White House[roman type], Sheryl Crow".
+The song title of the Chapel is "[italic type]Don't Stop Me Now[roman type], Queen". [kas chapel walk out song]
+The song title of the Andrews Air Force Base is "[italic type]Rise[roman type], Katy Perry". 
+
+[Africa]
+The song title of the Lalibela Ethiopia is "[italic type]Africa[roman type], Toto".
+The song title of the Arusha Airport is "[italic type]Adventure of a Lifetime[roman type], Coldplay".
+The song title of the Ngorongoro Crater is "[italic type]The Lion Sleeps Tonight[roman type], The Tokens".
+The song title of the Rock Church St George is "[italic type]The One that Got Away[roman type], Katy Perry".
+
+[Mazes]
+The song title of the Maze1 is "[italic type]Oops, I did it again.[roman type], Britney Spears".
+The song title of the Maze2 is "[italic type]Oops, I did it again.[roman type], Britney Spears".
+The song title of the Maze3 is "[italic type]Oops, I did it again.[roman type], Britney Spears".
+The song title of the Maze4 is "[italic type]Oops, I did it again.[roman type], Britney Spears".
+The song title of the Maze5 is "[italic type]Oops, I did it again.[roman type], Britney Spears".
+The song title of the Maze7 is "[italic type]Oops, I did it again.[roman type], Britney Spears".
+The song title of the Maze6 is "[italic type]Round and Round.[roman type], Selena Gomez & The Scene".
+
+The song title of the Cave1 is "[italic type]I Still Haven't Found What I'm Looking For.[roman type], U2".
+The song title of the Cave2 is "[italic type]I Still Haven't Found What I'm Looking For.[roman type], U2".
+The song title of the Cave3 is "[italic type]I Still Haven't Found What I'm Looking For.[roman type], U2".
+The song title of the Cave4 is "[italic type]I Still Haven't Found What I'm Looking For.[roman type], U2".
+The song title of the Cave5 is "[italic type]Time Warp[roman type], Richard O'Brien".
+The song title of the Cave6 is "[italic type]I Still Haven't Found What I'm Looking For.[roman type], U2".
+
+Playlisting is an action out of world. Understand "playlist" as Playlisting.
+
+Carry out playlisting:
+	say "The play list of rooms you have visted is: [paragraph break]";
+	repeat with item running through the list of visited rooms:
+		if song title of the item is "":
+			say "[item] has no song yet!";
+		otherwise:
+			say "[item]: [song title of item][line break]";
 
 Book 8 - Mapping/Ranking/Release
 

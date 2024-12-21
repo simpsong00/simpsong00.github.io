@@ -1869,7 +1869,9 @@ The Statue of Freedom is scenery in the US Capitol. The description is "A bronze
 
 Smithsonian Castle is north of the National Mall. "The distinctive red sandstone architecture and charming tower makes this building stand out on the mall. It serves as the administrative heart of the Smithsonian Institution. Its towers and turrets give it a fairy-tale appearance, and the surrounding gardens are a peaceful retreat.[paragraph break]Head [bt]south[rt] to return to the mall."
 
-National Air Space Museum is south of the National Mall. "[if aslan is magic]The National Air and Space Museum is now one giant virtual reality experience where you can fly to Mars or Space walk next to Saturn's rings. [otherwise]The National Air and Space Museum is filled with the [italic type]wonders of flight[roman type] and space exploration. Other exhibits include historic aircraft, spacecraft, and interactive displays.[paragraph break]Head [bt]north[rt] to return to the mall"
+National Air Space Museum is south of the National Mall. "[if aslan is magic]The National Air and Space Museum is now one giant virtual reality experience where you can fly to Mars or Space walk next to Saturn's rings. [otherwise]The National Air and Space Museum is filled with the [italic type]wonders of flight[roman type] and space exploration. Other exhibits include historic aircraft, spacecraft, and interactive displays.[paragraph break]Head [bt]north[rt] to return to the mall."
+
+The printed name of National Air Space Museum is "National Air and Space Museum".
 
 The Wonders of Flight is scenery in the National Air Space Museum. The description is "Old space capsules, shuttles, and a replica of the original Wright flyer are suspended here."
 
@@ -4206,7 +4208,7 @@ Understand "focus" as a mistake ("Ok... that's better. Let's get on with the mis
 
 Section 2 - Song Titles
 
-[Farmstead]
+[Farmstead - done]
 The song title of the Security Checkpoint is "[italic type]Saturday In the Park[roman type], Chicago".
 The song title of the Lane is "[italic type]Take Me Home, Country Road[roman type], John Denver".
 The song title of the Gate is "[italic type]The Long and Winding Road[roman type], The Beatles".
@@ -4220,7 +4222,7 @@ The song title of the Smokehouse is "[italic type]Wagon Wheel[roman type], Dariu
 The song title of the Old Cellar is "[italic type]Down Under[roman type], Men At Work".
 The song title of the Fire Pit is "[italic type]Shivers[roman type], Ed Sheeran".
 
-[Cornfield]
+[Cornfield - done]
 The song title of the Clearing is "[italic type]Getaway Car[roman type], Taylor Swift". [succulent like rocket league car]
 The song title of the Corn Maze is "[italic type]Cornelia Street[roman type], Taylor Swift".
 The song title of the Dead End is "[italic type]Where Are You Now?[roman type], Lost Frequencies, Calum Scott".
@@ -4228,7 +4230,7 @@ The song title of the Hidden Path is "[italic type]Maybe You're the Problem[roma
 The song title of the Secret Path is "[italic type]I Know Places[roman type], Taylor Swift".
 The song title of the Cemetery is "[italic type]Cemetery Drive[roman type], My Chemical Romance".
 
-[HQ]
+[HQ - done]
 The song title of the Conference Room is "[italic type]Sara Smile[roman type], Daryl Hall & John Oats".
 The song title of the Inner Sanctum is "[italic type]Theme from Get Smart[roman type], ??".
 The song title of the Martin's Office is "[italic type]When I Kissed the Teacher[roman type], Abba".
@@ -4238,7 +4240,7 @@ The song title of the Medical Center is "[italic type]Bad Case of Loving You (Do
 The song title of the Hyperloop Station is "[italic type]Long Train Runnin[roman type], Doobie Brothers".
 The song title of the Airstrip is "[italic type]Getaway Car[roman type], Taylor Swift".
 
-[Cincinnati]
+[Cincinnati - done]
 The song title of the Skyline Chili is "[italic type]Chili Blues[roman type], Cincinnati Dancing Pigs".
 The song title of the Cincinnati Museum Center is "[italic type]Come Together[roman type], The Beatles". [This was a song from the Justice League movie, performed by a different group... The CMC was the model for the Justice League HQ]
 The song title of the Cavern is "[italic type]Molossus[roman type], Hanz Zimmer". [from the dark knight trilogy]
@@ -4246,28 +4248,32 @@ The song title of the IMAX Theater is "[italic type]Don't Stop Believing[roman t
 The song title of the Smale Riverfront Park is "[italic type]Reminiscing[roman type], Little River Band".
 The song title of the Lunken Airport is "[italic type]Born to Run[roman type], Bruce Springsteen". 
 
-[VR Area]
+[VR Area - 2 left]
 The song title of the Peaceful Meditation is "[italic type]Wildest Dreams, Taylor's Version[roman type], Taylor Swift".
 The song title of the Dystopian 2049 is "[italic type]Till the World Ends[roman type], Britney Spears".
 The song title of the Metaverse is "[italic type]Hotel California[roman type], The Eagles".
+The song title of the Utopian 2049 is "[italic type]TBD[roman type], TBD".
+The song title of the Future National Park is "[italic type]TBD[roman type], TBD".
 
-[Oxford]
+[Oxford - 2 left]
 The song title of the Broad Street is "[italic type]London Boy[roman type], Taylor Swift".
 The song title of the Radcliffe Square is "[italic type]Dancing in the Moonlight[roman type], Jubel, NEIMY".
 The song title of the Cassie's Lab is "[italic type]Does Anybody Really Know What Time It Is[roman type], Chicago".
 The song title of the Hidden Airbase is "[italic type]Defying Gravity[roman type], Cynthia Erivo, Ariana Grande". 
 The song title of the Radcliffe Camera is "[italic type]Popular[roman type], Ariana Grande". 
-[
-The song title of the Sheldonian Theatre is "[italic type]TBD[roman type], ??". 
-The song title of the Bodleian Library is "[italic type]TBD[roman type], ??". 
-The song title of the Clarendon Building is "[italic type]TBD[roman type], ??". 
-The song title of the Cassie's Office is "[italic type]TBD[roman type], ??". 
-The song title of the Turf Tavern is "[italic type]TBD[roman type], ??". 
-The song title of the Vaults_Garden is "[italic type]TBD[roman type], ??".
-]
+The song title of the Sheldonian Theatre is "[italic type]Forget you![roman type], Glee Cast and Gwyneth Paltrow".  [a stretch, but theatre, musical theatre, glee...]
+The song title of the Bodleian Library is "[italic type]Lay Down Sally[roman type], Eric Clapton". [it was in a spotify playlist called bodleian blues] 
+The song title of the Clarendon Building is "[italic type]Clean[roman type], Taylor Swift". 
+The song title of the Cassie's Office is "[italic type]Time after Time[roman type], Cyndi Lauper". 
+The song title of the Turf Tavern is "[italic type]Galway Girl[roman type], Ed Sheeran". 
+The song title of the Vaults_Garden is "[italic type]Ivy[roman type], Taylor Swift".
 The song title of the Narnia Lamp is "[italic type]Back in Time[roman type], Huey Lewis and the News". 
+The song title of the Virtual Reality Lab is "[italic type]Hotel California[roman type], The Eagles".
+The song title of the Duke Humfreys Library is "[italic type]Duke Humfreys Library[roman type], Chris Palmer".
+The song title of the Divinity School is "[italic type]TBD[roman type], TBD".
+The song title of the Convocation House is "[italic type]TBD[roman type], TBD". 
 
-[Space]
+[Space - done]
 The song title of the Spaceport is "[italic type]Fly Me to the Moon[roman type], Frank Sinatra".
 The song title of the Flying through the Air is "[italic type]Levitating[roman type], Dua Lipa".
 The song title of the Tardis is "[italic type]Rocket Man[roman type], Elton John".
@@ -4276,24 +4282,35 @@ The song title of the The Airbnb is "[italic type]On a Clear Day[roman type], Ba
 The song title of the Blackness of Space is "[italic type]Hooked on a Feeling[roman type], Blue Suede, Bjorn Skifs".
 The song title of the Quantum View is "[italic type]Spirit in the Sky[roman type], Norman Greenbaum".
 
-[Cleveland]
+[Cleveland - 1 left]
 The song title of the Burke Lakefront is "[italic type]Dance the Night Away[roman type], Dua Lipa". [proposal]
 The song title of the Building 336 is "[italic type]Duel of the Fates[roman type], The London Voices, The London Symphony Orchestra".
 The song title of the Edgewater Park is "[italic type]L-O-V-E[roman type], Nat King Cole".
+The song title of the The Lighting Institute is "[italic type]Lights[roman type], Elle Goulding".
+The song title of the Nela Park is "[italic type]TBD[roman type], TBD".
 
-[DC]
+[DC - 9 left]
 The song title of the Lincoln Memorial is "[italic type]Birthday[roman type], Katy Perry". [jack's birthday, and he is here]
 The song title of the White House is "[italic type]Woman in the White House[roman type], Sheryl Crow".
 The song title of the Chapel is "[italic type]Don't Stop Me Now[roman type], Queen". [kas chapel walk out song]
 The song title of the Andrews Air Force Base is "[italic type]Rise[roman type], Katy Perry". 
+The song title of the National Mall is "[italic type]TBD[roman type], TBD". 
+The song title of the Washington Monument is "[italic type]TBD[roman type], TBD". 
+The song title of the National Cathedral is "[italic type]TBD[roman type], TBD".
+The song title of the US Capitol is "[italic type]TBD[roman type], TBD".
+The song title of the Smithsonian Castle is "[italic type]TBD[roman type], TBD".
+The song title of the National Portrait Gallery is "[italic type]TBD[roman type], TBD".
+The song title of the Lawsons Deli is "[italic type]Scenes from an Italian Restaurant[roman type], Billy Joel".
+The song title of the Reflecting Pool is "[italic type]TBD[roman type], TBD".
+The song title of the National Air Space Museum is "[italic type]TBD[roman type], TBD".
 
-[Africa]
+[Africa - done]
 The song title of the Lalibela Ethiopia is "[italic type]Africa[roman type], Toto".
 The song title of the Arusha Airport is "[italic type]Adventure of a Lifetime[roman type], Coldplay".
 The song title of the Ngorongoro Crater is "[italic type]The Lion Sleeps Tonight[roman type], The Tokens".
 The song title of the Rock Church St George is "[italic type]The One that Got Away[roman type], Katy Perry".
 
-[Mazes]
+[Mazes - done]
 The song title of the Maze1 is "[italic type]Oops, I did it again.[roman type], Britney Spears".
 The song title of the Maze2 is "[italic type]Oops, I did it again.[roman type], Britney Spears".
 The song title of the Maze3 is "[italic type]Oops, I did it again.[roman type], Britney Spears".
@@ -4312,7 +4329,7 @@ The song title of the Cave6 is "[italic type]I Still Haven't Found What I'm Look
 Playlisting is an action out of world. Understand "playlist" as Playlisting.
 
 Carry out playlisting:
-	say "The play list of rooms you have visted is: [paragraph break]";
+	say "The playlist of rooms you have visted is: [paragraph break]";
 	repeat with item running through the list of visited rooms:
 		if song title of the item is "":
 			say "[item] has no song yet!";
@@ -4388,8 +4405,9 @@ Chapter 3 Release
 Test me with "examine watch / go west / go west / go down / go down / go west / go west / take SCIF".
 
 Release along with an interpreter, website, the introductory booklet, the introductory postcard, private source text, and cover art.
-Release along with a file of "Spoiler-free Map" called "Quantum The Game - Map Spoiler Free.pdf".
-Release along with a file of "Full Map with SPOILERS" called "Quantum The Game - Map.pdf"
+Release along with a file of "Spoiler-free Map" called "Quotient The Game - Map Spoiler Free.pdf".
+Release along with a file of "Full Map with SPOILERS" called "Quotient The Game - Map.pdf".
+Release along with a file of "Song list by room Minor Spoilers" called "Quotient Song List.pdf".
 
 
 

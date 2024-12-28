@@ -4208,7 +4208,7 @@ Understand "focus" as a mistake ("Ok... that's better. Let's get on with the mis
 
 Section 2 - Song Titles
 
-[Farmstead - done]
+[Farmstead]
 The song title of the Security Checkpoint is "[italic type]Saturday In the Park[roman type], Chicago".
 The song title of the Lane is "[italic type]Take Me Home, Country Road[roman type], John Denver".
 The song title of the Gate is "[italic type]The Long and Winding Road[roman type], The Beatles".
@@ -4222,7 +4222,7 @@ The song title of the Smokehouse is "[italic type]Wagon Wheel[roman type], Dariu
 The song title of the Old Cellar is "[italic type]Down Under[roman type], Men At Work".
 The song title of the Fire Pit is "[italic type]Shivers[roman type], Ed Sheeran".
 
-[Cornfield - done]
+[Cornfield]
 The song title of the Clearing is "[italic type]Getaway Car[roman type], Taylor Swift". [succulent like rocket league car]
 The song title of the Corn Maze is "[italic type]Cornelia Street[roman type], Taylor Swift".
 The song title of the Dead End is "[italic type]Where Are You Now?[roman type], Lost Frequencies, Calum Scott".
@@ -4230,17 +4230,17 @@ The song title of the Hidden Path is "[italic type]Maybe You're the Problem[roma
 The song title of the Secret Path is "[italic type]I Know Places[roman type], Taylor Swift".
 The song title of the Cemetery is "[italic type]Cemetery Drive[roman type], My Chemical Romance".
 
-[HQ - done]
+[HQ]
 The song title of the Conference Room is "[italic type]Sara Smile[roman type], Daryl Hall & John Oats".
 The song title of the Inner Sanctum is "[italic type]Theme from Get Smart[roman type], ??".
 The song title of the Martin's Office is "[italic type]When I Kissed the Teacher[roman type], Abba".
 The song title of the Secret Passage is "[italic type]Secrets[roman type], The Weeknd".
 The song title of the Hallway is "[italic type]I Can See You[roman type], Taylor Swift".
-The song title of the Medical Center is "[italic type]Bad Case of Loving You (Doctor, Doctor)[roman type], Robert Palmer".
+The song title of the Medical Center is "[italic type]Teenage Dream[roman type], Katy Perry". [missing puzzle piece lyric]
 The song title of the Hyperloop Station is "[italic type]Long Train Runnin[roman type], Doobie Brothers".
 The song title of the Airstrip is "[italic type]Getaway Car[roman type], Taylor Swift".
 
-[Cincinnati - done]
+[Cincinnati]
 The song title of the Skyline Chili is "[italic type]Chili Blues[roman type], Cincinnati Dancing Pigs".
 The song title of the Cincinnati Museum Center is "[italic type]Come Together[roman type], The Beatles". [This was a song from the Justice League movie, performed by a different group... The CMC was the model for the Justice League HQ]
 The song title of the Cavern is "[italic type]Molossus[roman type], Hanz Zimmer". [from the dark knight trilogy]
@@ -4270,10 +4270,10 @@ The song title of the Vaults_Garden is "[italic type]Ivy[roman type], Taylor Swi
 The song title of the Narnia Lamp is "[italic type]Back in Time[roman type], Huey Lewis and the News". 
 The song title of the Virtual Reality Lab is "[italic type]Hotel California[roman type], The Eagles".
 The song title of the Duke Humfreys Library is "[italic type]Duke Humfreys Library[roman type], Chris Palmer".
-The song title of the Divinity School is "[italic type]TBD[roman type], TBD".
+The song title of the Divinity School is "[italic type]Bad Case of Loving You (Doctor, Doctor)[roman type], Robert Palmer".
 The song title of the Convocation House is "[italic type]TBD[roman type], TBD". 
 
-[Space - done]
+[Space]
 The song title of the Spaceport is "[italic type]Fly Me to the Moon[roman type], Frank Sinatra".
 The song title of the Flying through the Air is "[italic type]Levitating[roman type], Dua Lipa".
 The song title of the Tardis is "[italic type]Rocket Man[roman type], Elton John".
@@ -4282,12 +4282,12 @@ The song title of the The Airbnb is "[italic type]On a Clear Day[roman type], Ba
 The song title of the Blackness of Space is "[italic type]Hooked on a Feeling[roman type], Blue Suede, Bjorn Skifs".
 The song title of the Quantum View is "[italic type]Spirit in the Sky[roman type], Norman Greenbaum".
 
-[Cleveland - 1 left]
+[Cleveland]
 The song title of the Burke Lakefront is "[italic type]Dance the Night Away[roman type], Dua Lipa". [proposal]
 The song title of the Building 336 is "[italic type]Duel of the Fates[roman type], The London Voices, The London Symphony Orchestra".
 The song title of the Edgewater Park is "[italic type]L-O-V-E[roman type], Nat King Cole".
 The song title of the The Lighting Institute is "[italic type]Lights[roman type], Elle Goulding".
-The song title of the Nela Park is "[italic type]TBD[roman type], TBD".
+The song title of the Nela Park is "[italic type]We Built This City[roman type], Starship".
 
 [DC - 9 left]
 The song title of the Lincoln Memorial is "[italic type]Birthday[roman type], Katy Perry". [jack's birthday, and he is here]
@@ -4304,13 +4304,13 @@ The song title of the Lawsons Deli is "[italic type]Scenes from an Italian Resta
 The song title of the Reflecting Pool is "[italic type]TBD[roman type], TBD".
 The song title of the National Air Space Museum is "[italic type]TBD[roman type], TBD".
 
-[Africa - done]
+[Africa]
 The song title of the Lalibela Ethiopia is "[italic type]Africa[roman type], Toto".
 The song title of the Arusha Airport is "[italic type]Adventure of a Lifetime[roman type], Coldplay".
 The song title of the Ngorongoro Crater is "[italic type]The Lion Sleeps Tonight[roman type], The Tokens".
 The song title of the Rock Church St George is "[italic type]The One that Got Away[roman type], Katy Perry".
 
-[Mazes - done]
+[Mazes]
 The song title of the Maze1 is "[italic type]Oops, I did it again.[roman type], Britney Spears".
 The song title of the Maze2 is "[italic type]Oops, I did it again.[roman type], Britney Spears".
 The song title of the Maze3 is "[italic type]Oops, I did it again.[roman type], Britney Spears".
@@ -4408,6 +4408,7 @@ Release along with an interpreter, website, the introductory booklet, the introd
 Release along with a file of "Spoiler-free Map" called "Quotient The Game - Map Spoiler Free.pdf".
 Release along with a file of "Full Map with SPOILERS" called "Quotient The Game - Map.pdf".
 Release along with a file of "Song list by room Minor Spoilers" called "Quotient Song List.pdf".
+Release along with a file of "Puzzle Diagram - SPOILER" called "Quotient Puzzle Diagram.pdf".
 
 
 

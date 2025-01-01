@@ -226,7 +226,7 @@ Role
 "Game Inspiration........................Zork"
 "Book Inspiration........................The Quantum Contingent"
 "Second Book.............................Quantum Time"
-"Release.................................108.rsf"
+"Release.................................108.Rsf"
 "RSF stands for..........................Really sort of final."
 
 [Inventory]
@@ -4248,14 +4248,14 @@ The song title of the IMAX Theater is "[italic type]Don't Stop Believing[roman t
 The song title of the Smale Riverfront Park is "[italic type]Reminiscing[roman type], Little River Band".
 The song title of the Lunken Airport is "[italic type]Born to Run[roman type], Bruce Springsteen". 
 
-[VR Area - 2 left]
+[VR Area]
 The song title of the Peaceful Meditation is "[italic type]Wildest Dreams, Taylor's Version[roman type], Taylor Swift".
 The song title of the Dystopian 2049 is "[italic type]Till the World Ends[roman type], Britney Spears".
 The song title of the Metaverse is "[italic type]Hotel California[roman type], The Eagles".
-The song title of the Utopian 2049 is "[italic type]TBD[roman type], TBD".
-The song title of the Future National Park is "[italic type]TBD[roman type], TBD".
+The song title of the Utopian 2049 is "[italic type]Perfect[roman type], Ed Sheeran".
+The song title of the Future National Park is "[italic type]Montana Sky[roman type], Jonas Brothers".
 
-[Oxford - 2 left]
+[Oxford]
 The song title of the Broad Street is "[italic type]London Boy[roman type], Taylor Swift".
 The song title of the Radcliffe Square is "[italic type]Dancing in the Moonlight[roman type], Jubel, NEIMY".
 The song title of the Cassie's Lab is "[italic type]Does Anybody Really Know What Time It Is[roman type], Chicago".
@@ -4271,7 +4271,7 @@ The song title of the Narnia Lamp is "[italic type]Back in Time[roman type], Hue
 The song title of the Virtual Reality Lab is "[italic type]Hotel California[roman type], The Eagles".
 The song title of the Duke Humfreys Library is "[italic type]Duke Humfreys Library[roman type], Chris Palmer".
 The song title of the Divinity School is "[italic type]Bad Case of Loving You (Doctor, Doctor)[roman type], Robert Palmer".
-The song title of the Convocation House is "[italic type]TBD[roman type], TBD". 
+The song title of the Convocation House is "[italic type]Come and Get Your Love[roman type], Redbone". [just because it is a great song]
 
 [Space]
 The song title of the Spaceport is "[italic type]Fly Me to the Moon[roman type], Frank Sinatra".
@@ -4289,20 +4289,20 @@ The song title of the Edgewater Park is "[italic type]L-O-V-E[roman type], Nat K
 The song title of the The Lighting Institute is "[italic type]Lights[roman type], Elle Goulding".
 The song title of the Nela Park is "[italic type]We Built This City[roman type], Starship".
 
-[DC - 9 left]
+[DC]
 The song title of the Lincoln Memorial is "[italic type]Birthday[roman type], Katy Perry". [jack's birthday, and he is here]
 The song title of the White House is "[italic type]Woman in the White House[roman type], Sheryl Crow".
 The song title of the Chapel is "[italic type]Don't Stop Me Now[roman type], Queen". [kas chapel walk out song]
 The song title of the Andrews Air Force Base is "[italic type]Rise[roman type], Katy Perry". 
-The song title of the National Mall is "[italic type]TBD[roman type], TBD". 
-The song title of the Washington Monument is "[italic type]TBD[roman type], TBD". 
-The song title of the National Cathedral is "[italic type]TBD[roman type], TBD".
-The song title of the US Capitol is "[italic type]TBD[roman type], TBD".
-The song title of the Smithsonian Castle is "[italic type]TBD[roman type], TBD".
-The song title of the National Portrait Gallery is "[italic type]TBD[roman type], TBD".
+The song title of the National Mall is "[italic type]Birds of a Feather[roman type], Billie Eilish". 
+The song title of the Washington Monument is "[italic type]Deja Vu[roman type], Olivia Rodrigo". 
+The song title of the National Cathedral is "[italic type]Cathedral Heart[roman type], Kelley Jakle, Adam Mayfield".
+The song title of the US Capitol is "[italic type]Born in the U.S.A.[roman type], Bruce Springsteen".
+The song title of the Smithsonian Castle is "[italic type]Just the Way You Are[roman type], Billy Joel".
+The song title of the National Portrait Gallery is "[italic type]What Makes You Beautiful[roman type], One Direction".
 The song title of the Lawsons Deli is "[italic type]Scenes from an Italian Restaurant[roman type], Billy Joel".
-The song title of the Reflecting Pool is "[italic type]TBD[roman type], TBD".
-The song title of the National Air Space Museum is "[italic type]TBD[roman type], TBD".
+The song title of the Reflecting Pool is "[italic type]I Can See You[roman type], Taylor Swift". [I can see you in the reflection.]
+The song title of the National Air Space Museum is "[italic type]Blank Space[roman type], Taylor Swift". [space... get it]
 
 [Africa]
 The song title of the Lalibela Ethiopia is "[italic type]Africa[roman type], Toto".
@@ -4406,9 +4406,9 @@ Test me with "examine watch / go west / go west / go down / go down / go west / 
 
 Release along with an interpreter, website, the introductory booklet, the introductory postcard, private source text, and cover art.
 Release along with a file of "Spoiler-free Map" called "Quotient The Game - Map Spoiler Free.pdf".
-Release along with a file of "Full Map with SPOILERS" called "Quotient The Game - Map.pdf".
-Release along with a file of "Song list by room Minor Spoilers" called "Quotient Song List.pdf".
-Release along with a file of "Puzzle Diagram - SPOILER" called "Quotient Puzzle Diagram.pdf".
+Release along with a file of "Song list - Minor Spoilers" called "Quotient Song List.pdf".
+Release along with a file of "Full Map - SPOILERS" called "Quotient The Game - Map.pdf".
+Release along with a file of "Puzzle Diagram - SPOILERS" called "Quotient Puzzle Diagram.pdf".
 
 
 

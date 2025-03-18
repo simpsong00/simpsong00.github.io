@@ -251,6 +251,63 @@ Carry out taking inventory (this is the list-style inventory rule):
 	say “Everything else: [line break]";
 	list the contents of the player, listing marked items only, including all contents, with newlines, indented, with extra indentation;
 
+[Scoring]	
+
+Table of Tasks Achieved
+Points (a number)	Citation (some text)	Time (a time)
+3	"Watching the IMAX film"
+5	"Solving the Puzzle"
+5	"Getting the Crystal"
+5	"Putting the succulent on the Jet (and 2 for succulent)"
+5	"Wearing the Polished Pendant"
+10	"Rebooting the Quantum Computer"
+10	"Energizing the Red Laser"
+10	"Making the Light Saber"
+10	"Retrieving the Console Message"
+107	"Using Aslan to travel across time and Win!"
+
+achieve-pt is a number that varies. achieve-pt is initially 0.
+
+To record (T - text) as achieved:
+	choose row with a citation of T in the Table of Tasks Achieved;
+	if there is no time entry begin;
+		now time entry is the time of day;
+		increase score by points entry;
+		now achieve-pt is 1;
+	end if.
+
+The announce the score rule is not listed in any rulebook.
+
+Check requesting the score:
+	if the score is 0, say "You have not yet achieved anything of note." instead.
+
+Carry out requesting the score:
+	if the score is 0:
+		say "So far you are without points.";
+	otherwise:
+		say "You have so far scored [score] out of a possible 214, in [turn count] turns, earning you the rank of [current rank]. [line break]This includes 2 points for each of the treasures you have collected, including:[paragraph break]";
+		now everything that is a treasure is marked for listing;
+		now everything that is edible is not marked for listing;
+		now everything that is not a treasure is not marked for listing;
+		say “Treasures: ";
+		list the contents of the player, as a sentence, listing marked items only, including all contents;
+		now everything that is a treasure is not marked for listing;
+		now everything that is edible is marked for listing;
+		say "[line break]Treasured Food and Drink: ";
+		list the contents of the player, as a sentence, listing marked items only;
+		now everything that is a treasure is not marked for listing;
+		now everything that is edible is not marked for listing;
+		now everything that is not a treasure is marked for listing;
+		if achieve-pt is not 0:
+			say "[paragraph break]As well as points for these achievements:";
+			repeat through the Table of Tasks Achieved in time order:
+				say "[line break]  [points entry] point[s] for [citation entry]";
+			say "[paragraph break]";
+		else:
+			say "[paragraph break]No further achievements.".
+		
+[	record "ACTIVITY" as achieved.   ]
+
 
 Chapter 7 Magic Movements, Xyzzy, Magic Words
 
@@ -265,6 +322,8 @@ Carry out xyzzying to default:
 	now the player has the keycard;
 	now the player has the tardis communicator;
 	now the player has the Mirrored Ball;
+	if the tardis communicator is unscored, increase score by 2;
+	if the Mirrored Ball is unscored, increase score by 2;
 	now the player has the scroll of treasure;
 	move jet to airstrip;    
 
@@ -280,6 +339,21 @@ Carry out xyzzyplundering [anything]:
 	move the noun to the location;
 	say "You mutter the magic word, and with a flash, you have the [noun].";
 	try taking the noun;
+	
+Arting is an action out of world. Understand "xyzart" as arting.
+
+Carry out arting:
+	say "Here are all of the photos in the game!";
+	display figure of sign_image;
+	display figure of radcam_image;
+	display figure of cmc_image;
+	display figure of rotunda_image;
+	display figure of bridge_image;
+	display figure of cleveland_image;
+	display figure of crater_image;
+	display figure of rock_image;
+	display figure of lincoln_image;
+	say "I hope you find them for real!";
 
 Understand "plugh" as a mistake ("Is your voice hollow?")
 
@@ -1023,7 +1097,7 @@ Instead of touching Aslan:
 		move scroll of treasure to The National Mall;
 		move player to The National Mall;
 		now the description of the sky is "It is a perfect day in DC. The sun is shining, the blue birds are singing and the sky is bright blue!";
-		increase score by 107;
+		record "Using Aslan to travel across time and Win!" as achieved;
 	else if Quantum Console is activated and the Quantum Computer is rebooted and the laser is energized and pendant_event_triggered is 0:
 		say "The lamp post flickers gold and the glow pulsates brightly, but otherwise, you feel untouched."; [pendant is not shiny]
 	else if Quantum Console is activated and the Quantum Computer is wonky and the laser is energized and pendant_event_triggered is 1: [computer is not rebooted]
@@ -1287,7 +1361,7 @@ After waiting when the player is in the IMAX Theater:
 	if the player is in the IMAX Theater and the IMAX waiting count is 2:
 		now preview is 0;
 		say "The main feature finally starts!! Professor Eaton is on the screen in her lab. The camera zooms in and she says 'What if we could send messages across time. My console requires an enormous amount of energy to enable entanglement stabilization by means of the quantum Zeno effect. It'[paragraph break]     ... [bt]CRASH[rt]... a loud noise interrupts and the movie stops. House lights are turned on, and an employee announces over the speakers: [paragraph break]'Sorry folks, the film broke, the movie is now over.'";
-		increase the score by 3.
+		record "Watching the IMAX film" as achieved.
 
 A theater poster is a thing in the IMAX Theater. It is fixed in place. "A theater poster, featuring Professer Cassandra Eaton is mounted at the doorway."
 The description of the theater poster is "It's a large teal movie poster showing the beautiful Cassandra Eaton, with equations spinning around her head. It almost glows from the poster backlighting.".
@@ -1378,7 +1452,7 @@ Instead of examining the Fluorescent Tube:
 		Now the Fluorescent Tube is nowhere;
 		Now the player has The Light Saber;
 		the lightsaber-timer bings in 2 turns from now;
-		If The Light Saber is unscored, increase score by 10;
+		If The Light Saber is unscored, record "Making the Light Saber" as achieved;
 		Now The Light Saber is scored;
 	otherwise: 
 		if the Crystal is not in the Fluorescent Tube:
@@ -1389,7 +1463,7 @@ Instead of examining the Crystal:
 		say "The fluorescent tube has transformed into a glowing light saber. You raise it triumphantly over your head and say 'The force is strong in me'";
 		Now the Fluorescent Tube is nowhere;
 		Now the player has The Light Saber;
-		If The Light Saber is unscored, increase score by 10;
+		If The Light Saber is unscored, record "Making the Light Saber" as achieved;
 		Now The Light Saber is scored;
 	otherwise: 
 		if the Crystal is not in the Fluorescent Tube:
@@ -1486,7 +1560,7 @@ Check rebooting the Quantum Computer:
 Carry out rebooting the Quantum Computer:
 	now the Quantum Computer is rebooted;
 	the tardis-timer bings in 1 turns from now;
-	if the Quantum Computer is unscored, increase score by 10;
+	if the Quantum Computer is unscored, record "Rebooting the Quantum Computer" as achieved;
 	now the Quantum Computer is scored;
 	say "You press Control-Alt-Delete. The screen goes black for a moment, then the computer begins to reboot."
 
@@ -1644,7 +1718,7 @@ Instead of shooting Robert Clayton with the gun:
 	if player has the Tranquilizer Gun:
 		say "You shoot Robert Clayton with the tranquilizer gun and take the crystal from him.";
 		now the player carries the Crystal;
-		if the Crystal is unscored, increase score by 5;
+		if the Crystal is unscored, record "Getting the Crystal" as achieved;
 		now the crystal is scored;
 		now Robert Clayton is asleep;
 	otherwise:
@@ -1678,7 +1752,7 @@ Instead of taking the Crystal:
 	otherwise:
 		say "You shoot Robert Clayton with the tranquilizer gun and take the crystal from him.";
 		now the player carries the Crystal;
-		if the Crystal is unscored, increase score by 5;
+		if the Crystal is unscored, record "Getting the Crystal" as achieved;
 		now the crystal is scored;
 		now Robert Clayton is asleep;
 		continue the action.
@@ -1687,7 +1761,7 @@ Instead of Attacking Robert Clayton:
 	if player has the Tranquilizer Gun:
 		say "You shoot Robert Clayton with the tranquilizer gun and take the crystal from him.";
 		now the player carries the Crystal;
-		if the Crystal is unscored, increase score by 5;
+		if the Crystal is unscored, record "Getting the Crystal" as achieved;
 		now the crystal is scored;
 		now Robert Clayton is asleep;
 	otherwise:
@@ -1817,7 +1891,7 @@ After switching on the laser:
 		say "The beam reflects in such a way that a magical red glow appears high over the sanctuary. Two other distinct beams split off and illuminate objects carved in the wall. One is a [italic type]clock tower[roman type], and the other is a [italic type]creature[roman type] of some type.[paragraph break][bold type]You sense a magical shudder in the time continuum.[line break][roman type]";
 		now the laser is energized;
 		the laser-timer bings in 2 turns from now;
-		if the laser is unscored, increase score by 10;
+		if the laser is unscored, record "Energizing the Red Laser" as achieved;
 		now the laser is scored;
 		now the description of the sky is "There is a red glow in the sky.";
 	otherwise:
@@ -2267,7 +2341,7 @@ Instead of solving the jigsaw when the player carries the jagged piece and the j
 	say "You snap the final piece into place.";
 	now the description of the jigsaw is “The missing piece completed the poster for the show LOST on the elaborately detailed puzzle of movie and show posters.”;
 	try examining the jigsaw;
-	increase score by 5.
+	record "Solving the Puzzle" as achieved.
 
 Instead of examining the puzzle:
 	if puzzle is unsolved and the player does not have the spy glass, say "A puzzle of many different movie and show posters. This one is nearly finished, missing only one piece that you could never find.";
@@ -2394,8 +2468,8 @@ Instead of switching on the Quantum Console:
 	otherwise:
 		if Cassie is in the location:
 			say "The display lights up and starts to spin when you turn it on.[paragraph break]";
-			say "The display says: '01101101 01100001 01110010 01110010 01111001 00100000 01101101 01100101'";
-			if The Quantum Console is unscored, increase score by 10;
+			say "The display says: '01101101 01100001 01110010 01110010 01111001 00100000 01001101 01100001 01110010 01110100 01101001 01101110 00001010'";
+			if The Quantum Console is unscored, record "Retrieving the Console Message" as achieved;
 			say "[paragraph break]Cassie says 'Oh! Excellent! You've done it!'";
 			now the Quantum Console is activated;
 			now the Quantum Console is switched on;
@@ -2542,7 +2616,7 @@ Instead of shining the pendant:
 		say "You polish the pendant to a gleaming, mirror-like surface and as you do, you feel a surge of energy through your body.";
 		now pendant_event_triggered is 1;
 		now the pendant is polished;
-		if the pendant is unscored, increase score by 5;
+		if the pendant is unscored, record "Wearing the Polished Pendant" as achieved;
 	otherwise:
 		say "You polish the pendant to a gleaming mirror-like surface.";
 		now the pendant is polished;
@@ -2583,7 +2657,7 @@ After wearing the pendant:
 	if the pendant is polished:
 		say "As you place the polished pendant around your neck, you feel a strange energy coursing through your body.";
 		now pendant_event_triggered is 1;
-		if the pendant is unscored, increase score by 5;
+		if the pendant is unscored, record "Wearing the Polished Pendant" as achieved;
 	otherwise:
 		say "You wear the pendant, but nothing unusual happens.";
 
@@ -2841,7 +2915,7 @@ Instead of putting the succulent on the jet, try putting the succulent on top of
 
 Instead of putting the succulent on the top of the jet:
 	if mount_score is 0: 
-		increase score by 5;
+		record "Putting the succulent on the Jet (and 2 for succulent)" as achieved;
 		now mount_score is 1;
 		now mount_var is 1;
 		continue the action;

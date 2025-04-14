@@ -186,7 +186,7 @@ Carry out reviewing the game world:
 Understand "review world" as reviewing the game world.
 
 	
-Chapter 6 Credits / About / Inventory 
+Chapter 6 Credits / About / Inventory / Scoring 
 
 Understand "about" or "info" or "information" as showing about.
 
@@ -202,7 +202,7 @@ Understand "points" as showing points.
 Showing points is an action out of world.
 
 Carry out showing points:
-	say "You can score 107 points by collecting treasures and solving the puzzles leading to the endgame. You get another 107 points when you take the final move to win the game.[paragraph break]There are twenty-two treasures worth 2 points each. There is one action that is not required to win the game but provides context and is worth 3 points. Puzzles to win are worth 5-10 points. All treasures (except one tribute to Zork) provide a [italic type]hint[roman type] unless it is a food/drink. Most food and drink is just for fun, but not all![paragraph break]Good Luck!";
+	say "You can score 107 points by collecting treasures and solving the puzzles leading to the endgame. You get another 107 points when you take the final move to win the game.[paragraph break]There are twenty-two treasures worth 2 points each. There is one action that is not required to win the game but provides context and is worth 3 points. Puzzles to win are worth 5-10 points. All treasures (except one tribute to Zork) provide a [italic type]hint[roman type] unless it is a food/drink. Most food and drink is just for fun, but not all! Your score establishes your rank. All ranks can be listed via the command RANK.[paragraph break]Good Luck!";
 
 Understand "credits" or "credit" as showing the credits.
 
@@ -308,6 +308,14 @@ Carry out requesting the score:
 		
 [	record "ACTIVITY" as achieved.   ]
 
+ranking is an action out of world. Understand "rank" as ranking.
+
+Carry out ranking:
+	say "Here are all of the ranks in the game![line break]";
+	repeat through the Table of Rankings:
+		say "[line break]  [rank entry]";
+	say "[paragraph break]";
+	say "I hope you achieve them with grace!";
 
 Chapter 7 Magic Movements, Xyzzy, Magic Words
 
@@ -354,7 +362,7 @@ Carry out arting:
 	display figure of rock_image;
 	display figure of lincoln_image;
 	say "I hope you find them for real!";
-
+	
 Understand "plugh" as a mistake ("Is your voice hollow?")
 
 Understand "leviosa" as a mistake ("It's LeviOsa! Not LevioSA...")
@@ -712,9 +720,9 @@ The description of the leather chair is "It's a sumptuous leather chair with thi
 
 The coffered ceiling is scenery in the Martin's Office. "The coffered ceiling has many ornate squares, each the size of a trap door."
 
-The bookcase is scenery in the Martin's Office. "There is one book that catches your eye. [italic type]Dreamcatchers[roman type]."
+The bookcase is scenery in the Martin's Office. "[if the player has the book]There are a wide selection of books on the bookcase. Martin appears well read.[else]There is one book that catches your eye. [italic type]Dreamcatchers[roman type]."
 
-Understand "built-in" or "builtin" or "shelf" as bookcase.
+Understand "built-in" or "builtin" or "shelf" or "book case" as bookcase.
 
 Instead of sitting on the leather chair:
 	say "Oh yes, it is very comfortable. You swivel back and forth in the chair, pretending to be Martin.";
@@ -756,21 +764,43 @@ The steel striker is a thing.
 The description of the steel striker is "It is curved so you can wear it over the knuckles of your hand and strike it against the flint." 
 The steel striker is wearable. 
 
+Understand the command "strike" as something new.
+
+Striking it with is an action applying to two things. Understand "strike [something] with [something preferably held]" as striking it with.
+
+Striking is an action applying to one thing. Understand "strike [something]" as striking.
+
 pile of leaves is a thing in The Gate. The description of the pile of leaves is "Um, a pile of leaves, do you want to count them?" 
 	
-Instead of attacking the flint when the steel striker is not worn by the player:
+Instead of striking the flint when the steel striker is not worn by the player:
 	say "You must wear the steel striker over your knuckles, in order to hit the flint at the best angle."
 	
-Instead of attacking the flint when location is not the Yard:
+Instead of striking the flint when location is not the Yard:
 	say "The flint turns smooth in your hand and no sparks are created. A small voice comes from the flint. This ACME flint is GPS locked and only works by the old bonfire spot in the yard. Thank you for your cooperation.";
 
-Instead of attacking the flint when location is the Yard and the steel striker is worn and the leaves are not in the location:
+Instead of striking the flint when location is the Yard and the steel striker is worn and the leaves are not in the location:
 	say "Though you strike the flint sharply with the steel and throw sparks, they have nothing to catch on, since there is nothing to small enough to catch fire."
 
-Instead of attacking the flint when the steel striker is worn and the leaves are in the location and the leaves are not unlit:
+Instead of striking the flint when the steel striker is worn and the leaves are in the location and the leaves are not unlit:
 	say "The leaves have already caught fire."
 
-Instead of attacking the flint:
+Instead of striking the flint:
+	now the leaves are glowing;
+	say "You strike the flint against the steel striker and throw sparks onto the leaves; they make tiny circles of orange there. You can help the fire grow by blowing on the leaves."
+	
+Instead of striking the flint with the steel striker when the steel striker is not worn by the player:
+	say "You must wear the steel striker over your knuckles, in order to hit the flint at the best angle."
+	
+Instead of striking the flint with the steel striker when location is not the Yard:
+	say "The flint turns smooth in your hand and no sparks are created. A small voice comes from the flint. This ACME flint is GPS locked and only works by the old bonfire spot in the yard. Thank you for your cooperation.";
+
+Instead of striking the flint with the steel striker when location is the Yard and the steel striker is worn and the leaves are not in the location:
+	say "Though you strike the flint sharply with the steel and throw sparks, they have nothing to catch on, since there is nothing to small enough to catch fire."
+
+Instead of striking the flint with the steel striker when the steel striker is worn and the leaves are in the location and the leaves are not unlit:
+	say "The leaves have already caught fire."
+
+Instead of striking the flint with the steel striker:
 	now the leaves are glowing;
 	say "You strike the flint against the steel striker and throw sparks onto the leaves; they make tiny circles of orange there. You can help the fire grow by blowing on the leaves."
 	
@@ -1225,12 +1255,12 @@ Future National Park is north of the Metaverse. "For the few remaining Luddites 
 Peaceful Meditation is south of the Metaverse. "You are in a vast desert, with dunes stretching out to the horizon. The sun burns like a hot coal in the sky. You may meditate here as long as you like.[paragraph break]And that could be a very long time if you can't figure out how to exit."
 
 Hologram is a person. Hologram is in the Metaverse. "A hologram floats nearby."
-The description of the Hologram is "The hologram looks exactly like Cassie, only slightly transparent. Only her piercing blue eyes lake the transparency of the rest of her.".
+The description of the Hologram is "The hologram looks like Cassie, only  semi-transparent, almost like one would imagine a ghost. Her piercing blue eyes glow brighter than the rest of the hologram.".
 
 Section 1 - Yoga Master and Hologram
 
 Yoga Master is a person. Yoga Master is in Peaceful Meditation. "A serene yoga master appears, floating just a few inches above the sand in the lotus position."
-The description of the Yoga Master is "They are a serene yoga master, and they appear to be floating just a few inches above the sand in the lotus position with their eyes closed.".
+The description of the Yoga Master is "The yoga master appears to be floating just a few inches above the sand in the lotus position with their eyes closed. They are wearing what appears to be a very comfortable, terry-cloth robe adorned with baby yodas.".
 
 Instead of talking to Yoga Master:
 		say "The Yoga Master simply breaths out. And then in. Their breathing is slow and rhythmic. They do not even open their eyes when you talk to them."
@@ -1511,7 +1541,7 @@ Battery is scenery in Spaceport. "The megapacks store up the excess solar power 
 
 Understand "battery" or "solar" or "solar panels" or "backup" or "battery backup" or "power" or "power plant" or "virtual power plant" as Battery.
 
-Tardis is a port. "[first time]The Dragon capsule begins firing its Draco thrusters to maneuver to the docking bay. The docking maneuver isn't simple but appears so because of the automatic nature of the Dragon capsule’s autopilot software. You draw closer and closer until you hear a loud locking sound and feel a slight shake as the docking clamps lock the rocket into place.[paragraph break]You've successfully docked at the airlock to TARDIS.[only] TARDIS is a boxy-looking station, similar in shape to a 1960s London police box like Dr. Who’s time machine, only much larger. Quotient had even painted it TARDIS blue. You are now in the airlock."
+Tardis is a port. "[first time]The Dragon capsule begins firing its Draco thrusters to maneuver to the docking bay. The docking maneuver isn't simple but appears so because of the automatic nature of the Dragon capsule’s autopilot software. You draw closer and closer until you hear a loud locking sound and feel a slight shake as the docking clamps lock the rocket into place.[paragraph break]You've successfully docked at the airlock to TARDIS.[only] TARDIS is a boxy-looking station, similar in shape to a 1960s London police box --- like Dr. Who’s time machine --- only much larger.[line break]Quotient even painted it TARDIS blue. You are now in the airlock."
 
 The Control Center is a room. "The control center has lots of [italic type]controls[roman type], but you don't care.[paragraph break]There is a much cooler room to the [bt]north[rt]."
 
@@ -1526,13 +1556,13 @@ Instead of touching controls:
 The Airbnb is north of the Control Center. "This is the best hotel room view in the Solar System.[paragraph break]The viewing area for the Quantum Computer lies to the [bt]west[rt]. The Control Center lies to the [bt]south[rt]." The shade door is here. "A large metal shade blocks what you assume is a window." 
 The description of the shade door is "A large metal protective shade or shield.".
 
-Instead of opening the shade door, say "The shade opens revealing the On a [italic type]Clear Day You Can See Forever[roman type] window. It’s named after the old musical. The view was unimaginably beautiful. Space is the definition of dark. It makes the stars stand out like diamonds on velvet. Of course, the most amazing view is of our own blue marble, Earth. The drifting clouds created hazy, moving lines across the blue orb. Entire continents seemed small, our place in the universe seemed less important. We are but one planet in a vast sea of endless space. Lightning storms exploded in the clouds as they traversed land and sea. As former NASA astronaut Mike Massimino mused, 'How can something so beautiful be tolerated by human eyes.'"
+Instead of opening the shade door, say "The shade opens revealing the On a [italic type]Clear Day You Can See Forever[roman type] window. It’s named after the old musical. The view is unimaginably beautiful. Space is the definition of dark. It makes the stars stand out like diamonds on velvet. Of course, the most amazing view is of our own blue marble, Earth. The drifting clouds created hazy, moving lines across the blue orb. Entire continents seemed small, our place in the universe seemed less important. We are but one planet in a vast sea of endless space. Lightning storms exploded in the clouds as they traversed land and sea. As former NASA astronaut Mike Massimino mused, 'How can something so beautiful be tolerated by human eyes.'"
 
 Clear Day is scenery in the Airbnb. "On a Clear Day You Can See Forever is a 70's musical comedy drama, but I digress. On TARDIS, it's a cool window into the depths of space."
 
 Understand "see forever" or "forever" or "on a clear day" as Clear Day.
 
-The Quantum View is west of the Airbnb. "This is the computer viewing area allowing you to view the specially designed Zero-G shock mount for the quantum computer core through a window. The quantum computer is in a room of the station not accessible by humans. It operated under the vacuum of space at all times.[paragraph break]The Airbnb lies to the [bt]east[rt]." 
+The Quantum View is west of the Airbnb. "This is the computer viewing area. It allows you to view the specially designed Zero-G shock mount and the quantum computer core mounted there through a window. The quantum computer is in a room of the station not accessible by humans. It operated under the vacuum of space at all times.[paragraph break]The Airbnb lies to the [bt]east[rt]." 
 
 Section 1 - Things in TARDIS
 
@@ -2099,7 +2129,7 @@ Instead of pulling the blue lever:
 			now the docking clamps are 1;
 		otherwise:
 			if the rocket is in the Blackness of Space:
-				say "You have successfully docked at TARDIS[paragraph break]";
+				say "You pull the lever and see the docking clamps start to move.[paragraph break]";
 				move the rocket to TARDIS;
 				now the player is in the location of the rocket;
 				now the docking clamps are 0;
@@ -2597,7 +2627,7 @@ Michael Peterson, class of 2019, 'Great experience!'[line break]
 Simon Evernote, class of 2019, 'Exceptional. Everyone except me that is!'[line break]
 "
  
-A beautiful tapestry is scenery in the Sheldonian Theatre. "The tapestry shows the knight Lancelot charging up a hill toward a lion. He is wearing a gleaming pendant that appears to sparkle in the sun because of the small silver threads spraying outward on the cloth. There appears to be a slight bulge in the middle of the tapestry."
+A beautiful tapestry is scenery in the Sheldonian Theatre. "The tapestry shows the knight Lancelot charging up a hill toward a lion. He is wearing a gleaming pendant that appears to sparkle in the sun because of the small silver threads spraying outward on the cloth. [if pendant is undiscovered]There appears to be a slight bulge in the middle of the tapestry.[else]The tapestry is smooth and straight."
  
 The ancient pendant is a wearable thing. The description is "[if pendant is unpolished]Though mottled with rust, it looks quite beautiful.[else]The pendant sparkles beautifully." The pendant can be discovered or undiscovered. The pendant is undiscovered. The pendant can be polished or unpolished. The pendant is unpolished. The pendant can be scored or unscored.
 
@@ -2906,7 +2936,7 @@ The Succulent is a treasure. The succulent is in The Clearing.
 The description of the Succulent is "A small, green succulent, suitable for placing on a shelf or even on top of a sleek, fast-flying jet.".
 The read text of the succulent is "eeeeeee!"
 
-Understand "shelf" or "circular shelf" or "table" or "mounting shelf" or "mount" or "circular mounting" or "circular mounting shelf" as top of jet.
+Understand "shelf" or "circular shelf" or "table" or "mounting shelf" or "circular mounting" or "circular mounting shelf" as top of jet.
 
 mount_var is a number that varies. mount_var is initially 0.
 mount_score is a number that varies. mount_score is initially 0.
@@ -3138,7 +3168,7 @@ index	quip_string1
 4	"I hope you at least know you can shorten examine to just x. HELP will give you a few more tips if this is your first adventure."
 5	"Every treasure is a clue... except food, I just like food."
 6 	"Have you watched the TV Show LOST?"
-7	"What is your favorite song? Oh, that's right, this is a one way communicator. I have a whole playlist for you to listen to! http://spoti.fi/3w9WxSD"
+7	"What is your favorite song? I have a whole playlist for you to listen to! http://spoti.fi/3w9WxSD"
 8	"Did you look at the scenery by the lane. You may find a path there you missed."
 9	"You are still examing me? I hope you helped Desmond. He's hungry. It won't save the world, but you'll at least get a yummy treat out of it."
 10	"Have you read The Quantum Contingent? It's one of my favorite books."
@@ -3170,7 +3200,7 @@ index	quip_string1
 6	"The lever is for docking and undocking only!"
 7	"I'm sorry Dave, I can't do that... hahahahaha..."
 8	"So, how's it going? Do I need to provide better hints?"
-9	"You aren't allowed to touch the touch controls. You aren't qualified. Oh that's right, you can't talk to me... this is a one way conversation."
+9	"You aren't allowed to touch the touch controls. You aren't qualified."
 10	"I can't tell you everything, but I can tell you more."
 11	"Did you push the big red button?"
 12	"Ok, if you are going to keep doing this, maybe just use the up arrow."
@@ -3636,10 +3666,10 @@ Instead of showing the Mirrored Ball to [person]:
 	say "[line break]'Cool! Where you get that? You should show it to Sarah, she'd get a kick out of it.'";
 	
 Instead of showing the Tardis Communicator to Jack:
-	say "[line break]'The TARDIS Communicator can be very helpful. Every time you examine it, TARDIS will talk to you. Unfortunately, it's version 1.0, so it's a one way connection. You can't give TARDIS any commands.'";
+	say "[line break]'The TARDIS Communicator can be very helpful. Every time you examine it, TARDIS will talk to you.'";
 	
 Instead of showing the Tardis Communicator to Martin:
-	say "[line break]'The TARDIS Communicator is useful. Every time you examine it, TARDIS will talk to you. Since it's version 1.0, it's a one way connection. You can't give TARDIS any commands.'";
+	say "[line break]'The TARDIS Communicator is useful. Every time you examine it, TARDIS will talk to you.'";
 	
 Instead of showing the Tardis Communicator to Desmond:
 	say "[line break]Desmond tilts his head and looks at you with a smirk, 'Like I said, I'm just here for the s'mores. That looks like a spy thing.'";
@@ -3688,8 +3718,10 @@ Section 1 - Kara
 After asking the Kara about a topic listed in the Table of Kara's responses, say "[line break][response entry][line break]".
 
 After asking the Kara about something:
-	if the topic understood is not a topic listed in the Table of Kara's responses:
-		say "[line break][one of]Kara looks at you quizzically, 'I don't know much about that.[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Kara looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[cycling]"
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else:
+		say "[line break][one of]Kara looks at you quizzically, 'I don't know much about that.'[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Kara looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[cycling]"
 		
 After telling the Kara about a topic listed in the Table of Kara's responses, say "[line break][response entry][line break]".
 
@@ -3717,12 +3749,6 @@ topic	response
 "Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"Greg"	"I heard he's an author?"
-"Karen"	"Did you mean Kara or Cassie?"
-"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
 "laser/lasers"	"Cassie said there is a special laser in the US that she needs to have turned on for her experiment to work."
 "crystal"	"Cassie needs it to power the console in her lab If she can contain it somehow."
 "metaverse/vr/meta"	"I know Cassie has a great VR lab."
@@ -3745,7 +3771,9 @@ Section 3 - Florin
 After asking the Florin about a topic listed in the Table of Florin's responses, say "[if robert clayton is asleep]You got Robert, You got the Crystal! Stop talking to me and help Cassie power up the console![else][line break][response entry][line break]".
 
 After asking the Florin about something:
-	if the topic understood is not a topic listed in the Table of Florin's responses:
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else:
 		say "[line break][if robert clayton is asleep]You got him![else][one of]I need to find my gun![or]Sorry, I'm not sure.[or]We need to stop talking and stop Robert![or]Florin looks over his shoulder and says, 'Did you hear a lion?'[cycling]"
 		
 After telling the Florin about a topic listed in the Table of Florin's responses, say "[if robert clayton is asleep]You got Robert, You got the Crystal! Stop talking to me and help Cassie power up the console![else][line break][response entry][line break]".
@@ -3774,12 +3802,6 @@ topic	response
 "Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is a great leader."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"Greg"	"I heard he's an author?"
-"Karen"	"Did you mean Kara or Cassie?"
-"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
 "laser/lasers"	"Cassie said there is a special laser in the US that she needs to have turned on for her experiment to work."
 "crystal"	"Cassie needs it to power something in her lab."
 "metaverse/vr/meta"	"I know Cassie has a great VR lab."
@@ -3804,14 +3826,16 @@ Section 5 - Cassie
 After asking Cassie about a topic listed in the Table of Cassie's responses, say "[line break][response entry][line break]".
 
 After asking the Cassie about something:
-	if the topic understood is not a topic listed in the Table of Cassie's responses:
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else:
 		say "[line break][one of]hmmm, for a magical result, you'll need to do more than just the mission. When all else fails, use lasers I always say![or]I think Lancelot knew something. If you find his pendant, wear it for good luck.[or]I haven't time for this, we must stabilize the entanglement![at random]"
 		
 After telling the Cassie about a topic listed in the Table of Cassie's responses, say "[line break][response entry][line break]".
 
 After telling the Cassie about something:
 	if the topic understood is not a topic listed in the Table of Cassie's responses:
-		say "[line break][one of]Cassie looks at you quizzically, 'I don't know much about that.[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Cassie, 'I'm afraid I don't know dear.'[at random]"
+		say "[line break][one of]Cassie looks at you quizzically, 'I don't know much about that.'[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Cassie, 'I'm afraid I don't know dear.'[at random]"
 		
 Table of Cassie's responses
 topic	response
@@ -3831,15 +3855,6 @@ topic	response
 "Prime Minister"	"Martin always said he'd make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is known as a great leader."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"Greg"	"I heard he's an author?"
-"Karen"	"Did you mean Kara or Cassie?"
-"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
-"mt dew"	"Refreshing!"
-"mountain dew"	"Refreshing!"
-"mtn dew"	"Refreshing!"
 "laser/lasers"	"Critical for stabilization."
 "crystal"	"The Crystal is said to be a Kyber Crystal, It should be able to provide the power we need for the quantum console."
 "movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
@@ -3862,7 +3877,9 @@ Section 6 - Tardis
 After asking Tardis Communicator about a topic listed in the Table of Tardis's responses, say "[line break][response entry][line break]".
 
 After asking the Tardis Communicator about something:
-	if the topic understood is not a topic listed in the Table of Tardis's responses:
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else:
 		say "[line break][one of]hmmm, I am a very capable computer and I still don't know what you are asking about![or]Really? That's your question? Try asking about something important.[or]I'm at a total loss. Did you reboot me yet?[at random]"
 		
 After telling the Tardis Communicator about a topic listed in the Table of Tardis's responses, say "[line break][response entry][line break]".
@@ -3891,15 +3908,6 @@ topic	response
 "Prime Minister"	"Martin always said he'd make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is known as a great leader."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent. There are a lot of great Jason's... There's Jason Bourne, the spy, Jason, leader of the Argonauts, just to name a couple. Did you have another Jason in mind?"
-"Greg"	"I heard he's an author?"
-"Karen"	"Did you mean Kara or Cassie?"
-"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
-"mt dew"	"Refreshing!"
-"mountain dew"	"Refreshing!"
-"mtn dew"	"Refreshing!"
 "metaverse/vr/meta"	"We should meet there. I could take the shape of a human in the metaverse."
 "laser/lasers"	"Lasers are considered critical for stabilization."
 "crystal"	"The Crystal is said to be a Kyber Crystal, It should be able to provide the power needed for the quantum console."
@@ -3917,14 +3925,16 @@ Section 7 - Jack
 After asking the Jack about a topic listed in the Table of Jack's responses, say "[line break][response entry][line break]".
 
 After asking the Jack about something:
-	if the topic understood is not a topic listed in the Table of Jack's responses:
-		say "[line break][one of]Jack looks at you quizzically, 'I don't know much about that.[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Jack looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[at random]"
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else:
+		say "[line break][one of]Jack looks at you quizzically, 'I don't know much about that.'[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Jack looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[at random]"
 		
 After telling the Jack about a topic listed in the Table of Jack's responses, say "[line break][response entry][line break]".
 
 After telling the Jack about something:
 	if the topic understood is not a topic listed in the Table of Jack's responses:
-		say "[line break][one of]Jack looks at you quizzically, 'I don't know much about that.[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Jack looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[at random]"
+		say "[line break][one of]Jack looks at you quizzically, 'I don't know much about that.'[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Jack looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[at random]"
 
 
 Table of Jack's responses
@@ -3946,15 +3956,6 @@ topic	response
 "Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"Greg"	"I heard he's an author?"
-"Karen"	"Did you mean Kara or Cassie?"
-"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
-"mt dew"	"Refreshing!"
-"mountain dew"	"Refreshing!"
-"mtn dew"	"Refreshing!"
 "metaverse/vr/meta"	"I know Cassie has a great VR lab."
 "laser/lasers"	"All I know is that Cassie said there was a laser that would help her with her time experiment by aligning the quantum states."
 "movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
@@ -3969,20 +3970,26 @@ topic	response
 "light saber"	"It is a powerful weapon, just like Star Wars, except, I think we might be able to really make one."
 "light sabre"	"A powerful weapon with a british spelling."
 "crystal"	"I heard it was stolen by the Lion. It might be an energy source like the one Cassie needs."
+"entanglement/tanglement/tangle/stablize/time"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But Cassie is trying to find a way to force a state without breaking entanglement."
+"quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But Cassie is trying to find a way to force a state without breaking entanglement."
+"quantum/physics"	"Let's see... how can I put this... Quantum physics is the physics of very tiny things. Lots of really spooky things happen at these atomic scales."
+
 
 Section 8 - Sarah
 
 After asking the Sarah about a topic listed in the Table of Sarah's responses, say "[line break][response entry][line break]".
 
 After asking the Sarah about something:
-	if the topic understood is not a topic listed in the Table of Sarah's responses:
-		say "[line break]Sarah smiles. 'That's an interesting question!'.[line break]"
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else:
+		say "[line break]Sarah smiles. 'That's an interesting questions!'[line break]"
 		
 After telling the Sarah about a topic listed in the Table of Sarah's responses, say "[line break][response entry][line break]".
 
 After telling the Sarah about something:
 	if the topic understood is not a topic listed in the Table of Sarah's responses:
-		say "[line break][one of]Sarah looks at you quizzically, 'I don't know much about that.[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Sarah looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[at random]"
+		say "[line break][one of]Sarah looks at you quizzically, 'I don't know much about that.'[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Sarah looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[at random]"
 
 Table of Sarah's responses
 topic	response
@@ -4005,12 +4012,6 @@ topic	response
 "Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"Greg"	"I heard he's an author?"
-"Karen"	"Did you mean Kara or Cassie?"
-"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
 "metaverse/vr/meta"	"VR can be fun. I use the Meta Quest 8, myself.."
 "crystal"	"Cassie needs it to power something, but it needs a containment chamber."
 "tube/bulb"	"Maybe it could be used as a containment chamber?"
@@ -4033,7 +4034,9 @@ Section 9 - Martin
 After asking the Martin about a topic listed in the Table of Martin's Replies, say "[line break][muse entry][line break]".
 
 After asking the Martin about something:
-	if the topic understood is not a topic listed in the Table of Martin's Replies:
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else:
 		say "[line break]Martin narrows his eyes. 'Do you have any important questions?'"
 		
 After telling Martin about a topic listed in the Table of Martin's Replies, say "[line break][muse entry][line break]".
@@ -4041,7 +4044,6 @@ After telling Martin about a topic listed in the Table of Martin's Replies, say 
 After telling Martin about something:
 	if the topic understood is not a topic listed in the Table of Martin's Replies:
 		say "[line break]Martin narrows his eyes. 'Excuse me? What are you talking about?'"
-
 
 [We can then provide a simple table giving Martin's responses:]
 
@@ -4060,12 +4062,6 @@ Topic	Muse
 "Cassie"	"Cassie is very dear to me. I've known her since I was her student at Oxford."
 "President" or "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Prime Minister" or "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"Greg"	"I heard he's an author?"
-"Karen"	"Did you mean Kara or Cassie?"
-"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
 "metaverse/vr/meta"	"The metaverse is entertaining, but not something I know a lot about. I do know that Cassie has a VR lab."
 "escape hatch" or "the escape hatch"	"It's right over your head."
 "escape"	"Did you try up?"
@@ -4094,9 +4090,26 @@ Topic	r2d2
 "pod" or "pod bay"	"I'm sorry Dave, I can't do that."
 "light bulbs" or "light" or "lights"	"Fluorescent bulbs will always have dark ends."
 "christmas tree" or "tree"	"I will decorate the tree. You are not needed."
-"chili/skyline/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
+"chili/skyline/skyline/scone/pretzel"	"Yum! Even I like this."
+"skyline chili"	"Yum! Delicious. Even for me."
+"dew/Pimms/beer/water/pop"	"Refreshing! But I prefer a little WD-40"
+
+[----- Generic Responses for All Characters -------]
+
+Table of generic responses
+Topic	response
+"chili/skyline/scone/pretzel"	"Yum! Delicious!"
+"mt dew" or "mountain dew" or "mtn dew"	"Yahoo Mountain Dew!"
+"pimms/beer/dew/soda/pop/water"	"Refreshing!"
+"skyline chili"	"Yum!"
+"Greg"	"I heard he's an author?"
+"Karen"	"Did you mean Kara or Cassie?"
+"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
+"*"	"I'm uncertain what you mean."
+"dogs"	"Everyone should love dogs."
+"movies"	"I love Movies... I think Knight and Day is one of my favorites."
+"quantum"	"Quantum... yes, that's how Tardis works... but you'll need to ask Jack, Cassie, or Tardis itself for more info."
+"pickles"	"Hmmmm... like the kind you eat, of the kind you hang on the Christmas tree?"
 
 Section 11 - Talking
 

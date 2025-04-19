@@ -226,8 +226,8 @@ Role
 "Game Inspiration........................Zork"
 "Book Inspiration........................The Quantum Contingent"
 "Second Book.............................Quantum Time"
-"Release.................................108.Rsf"
-"RSF stands for..........................Really sort of final."
+"Release.................................108.Rsff"
+"RSFF stands for..........................Really sort of final final."
 
 [Inventory]
 
@@ -313,7 +313,7 @@ ranking is an action out of world. Understand "rank" as ranking.
 Carry out ranking:
 	say "Here are all of the ranks in the game![line break]";
 	repeat through the Table of Rankings:
-		say "[line break]  [rank entry]";
+		say "[line break] [score entry] - [rank entry]";
 	say "[paragraph break]";
 	say "I hope you achieve them with grace!";
 
@@ -988,8 +988,12 @@ Understand "Sheldonian Theater" as Sheldonian Theatre.
 Clarendon Building is a room. "This is a neoclassical building completed in 1715 to enable moving the University Presses out of the basement of the Sheldonian Theater. They couldn't work while plays were in progress, hence the necessity of the move.[paragraph break]As for your movement, you can go [bt]east[rt] or [bt]west[rt]."
 
 A piece of paper is a thing. The piece of paper is in the Clarendon Building. "There is a piece of paper on the floor."
-The description of the piece of paper is "It's just a slip of paper, but it does appear to have some writing on it.".
-The read text of the piece of paper is "I hope you are enjoying your journey. Welcome to Oxford."
+The description of the piece of paper is "It appears to be a page ripped from a book. The text is still legible.".
+The read text of the piece of paper is "[bt]Chapter 1 - Switzerland, The Demands[rt]
+[paragraph break]The President’s armor-plated convoy approached the idyllic Swiss chalet. Nestled high in the Swiss Alps, the crisp air, brilliant blue sky, and alpine snowbells were deceiving. This was not a ski vacation or a mountain retreat. Four world leaders were gathering in secret to discuss dark threats. [paragraph break]
+Down below, in Lucerne, a man approached the Hotel des Balances. Stepping inside, he walked past the large mahogany-framed fireplace and stepped onto the narrow balcony overlooking the crystal-clear River Reuss. Looking upriver, he could see the famous Lucerne-Chapel bridge in the distance. He hastened down the intricate wrought-iron railing to the fifth table and waited for his contact. The river water reflected the bright noon sunlight. He dropped a pebble in the water and could see it drift slowly all the way to the bottom of the clean, mountain-fed river. 
+The church across the river had green patina on its copper-covered steeples. It reminded him of the many greenbacks he hoped to earn for his loyalty to the Contingent. He pulled out his phone and gazed at the live video image of the quaint Swiss chalet, less than 100 kilometers away. [paragraph break]
+In a world that thrived on technology, it was hard to keep a secret, even for the top governments of the world. This meeting of four of the world’s top leaders was meticulously planned. They secured the venue in advance. They cleared the route to and from the chalet. The stop was billed as a well-deserved break for one of the most well-liked leaders of the free world. On President Bridget O’Connor’s calendar, it was listed as a pleasure stop, a photo op at a remote chalet surrounded by the majestic, towering, snow-capped Alps with a winding downhill path to a pristine lake that reflected the surrounding beauty. [paragraph break]When they arrived at the chalet, the President’s lead secret service agent stepped out of the armored limo and surveyed the scene. What would have been a firefight was instead a whisper-quiet techno-fight. A small armed drone shot a self-propelled nano-technology dart into the agent’s neck. It was a small, silent prick, like a mosquito bite; he thought nothing of it. Other agents exited the convoy. Each was shot with the nano-darts. Most ignored the prick entirely. All looked around cautiously, ultimately determining the coast was clear for their package to exit the vehicle. Once the dart had found its subject, the nano-bot it delivered burrowed into the skin of each agent like a microscopic tick from a warm Connecticut wood.[paragraph break] --- an excerpt from [italic type]The Quantum Contingent[rt]".
 
 Bodleian Library is a room. "You are at the entrance of the Bodleian Library, one of the oldest libraries in Europe. The [italic type]great gate[roman type] at the entrance of the Bodleian is open.[paragraph break]To the [bt]south[rt] is Radcliffe Square, to the North the Sheldonian Theatre. You can enter the old Duke Humfrey's library to the [bt]northwes[rt]t or the Divinity School to the [bt]southwest[rt]."
 
@@ -1036,11 +1040,11 @@ Cassie's Office is a room. "Cassie’s office reflects her personality. It is a 
 
 After going to Cassie's Office:
 	try looking;
-	if Kara is in Cassie's office, say "[if Cassie is unspoken]When you walk in, Cassie and Kara are talking. You overhear a piece of their conversation[paragraph break]'Yes, I loved Martin, but my time is passed.'... 'It's never too late for'[paragraph break]They look up. Cassie smiles at you. 'Hello, you must be the new agent, I'm Cassie, and this is Kara.'[line break]'Yes, I recognize you from your agent profiles.'[line break]Kara stands and shakes your hand. 'Welcome to the team. I must be going. I'm off to find the pendant!' [karaleaves][else]Cassie is staring intently at her chaulkboard, but senses you as you enter, 'You have returned. Did you discover anything?'";
+	if Kara is in Cassie's office, say "[if Cassie is unspoken]When you walk in, Cassie and Kara are talking. You overhear a piece of their conversation[paragraph break]'Yes, I loved Martin, but my time is passed.'... 'It's never too late for'[paragraph break]They look up. Cassie smiles at you. 'Hello, you must be the new agent, I'm Cassie, and this is Kara.'[line break]'Yes, I recognize you from your agent profiles.' Kara stands and shakes your hand. 'Welcome to the team.'[karaleaves][else]Cassie is staring intently at her chaulkboard, but senses you as you enter, 'You have returned. Did you discover anything?'";
 	if Cassie is in Cassie's office, now Cassie is spoken;
 	
 to say karaleaves:
-	say "Kara smiles and nods as she heads out the door.";
+	say "[if the player has the pendant][line break]Kara suddenly does a double-take. 'Oh! I see you have the pendant. Way to go! I must go talk with Martin.'[else]Kara turns and nods at Cassie. 'I must be going. I'm sure you have a lot to talk about with Cassie. Kara smiles and heads out the door.'";
 	now Kara is in Radcliffe Square.
 
 An old chalkboard is a thing. It is in Cassie's office. "Mysterious equations fill an [italic type]old chalkboard[roman type] in the corner."
@@ -1094,7 +1098,7 @@ The equipment is scenery on the countertop. "Delicate scales and glass test tube
 
 Convocation House is a room. "The Convocation house is primarily used for events. It was once used as a meeting place for the House of Commons. Its stone-vaulted ceiling dates back to 1758-1759.[paragraph break]You can go [bt]north[rt] or [bt]east[rt]."
 
-The Turf Tavern is a room. "[if the player was in Cassie's Office]You enter the 12th Century inn, Turf Tavern, from the front. It is very popular with Oxford Students.[paragraph break]You can go northeast or west.[otherwise]You head down New College Lane and shuffle past the tourists posing for pictures under the Hertford Bridge, or the Bridge of Sighs, so called for its similarity to the famous bridge in Venice. After passing under the bridge, you ducked into the very narrow alleyway known as St. Helen’s Passage. It is marked by a green street sign affixed to the wall, or you could easily miss it. Following the winding cobblestone passage leads you to the entrance of the pub where many famous alumni have enjoyed a drink or dinner. They built the Turf Tavern just outside the city walls in order to avoid jurisdiction of the colleges. It was a fitting place to discuss Quotient business.[paragraph break]You can go [bt]northeast[rt] or [bt]west[rt]."
+The Turf Tavern is a room. "[if the player was in Cassie's Office]You enter the 12th Century inn, Turf Tavern, from the front. It is very popular with Oxford Students.[paragraph break]You can go northeast or west.[otherwise]You head down New College Lane and shuffle past the tourists posing for pictures under the Hertford Bridge, or the Bridge of Sighs, so called for its similarity to the famous bridge in Venice. After passing under the bridge, you ducked into the very narrow alleyway known as St. Helen’s Passage. It is marked by a green street sign affixed to the wall, or you could easily miss it. Following the winding cobblestone passage leads you to the entrance of the pub where many famous alumni have enjoyed a drink or dinner. They built the Turf Tavern just outside the city walls in order to avoid jurisdiction of the colleges. It is a fitting place to discuss Quotient business.[paragraph break]You can go [bt]northeast[rt] or [bt]west[rt]."
 
 The Black Painted Board is a thing. It is in the Turf Tavern. It is fixed in place. "A traditional black painted board is mounted on a post and is filled with writing."
 The description of the Black Painted Board is "It looks like a chalkboard upon which they have painted many words.".
@@ -2006,11 +2010,11 @@ Instead of taking the pod:
 
 Instead of entering the pod:
 	if location is airstrip:
-		say "Whoosh... You take off from [the location] and travel in the hyperloop pod to [if location is airstrip]the Hyperloop Station.[otherwise] the Airstrip.";
+		say "Whoosh... You take off from [the location] and travel in the hyperloop pod to the Hyperloop Station.";
 		move Pod to hyperloop station;
 		move the player to Hyperloop Station;
 	else if location is hyperloop station:
-		say "Whoosh... You take off from [the location] and travel in the hyperloop pod to [if location is airstrip]the Hyperloop Station.[otherwise] the Airstrip.";
+		say "Whoosh... You take off from [the location] and travel in the hyperloop pod to the Airstrip. The hyperloop slows to a stop and the doors of the sleek pod open silently. After ascended a flight of steel stairs you emerge above ground in the middle of a patch of long-needled white pine trees, just a few feet from the secluded airstrip.";
 		move Pod to airstrip;
 		move the player to airstrip;
 	otherwise:
@@ -2019,7 +2023,8 @@ Instead of entering the pod:
 
 Section 2 Plane
 
-The Quotient Jet is a vehicle in the Airstrip. The description of the Quotient Jet is "The Quotient Jet is a matte-black Gulfstream 950ER Superjet with a custom interior featuring a conference table with a holographic projection screen. It also has a bedroom, and the treat cupboard is stocked with fresh chocolate-covered strawberries every time you board."
+The Quotient Jet is a vehicle in the Airstrip. "One of Quotient’s jets is here primed and ready."
+The description of the Quotient Jet is "The Quotient Jet is a matte-black Gulfstream 950ER Superjet with a custom interior featuring a conference table with a holographic projection screen. It also has a bedroom, and the treat cupboard is stocked with fresh chocolate-covered strawberries every time you board."
 The Quotient Jet can be airborne or grounded. 
 The Quotient Jet is grounded.
 The top of the Quotient Jet is a supporter. The top of the Quotient Jet is part of the Quotient Jet.

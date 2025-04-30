@@ -511,6 +511,14 @@ Understand "foot" or "appendage" or "left foot" as mark.
 Instead of examining the mark:
     say "[if player is in VR Area]You look at the bottom of your left foot. What appear to be your initials are written there in black sharpie.";
 
+A room can be noted. A room is usually not noted.
+The visited-rooms-list is a list of rooms that varies.
+
+Every turn:
+	if the location is not noted:
+		add the location to the visited-rooms-list;
+		now the location is noted;
+
 Chapter 4 Text Messages
 
 After going to the Hyperloop Station for the first time:
@@ -4426,7 +4434,7 @@ Playlisting is an action out of world. Understand "playlist" as Playlisting.
 
 Carry out playlisting:
 	say "The playlist of rooms you have visited is: [paragraph break]";
-	repeat with item running through the list of visited rooms:
+	repeat with item running through the visited-rooms-list:
 		if song title of the item is "":
 			say "[item] has no song yet!";
 		otherwise:
@@ -4505,6 +4513,7 @@ Release along with a file of "Spoiler-free Map" called "Quotient The Game - Map 
 Release along with a file of "Song list - Minor Spoilers" called "Quotient Song List.pdf".
 Release along with a file of "Full Map - SPOILERS" called "Quotient The Game - Map.pdf".
 Release along with a file of "Puzzle Diagram - SPOILERS" called "Quotient Puzzle Diagram.pdf".
+
 
 
 

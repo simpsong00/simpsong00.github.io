@@ -624,6 +624,10 @@ The Farmhouse is west of The Headquarters Entrance. "You cross the porch of the 
 
 Parking is southwest of The Headquarters Entrance. Parking is south of Fire Pit. "There is some parking here off the driveway, just past the house.[paragraph break]A fire pit is to the [bt]north[rt], or you can return [bt]northeast[rt] to the entrance."
 
+A turtle is an animal in the Parking. "A large three-legged turtle [one of]waddles by slowly.[or]holes up in his shell.[or]winks at you and keeps going.[at random]."
+
+The description of the turtle is "A large three-legged turtle, wearing a tiny turtleneck with the name Shelly on it."
+
 The north window is scenery in the Farmhouse. The outdoors is scenery in the Farmhouse. Understand "lawn" and "field" as the outdoors. The description of the outdoors is "Beyond a short stretch of clear ground, past the hammock, the Cornfield is thick and uninhabited for as far as you can see." Instead of searching the north window, try examining the outdoors. The description of the north window is "It gives a view of the cornfield and hammock."
 
 The grape chandelier is scenery in the Farmhouse. "The glass grapes are grouped into bunches. The are purple and stretch along a long cast-iron frame."
@@ -1104,7 +1108,9 @@ The countertop is scenery in Cassie's Lab. It is a supporter. "The countertop ha
 
 The equipment is scenery on the countertop. "Delicate scales and glass test tubes, lasers, vacuum vessels, and other interconnected things you do not recognize." 
 
-Convocation House is a room. "The Convocation house is primarily used for events. It was once used as a meeting place for the House of Commons. Its stone-vaulted ceiling dates back to 1758-1759.[paragraph break]You can go [bt]north[rt] or [bt]east[rt]."
+Convocation House is a room. "The Convocation house is primarily used for events. It was once used as a meeting place for the House of Commons. Its stone-vaulted ceiling dates back to 1758-1759. A [italic type]poster[roman type] is on one wall.[paragraph break]You can go [bt]north[rt] or [bt]east[rt]."
+
+The poster is scenery in Convocation House. "A poster advertising for graduate students to help with a time experiment. It has a picture of a glowing lion."
 
 The Turf Tavern is a room. "[if the player was in Cassie's Office]You enter the 12th Century inn, Turf Tavern, from the front. It is very popular with Oxford Students.[paragraph break]You can go northeast or west.[otherwise]You head down New College Lane and shuffle past the tourists posing for pictures under the Hertford Bridge, or the Bridge of Sighs, so called for its similarity to the famous bridge in Venice. After passing under the bridge, you ducked into the very narrow alleyway known as St. Helen’s Passage. It is marked by a green street sign affixed to the wall, or you could easily miss it. Following the winding cobblestone passage leads you to the entrance of the pub where many famous alumni have enjoyed a drink or dinner. They built the Turf Tavern just outside the city walls in order to avoid jurisdiction of the colleges. It is a fitting place to discuss Quotient business.[paragraph break]You can go [bt]northeast[rt] or [bt]west[rt]."
 
@@ -1299,32 +1305,29 @@ After asking the hologram about something:
 
 Table of Cassie_AV Replies
 Topic	Muse
-"mission"	"Reboot the computer and get to the Continuum"
-"the mission"	"Reboot the computer and get to the Continuum"
-"computer"	"Tardis is our computer. It is in space."
-"continuum"	"The name of Cassie's lab."
-"tardis"	"Tardis is our computer. It is in space."
+"the/-- mission"	"Reboot the computer and get to the Continuum"
+"the/-- computer"	"Tardis is our computer. It is in space."
+"the/-- continuum"	"The name of Cassie's lab."
+"the/-- tardis"	"Tardis is our computer. It is in space."
 "Jack"	"Jack is very special to me."
 "Sarah"	"Sarah is like a daughter to me."
 "Kara"	"Kara really proved herself during The Quantum Contingent Mission"
 "Florin"	"Florin is a very capable agent, and a long time friend."
-"President"	"President Bridget O'Connor is one of the finest women I have ever known."
-"Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
+"the/-- President"	"President Bridget O'Connor is one of the finest women I have ever known."
+"the/-- Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Greg"	"I heard he's an author?"
 "Martin"	"I love Martin, don't you?"
 "Karen"	"Did you mean Kara or Cassie?"
 "Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/skyline/scone/pretzel"	"Yum! Delicious."
-"crystal"	"The Crystal should be able to provide the power we need for the quantum console."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
-"metaverse/vr/exit"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
+"the/-- chili/skyline/skyline/scone/pretzel"	"Yum! Delicious."
+"the/-- crystal"	"The Crystal should be able to provide the power we need for the quantum console."
+"the/-- skyline chili"	"Yum! Delicious."
+"the/-- dew/Pimms/beer/water/pop"	"Refreshing!"
+"the/-- metaverse/vr/exit"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
 Of course, hackers will alter metaverse programs to remove both safety features. With no blinking-eye exit, and no id mark, it would be hard to tell what is real and what is meta. With the appropriate setup, you could trap a person in the metaverse, and make them think it’s real. "
-"the metaverse"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
-Of course, hackers will alter metaverse programs to remove both safety features. With no blinking-eye exit, and no id mark, it would be hard to tell what is real and what is meta. With the appropriate setup, you could trap a person in the metaverse, and make them think it’s real. "
-"entanglement/tanglement/tangle/stablize/time" or "quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But what if I told you, I found a way to force a state without breaking entanglement"
+"the/-- entanglement/tanglement/tangle/stablize/time" or "the/-- quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But what if I told you, I found a way to force a state without breaking entanglement"
 		
 Chapter 6 Cincinnati 
 
@@ -1987,11 +1990,13 @@ The Statue of Freedom is scenery in the US Capitol. The description is "A bronze
 
 Smithsonian Castle is north of the National Mall. "The distinctive red sandstone architecture and charming tower makes this building stand out on the mall. It serves as the administrative heart of the Smithsonian Institution. Its towers and turrets give it a fairy-tale appearance, and the surrounding gardens are a peaceful retreat.[paragraph break]Head [bt]south[rt] to return to the mall."
 
-National Air Space Museum is south of the National Mall. "[if aslan is magic]The National Air and Space Museum is now one giant virtual reality experience where you can fly to Mars or Spacewalk next to Saturn's rings. [otherwise]The National Air and Space Museum is filled with the [italic type]wonders of flight[roman type] and space exploration. Other exhibits include historic aircraft, spacecraft, and interactive displays.[paragraph break]Head [bt]north[rt] to return to the mall."
+National Air Space Museum is south of the National Mall. "[if aslan is magic]The National Air and Space Museum is now one giant virtual reality experience where you can fly to Mars or Spacewalk next to Saturn's rings. [otherwise]The National Air and Space Museum is filled with the [italic type]wonders of flight[roman type] and space exploration. There is a large, modern, [italic type]mural[roman type] on one wall. Other exhibits include historic aircraft, spacecraft, and interactive displays.[paragraph break]Head [bt]north[rt] to return to the mall."
 
 The printed name of National Air Space Museum is "National Air and Space Museum".
 
 The Wonders of Flight is scenery in the National Air Space Museum. The description is "Old space capsules, shuttles, and a replica of the original Wright flyer are suspended here."
+
+The large modern mural is scenery in the National Air Space Museum. The description is "A large wall mural showing an airshow of different planes, each with a succulent on top!"
 
 Understand "exhibits" or "aircraft" or "displays" as Wonders of Flight.
 
@@ -3441,45 +3446,33 @@ The description of Desmond is "Desmond is Sarah's husband and the CTO at BrightS
 Desmond is carrying the flint and the steel striker.
 
 Understand "husband" or "desi" or "des" or "desy" or "non spy" as Desmond.
-	
-Instead of asking Desmond about something:
-	if the topic understood matches "flint":
-		say "It's supposed to spark, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker.";
-		now the player has the flint;
-		now the player has the steel striker;
-		now desmond_carry is 0;
-	else if the topic understood matches "the flint":
-		say "It's supposed to spark, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker.";
-		now the player has the flint;
-		now the player has the steel striker;
-		now desmond_carry is 0;
-	else if the topic understood matches "steel striker":
-		say "I was using it to try and spark a fire, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker.";
-		now the player has the flint;
-		now the player has the steel striker;
-		now desmond_carry is 0;
-	else if the topic understood matches "the steel striker":
-		say "I was using it to try and spark a fire, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker.";
-		now the player has the flint;
-		now the player has the steel striker;
-		now desmond_carry is 0;
-	else if the topic understood matches "the striker":
-		say "I was using it to try and spark a fire, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker.";
-		now the player has the flint;
-		now the player has the steel striker;
-		now desmond_carry is 0;
-	else if the topic understood matches "striker":
-		say "I was using it to try and spark a fire, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker.";
-		now the player has the flint;
-		now the player has the steel striker;
-		now desmond_carry is 0;
-	else if the topic understood matches "steel":
-		say "I was using it to try and spark a fire, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker.";
-		now the player has the flint;
-		now the player has the steel striker;
-		now desmond_carry is 0;
-	otherwise:
-		say "Where's Sarah? She knows a lot more than me."
+
+After asking Desmond about a topic listed in the Table of Desmond's responses:
+	say "[line break][response entry][line break]";
+	now the player has the flint;
+	now the player has the steel striker;
+	now desmond_carry is 0;
+
+After asking the Desmond about something:
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else if the topic understood is a topic listed in the Table of Non-flint responses:
+		say "[line break][response entry][line break]";
+	else:
+		say "[line break][one of]Desmond looks at you quizzically, 'I don't know much about that.'[or]Where's Sarah? She knows a lot more than me.[or]Hmmmm... maybe Martin knows.[or]Desmond looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[cycling]"
+
+Table of Desmond's responses
+topic	response
+"the/-- flint/steel/striker"	"It's supposed to spark, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker."
+"steel striker"	"It's supposed to spark, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker."
+"the steel striker"	"It's supposed to spark, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker."
+
+Table of Non-flint responses
+topic	response
+"Sarah"	"She's my fiancee, she knows a lot more than me."
+"Jack"	"Jack's my soon to be brother-in-law. Quite the quantum scientist."
+"Martin"	"Martin is in charge."
+"leo"	"In my business, LEO stands for Low Earth Orbit."
 		
 Chapter 7 - Florin
 
@@ -3749,31 +3742,27 @@ topic	response
 "Jack"	"I love Jack. He happens to be an expert at quantum computing, and a great dancer."
 "Sarah"	"Sarah is my soon to be sister-in-law. Why do you ask about her? Do you know something I don't?"
 "Martin"	"He is like a father to me. His connections are legendary."
-"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
-"computer"	"Tardis is our computer. Jack built it."
-"the computer"	"Tardis is our computer. It is in space."
+"the/-- Quantum Contingent" or "the/-- Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
+"the/-- computer"	"Tardis is our computer. Jack built it."
 "tardis"	"Tardis is our computer. Jack built it."
-"continuum"	"It is the name of Cassie's lab."
-"mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about."
-"the mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about."
+"the/-- continuum"	"It is the name of Cassie's lab."
+"the/-- mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about."
 "Florin"	"Florin is gracious. A great agent. I heard he used to be MI-5."
 "Cassie"	"She's brilliant with time, but can't she see Martin is in love with her?"
-"President"	"President Bridget O'Connor is one of the finest women I have ever known."
-"Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
+"the/-- President"	"President Bridget O'Connor is one of the finest women I have ever known."
+"the/-- Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"laser/lasers"	"Cassie said there is a special laser in the US that she needs to have turned on for her experiment to work."
-"crystal"	"Cassie needs it to power the console in her lab If she can contain it somehow."
-"metaverse/vr/meta"	"I know Cassie has a great VR lab."
+"the/-- laser/lasers"	"Cassie said there is a special laser in the US that she needs to have turned on for her experiment to work."
+"the/-- crystal"	"Cassie needs it to power the console in her lab If she can contain it somehow."
+"the/-- metaverse/vr/meta"	"I know Cassie has a great VR lab."
 "virtual reality"	"I know Cassie has a great VR lab."
-"the lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
-"the abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"the/-- lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
+"the/-- abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
 "robert clayton"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "clayton/robert"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
-"password/passcode"	"I don't know. You'd have to ask Cassie."
-"pendant"	"The legend is that Lancelot could do unbelievable things if he was wearing this pendant. It had a mirror-like finish. He polished it every day."
+"the/-- password/passcode"	"I don't know. You'd have to ask Cassie."
+"the/-- pendant"	"The legend is that Lancelot could do unbelievable things if he was wearing this pendant. It had a mirror-like finish. He polished it every day."
 
 Section 2 - Desmond	
 
@@ -3802,32 +3791,27 @@ topic	response
 "Jack"	"Jack's great. He happens to be an expert at quantum computing. That's why we recruited him."
 "Sarah"	"Sarah and I go way back. I trained her."
 "Martin"	"Martin and I competed in sports in college!"
-"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
-"computer"	"Tardis is our computer. Jack built it."
-"the computer"	"Tardis is our computer. It is in space."
-"tardis"	"Tardis is our computer. Jack built it."
-"continuum"	"It is the name of Cassie's lab."
-"mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about. My job is to find the Crystal. I've tracket Robert down before."
-"the mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about. My job is to track down Robert. I've done that before."
+"the/-- Quantum Contingent" or "the/-- Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
+"the/-- computer/tardis"	"Tardis is our computer. Jack built it."
+"the/-- continuum"	"It is the name of Cassie's lab."
+"the/-- mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about. My job is to find the Robert and hopefully he'll have the crystal. I've tracked Robert down before."
 "Florin"	"Uh, that's me."
 "Cassie"	"She's brilliant with time, but can't she see Martin is in love with her?"
-"President"	"President Bridget O'Connor is a great leader."
-"Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
+"the/-- President"	"President Bridget O'Connor is a great leader."
+"the/-- Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is a great leader."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"laser/lasers"	"Cassie said there is a special laser in the US that she needs to have turned on for her experiment to work."
-"crystal"	"Cassie needs it to power something in her lab."
-"metaverse/vr/meta"	"I know Cassie has a great VR lab."
-"virtual reality"	"I know Cassie has a great VR lab."
-"pendant"	"It has something to do with Cassie's time experiment, but I'm not sure what."
-"the lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
-"the abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"the/-- laser/lasers"	"Cassie said there is a special laser in the US that she needs to have turned on for her experiment to work."
+"the/-- crystal"	"Cassie needs it to power something in her lab."
+"the/-- metaverse/vr/meta"	"I know Cassie has a great VR lab."
+"the/-- virtual reality"	"I know Cassie has a great VR lab."
+"the/-- pendant"	"It has something to do with Cassie's time experiment, but I'm not sure what."
+"the/-- lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
+"the/-- abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
 "robert clayton"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "clayton/robert"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
-"password/passcode"	"I don't know. You'd have to ask Cassie."
-"pendant"	"The legend is that Lancelot could do unbelievable things if he was wearing this pendant. It had a mirror-like finish. He polished it every day."
+"the/-- password/passcode"	"I don't know. You'd have to ask Cassie."
+"the/-- pendant"	"The legend is that Lancelot could do unbelievable things if he was wearing this pendant. It had a mirror-like finish. He polished it every day."
 	
 Section 4 - Server
 
@@ -3857,33 +3841,29 @@ topic	response
 "Sarah"	"Sarah is sweet, a former student. Why do you ask about her? Do you know something I don't?"
 "Jack"	"He is one of the best quantum scientists I know, and I know them all."
 "Martin"	"I know now that he is my one true love."
-"computer"	"Oh, I don't talk about such things."
-"the computer"	"Oh, I don't talk about such things."
-"tardis"	"Tardis is from Dr. Who isn't it?"
-"mission"	"I need to make the entanglement stable! Your mission is to help me do so. I need a power source and TARDIS needs to be rebooted. Jack is helping me with a laser in DC."
-"the mission"	"I need to make the entanglement stable! Your mission is to help me do so. I need a power source and TARDIS needs to be rebooted. Jack is helping me with a laser in DC."
-"continuum"	"The Continuum Is my lab."
+"the/-- computer"	"Oh, I don't talk about such things."
+"the/-- tardis"	"Tardis is from Dr. Who isn't it?"
+"the/-- mission"	"I need to make the entanglement stable! Your mission is to help me do so. I need a power source and TARDIS needs to be rebooted. Jack is helping me with a laser in DC."
+"the/-- continuum"	"The Continuum Is my lab."
 "Florin"	"Florin is a friend. I would recommend agents, he would develop them!"
-"President"	"President Bridget O'Connor is considered an outstanding leader."
-"Prime Minister"	"Martin always said he'd make a great Quotient Agent."
+"the/-- President"	"President Bridget O'Connor is considered an outstanding leader."
+"the/-- Prime Minister"	"Martin always said he'd make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is known as a great leader."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"laser/lasers"	"Critical for stabilization."
-"crystal"	"The Crystal is said to be a Kyber Crystal, It should be able to provide the power we need for the quantum console."
-"movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
-"password/passcode/pass"	"Oh, it changes every day. I leave myself an anagram hint in my yoga simulation in the VR lab."
-"console"	"It needs a strong power source, and to open it, you'll need my password."
-"quantum console"	"It needs a strong power source, and to open it, you'll need my password."
+"the/-- laser/lasers"	"Critical for stabilization."
+"the/-- crystal"	"The Crystal is said to be a Kyber Crystal, It should be able to provide the power we need for the quantum console."
+"the/-- movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
+"the/-- password/passcode/pass"	"Oh, it changes every day. I leave myself an anagram hint in my yoga simulation in the VR lab."
+"the/-- console"	"It needs a strong power source, and to open it, you'll need my password."
+"the/-- quantum console"	"It needs a strong power source, and to open it, you'll need my password."
 "yoga"	"I practice yoga every day in my VR lab."
 "meditation"	"I meditate every day in my VR lab"
-"tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
-"light saber"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
-"light sabre"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
-"metaverse/vr/exit"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
+"the/-- tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
+"the/-- light saber"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
+"the/-- light sabre"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
+"the/-- metaverse/vr/exit"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
 Of course, hackers will alter metaverse programs to remove both safety features. With no blinking-eye exit, and no id mark, it would be hard to tell what is real and what is meta. With the appropriate setup, you could trap a person in the metaverse, and make them think it’s real. "
-"the metaverse"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
-Of course, hackers will alter metaverse programs to remove both safety features. With no blinking-eye exit, and no id mark, it would be hard to tell what is real and what is meta. With the appropriate setup, you could trap a person in the metaverse, and make them think it’s real. "
-"entanglement/tanglement/tangle/stablize/time" or "quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But what if I told you, I found a way to force a state without breaking entanglement."
+"the/-- entanglement/tanglement/tangle/stablize/time" or "the/-- quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But what if I told you, I found a way to force a state without breaking entanglement."
 		
 Section 6 - Tardis	
 
@@ -3910,26 +3890,22 @@ topic	response
 "cassie/cassandra/prof/professor"	"She is a Professor at Oxford university, a brilliant Quantum Scientist and an world renowned expert on time, as in the time continuum. In fact, she calls her lab the continuum."
 "professor eaton"	"She is a Professor at Oxford university, a brilliant Quantum Scientist and an world renowned expert on time, as in the time continuum. In fact, she calls her lab the continuum."
 "Martin"	"He's the boss. A very capable fellow who has connections around the world, including at the White House. He and Cassie used to go out, but the whole human emotion thing is beyond my programming."
-"computer/tardis"	"Who me?"
-"the computer"	"Who me?"
-"continuum"	"It's the name of Cassie's Time Lab."
-"the continuum"	"It's the name of Cassie's Time Lab."
-"mission"	"You need to make the entanglement stable! Cassie will need a power source and Jack is doing somethig with a laser in DC."
-"the mission"	"You need to make the entanglement stable! Cassie will need a power source and Jack is doing somethig with a laser in DC."
+"the/-- computer/tardis"	"Who me?"
+"the/-- continuum"	"It's the name of Cassie's Time Lab."
+"the/-- mission"	"You need to make the entanglement stable! Cassie will need a power source and Jack is doing somethig with a laser in DC."
 "Florin"	"Florin is a friend. I would recommend agents, he would develop them!"
-"President"	"President Bridget O'Connor is considered an outstanding leader."
-"Prime Minister"	"Martin always said he'd make a great Quotient Agent."
+"the/-- President"	"President Bridget O'Connor is considered an outstanding leader."
+"the/-- Prime Minister"	"Martin always said he'd make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is known as a great leader."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent. There are a lot of great Jason's... There's Jason Bourne, the spy, Jason, leader of the Argonauts, just to name a couple. Did you have another Jason in mind?"
-"metaverse/vr/meta"	"We should meet there. I could take the shape of a human in the metaverse."
-"laser/lasers"	"Lasers are considered critical for stabilization."
-"crystal"	"The Crystal is said to be a Kyber Crystal, It should be able to provide the power needed for the quantum console."
-"movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
-"tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
-"light saber"	"A light saber would be perfect for powering Cassie's console. You'd need a Kyber Crystal and something to contain the energy."
-"light sabre"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
-"entanglement/tanglement/tangle/stablize/time"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But Cassie is trying to find a way to force a state without breaking entanglement."
-"quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But Cassie is trying to find a way to force a state without breaking entanglement."
+"the/-- metaverse/vr/meta"	"We should meet there. I could take the shape of a human in the metaverse."
+"the/-- laser/lasers"	"Lasers are considered critical for stabilization."
+"the/-- crystal"	"The Crystal is said to be a Kyber Crystal, It should be able to provide the power needed for the quantum console."
+"the/-- movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
+"the/-- tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
+"the/-- light saber"	"A light saber would be perfect for powering Cassie's console. You'd need a Kyber Crystal and something to contain the energy."
+"the/-- light sabre"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
+"entanglement/tanglement/tangle/stablize/time" or "quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But Cassie is trying to find a way to force a state without breaking entanglement."
 "quantum/physics"	"Let's see... how can I put this... Quantum physics is the physics of very tiny things. Lots of really spooky things happen at these atomic scales."
 		
 	
@@ -3956,35 +3932,29 @@ topic	response
 "Kara"	"I love Kara. She happens to be an expert at quantum communication, and a great dresser."
 "Sarah"	"Sarah is my sister. Why do you ask about her? Do you know something I don't?"
 "Martin"	"He is like a father to me."
-"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
+"the/-- Quantum Contingent" or "the/-- Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
 "continuum"	"It is the name of Cassie's lab."
-"computer"	"Tardis is our quantum computer. I built it."
-"the computer"	"Tardis is our quantum computer. It is in space."
-"tardis"	"Tardis is our quantum computer. I built it."
-"mission"	"We must get to the Continuum and power up the console. As for me, Cassie wants me to do something with a laser in DC. That's all I know right now."
-"the mission"	"We must get to the Continuum and power up the console. As for me, Cassie wants me to do something with a laser in DC. That's all I know right now."
+"the/-- computer/tardis"	"Tardis is our quantum computer. I built it."
+"the/-- mission"	"We must get to the Continuum and power up the console. As for me, Cassie wants me to do something with a laser in DC. That's all I know right now."
 "Florin"	"Florin is great. He saved my butt more than once!"
 "Cassie"	"She's brilliant with time, but can't she see Martin is in love with her?"
-"President"	"President Bridget O'Connor is one of the finest women I have ever known."
-"Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
+"the/-- President"	"President Bridget O'Connor is one of the finest women I have ever known."
+"the/-- Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"metaverse/vr/meta"	"I know Cassie has a great VR lab."
-"laser/lasers"	"All I know is that Cassie said there was a laser that would help her with her time experiment by aligning the quantum states."
-"movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
-"the lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
-"the abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"the/-- metaverse/vr/meta"	"I know Cassie has a great VR lab."
+"the/-- laser/lasers"	"All I know is that Cassie said there was a laser that would help her with her time experiment by aligning the quantum states."
+"the/-- movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
+"the/-- lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
+"the/-- abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
 "robert clayton"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "clayton/robert"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "meditation"	"I meditate to clear my head"
-"tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
-"light saber"	"It is a powerful weapon, just like Star Wars, except, I think we might be able to really make one."
-"light sabre"	"A powerful weapon with a british spelling."
-"crystal"	"I heard it was stolen by the Lion. It might be an energy source like the one Cassie needs."
-"entanglement/tanglement/tangle/stablize/time"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But Cassie is trying to find a way to force a state without breaking entanglement."
-"quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But Cassie is trying to find a way to force a state without breaking entanglement."
+"the/-- tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
+"the/-- light saber"	"It is a powerful weapon, just like Star Wars, except, I think we might be able to really make one."
+"the/-- light sabre"	"A powerful weapon with a british spelling."
+"the/-- crystal"	"I heard it was stolen by the Lion. It might be an energy source like the one Cassie needs."
+"entanglement/tanglement/tangle/stablize/time" or "quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But Cassie is trying to find a way to force a state without breaking entanglement."
 "quantum/physics"	"Let's see... how can I put this... Quantum physics is the physics of very tiny things. Lots of really spooky things happen at these atomic scales."
 
 
@@ -4011,36 +3981,29 @@ topic	response
 "Kara"	"Kara is an expert at quantum communication."
 "Florin"	"Florin is a very capable agent. He trained me. He is a dear friend."
 "Martin"	"He is like a father to me. His connections are legendary."
-"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
-"computer"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
-"the computer"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
+"the/-- Quantum Contingent" or "the/-- Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
+"the/-- computer/computers"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
 "tardis"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
-"mission"	"We must get to the Continuum and power up the console. I'm going to Cleveland to look for a way to contain a powerful energy source to power the console. Anything else is an unknown at this point."
-"the mission"	"We must get to the Continuum and power up the console. I'm going to Cleveland to look for a way to contain a powerful energy source to power the console. Anything else is an unknown at this point."
-"continuum"	"The Continuum is what Cassie calls her lab."
+"the/-- mission"	"We must get to the Continuum and power up the console. I'm going to Cleveland to look for a way to contain a powerful energy source to power the console. Anything else is an unknown at this point."
+"the/-- continuum"	"The Continuum is what Cassie calls her lab."
 "Cassie"	"She's brilliant with time, but can't she see Martin is in love with her?"
-"professor/eaton/prof"	"Professor Eaton is a brilliant scientist. She is the world's expert on time, and runs the quantum lab in Oxford."
+"the/-- professor/eaton/prof"	"Professor Eaton is a brilliant scientist. She is the world's expert on time, and runs the quantum lab in Oxford."
 "Professor Eaton"	"Professor Eaton is a brilliant scientist. She is the world's expert on time, and runs the quantum lab in Oxford."
 "President"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"metaverse/vr/meta"	"VR can be fun. I use the Meta Quest 8, myself.."
-"crystal"	"Cassie needs it to power something, but it needs a containment chamber."
-"tube/bulb"	"Maybe it could be used as a containment chamber?"
-"fluorescent tube"	"Maybe it could be used as a containment chamber?"
-"the lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
-"key/cage"	"Feel free to search Martin's office. It's part of your test."
-"iron cage"	"Feel free to search Martin's office. It's part of your test."
-"the abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"the/-- metaverse/vr/meta"	"VR can be fun. I use the Meta Quest 8, myself.."
+"the/-- crystal"	"Cassie needs it to power something, but it needs a containment chamber."
+"the/-- tube/bulb" or "the/-- fluorescent tube"	"Maybe it could be used as a containment chamber?"
+"the/-- lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
+"the/-- abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"the/-- key/cage" or "the/-- iron cage"	"Feel free to search Martin's office. It's part of your test."
 "robert clayton"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "clayton/robert"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
-"tapestry"	"I don't know anything about the tapestry. Maybe you should ask Cassie."
-"light saber"	"A light saber requires tremendous energy to operate."
-"light sabre"	"A light saber requires tremendous energy to operate."
-"crystal"	"I heard it was stolen by the lion."
+"the/-- tapestry"	"I don't know anything about the tapestry. Maybe you should ask Cassie."
+"the/-- light saber"	"A light saber requires tremendous energy to operate."
+"the/-- light sabre"	"A light saber requires tremendous energy to operate."
 
 Section 9 - Martin
 
@@ -4062,29 +4025,27 @@ After telling Martin about something:
 
 Table of Martin's Replies
 Topic	Muse
-"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
-"the mission" or "mission"	"We need to help Cassie with her experiment. That means, rebooting the computer and getting to the Continuum to help her with her quantum console. Jack, Sarah and Kara are working on some other things required for the experiment to work. Only Cassie understands everything."
-"continuum"	"The name of Cassie's lab."
-"quantum console" or "console"	"You'll have to ask Cassie about that."
-"computer" or "the computer"	"Tardis is our quantum computer. It is in space."
-"tardis"	"Tardis is our quantum computer. It is in space."
+"the/-- Quantum Contingent" or "the/-- Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
+"the/-- mission"	"We need to help Cassie with her experiment. That means, rebooting the computer and getting to the Continuum to help her with her quantum console. Jack, Sarah and Kara are working on some other things required for the experiment to work. Only Cassie understands everything."
+"the/-- continuum"	"The name of Cassie's lab."
+"the/-- quantum console" or "the/-- console"	"You'll have to ask Cassie about that."
+"the/-- computer/tardis"	"Tardis is our quantum computer. It is in space."
 "Jack"	"Jack is like a son to me."
 "Sarah"	"Sarah is like a daughter to me."
 "Kara"	"Kara really proved herself during The Quantum Contingent Mission"
 "Florin"	"Florin is a very capable agent, and a long time friend."
 "Cassie"	"Cassie is very dear to me. I've known her since I was her student at Oxford."
-"President" or "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
-"Prime Minister" or "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"metaverse/vr/meta"	"The metaverse is entertaining, but not something I know a lot about. I do know that Cassie has a VR lab."
-"escape hatch" or "the escape hatch"	"It's right over your head."
-"escape"	"Did you try up?"
-"tapestry"	"I don't know anything about the tapestry. Maybe you should ask Cassie."
-"the lion" or "lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"abyss" or "the abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"the/-- President" or "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
+"the/-- Prime Minister" or "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
+"the/-- metaverse/vr/meta"	"The metaverse is entertaining, but not something I know a lot about. I do know that Cassie has a VR lab."
+"the/-- escape hatch" or "escape"	"It's right over your head."
+"the/-- tapestry"	"I don't know anything about the tapestry. Maybe you should ask Cassie."
+"the/-- lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
+"the/-- abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
 "robert clayton"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "clayton/robert"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
-"light saber" or "light sabre"	"A light saber requires tremendous energy to operate."
-"communicator/comm/comms" or "tardis communicator"	"The TARDIS communicator will allow TARDIS to talk to you while you are on your mission. It can be very helpful in the field."
+"the/-- light saber" or "the/-- light sabre"	"A light saber requires tremendous energy to operate."
+"the/-- communicator/comm/comms" or "the/-- tardis communicator"	"The TARDIS communicator will allow TARDIS to talk to you while you are on your mission. It can be very helpful in the field."
 
 Section 10 - Robot
 
@@ -4098,29 +4059,29 @@ After asking the Robot about something:
 
 Table of Robot's Replies
 Topic	r2d2
-"pod bay doors"	"I'm sorry Dave, I can't do that."
-"doors" or "bay"	"I'm sorry Dave, I can't do that."
-"pod" or "pod bay"	"I'm sorry Dave, I can't do that."
-"light bulbs" or "light" or "lights"	"Fluorescent bulbs will always have dark ends."
-"christmas tree" or "tree"	"I will decorate the tree. You are not needed."
-"chili/skyline/skyline/scone/pretzel"	"Yum! Even I like this."
-"skyline chili"	"Yum! Delicious. Even for me."
-"dew/Pimms/beer/water/pop"	"Refreshing! But I prefer a little WD-40"
+"the/-- pod bay doors"	"I'm sorry Dave, I can't do that."
+"the/-- doors" or "the/-- bay"	"I'm sorry Dave, I can't do that."
+"the/-- pod" or "the/-- pod bay"	"I'm sorry Dave, I can't do that."
+"the/-- light bulbs" or "the/-- light" or "the/-- lights"	"Fluorescent bulbs will always have dark ends."
+"the/-- christmas tree" or "the/-- tree"	"I will decorate the tree. You are not needed."
+"the/-- chili/skyline/skyline/scone/pretzel"	"Yum! Even I like this."
+"the/-- skyline chili"	"Yum! Delicious. Even for me."
+"the/-- dew/Pimms/beer/water/pop"	"Refreshing! But I prefer a little WD-40"
 
 [----- Generic Responses for All Characters -------]
 
 Table of generic responses
 Topic	response
-"chili/skyline/scone/pretzel"	"Yum! Delicious!"
-"mt dew" or "mountain dew" or "mtn dew"	"Yahoo Mountain Dew!"
-"pimms/beer/dew/soda/pop/water"	"Refreshing!"
-"skyline chili"	"Yum!"
+"the/-- chili/skyline/scone/pretzel"	"Yum! Delicious!"
+"the/-- mt dew" or "the/-- mountain dew" or "the/-- mtn dew"	"Yahoo Mountain Dew!"
+"the/-- pimms/beer/dew/soda/pop/water"	"Refreshing!"
+"the/-- skyline chili"	"Yum!"
 "Greg"	"I heard he's an author?"
 "Karen"	"Did you mean Kara or Cassie?"
 "Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
 "*"	"I'm uncertain what you mean."
 "dogs"	"Everyone should love dogs."
-"movies"	"I love Movies... I think Knight and Day is one of my favorites."
+"the/-- movies"	"I love Movies... I think Knight and Day is one of my favorites."
 "quantum"	"Quantum... yes, that's how Tardis works... but you'll need to ask Jack, Cassie, or Tardis itself for more info."
 "pickles"	"Hmmmm... like the kind you eat, of the kind you hang on the Christmas tree?"
 

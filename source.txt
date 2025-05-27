@@ -624,7 +624,7 @@ The Farmhouse is west of The Headquarters Entrance. "You cross the porch of the 
 
 Parking is southwest of The Headquarters Entrance. Parking is south of Fire Pit. "There is some parking here off the driveway, just past the house.[paragraph break]A fire pit is to the [bt]north[rt], or you can return [bt]northeast[rt] to the entrance."
 
-A turtle is an animal in the Parking. "A large three-legged turtle [one of]waddles by slowly.[or]holes up in his shell.[or]winks at you and keeps going.[at random]."
+A turtle is an animal in the Parking. "A large three-legged turtle [one of]waddles by slowly.[or]holes up in his shell.[or]winks at you and keeps going.[cycling]"
 
 The description of the turtle is "A large three-legged turtle, wearing a tiny turtleneck with the name Shelly on it."
 
@@ -1289,7 +1289,7 @@ Check Meditating:
 if the player is not in the Peaceful Meditation, say "You feel a calm sense of security." instead;
 
 Carry out Meditating:
-	say "[line break]'Ahhhh, welcome to Peaceful Meditation,' says the normally silent Yoga Master. 'Take a deep cleansing breath. Your anagram for the day is: The Oldest Log.'[line break]";
+	say "[line break]'Ahhhh, welcome to Peaceful Meditation,' says the normally silent Yoga Master. 'Take a deep cleansing breath. Your anagram for the day is: The Oldest Log.'[paragraph break]A yoga mat has appeared.";
 	now the Yoga Mat is in the Peaceful Meditation.
 
 Instead of talking to Hologram:
@@ -1849,7 +1849,7 @@ National Mall is a room. "[if aslan is magic]You are standing on the expansive l
 
 To say endgamemall:
 say "[paragraph break]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[line break]";
-say "[bold type]Congratulations! You have won the game.[paragraph break][roman type]Feel free to wander around, I have moved the Jet to Andrews Air Force base for your convenience.[line break]If you examine the older couple on the lawn, you notice they look like Cassie and Martin. Cassie managed to send a message back in time, asking Martin to marry her earlier in their lives. (that was the binary message you found in her lab)[paragraph break]He did, and thanks to a little Aslan magic (and a mysterious Lancelot pendant) you managed to travel forward in time to see them sitting on the National Mall. Oh, and by the way, you have been granted a scroll listing all of the treasures and their locations in case you want to go back and any you missed. I hope you enjoyed [italic type]Quotient, the Game![roman type]";
+say "[bold type]Congratulations! You have won the game.[paragraph break][roman type]Feel free to wander around, I have moved the Jet to Andrews Air Force base for your convenience.[line break]If you examine the older couple on the lawn, you notice they look like Cassie and Martin. Cassie managed to send a message back in time, asking Martin to marry her earlier in their lives. (that was the binary message you found in her lab)[paragraph break]He did, and thanks to a little Aslan magic (and a mysterious Lancelot pendant) you managed to travel forward in time to see them sitting on the National Mall. Oh, and by the way, you have been granted a scroll listing all of the treasures and their locations in case you want to go back and collect any you missed. I hope you enjoyed [italic type]Quotient, the Game![roman type]";
 say "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[line break]";
 
 
@@ -3472,6 +3472,7 @@ topic	response
 "Sarah"	"She's my fiancee, she knows a lot more than me."
 "Jack"	"Jack's my soon to be brother-in-law. Quite the quantum scientist."
 "Martin"	"Martin is in charge."
+"kara"	"Kara is quite an agent herself, and she and Jack are very close."
 "leo"	"In my business, LEO stands for Low Earth Orbit."
 		
 Chapter 7 - Florin
@@ -4076,6 +4077,7 @@ Topic	response
 "the/-- mt dew" or "the/-- mountain dew" or "the/-- mtn dew"	"Yahoo Mountain Dew!"
 "the/-- pimms/beer/dew/soda/pop/water"	"Refreshing!"
 "the/-- skyline chili"	"Yum!"
+"smore"	"Delicious. It takes me back to my childhood!"
 "Greg"	"I heard he's an author?"
 "Karen"	"Did you mean Kara or Cassie?"
 "Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
@@ -4084,6 +4086,7 @@ Topic	response
 "the/-- movies"	"I love Movies... I think Knight and Day is one of my favorites."
 "quantum"	"Quantum... yes, that's how Tardis works... but you'll need to ask Jack, Cassie, or Tardis itself for more info."
 "pickles"	"Hmmmm... like the kind you eat, of the kind you hang on the Christmas tree?"
+"the/-- hyperloop/hyper/loop"	"Think of it like a superfast subway."
 
 Section 11 - Talking
 

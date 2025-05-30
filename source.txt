@@ -4477,7 +4477,7 @@ Release along with a file of "Spoiler-free Map" called "Quotient The Game - Map 
 Release along with a file of "Song list - Minor Spoilers" called "Quotient Song List.pdf".
 Release along with a file of "Full Map - SPOILERS" called "Quotient The Game - Map.pdf".
 Release along with a file of "Puzzle Diagram - SPOILERS" called "Quotient Puzzle Diagram.pdf".
-
+Release along with a file of "Formal Full Map" called "Full formal quotient map.pdf".
 
 
 

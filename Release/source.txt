@@ -38,6 +38,9 @@ Include Inanimate Listeners by Emily Short.
 
 Chapter 3 Some helpful help tools from Emily Short's Bronze
 
+rule for printing the name of a thing (called t):
+	say "[bold type][the printed name of t][roman type]";
+
 Taking inventory is acting confused. Looking is acting confused.
 
 After acting confused for the third turn:
@@ -134,7 +137,7 @@ Understand "help" as helping.
 
 
 Carry out helping:
-	say "[story title] understands commands, such as '[command prompt]examine [a random thing that can be seen by the player]'. You can get some information about the current game state with commands such as LOOK, EXAMINE, INVENTORY, TAKE, etc. Commands are typically in the format of VERB, VERB NOUN, or VERB with/to NOUN. As in TAKE, TAKE THE SHOVEL, or TALK TO SARAH. In some cases, you may do something more complex like this. >HIT THE NAIL WITH THE HAMMER, or >ASK MARTIN ABOUT THE COMPUTER.[paragraph break]In [italic type]Quotient the Game[roman type], if you take an item, it will automatically be examined for you. (but not read) In this fictional world, based on real places, you move around with commands like NORTH, SOUTH, UP, etc. If you are ever unsure of the ways you can go, just type EXITS.[paragraph break]There are a few special commands: PLACES, OBJECTS, SONG, and PLAYLIST (oh and FUN). The places and objects commands list either the places you've been or the objecsts you've seen. The song command tells you the song associated with the location you are in, and finally, the playlist command creates a special playlist for you by listing all of the songs associated with the rooms you have traversed in your adventure. FUN tells you some fun things to do, although some of them could be considere minor spoilers, so beware![paragraph break]If you stumble across the TARDIS communicator, take it! You can examine it again [italic type]and again[roman type] to hear the Quotient quantum computer talk to you about things that might be of interest near you. If you examine it enough, it will give you some hints based on the region you are currently in. You can also ask it questions. If you need a starting hint, type HINT.[line break]And remember, commands can be abbreviated. For example, n is NORTH and x is EXAMINE.[paragraph break]Scenery that can be examined in a room will be shown in [italic type]italics.[roman type] 'Things' that can be examined or taken are listed in a paragraph below the room description, and the directions to exit are listed in a separate paragraph as well.[paragraph break]You get points from collecting treasures and solving puzzles. As your points go higher, so does your rank! Type POINTS for more info, or SCORE to see your score. You should figure out the true mission of the game as you go along. [paragraph break]Remember, in addition to EXAMINE, you can READ certain objects as well. It is helpful to read things if they can be read. Finally, ABOUT will tell you what the game is based on, and CREDITS gives credit where credit is due![paragraph break]Now, let's get adventuring!";
+	say "[story title] understands commands, such as '[command prompt]examine [a random thing that can be seen by the player]'. You can get some information about the current game state with commands such as LOOK, EXAMINE, INVENTORY, TAKE, etc. Commands are typically in the format of VERB, VERB NOUN, or VERB with/to NOUN. As in TAKE, TAKE THE SHOVEL, or TALK TO SARAH. In some cases, you may do something more complex like this. >HIT THE NAIL WITH THE HAMMER, or >ASK MARTIN ABOUT THE COMPUTER.[paragraph break]In [italic type]Quotient the Game[roman type], if you take an item, it will automatically be examined for you. (but not read) In this fictional world, based on real places, you move around with commands like NORTH, SOUTH, UP, etc. If you are ever unsure of the ways you can go, just type EXITS.[paragraph break]There are a few special commands: PLACES, OBJECTS, SONG, and PLAYLIST (oh and FUN). The places and objects commands list either the places you've been or the objects you've seen. The song command tells you the song associated with the location you are in, and finally, the playlist command creates a special playlist for you by listing all of the songs associated with the rooms you have traversed in your adventure. FUN tells you some fun things to do, although some of them could be considered minor spoilers, so beware![paragraph break]If you stumble across the TARDIS communicator, take it! You can examine it again [italic type]and again[roman type] to hear the Quotient quantum computer talk to you about things that might be of interest near you. If you examine it enough, it will give you some hints based on the region you are currently in. You can also ask it questions. If you need a starting hint, type HINT.[line break]And remember, commands can be abbreviated. For example, n is NORTH and x is EXAMINE.[paragraph break]Scenery that can be examined in a room will be shown in [italic type]italics.[roman type] Directions to exit and 'Things' that can be examined or taken are listed in a paragraph below the room description in [bold type]bold[roman type].[paragraph break]You get points from collecting treasures and solving puzzles. As your points go higher, so does your rank! Type POINTS for more info, or SCORE to see your score. You should figure out the true mission of the game as you go along. [paragraph break]Remember, in addition to EXAMINE, you can READ certain objects as well. It is helpful to read things if they can be read. Finally, ABOUT will tell you what the game is based on, and CREDITS gives credit where credit is due![paragraph break]Now, let's get adventuring!";
 
 Hinting is an action out of world.
 Understand "hint" or "hints" or "clue" or "clues" as hinting.
@@ -186,7 +189,7 @@ Carry out reviewing the game world:
 Understand "review world" as reviewing the game world.
 
 	
-Chapter 6 Credits / About / Inventory 
+Chapter 6 Credits / About / Inventory / Scoring 
 
 Understand "about" or "info" or "information" as showing about.
 
@@ -202,7 +205,7 @@ Understand "points" as showing points.
 Showing points is an action out of world.
 
 Carry out showing points:
-	say "You can score 107 points by collecting treasures and solving the puzzles leading to the endgame. You get another 107 points when you take the final move to win the game.[paragraph break]There are twenty-two treasures worth 2 points each. There is one action that is not required to win the game but provides context and is worth 3 points. Puzzles to win are worth 5-10 points. All treasures (except one tribute to Zork) provide a [italic type]hint[roman type] unless it is a food/drink. Most food and drink is just for fun, but not all![paragraph break]Good Luck!";
+	say "You can score 107 points by collecting treasures and solving the puzzles leading to the endgame. You get another 107 points when you take the final move to win the game.[paragraph break]There are twenty-two treasures worth 2 points each. There is one action that is not required to win the game but provides context and is worth 3 points. Puzzles to win are worth 5-10 points. All treasures (except one tribute to Zork) provide a [italic type]hint[roman type] unless it is a food/drink. Most food and drink is just for fun, but not all! Your score establishes your rank. All ranks can be listed via the command RANK.[paragraph break]Good Luck!";
 
 Understand "credits" or "credit" as showing the credits.
 
@@ -226,8 +229,8 @@ Role
 "Game Inspiration........................Zork"
 "Book Inspiration........................The Quantum Contingent"
 "Second Book.............................Quantum Time"
-"Release.................................108.Rsf"
-"RSF stands for..........................Really sort of final."
+"Release.................................108.Rsff"
+"RSFF stands for..........................Really sort of final final."
 
 [Inventory]
 
@@ -251,6 +254,71 @@ Carry out taking inventory (this is the list-style inventory rule):
 	say “Everything else: [line break]";
 	list the contents of the player, listing marked items only, including all contents, with newlines, indented, with extra indentation;
 
+[Scoring]	
+
+Table of Tasks Achieved
+Points (a number)	Citation (some text)	Time (a time)
+3	"Watching the IMAX film"
+5	"Solving the Puzzle"
+5	"Getting the Crystal"
+5	"Putting the succulent on the Jet (and 2 for succulent)"
+5	"Wearing the Polished Pendant"
+10	"Rebooting the Quantum Computer"
+10	"Energizing the Red Laser"
+10	"Making the Light Saber"
+10	"Retrieving the Console Message"
+107	"Using Aslan to travel across time and Win!"
+
+achieve-pt is a number that varies. achieve-pt is initially 0.
+
+To record (T - text) as achieved:
+	choose row with a citation of T in the Table of Tasks Achieved;
+	if there is no time entry begin;
+		now time entry is the time of day;
+		increase score by points entry;
+		now achieve-pt is 1;
+	end if.
+
+The announce the score rule is not listed in any rulebook.
+
+Check requesting the score:
+	if the score is 0, say "You have not yet achieved anything of note." instead.
+
+Carry out requesting the score:
+	if the score is 0:
+		say "So far you are without points.";
+	otherwise:
+		say "You have so far scored [score] out of a possible 214, in [turn count] turns, earning you the rank of [current rank]. [line break]This includes 2 points for each of the treasures you have collected, including:[paragraph break]";
+		now everything that is a treasure is marked for listing;
+		now everything that is edible is not marked for listing;
+		now everything that is not a treasure is not marked for listing;
+		say “Treasures: ";
+		list the contents of the player, as a sentence, listing marked items only, including all contents;
+		now everything that is a treasure is not marked for listing;
+		now everything that is edible is marked for listing;
+		say "[line break]Treasured Food and Drink: ";
+		list the contents of the player, as a sentence, listing marked items only;
+		now everything that is a treasure is not marked for listing;
+		now everything that is edible is not marked for listing;
+		now everything that is not a treasure is marked for listing;
+		if achieve-pt is not 0:
+			say "[paragraph break]As well as points for these achievements:";
+			repeat through the Table of Tasks Achieved in time order:
+				say "[line break]  [points entry] point[s] for [citation entry]";
+			say "[paragraph break]";
+		else:
+			say "[paragraph break]No further achievements.".
+		
+[	record "ACTIVITY" as achieved.   ]
+
+ranking is an action out of world. Understand "rank" as ranking.
+
+Carry out ranking:
+	say "Here are all of the ranks in the game![line break]";
+	repeat through the Table of Rankings:
+		say "[line break] [score entry] - [rank entry]";
+	say "[paragraph break]";
+	say "I hope you achieve them with grace!";
 
 Chapter 7 Magic Movements, Xyzzy, Magic Words
 
@@ -265,6 +333,8 @@ Carry out xyzzying to default:
 	now the player has the keycard;
 	now the player has the tardis communicator;
 	now the player has the Mirrored Ball;
+	if the tardis communicator is unscored, increase score by 2;
+	if the Mirrored Ball is unscored, increase score by 2;
 	now the player has the scroll of treasure;
 	move jet to airstrip;    
 
@@ -280,7 +350,22 @@ Carry out xyzzyplundering [anything]:
 	move the noun to the location;
 	say "You mutter the magic word, and with a flash, you have the [noun].";
 	try taking the noun;
+	
+Arting is an action out of world. Understand "xyzart" as arting.
 
+Carry out arting:
+	say "Here are all of the photos in the game!";
+	display figure of sign_image;
+	display figure of radcam_image;
+	display figure of cmc_image;
+	display figure of rotunda_image;
+	display figure of bridge_image;
+	display figure of cleveland_image;
+	display figure of crater_image;
+	display figure of rock_image;
+	display figure of lincoln_image;
+	say "I hope you find them for real!";
+	
 Understand "plugh" as a mistake ("Is your voice hollow?")
 
 Understand "leviosa" as a mistake ("It's LeviOsa! Not LevioSA...")
@@ -396,7 +481,9 @@ Book 2 - Play Begins
 Chapter 1 When Play Begins
 
 When play begins:
-	say "Do you want to become an agent of Quotient, the global, independent spy agency? You are at the entrance to their top-secret headquarters. Proceed down the lane to begin your mission and earn the rank of Secret Agent! If this is your first text adventure, just type [bold type]help[roman type]."
+	say "Do you want to become an agent of Quotient, the global, independent spy agency? You are at the entrance to their top-secret headquarters. Proceed down the lane to begin your mission and earn the rank of Secret Agent! If this is your first text adventure, just type [bold type]help[roman type].";
+	add the location to the visited-rooms-list;
+	now the location is noted.
 
 Chapter 2 - Ports and Chairs and Songs for Rooms
 
@@ -428,6 +515,14 @@ Understand "foot" or "appendage" or "left foot" as mark.
 
 Instead of examining the mark:
     say "[if player is in VR Area]You look at the bottom of your left foot. What appear to be your initials are written there in black sharpie.";
+
+A room can be noted. A room is usually not noted.
+The visited-rooms-list is a list of rooms that varies.
+
+Every turn:
+	if the location is not noted:
+		add the location to the visited-rooms-list;
+		now the location is noted;
 
 Chapter 4 Text Messages
 
@@ -534,6 +629,10 @@ The Farmhouse is west of The Headquarters Entrance. "You cross the porch of the 
 
 Parking is southwest of The Headquarters Entrance. Parking is south of Fire Pit. "There is some parking here off the driveway, just past the house.[paragraph break]A fire pit is to the [bt]north[rt], or you can return [bt]northeast[rt] to the entrance."
 
+A turtle is an animal in the Parking. "A large three-legged turtle [one of]waddles by slowly.[or]holes up in his shell.[or]winks at you and keeps going.[cycling]"
+
+The description of the turtle is "A large three-legged turtle, wearing a tiny turtleneck with the name Shelly on it."
+
 The north window is scenery in the Farmhouse. The outdoors is scenery in the Farmhouse. Understand "lawn" and "field" as the outdoors. The description of the outdoors is "Beyond a short stretch of clear ground, past the hammock, the Cornfield is thick and uninhabited for as far as you can see." Instead of searching the north window, try examining the outdoors. The description of the north window is "It gives a view of the cornfield and hammock."
 
 The grape chandelier is scenery in the Farmhouse. "The glass grapes are grouped into bunches. The are purple and stretch along a long cast-iron frame."
@@ -630,7 +729,7 @@ Martin's Office is north of the Conference Room. "This is Martin's office. Marti
 
 After going to Martin's Office:
 	try looking;
-	if Martin is in Martin's office, say "[if aslan is magic]Congratulations Agent, you'c completed the mission![else if martin is unspoken]Martin smiles when you walk in. [paragraph break]'Welcome to the team. Your training mission involves two types of things. One is simply treasure hunting. This will earn points toward your rank. While we were setting up your training mission, a real mission came in. The Lion escaped and interfered with Cassie's time experiment. We'll need your help on this mission. All of our agents are already working it. You'll have to figure out the rest. HQ has been locked down for security reasons. When you are ready to leave, you'll need to leave by Hyperloop or by the Escape Hatch. Good luck.'[else]Martin looks up from his desk, 'Back so soon?'";
+	if Martin is in Martin's office, say "[if aslan is magic]Congratulations Agent, you've completed the mission![else if martin is unspoken]Martin smiles when you walk in. [paragraph break]'Welcome to the team. Your mission involves two things. One is simply treasure hunting. This will earn points toward your rank. While we were setting up this training mission, a real mission came in. This is the second and most important part of your mission. The Lion has escaped and interfered with Cassie's time experiment. We need your help on this mission. It's critical we help Cassie complete her experiment. All of our agents are already working it. There is no time to explain more, you'll have to figure out the rest as you go. HQ has been locked down. When you are ready to leave, you'll need to leave by Hyperloop or by the Escape Hatch. Good luck.'[else]Martin looks up from his desk, 'Back so soon?'";
 	if Martin is in Martin's office, now Martin is spoken;
 		
 A leather chair is a chair. It is in the Martin's Office. 
@@ -638,9 +737,9 @@ The description of the leather chair is "It's a sumptuous leather chair with thi
 
 The coffered ceiling is scenery in the Martin's Office. "The coffered ceiling has many ornate squares, each the size of a trap door."
 
-The bookcase is scenery in the Martin's Office. "There is one book that catches your eye. [italic type]Dreamcatchers[roman type]."
+The bookcase is scenery in the Martin's Office. "[if the player has the book]There are a wide selection of books on the bookcase. Martin appears well read.[else]There is one book that catches your eye. [italic type]Dreamcatchers[roman type]."
 
-Understand "built-in" or "builtin" or "shelf" as bookcase.
+Understand "built-in" or "builtin" or "shelf" or "book case" as bookcase.
 
 Instead of sitting on the leather chair:
 	say "Oh yes, it is very comfortable. You swivel back and forth in the chair, pretending to be Martin.";
@@ -682,21 +781,43 @@ The steel striker is a thing.
 The description of the steel striker is "It is curved so you can wear it over the knuckles of your hand and strike it against the flint." 
 The steel striker is wearable. 
 
+Understand the command "strike" as something new.
+
+Striking it with is an action applying to two things. Understand "strike [something] with [something preferably held]" as striking it with.
+
+Striking is an action applying to one thing. Understand "strike [something]" as striking.
+
 pile of leaves is a thing in The Gate. The description of the pile of leaves is "Um, a pile of leaves, do you want to count them?" 
 	
-Instead of attacking the flint when the steel striker is not worn by the player:
+Instead of striking the flint when the steel striker is not worn by the player:
 	say "You must wear the steel striker over your knuckles, in order to hit the flint at the best angle."
 	
-Instead of attacking the flint when location is not the Yard:
+Instead of striking the flint when location is not the Yard:
 	say "The flint turns smooth in your hand and no sparks are created. A small voice comes from the flint. This ACME flint is GPS locked and only works by the old bonfire spot in the yard. Thank you for your cooperation.";
 
-Instead of attacking the flint when location is the Yard and the steel striker is worn and the leaves are not in the location:
+Instead of striking the flint when location is the Yard and the steel striker is worn and the leaves are not in the location:
 	say "Though you strike the flint sharply with the steel and throw sparks, they have nothing to catch on, since there is nothing to small enough to catch fire."
 
-Instead of attacking the flint when the steel striker is worn and the leaves are in the location and the leaves are not unlit:
+Instead of striking the flint when the steel striker is worn and the leaves are in the location and the leaves are not unlit:
 	say "The leaves have already caught fire."
 
-Instead of attacking the flint:
+Instead of striking the flint:
+	now the leaves are glowing;
+	say "You strike the flint against the steel striker and throw sparks onto the leaves; they make tiny circles of orange there. You can help the fire grow by blowing on the leaves."
+	
+Instead of striking the flint with the steel striker when the steel striker is not worn by the player:
+	say "You must wear the steel striker over your knuckles, in order to hit the flint at the best angle."
+	
+Instead of striking the flint with the steel striker when location is not the Yard:
+	say "The flint turns smooth in your hand and no sparks are created. A small voice comes from the flint. This ACME flint is GPS locked and only works by the old bonfire spot in the yard. Thank you for your cooperation.";
+
+Instead of striking the flint with the steel striker when location is the Yard and the steel striker is worn and the leaves are not in the location:
+	say "Though you strike the flint sharply with the steel and throw sparks, they have nothing to catch on, since there is nothing to small enough to catch fire."
+
+Instead of striking the flint with the steel striker when the steel striker is worn and the leaves are in the location and the leaves are not unlit:
+	say "The leaves have already caught fire."
+
+Instead of striking the flint with the steel striker:
 	now the leaves are glowing;
 	say "You strike the flint against the steel striker and throw sparks onto the leaves; they make tiny circles of orange there. You can help the fire grow by blowing on the leaves."
 	
@@ -746,7 +867,7 @@ Smokehouse is west of the Yard. "An old ivy-covered smokehouse surrounded by a [
 The shovel is an object. It is in the Smokehouse. "A rusty shovel is here. It looks like it would only work in sand."
 The description of the shovel is "Looks like an ordinary shovel to me.".
 
-Bowling balls are scenery in the Smokehouse. "The bowling balls are many different colors."
+Bowling balls are scenery in the Smokehouse. "The bowling balls are many different colors. There are 4 in total, an 8 lb, 15 lb, 16lb and 23 lb."
 
 Instead of taking the bowling balls:
 	say "They are an integral part of the garden, and are just for your visual pleasure."
@@ -755,7 +876,7 @@ Understand "bowling ball" or "bowling ball garden" as Bowling balls.
 
 Fire Pit is south of The Smokehouse. "[if the player was in Parking]You pass by the back of the house and stumble upon a fire pit surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go north or return south to parking.[else]A fire pit is surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go [bt]north[rt] to the Smoke House, or you can go [bt]south[rt] to parking.[end if]"
 
-The Fairy is scenery in The Fire Pit. "The inanimate, ornamental fairy appears to be twirling around, dancing, and enjoying life."
+The Fairy is scenery in The Fire Pit. "The inanimate, ornamental fairy appears to be twirling around, dancing, and enjoying life. The unique thing about this fairy is the shiny pendant hanging around her neck."
 
 Understand "ornamental fairy" as Fairy.
 
@@ -884,8 +1005,12 @@ Understand "Sheldonian Theater" as Sheldonian Theatre.
 Clarendon Building is a room. "This is a neoclassical building completed in 1715 to enable moving the University Presses out of the basement of the Sheldonian Theater. They couldn't work while plays were in progress, hence the necessity of the move.[paragraph break]As for your movement, you can go [bt]east[rt] or [bt]west[rt]."
 
 A piece of paper is a thing. The piece of paper is in the Clarendon Building. "There is a piece of paper on the floor."
-The description of the piece of paper is "It's just a slip of paper, but it does appear to have some writing on it.".
-The read text of the piece of paper is "I hope you are enjoying your journey. Welcome to Oxford."
+The description of the piece of paper is "It appears to be a page ripped from a book. The text is still legible.".
+The read text of the piece of paper is "[bt]Chapter 1 - Switzerland, The Demands[rt]
+[paragraph break]The President’s armor-plated convoy approached the idyllic Swiss chalet. Nestled high in the Swiss Alps, the crisp air, brilliant blue sky, and alpine snowbells were deceiving. This was not a ski vacation or a mountain retreat. Four world leaders were gathering in secret to discuss dark threats. [paragraph break]
+Down below, in Lucerne, a man approached the Hotel des Balances. Stepping inside, he walked past the large mahogany-framed fireplace and stepped onto the narrow balcony overlooking the crystal-clear River Reuss. Looking upriver, he could see the famous Lucerne-Chapel bridge in the distance. He hastened down the intricate wrought-iron railing to the fifth table and waited for his contact. The river water reflected the bright noon sunlight. He dropped a pebble in the water and could see it drift slowly all the way to the bottom of the clean, mountain-fed river. 
+The church across the river had green patina on its copper-covered steeples. It reminded him of the many greenbacks he hoped to earn for his loyalty to the Contingent. He pulled out his phone and gazed at the live video image of the quaint Swiss chalet, less than 100 kilometers away. [paragraph break]
+In a world that thrived on technology, it was hard to keep a secret, even for the top governments of the world. This meeting of four of the world’s top leaders was meticulously planned. They secured the venue in advance. They cleared the route to and from the chalet. The stop was billed as a well-deserved break for one of the most well-liked leaders of the free world. On President Bridget O’Connor’s calendar, it was listed as a pleasure stop, a photo op at a remote chalet surrounded by the majestic, towering, snow-capped Alps with a winding downhill path to a pristine lake that reflected the surrounding beauty. [paragraph break]When they arrived at the chalet, the President’s lead secret service agent stepped out of the armored limo and surveyed the scene. What would have been a firefight was instead a whisper-quiet techno-fight. A small armed drone shot a self-propelled nano-technology dart into the agent’s neck. It was a small, silent prick, like a mosquito bite; he thought nothing of it. Other agents exited the convoy. Each was shot with the nano-darts. Most ignored the prick entirely. All looked around cautiously, ultimately determining the coast was clear for their package to exit the vehicle. Once the dart had found its subject, the nano-bot it delivered burrowed into the skin of each agent like a microscopic tick from a warm Connecticut wood.[paragraph break] --- an excerpt from [italic type]The Quantum Contingent[rt]".
 
 Bodleian Library is a room. "You are at the entrance of the Bodleian Library, one of the oldest libraries in Europe. The [italic type]great gate[roman type] at the entrance of the Bodleian is open.[paragraph break]To the [bt]south[rt] is Radcliffe Square, to the North the Sheldonian Theatre. You can enter the old Duke Humfrey's library to the [bt]northwes[rt]t or the Divinity School to the [bt]southwest[rt]."
 
@@ -932,11 +1057,11 @@ Cassie's Office is a room. "Cassie’s office reflects her personality. It is a 
 
 After going to Cassie's Office:
 	try looking;
-	if Kara is in Cassie's office, say "[if Cassie is unspoken]When you walk in, Cassie and Kara are talking. You overhear a piece of their conversation[paragraph break]'Yes, I loved Martin, but my time is passed.'... 'It's never too late for'[paragraph break]They look up. Cassie smiles at you. 'Hello, you must be the new agent, I'm Cassie, and this is Kara.'[line break]'Yes, I recognize you from your agent profiles.'[line break]Kara stands and shakes your hand. 'Welcome to the team. I must be going. I'm off to find the pendant!' [karaleaves][else]Cassie is staring intently at her chaulkboard, but senses you as you enter, 'You have returned. Did you discover anything?'";
+	if Kara is in Cassie's office, say "[if Cassie is unspoken]When you walk in, Cassie and Kara are talking. You overhear a piece of their conversation[paragraph break]'Yes, I loved Martin, but my time is passed.'... 'It's never too late for'[paragraph break]They look up. Cassie smiles at you. 'Hello, you must be the new agent, I'm Cassie, and this is Kara.'[line break]'Yes, I recognize you from your agent profiles.' Kara stands and shakes your hand. 'Welcome to the team.'[karaleaves][else]Cassie is staring intently at her chaulkboard, but senses you as you enter, 'You have returned. Did you discover anything?'";
 	if Cassie is in Cassie's office, now Cassie is spoken;
 	
 to say karaleaves:
-	say "Kara smiles and nods as she heads out the door.";
+	say "[if the player has the pendant][line break]Kara suddenly does a double-take. 'Oh! I see you have the pendant. Way to go! I must go talk with Martin.'[else]Kara turns and nods at Cassie. 'I must be going. I'm sure you have a lot to talk about with Cassie. Kara smiles and heads out the door.'";
 	now Kara is in Radcliffe Square.
 
 An old chalkboard is a thing. It is in Cassie's office. "Mysterious equations fill an [italic type]old chalkboard[roman type] in the corner."
@@ -988,9 +1113,11 @@ The countertop is scenery in Cassie's Lab. It is a supporter. "The countertop ha
 
 The equipment is scenery on the countertop. "Delicate scales and glass test tubes, lasers, vacuum vessels, and other interconnected things you do not recognize." 
 
-Convocation House is a room. "The Convocation house is primarily used for events. It was once used as a meeting place for the House of Commons. Its stone-vaulted ceiling dates back to 1758-1759.[paragraph break]You can go [bt]north[rt] or [bt]east[rt]."
+Convocation House is a room. "The Convocation house is primarily used for events. It was once used as a meeting place for the House of Commons. Its stone-vaulted ceiling dates back to 1758-1759. A [italic type]poster[roman type] is on one wall.[paragraph break]You can go [bt]north[rt] or [bt]east[rt]."
 
-The Turf Tavern is a room. "[if the player was in Cassie's Office]You enter the 12th Century inn, Turf Tavern, from the front. It is very popular with Oxford Students.[paragraph break]You can go northeast or west.[otherwise]You head down New College Lane and shuffle past the tourists posing for pictures under the Hertford Bridge, or the Bridge of Sighs, so called for its similarity to the famous bridge in Venice. After passing under the bridge, you ducked into the very narrow alleyway known as St. Helen’s Passage. It is marked by a green street sign affixed to the wall, or you could easily miss it. Following the winding cobblestone passage leads you to the entrance of the pub where many famous alumni have enjoyed a drink or dinner. They built the Turf Tavern just outside the city walls in order to avoid jurisdiction of the colleges. It was a fitting place to discuss Quotient business.[paragraph break]You can go [bt]northeast[rt] or [bt]west[rt]."
+The poster is scenery in Convocation House. "A poster advertising for graduate students to help with a time experiment. It has a picture of a glowing lion."
+
+The Turf Tavern is a room. "[if the player was in Cassie's Office]You enter the 12th Century inn, Turf Tavern, from the front. It is very popular with Oxford Students.[paragraph break]You can go northeast or west.[otherwise]You head down New College Lane and shuffle past the tourists posing for pictures under the Hertford Bridge, or the Bridge of Sighs, so called for its similarity to the famous bridge in Venice. After passing under the bridge, you ducked into the very narrow alleyway known as St. Helen’s Passage. It is marked by a green street sign affixed to the wall, or you could easily miss it. Following the winding cobblestone passage leads you to the entrance of the pub where many famous alumni have enjoyed a drink or dinner. They built the Turf Tavern just outside the city walls in order to avoid jurisdiction of the colleges. It is a fitting place to discuss Quotient business.[paragraph break]You can go [bt]northeast[rt] or [bt]west[rt]."
 
 The Black Painted Board is a thing. It is in the Turf Tavern. It is fixed in place. "A traditional black painted board is mounted on a post and is filled with writing."
 The description of the Black Painted Board is "It looks like a chalkboard upon which they have painted many words.".
@@ -1023,7 +1150,7 @@ Instead of touching Aslan:
 		move scroll of treasure to The National Mall;
 		move player to The National Mall;
 		now the description of the sky is "It is a perfect day in DC. The sun is shining, the blue birds are singing and the sky is bright blue!";
-		increase score by 107;
+		record "Using Aslan to travel across time and Win!" as achieved;
 	else if Quantum Console is activated and the Quantum Computer is rebooted and the laser is energized and pendant_event_triggered is 0:
 		say "The lamp post flickers gold and the glow pulsates brightly, but otherwise, you feel untouched."; [pendant is not shiny]
 	else if Quantum Console is activated and the Quantum Computer is wonky and the laser is energized and pendant_event_triggered is 1: [computer is not rebooted]
@@ -1151,12 +1278,12 @@ Future National Park is north of the Metaverse. "For the few remaining Luddites 
 Peaceful Meditation is south of the Metaverse. "You are in a vast desert, with dunes stretching out to the horizon. The sun burns like a hot coal in the sky. You may meditate here as long as you like.[paragraph break]And that could be a very long time if you can't figure out how to exit."
 
 Hologram is a person. Hologram is in the Metaverse. "A hologram floats nearby."
-The description of the Hologram is "The hologram looks exactly like Cassie, only slightly transparent. Only her piercing blue eyes lake the transparency of the rest of her.".
+The description of the Hologram is "The hologram looks like Cassie, only  semi-transparent, almost like one would imagine a ghost. Her piercing blue eyes glow brighter than the rest of the hologram.".
 
 Section 1 - Yoga Master and Hologram
 
 Yoga Master is a person. Yoga Master is in Peaceful Meditation. "A serene yoga master appears, floating just a few inches above the sand in the lotus position."
-The description of the Yoga Master is "They are a serene yoga master, and they appear to be floating just a few inches above the sand in the lotus position with their eyes closed.".
+The description of the Yoga Master is "The yoga master appears to be floating just a few inches above the sand in the lotus position with their eyes closed. They are wearing what appears to be a very comfortable, terry-cloth robe adorned with baby yodas.".
 
 Instead of talking to Yoga Master:
 		say "The Yoga Master simply breaths out. And then in. Their breathing is slow and rhythmic. They do not even open their eyes when you talk to them."
@@ -1167,7 +1294,7 @@ Check Meditating:
 if the player is not in the Peaceful Meditation, say "You feel a calm sense of security." instead;
 
 Carry out Meditating:
-	say "[line break]'Ahhhh, welcome to Peaceful Meditation,' says the normally silent Yoga Master. 'Take a deep cleansing breath. Your anagram for the day is: The Oldest Log.'[line break]";
+	say "[line break]'Ahhhh, welcome to Peaceful Meditation,' says the normally silent Yoga Master. 'Take a deep cleansing breath. Your anagram for the day is: The Oldest Log.'[paragraph break]A yoga mat has appeared.";
 	now the Yoga Mat is in the Peaceful Meditation.
 
 Instead of talking to Hologram:
@@ -1183,32 +1310,29 @@ After asking the hologram about something:
 
 Table of Cassie_AV Replies
 Topic	Muse
-"mission"	"Reboot the computer and get to the Continuum"
-"the mission"	"Reboot the computer and get to the Continuum"
-"computer"	"Tardis is our computer. It is in space."
-"continuum"	"The name of Cassie's lab."
-"tardis"	"Tardis is our computer. It is in space."
+"the/-- mission"	"Reboot the computer and get to the Continuum"
+"the/-- computer"	"Tardis is our computer. It is in space."
+"the/-- continuum"	"The name of Cassie's lab."
+"the/-- tardis"	"Tardis is our computer. It is in space."
 "Jack"	"Jack is very special to me."
 "Sarah"	"Sarah is like a daughter to me."
 "Kara"	"Kara really proved herself during The Quantum Contingent Mission"
 "Florin"	"Florin is a very capable agent, and a long time friend."
-"President"	"President Bridget O'Connor is one of the finest women I have ever known."
-"Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
+"the/-- President"	"President Bridget O'Connor is one of the finest women I have ever known."
+"the/-- Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Greg"	"I heard he's an author?"
 "Martin"	"I love Martin, don't you?"
 "Karen"	"Did you mean Kara or Cassie?"
 "Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/skyline/scone/pretzel"	"Yum! Delicious."
-"crystal"	"The Crystal should be able to provide the power we need for the quantum console."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
-"metaverse/vr/exit"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
+"the/-- chili/skyline/skyline/scone/pretzel"	"Yum! Delicious."
+"the/-- crystal"	"The Crystal should be able to provide the power we need for the quantum console."
+"the/-- skyline chili"	"Yum! Delicious."
+"the/-- dew/Pimms/beer/water/pop"	"Refreshing!"
+"the/-- metaverse/vr/exit"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
 Of course, hackers will alter metaverse programs to remove both safety features. With no blinking-eye exit, and no id mark, it would be hard to tell what is real and what is meta. With the appropriate setup, you could trap a person in the metaverse, and make them think it’s real. "
-"the metaverse"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
-Of course, hackers will alter metaverse programs to remove both safety features. With no blinking-eye exit, and no id mark, it would be hard to tell what is real and what is meta. With the appropriate setup, you could trap a person in the metaverse, and make them think it’s real. "
-"entanglement/tanglement/tangle/stablize/time" or "quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But what if I told you, I found a way to force a state without breaking entanglement"
+"the/-- entanglement/tanglement/tangle/stablize/time" or "the/-- quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But what if I told you, I found a way to force a state without breaking entanglement"
 		
 Chapter 6 Cincinnati 
 
@@ -1287,7 +1411,7 @@ After waiting when the player is in the IMAX Theater:
 	if the player is in the IMAX Theater and the IMAX waiting count is 2:
 		now preview is 0;
 		say "The main feature finally starts!! Professor Eaton is on the screen in her lab. The camera zooms in and she says 'What if we could send messages across time. My console requires an enormous amount of energy to enable entanglement stabilization by means of the quantum Zeno effect. It'[paragraph break]     ... [bt]CRASH[rt]... a loud noise interrupts and the movie stops. House lights are turned on, and an employee announces over the speakers: [paragraph break]'Sorry folks, the film broke, the movie is now over.'";
-		increase the score by 3.
+		record "Watching the IMAX film" as achieved.
 
 A theater poster is a thing in the IMAX Theater. It is fixed in place. "A theater poster, featuring Professer Cassandra Eaton is mounted at the doorway."
 The description of the theater poster is "It's a large teal movie poster showing the beautiful Cassandra Eaton, with equations spinning around her head. It almost glows from the poster backlighting.".
@@ -1378,7 +1502,7 @@ Instead of examining the Fluorescent Tube:
 		Now the Fluorescent Tube is nowhere;
 		Now the player has The Light Saber;
 		the lightsaber-timer bings in 2 turns from now;
-		If The Light Saber is unscored, increase score by 10;
+		If The Light Saber is unscored, record "Making the Light Saber" as achieved;
 		Now The Light Saber is scored;
 	otherwise: 
 		if the Crystal is not in the Fluorescent Tube:
@@ -1389,7 +1513,7 @@ Instead of examining the Crystal:
 		say "The fluorescent tube has transformed into a glowing light saber. You raise it triumphantly over your head and say 'The force is strong in me'";
 		Now the Fluorescent Tube is nowhere;
 		Now the player has The Light Saber;
-		If The Light Saber is unscored, increase score by 10;
+		If The Light Saber is unscored, record "Making the Light Saber" as achieved;
 		Now The Light Saber is scored;
 	otherwise: 
 		if the Crystal is not in the Fluorescent Tube:
@@ -1437,7 +1561,7 @@ Battery is scenery in Spaceport. "The megapacks store up the excess solar power 
 
 Understand "battery" or "solar" or "solar panels" or "backup" or "battery backup" or "power" or "power plant" or "virtual power plant" as Battery.
 
-Tardis is a port. "[first time]The Dragon capsule begins firing its Draco thrusters to maneuver to the docking bay. The docking maneuver isn't simple but appears so because of the automatic nature of the Dragon capsule’s autopilot software. You draw closer and closer until you hear a loud locking sound and feel a slight shake as the docking clamps lock the rocket into place.[paragraph break]You've successfully docked at the airlock to TARDIS.[only] TARDIS is a boxy-looking station, similar in shape to a 1960s London police box like Dr. Who’s time machine, only much larger. Quotient had even painted it TARDIS blue. You are now in the airlock."
+Tardis is a port. "[first time]The Dragon capsule begins firing its Draco thrusters to maneuver to the docking bay. The docking maneuver isn't simple but appears so because of the automatic nature of the Dragon capsule’s autopilot software. You draw closer and closer until you hear a loud locking sound and feel a slight shake as the docking clamps lock the rocket into place.[paragraph break]You've successfully docked at the airlock to TARDIS.[only] TARDIS is a boxy-looking station, similar in shape to a 1960s London police box --- like Dr. Who’s time machine --- only much larger.[line break]Quotient even painted it TARDIS blue. You are now in the airlock."
 
 The Control Center is a room. "The control center has lots of [italic type]controls[roman type], but you don't care.[paragraph break]There is a much cooler room to the [bt]north[rt]."
 
@@ -1449,16 +1573,23 @@ Instead of pushing controls:
 Instead of touching controls:
 	say "no touching the controls... move along."
 
-The Airbnb is north of the Control Center. "This is the best hotel room view in the Solar System.[paragraph break]The viewing area for the Quantum Computer lies to the [bt]west[rt]. The Control Center lies to the [bt]south[rt]." The shade door is here. "A large metal shade blocks what you assume is a window." 
-The description of the shade door is "A large metal protective shade or shield.".
+The Airbnb is north of the Control Center. "This is the best hotel room view in the Solar System.[paragraph break]The viewing area for the Quantum Computer lies to the [bt]west[rt]. The Control Center lies to the [bt]south[rt]."
 
-Instead of opening the shade door, say "The shade opens revealing the On a [italic type]Clear Day You Can See Forever[roman type] window. It’s named after the old musical. The view was unimaginably beautiful. Space is the definition of dark. It makes the stars stand out like diamonds on velvet. Of course, the most amazing view is of our own blue marble, Earth. The drifting clouds created hazy, moving lines across the blue orb. Entire continents seemed small, our place in the universe seemed less important. We are but one planet in a vast sea of endless space. Lightning storms exploded in the clouds as they traversed land and sea. As former NASA astronaut Mike Massimino mused, 'How can something so beautiful be tolerated by human eyes.'"
+The Shade is in the Airbnb. Shade can be openable. The Shade is openable. The Shade can be open. Shade can be closed. Shade is closed. "[if closed]A large metal protective [bold type]shade[roman type] blocks what you assume is a window.[else]The open [bold type]shade[roman type] reveals the [italic type]Clear Day You Can See Forever Window.[roman type]"
 
-Clear Day is scenery in the Airbnb. "On a Clear Day You Can See Forever is a 70's musical comedy drama, but I digress. On TARDIS, it's a cool window into the depths of space."
+The description of the Shade is "[if closed]A large metal protective [bold type]shade[roman type] blocks what you assume is a window.[else]The open [bold type]shade[roman type] reveals the [italic type]Clear Day You Can See Forever Window.[roman type]". 
+
+Report opening the shade: 
+	say "The shade opens revealing the On a [italic type]Clear Day You Can See Forever[roman type] window. It’s named after the old musical. The view is unimaginably beautiful. Space is the definition of dark. It makes the stars stand out like diamonds on velvet. Of course, the most amazing view is of our own blue marble, Earth. The drifting clouds created hazy, moving lines across the blue orb. Entire continents seemed small, our place in the universe seemed less important. We are but one planet in a vast sea of endless space. Lightning storms exploded in the clouds as they traversed land and sea. As former NASA astronaut Mike Massimino mused, 'How can something so beautiful be tolerated by human eyes.'"
+
+Report closing the shade: 
+	say "It is sad to say good bye to such a beautiful view."
+
+Clear Day You Can See Forever Window is scenery in the Airbnb. "On a Clear Day You Can See Forever is a 70's musical comedy drama, but I digress. On TARDIS, it's a cool window into the depths of space."
 
 Understand "see forever" or "forever" or "on a clear day" as Clear Day.
 
-The Quantum View is west of the Airbnb. "This is the computer viewing area allowing you to view the specially designed Zero-G shock mount for the quantum computer core through a window. The quantum computer is in a room of the station not accessible by humans. It operated under the vacuum of space at all times.[paragraph break]The Airbnb lies to the [bt]east[rt]." 
+The Quantum View is west of the Airbnb. "This is the computer viewing area. It allows you to view the specially designed Zero-G shock mount and the quantum computer core mounted there through a window. The quantum computer is in a room of the station not accessible by humans. It operated under the vacuum of space at all times.[paragraph break]The Airbnb lies to the [bt]east[rt]." 
 
 Section 1 - Things in TARDIS
 
@@ -1486,7 +1617,7 @@ Check rebooting the Quantum Computer:
 Carry out rebooting the Quantum Computer:
 	now the Quantum Computer is rebooted;
 	the tardis-timer bings in 1 turns from now;
-	if the Quantum Computer is unscored, increase score by 10;
+	if the Quantum Computer is unscored, record "Rebooting the Quantum Computer" as achieved;
 	now the Quantum Computer is scored;
 	say "You press Control-Alt-Delete. The screen goes black for a moment, then the computer begins to reboot."
 
@@ -1610,7 +1741,7 @@ Report blowing out:
 	otherwise: 
 		say "You blow on [the noun], to little effect."
 
-The Crystal is a thing. "The Crystal is a brilliant blue color." The Crystal can be scored or unscored.
+The Crystal is a thing. "The [bold type]Crystal[roman type] is a brilliant blue color." The Crystal can be scored or unscored.
 
 Section 1 - Robert Clayton
 
@@ -1644,7 +1775,7 @@ Instead of shooting Robert Clayton with the gun:
 	if player has the Tranquilizer Gun:
 		say "You shoot Robert Clayton with the tranquilizer gun and take the crystal from him.";
 		now the player carries the Crystal;
-		if the Crystal is unscored, increase score by 5;
+		if the Crystal is unscored, record "Getting the Crystal" as achieved;
 		now the crystal is scored;
 		now Robert Clayton is asleep;
 	otherwise:
@@ -1678,7 +1809,7 @@ Instead of taking the Crystal:
 	otherwise:
 		say "You shoot Robert Clayton with the tranquilizer gun and take the crystal from him.";
 		now the player carries the Crystal;
-		if the Crystal is unscored, increase score by 5;
+		if the Crystal is unscored, record "Getting the Crystal" as achieved;
 		now the crystal is scored;
 		now Robert Clayton is asleep;
 		continue the action.
@@ -1687,7 +1818,7 @@ Instead of Attacking Robert Clayton:
 	if player has the Tranquilizer Gun:
 		say "You shoot Robert Clayton with the tranquilizer gun and take the crystal from him.";
 		now the player carries the Crystal;
-		if the Crystal is unscored, increase score by 5;
+		if the Crystal is unscored, record "Getting the Crystal" as achieved;
 		now the crystal is scored;
 		now Robert Clayton is asleep;
 	otherwise:
@@ -1730,7 +1861,7 @@ National Mall is a room. "[if aslan is magic]You are standing on the expansive l
 
 To say endgamemall:
 say "[paragraph break]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[line break]";
-say "[bold type]Congratulations! You have won the game.[paragraph break][roman type]Feel free to wander around, I have moved the Jet to Andrews Air Force base for your convenience.[line break]If you examine the older couple on the lawn, you notice they look like Cassie and Martin. Cassie managed to send a message back in time, asking Martin to marry her earlier in their lives. (that was the binary message you found in her lab)[paragraph break]He did, and thanks to a little Aslan magic (and a mysterious Lancelot pendant) you managed to travel forward in time to see them sitting on the National Mall. Oh, and by the way, you have been granted a scroll listing all of the treasures and their locations in case you want to go back and any you missed. I hope you enjoyed [italic type]Quotient, the Game![roman type]";
+say "[bold type]Congratulations! You have won the game.[paragraph break][roman type]Feel free to wander around, I have moved the Jet to Andrews Air Force base for your convenience.[line break]If you examine the older couple on the lawn, you notice they look like Cassie and Martin. Cassie managed to send a message back in time, asking Martin to marry her earlier in their lives. (that was the binary message you found in her lab)[paragraph break]He did, and thanks to a little Aslan magic (and a mysterious Lancelot pendant) you managed to travel forward in time to see them sitting on the National Mall. Oh, and by the way, you have been granted a scroll listing all of the treasures and their locations in case you want to go back and collect any you missed. I hope you enjoyed [italic type]Quotient, the Game![roman type]";
 say "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[line break]";
 
 
@@ -1817,7 +1948,7 @@ After switching on the laser:
 		say "The beam reflects in such a way that a magical red glow appears high over the sanctuary. Two other distinct beams split off and illuminate objects carved in the wall. One is a [italic type]clock tower[roman type], and the other is a [italic type]creature[roman type] of some type.[paragraph break][bold type]You sense a magical shudder in the time continuum.[line break][roman type]";
 		now the laser is energized;
 		the laser-timer bings in 2 turns from now;
-		if the laser is unscored, increase score by 10;
+		if the laser is unscored, record "Energizing the Red Laser" as achieved;
 		now the laser is scored;
 		now the description of the sky is "There is a red glow in the sky.";
 	otherwise:
@@ -1871,11 +2002,13 @@ The Statue of Freedom is scenery in the US Capitol. The description is "A bronze
 
 Smithsonian Castle is north of the National Mall. "The distinctive red sandstone architecture and charming tower makes this building stand out on the mall. It serves as the administrative heart of the Smithsonian Institution. Its towers and turrets give it a fairy-tale appearance, and the surrounding gardens are a peaceful retreat.[paragraph break]Head [bt]south[rt] to return to the mall."
 
-National Air Space Museum is south of the National Mall. "[if aslan is magic]The National Air and Space Museum is now one giant virtual reality experience where you can fly to Mars or Spacewalk next to Saturn's rings. [otherwise]The National Air and Space Museum is filled with the [italic type]wonders of flight[roman type] and space exploration. Other exhibits include historic aircraft, spacecraft, and interactive displays.[paragraph break]Head [bt]north[rt] to return to the mall."
+National Air Space Museum is south of the National Mall. "[if aslan is magic]The National Air and Space Museum is now one giant virtual reality experience where you can fly to Mars or Spacewalk next to Saturn's rings. [otherwise]The National Air and Space Museum is filled with the [italic type]wonders of flight[roman type] and space exploration. There is a large, modern, [italic type]mural[roman type] on one wall. Other exhibits include historic aircraft, spacecraft, and interactive displays.[paragraph break]Head [bt]north[rt] to return to the mall."
 
 The printed name of National Air Space Museum is "National Air and Space Museum".
 
 The Wonders of Flight is scenery in the National Air Space Museum. The description is "Old space capsules, shuttles, and a replica of the original Wright flyer are suspended here."
+
+The large modern mural is scenery in the National Air Space Museum. The description is "A large wall mural showing an airshow of different planes, each with a succulent on top!"
 
 Understand "exhibits" or "aircraft" or "displays" as Wonders of Flight.
 
@@ -1902,11 +2035,11 @@ Instead of taking the pod:
 
 Instead of entering the pod:
 	if location is airstrip:
-		say "Whoosh... You take off from [the location] and travel in the hyperloop pod to [if location is airstrip]the Hyperloop Station.[otherwise] the Airstrip.";
+		say "Whoosh... You take off from [the location] and travel in the hyperloop pod to the Hyperloop Station.";
 		move Pod to hyperloop station;
 		move the player to Hyperloop Station;
 	else if location is hyperloop station:
-		say "Whoosh... You take off from [the location] and travel in the hyperloop pod to [if location is airstrip]the Hyperloop Station.[otherwise] the Airstrip.";
+		say "Whoosh... You take off from [the location] and travel in the hyperloop pod to the Airstrip. The hyperloop slows to a stop and the doors of the sleek pod open silently. After ascended a flight of steel stairs you emerge above ground in the middle of a patch of long-needled white pine trees, just a few feet from the secluded airstrip.";
 		move Pod to airstrip;
 		move the player to airstrip;
 	otherwise:
@@ -1915,7 +2048,8 @@ Instead of entering the pod:
 
 Section 2 Plane
 
-The Quotient Jet is a vehicle in the Airstrip. The description of the Quotient Jet is "The Quotient Jet is a matte-black Gulfstream 950ER Superjet with a custom interior featuring a conference table with a holographic projection screen. It also has a bedroom, and the treat cupboard is stocked with fresh chocolate-covered strawberries every time you board."
+The Quotient Jet is a vehicle in the Airstrip. "One of Quotient’s jets is here primed and ready."
+The description of the Quotient Jet is "The Quotient Jet is a matte-black Gulfstream 950ER Superjet with a custom interior featuring a conference table with a holographic projection screen. It also has a bedroom, and the treat cupboard is stocked with fresh chocolate-covered strawberries every time you board."
 The Quotient Jet can be airborne or grounded. 
 The Quotient Jet is grounded.
 The top of the Quotient Jet is a supporter. The top of the Quotient Jet is part of the Quotient Jet.
@@ -2025,7 +2159,7 @@ Instead of pulling the blue lever:
 			now the docking clamps are 1;
 		otherwise:
 			if the rocket is in the Blackness of Space:
-				say "You have successfully docked at TARDIS[paragraph break]";
+				say "You pull the lever and see the docking clamps start to move.[paragraph break]";
 				move the rocket to TARDIS;
 				now the player is in the location of the rocket;
 				now the docking clamps are 0;
@@ -2267,7 +2401,7 @@ Instead of solving the jigsaw when the player carries the jagged piece and the j
 	say "You snap the final piece into place.";
 	now the description of the jigsaw is “The missing piece completed the poster for the show LOST on the elaborately detailed puzzle of movie and show posters.”;
 	try examining the jigsaw;
-	increase score by 5.
+	record "Solving the Puzzle" as achieved.
 
 Instead of examining the puzzle:
 	if puzzle is unsolved and the player does not have the spy glass, say "A puzzle of many different movie and show posters. This one is nearly finished, missing only one piece that you could never find.";
@@ -2318,7 +2452,7 @@ Instead of examining the watch:
 	say "You glance at your watch, and see the time and weather.";
 	say "[time of day]".
 
-The SCIF is a device in the Conference Room. "A secure communication device, or SCIF, is here. It is used for connecting with the President."
+The SCIF is a device in the Conference Room. "A secure communication device, or [bold type]SCIF[roman type], is here. It is used for connecting with the President."
 The description of the SCIF is "This secure communication device, or SCIF, is state of the art. It is not only secure, it also projects a hologram of people in the Oval Office into the conference room. It is primarily used for connecting with the President.".
 
 The SCIF can be switched on or switched off. The SCIF is switched off.
@@ -2350,7 +2484,7 @@ Instead of switching off the SCIF:
 
 A lab bench is scenery in Cassie's lab. The lab bench is a supporter. "The lab bench has a solid back industrial top"
 
-The Quantum Console is a container on the Lab Bench. "A console is here, it appears to have a place to hold a long cylindrical object. It also has a digital display."
+The Quantum Console is a container on the Lab Bench. "A [bold type]quantum console[roman type] is here, it appears to have a place to hold a long cylindrical object. It also has a digital display."
 The Quantum Console can be activated or unactivated. The Quantum Console is unactivated.
 The Quantum Console can be switched on or switched off. The Quantum Console is switched off.
 The Quantum Console can be powered or unpowered. The Quantum Console is unpowered.
@@ -2394,8 +2528,8 @@ Instead of switching on the Quantum Console:
 	otherwise:
 		if Cassie is in the location:
 			say "The display lights up and starts to spin when you turn it on.[paragraph break]";
-			say "The display says: '01101101 01100001 01110010 01110010 01111001 00100000 01101101 01100101'";
-			if The Quantum Console is unscored, increase score by 10;
+			say "The display says: '01101101 01100001 01110010 01110010 01111001 00100000 01001101 01100001 01110010 01110100 01101001 01101110 00001010'";
+			if The Quantum Console is unscored, record "Retrieving the Console Message" as achieved;
 			say "[paragraph break]Cassie says 'Oh! Excellent! You've done it!'";
 			now the Quantum Console is activated;
 			now the Quantum Console is switched on;
@@ -2406,7 +2540,7 @@ Instead of switching on the Quantum Console:
 			otherwise:
 				say "You need Cassie to activate the console."
 				
-A keyboard is a thing. The keyboard is in Cassie's lab. "A wireless keyboard is here."
+A keyboard is a thing. The keyboard is in Cassie's lab. "A wireless [bold type]keyboard[roman type] is here."
 The description of the keyboard is "The keyboard is a standard qwerty keyboard. It is wireless, and backlit.".
 
 Instead of taking the keyboard:
@@ -2439,7 +2573,7 @@ Instead of going through the Escape Tunnel:
 		
 The Trap Door is scenery in Martin's office. "It's a ceiling... maybe just go up?"
 
-The cold suit is a wearable thing. "A cold suit in your size is here."
+The cold suit is a wearable thing. "A [bold type]cold suit[roman type] in your size is here."
 The cold suit is in the Hallway.
 The description of the Cold Suit is "The cold suit looks a lot like a diver's wetsuit, but it makes you appear to be the same temperature as the ambient air around you. This renders you invisible to infrared sensors.".
 The read text of the Cold Suit is "Cold Suits R US"
@@ -2455,7 +2589,7 @@ The treat cupboard is in the Quotient jet.
 The treat cupboard is closed.
 The treat cupboard is fixed in place.
 
-The chocolate-covered strawberry are a thing. "An exquisite dark-chocolate covered strawberry."
+The chocolate-covered strawberry are a thing. "An exquisite dark-[bold type]chocolate covered strawberry[roman type]."
 The chocolate-covered strawberry are in the treat cupboard. 
 The description of the chocolate-covered strawberry is "It is an exquisite, dark-chocolate-covered strawberry. The bright red berry peaks over the top of the chocolate jacket and the green stem makes a perfect handle.".
 Understand "berry" as chocolate-covered strawberry.
@@ -2486,7 +2620,7 @@ Report entering the throne:
 Underlying relates various things to one thing. The verb to underlie means the underlying relation. The verb to be under means the underlying relation. The verb to be beneath means the underlying relation.
 
 Instead of looking under the throne:
-	say "You find an old graduation program.";
+	say "You find an old [bold type]graduation program[roman type].";
 	now the graduation program is in the Sheldonian Theatre;
 	try taking the graduation program;	
 	
@@ -2523,7 +2657,7 @@ Michael Peterson, class of 2019, 'Great experience!'[line break]
 Simon Evernote, class of 2019, 'Exceptional. Everyone except me that is!'[line break]
 "
  
-A beautiful tapestry is scenery in the Sheldonian Theatre. "The tapestry shows the knight Lancelot charging up a hill toward a lion. He is wearing a gleaming pendant that appears to sparkle in the sun because of the small silver threads spraying outward on the cloth. There appears to be a slight bulge in the middle of the tapestry."
+A beautiful tapestry is scenery in the Sheldonian Theatre. "The tapestry shows the knight Lancelot charging up a hill toward a lion. He is wearing a gleaming pendant that appears to sparkle in the sun because of the small silver threads spraying outward on the cloth. [if pendant is undiscovered]There appears to be a slight bulge in the middle of the tapestry.[else]The tapestry is smooth and straight."
  
 The ancient pendant is a wearable thing. The description is "[if pendant is unpolished]Though mottled with rust, it looks quite beautiful.[else]The pendant sparkles beautifully." The pendant can be discovered or undiscovered. The pendant is undiscovered. The pendant can be polished or unpolished. The pendant is unpolished. The pendant can be scored or unscored.
 
@@ -2542,7 +2676,7 @@ Instead of shining the pendant:
 		say "You polish the pendant to a gleaming, mirror-like surface and as you do, you feel a surge of energy through your body.";
 		now pendant_event_triggered is 1;
 		now the pendant is polished;
-		if the pendant is unscored, increase score by 5;
+		if the pendant is unscored, record "Wearing the Polished Pendant" as achieved;
 	otherwise:
 		say "You polish the pendant to a gleaming mirror-like surface.";
 		now the pendant is polished;
@@ -2583,7 +2717,7 @@ After wearing the pendant:
 	if the pendant is polished:
 		say "As you place the polished pendant around your neck, you feel a strange energy coursing through your body.";
 		now pendant_event_triggered is 1;
-		if the pendant is unscored, increase score by 5;
+		if the pendant is unscored, record "Wearing the Polished Pendant" as achieved;
 	otherwise:
 		say "You wear the pendant, but nothing unusual happens.";
 
@@ -2676,12 +2810,14 @@ The read text of the scroll of treasure is "Examine me in order to read me."
 
 [-----]
 
-A stack of Zorkmid Bills is a treasure. The stack of zorkmid bills are nowhere. "On the ground sit 200 neatly stacked zorkmid bills." Understand "notes" or "banknotes" or "bank notes" or "zorkmids" as the bills. The description of the bills is "[banknotes]".
+A stack of Zorkmid Bills is a treasure. The stack of zorkmid bills are nowhere. "On the ground sit 200 neatly stacked [bold type]zorkmid bills.[roman type]" 
+
+Understand "notes" or "banknotes" or "bank notes" or "zorkmids" as the bills. The description of the bills is "[banknotes]".
 The read text of the bills is "In Frobs We Trust".
 
 [-----]
 
-Yoga Mat is a treasure. It is nowhere. "A beautiful yoga mat is here. Its color oscillates gently."
+Yoga Mat is a treasure. It is nowhere. "A beautiful [bold type]yoga mat[roman type] is here. Its color oscillates gently."
 The description of the Yoga Mat is "It is a large yoga mat, thicker than most. It is soft, but not in a rubbery way, it feels more like lying on a thick bed of pine needles, covered with cloth. Its color is changing constantly.".
 The read text of the Yoga Mat is "A small tag in the corner says 'Anagrams make great passwords.'"
 
@@ -2727,7 +2863,7 @@ Understand "crackers" or "oyster crackers" or "hexagon" as Oyster Cracker.
 
 [------]
 
-The Mirrored Ball is a treasure. The Mirrored Ball is in the old barn. "Small shards of sunlight shine down from the mirrored ball hanging high up in the rafters."
+The Mirrored Ball is a treasure. The Mirrored Ball is in the old barn. "Small shards of sunlight shine down from the [bold type]mirrored ball[roman type] hanging high up in the rafters."
 The description of the Mirrored Ball is "This mirrored ball reflects the light of a thousand dreams!".
 
 The Mirrored Ball can be hung or unhung. The Mirrored Ball is unhung.
@@ -2786,7 +2922,7 @@ Instead of eating the pretzel:
 			
 [-----]
 	
-The Can of Rediwhip is an edible treasure. The can of rediwhip is in the kitchen. "You see classic all american rediwhip here."
+The Can of Rediwhip is an edible treasure. The can of rediwhip is in the kitchen. "You see a classic all-american [bold type]can of rediwhip[roman type] here."
 The description of the can of rediwhip is "It's the classic spray can of Whipped Cream.".
 
 Instead of drinking the can of rediwhip:
@@ -2810,7 +2946,7 @@ The read text of the medal is "First Class Spelunker Agent!"
 
 [-----]
 
-The Nutter Butter is an edible treasure. It is nowhere. "A nutter butter is floating here."
+The Nutter Butter is an edible treasure. It is nowhere. "A [bold type]nutter butter[roman type] is floating here."
 The description of the Nutter Butter is "The classic, peanut-shaped, cookie."
 
 Instead of eating the Nutter Butter:
@@ -2832,7 +2968,7 @@ The Succulent is a treasure. The succulent is in The Clearing.
 The description of the Succulent is "A small, green succulent, suitable for placing on a shelf or even on top of a sleek, fast-flying jet.".
 The read text of the succulent is "eeeeeee!"
 
-Understand "shelf" or "circular shelf" or "table" or "mounting shelf" or "mount" or "circular mounting" or "circular mounting shelf" as top of jet.
+Understand "shelf" or "circular shelf" or "table" or "mounting shelf" or "circular mounting" or "circular mounting shelf" as top of jet.
 
 mount_var is a number that varies. mount_var is initially 0.
 mount_score is a number that varies. mount_score is initially 0.
@@ -2841,7 +2977,7 @@ Instead of putting the succulent on the jet, try putting the succulent on top of
 
 Instead of putting the succulent on the top of the jet:
 	if mount_score is 0: 
-		increase score by 5;
+		record "Putting the succulent on the Jet (and 2 for succulent)" as achieved;
 		now mount_score is 1;
 		now mount_var is 1;
 		continue the action;
@@ -3064,7 +3200,7 @@ index	quip_string1
 4	"I hope you at least know you can shorten examine to just x. HELP will give you a few more tips if this is your first adventure."
 5	"Every treasure is a clue... except food, I just like food."
 6 	"Have you watched the TV Show LOST?"
-7	"What is your favorite song? Oh, that's right, this is a one way communicator. I have a whole playlist for you to listen to! http://spoti.fi/3w9WxSD"
+7	"What is your favorite song? I have a whole playlist for you to listen to! http://spoti.fi/3w9WxSD"
 8	"Did you look at the scenery by the lane. You may find a path there you missed."
 9	"You are still examing me? I hope you helped Desmond. He's hungry. It won't save the world, but you'll at least get a yummy treat out of it."
 10	"Have you read The Quantum Contingent? It's one of my favorite books."
@@ -3096,7 +3232,7 @@ index	quip_string1
 6	"The lever is for docking and undocking only!"
 7	"I'm sorry Dave, I can't do that... hahahahaha..."
 8	"So, how's it going? Do I need to provide better hints?"
-9	"You aren't allowed to touch the touch controls. You aren't qualified. Oh that's right, you can't talk to me... this is a one way conversation."
+9	"You aren't allowed to touch the touch controls. You aren't qualified."
 10	"I can't tell you everything, but I can tell you more."
 11	"Did you push the big red button?"
 12	"Ok, if you are going to keep doing this, maybe just use the up arrow."
@@ -3324,45 +3460,34 @@ The description of Desmond is "Desmond is Sarah's husband and the CTO at BrightS
 Desmond is carrying the flint and the steel striker.
 
 Understand "husband" or "desi" or "des" or "desy" or "non spy" as Desmond.
-	
-Instead of asking Desmond about something:
-	if the topic understood matches "flint":
-		say "It's supposed to spark, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker.";
-		now the player has the flint;
-		now the player has the steel striker;
-		now desmond_carry is 0;
-	else if the topic understood matches "the flint":
-		say "It's supposed to spark, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker.";
-		now the player has the flint;
-		now the player has the steel striker;
-		now desmond_carry is 0;
-	else if the topic understood matches "steel striker":
-		say "I was using it to try and spark a fire, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker.";
-		now the player has the flint;
-		now the player has the steel striker;
-		now desmond_carry is 0;
-	else if the topic understood matches "the steel striker":
-		say "I was using it to try and spark a fire, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker.";
-		now the player has the flint;
-		now the player has the steel striker;
-		now desmond_carry is 0;
-	else if the topic understood matches "the striker":
-		say "I was using it to try and spark a fire, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker.";
-		now the player has the flint;
-		now the player has the steel striker;
-		now desmond_carry is 0;
-	else if the topic understood matches "striker":
-		say "I was using it to try and spark a fire, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker.";
-		now the player has the flint;
-		now the player has the steel striker;
-		now desmond_carry is 0;
-	else if the topic understood matches "steel":
-		say "I was using it to try and spark a fire, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker.";
-		now the player has the flint;
-		now the player has the steel striker;
-		now desmond_carry is 0;
-	otherwise:
-		say "Where's Sarah? She knows a lot more than me."
+
+After asking Desmond about a topic listed in the Table of Desmond's responses:
+	say "[line break][response entry][line break]";
+	now the player has the flint;
+	now the player has the steel striker;
+	now desmond_carry is 0;
+
+After asking the Desmond about something:
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else if the topic understood is a topic listed in the Table of Non-flint responses:
+		say "[line break][response entry][line break]";
+	else:
+		say "[line break][one of]Desmond looks at you quizzically, 'I don't know much about that.'[or]Where's Sarah? She knows a lot more than me.[or]Hmmmm... maybe Martin knows.[or]Desmond looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[cycling]"
+
+Table of Desmond's responses
+topic	response
+"the/-- flint/steel/striker"	"It's supposed to spark, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker."
+"steel striker"	"It's supposed to spark, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker."
+"the steel striker"	"It's supposed to spark, but I've had no luck. Here, you give it a try.[line break]Desmond hands you the flint and steel striker."
+
+Table of Non-flint responses
+topic	response
+"Sarah"	"She's my fiancee, she knows a lot more than me."
+"Jack"	"Jack's my soon to be brother-in-law. Quite the quantum scientist."
+"Martin"	"Martin is in charge."
+"kara"	"Kara is quite an agent herself, and she and Jack are very close."
+"leo"	"In my business, LEO stands for Low Earth Orbit."
 		
 Chapter 7 - Florin
 
@@ -3562,10 +3687,10 @@ Instead of showing the Mirrored Ball to [person]:
 	say "[line break]'Cool! Where you get that? You should show it to Sarah, she'd get a kick out of it.'";
 	
 Instead of showing the Tardis Communicator to Jack:
-	say "[line break]'The TARDIS Communicator can be very helpful. Every time you examine it, TARDIS will talk to you. Unfortunately, it's version 1.0, so it's a one way connection. You can't give TARDIS any commands.'";
+	say "[line break]'The TARDIS Communicator can be very helpful. Every time you examine it, TARDIS will talk to you.'";
 	
 Instead of showing the Tardis Communicator to Martin:
-	say "[line break]'The TARDIS Communicator is useful. Every time you examine it, TARDIS will talk to you. Since it's version 1.0, it's a one way connection. You can't give TARDIS any commands.'";
+	say "[line break]'The TARDIS Communicator is useful. Every time you examine it, TARDIS will talk to you.'";
 	
 Instead of showing the Tardis Communicator to Desmond:
 	say "[line break]Desmond tilts his head and looks at you with a smirk, 'Like I said, I'm just here for the s'mores. That looks like a spy thing.'";
@@ -3614,8 +3739,10 @@ Section 1 - Kara
 After asking the Kara about a topic listed in the Table of Kara's responses, say "[line break][response entry][line break]".
 
 After asking the Kara about something:
-	if the topic understood is not a topic listed in the Table of Kara's responses:
-		say "[line break][one of]Kara looks at you quizzically, 'I don't know much about that.[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Kara looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[cycling]"
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else:
+		say "[line break][one of]Kara looks at you quizzically, 'I don't know much about that.'[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Kara looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[cycling]"
 		
 After telling the Kara about a topic listed in the Table of Kara's responses, say "[line break][response entry][line break]".
 
@@ -3630,37 +3757,27 @@ topic	response
 "Jack"	"I love Jack. He happens to be an expert at quantum computing, and a great dancer."
 "Sarah"	"Sarah is my soon to be sister-in-law. Why do you ask about her? Do you know something I don't?"
 "Martin"	"He is like a father to me. His connections are legendary."
-"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
-"computer"	"Tardis is our computer. Jack built it."
-"the computer"	"Tardis is our computer. It is in space."
+"the/-- Quantum Contingent" or "the/-- Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
+"the/-- computer"	"Tardis is our computer. Jack built it."
 "tardis"	"Tardis is our computer. Jack built it."
-"continuum"	"It is the name of Cassie's lab."
-"mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about."
-"the mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about."
+"the/-- continuum"	"It is the name of Cassie's lab."
+"the/-- mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about."
 "Florin"	"Florin is gracious. A great agent. I heard he used to be MI-5."
 "Cassie"	"She's brilliant with time, but can't she see Martin is in love with her?"
-"President"	"President Bridget O'Connor is one of the finest women I have ever known."
-"Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
+"the/-- President"	"President Bridget O'Connor is one of the finest women I have ever known."
+"the/-- Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"Greg"	"I heard he's an author?"
-"Karen"	"Did you mean Kara or Cassie?"
-"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
-"laser/lasers"	"Cassie said there is a special laser in the US that she needs to have turned on for her experiment to work."
-"crystal"	"Cassie needs it to power the console in her lab If she can contain it somehow."
-"metaverse/vr/meta"	"I know Cassie has a great VR lab."
+"the/-- laser/lasers"	"Cassie said there is a special laser in the US that she needs to have turned on for her experiment to work."
+"the/-- crystal"	"Cassie needs it to power the console in her lab If she can contain it somehow."
+"the/-- metaverse/vr/meta"	"I know Cassie has a great VR lab."
 "virtual reality"	"I know Cassie has a great VR lab."
-"the lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
-"the abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"the/-- lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
+"the/-- abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
 "robert clayton"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "clayton/robert"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
-"password/passcode"	"I don't know. You'd have to ask Cassie."
-"pendant"	"The legend is that Lancelot could do unbelievable things if he was wearing this pendant. It had a mirror-like finish. He polished it every day."
+"the/-- password/passcode"	"I don't know. You'd have to ask Cassie."
+"the/-- pendant"	"The legend is that Lancelot could do unbelievable things if he was wearing this pendant. It had a mirror-like finish. He polished it every day."
 
 Section 2 - Desmond	
 
@@ -3671,7 +3788,9 @@ Section 3 - Florin
 After asking the Florin about a topic listed in the Table of Florin's responses, say "[if robert clayton is asleep]You got Robert, You got the Crystal! Stop talking to me and help Cassie power up the console![else][line break][response entry][line break]".
 
 After asking the Florin about something:
-	if the topic understood is not a topic listed in the Table of Florin's responses:
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else:
 		say "[line break][if robert clayton is asleep]You got him![else][one of]I need to find my gun![or]Sorry, I'm not sure.[or]We need to stop talking and stop Robert![or]Florin looks over his shoulder and says, 'Did you hear a lion?'[cycling]"
 		
 After telling the Florin about a topic listed in the Table of Florin's responses, say "[if robert clayton is asleep]You got Robert, You got the Crystal! Stop talking to me and help Cassie power up the console![else][line break][response entry][line break]".
@@ -3687,38 +3806,27 @@ topic	response
 "Jack"	"Jack's great. He happens to be an expert at quantum computing. That's why we recruited him."
 "Sarah"	"Sarah and I go way back. I trained her."
 "Martin"	"Martin and I competed in sports in college!"
-"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
-"computer"	"Tardis is our computer. Jack built it."
-"the computer"	"Tardis is our computer. It is in space."
-"tardis"	"Tardis is our computer. Jack built it."
-"continuum"	"It is the name of Cassie's lab."
-"mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about. My job is to find the Crystal. I've tracket Robert down before."
-"the mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about. My job is to track down Robert. I've done that before."
+"the/-- Quantum Contingent" or "the/-- Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
+"the/-- computer/tardis"	"Tardis is our computer. Jack built it."
+"the/-- continuum"	"It is the name of Cassie's lab."
+"the/-- mission"	"We must get to the Continuum and power up the console. Cassie said it needs an extremely powerful energy source, and Jack has to do something with lasers in DC. I'm not sure what that is about. My job is to find the Robert and hopefully he'll have the crystal. I've tracked Robert down before."
 "Florin"	"Uh, that's me."
 "Cassie"	"She's brilliant with time, but can't she see Martin is in love with her?"
-"President"	"President Bridget O'Connor is a great leader."
-"Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
+"the/-- President"	"President Bridget O'Connor is a great leader."
+"the/-- Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is a great leader."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"Greg"	"I heard he's an author?"
-"Karen"	"Did you mean Kara or Cassie?"
-"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
-"laser/lasers"	"Cassie said there is a special laser in the US that she needs to have turned on for her experiment to work."
-"crystal"	"Cassie needs it to power something in her lab."
-"metaverse/vr/meta"	"I know Cassie has a great VR lab."
-"virtual reality"	"I know Cassie has a great VR lab."
-"pendant"	"It has something to do with Cassie's time experiment, but I'm not sure what."
-"the lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
-"the abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"the/-- laser/lasers"	"Cassie said there is a special laser in the US that she needs to have turned on for her experiment to work."
+"the/-- crystal"	"Cassie needs it to power something in her lab."
+"the/-- metaverse/vr/meta"	"I know Cassie has a great VR lab."
+"the/-- virtual reality"	"I know Cassie has a great VR lab."
+"the/-- pendant"	"It has something to do with Cassie's time experiment, but I'm not sure what."
+"the/-- lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
+"the/-- abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
 "robert clayton"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "clayton/robert"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
-"password/passcode"	"I don't know. You'd have to ask Cassie."
-"pendant"	"The legend is that Lancelot could do unbelievable things if he was wearing this pendant. It had a mirror-like finish. He polished it every day."
+"the/-- password/passcode"	"I don't know. You'd have to ask Cassie."
+"the/-- pendant"	"The legend is that Lancelot could do unbelievable things if he was wearing this pendant. It had a mirror-like finish. He polished it every day."
 	
 Section 4 - Server
 
@@ -3730,14 +3838,16 @@ Section 5 - Cassie
 After asking Cassie about a topic listed in the Table of Cassie's responses, say "[line break][response entry][line break]".
 
 After asking the Cassie about something:
-	if the topic understood is not a topic listed in the Table of Cassie's responses:
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else:
 		say "[line break][one of]hmmm, for a magical result, you'll need to do more than just the mission. When all else fails, use lasers I always say![or]I think Lancelot knew something. If you find his pendant, wear it for good luck.[or]I haven't time for this, we must stabilize the entanglement![at random]"
 		
 After telling the Cassie about a topic listed in the Table of Cassie's responses, say "[line break][response entry][line break]".
 
 After telling the Cassie about something:
 	if the topic understood is not a topic listed in the Table of Cassie's responses:
-		say "[line break][one of]Cassie looks at you quizzically, 'I don't know much about that.[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Cassie, 'I'm afraid I don't know dear.'[at random]"
+		say "[line break][one of]Cassie looks at you quizzically, 'I don't know much about that.'[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Cassie, 'I'm afraid I don't know dear.'[at random]"
 		
 Table of Cassie's responses
 topic	response
@@ -3746,49 +3856,38 @@ topic	response
 "Sarah"	"Sarah is sweet, a former student. Why do you ask about her? Do you know something I don't?"
 "Jack"	"He is one of the best quantum scientists I know, and I know them all."
 "Martin"	"I know now that he is my one true love."
-"computer"	"Oh, I don't talk about such things."
-"the computer"	"Oh, I don't talk about such things."
-"tardis"	"Tardis is from Dr. Who isn't it?"
-"mission"	"I need to make the entanglement stable! Your mission is to help me do so. I need a power source and TARDIS needs to be rebooted. Jack is helping me with a laser in DC."
-"the mission"	"I need to make the entanglement stable! Your mission is to help me do so. I need a power source and TARDIS needs to be rebooted. Jack is helping me with a laser in DC."
-"continuum"	"The Continuum Is my lab."
+"the/-- computer"	"Oh, I don't talk about such things."
+"the/-- tardis"	"Tardis is from Dr. Who isn't it?"
+"the/-- mission"	"I need to make the entanglement stable! Your mission is to help me do so. I need a power source and TARDIS needs to be rebooted. Jack is helping me with a laser in DC."
+"the/-- continuum"	"The Continuum Is my lab."
 "Florin"	"Florin is a friend. I would recommend agents, he would develop them!"
-"President"	"President Bridget O'Connor is considered an outstanding leader."
-"Prime Minister"	"Martin always said he'd make a great Quotient Agent."
+"the/-- President"	"President Bridget O'Connor is considered an outstanding leader."
+"the/-- Prime Minister"	"Martin always said he'd make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is known as a great leader."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"Greg"	"I heard he's an author?"
-"Karen"	"Did you mean Kara or Cassie?"
-"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
-"mt dew"	"Refreshing!"
-"mountain dew"	"Refreshing!"
-"mtn dew"	"Refreshing!"
-"laser/lasers"	"Critical for stabilization."
-"crystal"	"The Crystal is said to be a Kyber Crystal, It should be able to provide the power we need for the quantum console."
-"movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
-"password/passcode/pass"	"Oh, it changes every day. I leave myself an anagram hint in my yoga simulation in the VR lab."
-"console"	"It needs a strong power source, and to open it, you'll need my password."
-"quantum console"	"It needs a strong power source, and to open it, you'll need my password."
+"the/-- laser/lasers"	"Critical for stabilization."
+"the/-- crystal"	"The Crystal is said to be a Kyber Crystal, It should be able to provide the power we need for the quantum console."
+"the/-- movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
+"the/-- password/passcode/pass"	"Oh, it changes every day. I leave myself an anagram hint in my yoga simulation in the VR lab."
+"the/-- console"	"It needs a strong power source, and to open it, you'll need my password."
+"the/-- quantum console"	"It needs a strong power source, and to open it, you'll need my password."
 "yoga"	"I practice yoga every day in my VR lab."
 "meditation"	"I meditate every day in my VR lab"
-"tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
-"light saber"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
-"light sabre"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
-"metaverse/vr/exit"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
+"the/-- tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
+"the/-- light saber"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
+"the/-- light sabre"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
+"the/-- metaverse/vr/exit"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
 Of course, hackers will alter metaverse programs to remove both safety features. With no blinking-eye exit, and no id mark, it would be hard to tell what is real and what is meta. With the appropriate setup, you could trap a person in the metaverse, and make them think it’s real. "
-"the metaverse"	"I suspect the metaverse will be almost indistinguishable from reality by 2049. Standard metaverse gear will need simple safeguards to help you determine if you were in real space or meta space. For example, rapid eye blinking could be an industry standard for ‘get me out of here.’ All meta suits would then back you to the real world instantly if rapid eye blinking occurred. Also, maybe every avatar will have an identifying mark on the bottom of their left foot/shoe/appendage that shows their metaverse id. Kind of like Woody in Toy Story.
-Of course, hackers will alter metaverse programs to remove both safety features. With no blinking-eye exit, and no id mark, it would be hard to tell what is real and what is meta. With the appropriate setup, you could trap a person in the metaverse, and make them think it’s real. "
-"entanglement/tanglement/tangle/stablize/time" or "quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But what if I told you, I found a way to force a state without breaking entanglement."
+"the/-- entanglement/tanglement/tangle/stablize/time" or "the/-- quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But what if I told you, I found a way to force a state without breaking entanglement."
 		
 Section 6 - Tardis	
 
 After asking Tardis Communicator about a topic listed in the Table of Tardis's responses, say "[line break][response entry][line break]".
 
 After asking the Tardis Communicator about something:
-	if the topic understood is not a topic listed in the Table of Tardis's responses:
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else:
 		say "[line break][one of]hmmm, I am a very capable computer and I still don't know what you are asking about![or]Really? That's your question? Try asking about something important.[or]I'm at a total loss. Did you reboot me yet?[at random]"
 		
 After telling the Tardis Communicator about a topic listed in the Table of Tardis's responses, say "[line break][response entry][line break]".
@@ -3806,35 +3905,22 @@ topic	response
 "cassie/cassandra/prof/professor"	"She is a Professor at Oxford university, a brilliant Quantum Scientist and an world renowned expert on time, as in the time continuum. In fact, she calls her lab the continuum."
 "professor eaton"	"She is a Professor at Oxford university, a brilliant Quantum Scientist and an world renowned expert on time, as in the time continuum. In fact, she calls her lab the continuum."
 "Martin"	"He's the boss. A very capable fellow who has connections around the world, including at the White House. He and Cassie used to go out, but the whole human emotion thing is beyond my programming."
-"computer/tardis"	"Who me?"
-"the computer"	"Who me?"
-"continuum"	"It's the name of Cassie's Time Lab."
-"the continuum"	"It's the name of Cassie's Time Lab."
-"mission"	"You need to make the entanglement stable! Cassie will need a power source and Jack is doing somethig with a laser in DC."
-"the mission"	"You need to make the entanglement stable! Cassie will need a power source and Jack is doing somethig with a laser in DC."
+"the/-- computer/tardis"	"Who me?"
+"the/-- continuum"	"It's the name of Cassie's Time Lab."
+"the/-- mission"	"You need to make the entanglement stable! Cassie will need a power source and Jack is doing somethig with a laser in DC."
 "Florin"	"Florin is a friend. I would recommend agents, he would develop them!"
-"President"	"President Bridget O'Connor is considered an outstanding leader."
-"Prime Minister"	"Martin always said he'd make a great Quotient Agent."
+"the/-- President"	"President Bridget O'Connor is considered an outstanding leader."
+"the/-- Prime Minister"	"Martin always said he'd make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is known as a great leader."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent. There are a lot of great Jason's... There's Jason Bourne, the spy, Jason, leader of the Argonauts, just to name a couple. Did you have another Jason in mind?"
-"Greg"	"I heard he's an author?"
-"Karen"	"Did you mean Kara or Cassie?"
-"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
-"mt dew"	"Refreshing!"
-"mountain dew"	"Refreshing!"
-"mtn dew"	"Refreshing!"
-"metaverse/vr/meta"	"We should meet there. I could take the shape of a human in the metaverse."
-"laser/lasers"	"Lasers are considered critical for stabilization."
-"crystal"	"The Crystal is said to be a Kyber Crystal, It should be able to provide the power needed for the quantum console."
-"movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
-"tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
-"light saber"	"A light saber would be perfect for powering Cassie's console. You'd need a Kyber Crystal and something to contain the energy."
-"light sabre"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
-"entanglement/tanglement/tangle/stablize/time"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But Cassie is trying to find a way to force a state without breaking entanglement."
-"quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But Cassie is trying to find a way to force a state without breaking entanglement."
+"the/-- metaverse/vr/meta"	"We should meet there. I could take the shape of a human in the metaverse."
+"the/-- laser/lasers"	"Lasers are considered critical for stabilization."
+"the/-- crystal"	"The Crystal is said to be a Kyber Crystal, It should be able to provide the power needed for the quantum console."
+"the/-- movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
+"the/-- tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
+"the/-- light saber"	"A light saber would be perfect for powering Cassie's console. You'd need a Kyber Crystal and something to contain the energy."
+"the/-- light sabre"	"A light saber would be perfect for powering my console. You'd need a Kyber Crystal and something to contain the energy."
+"entanglement/tanglement/tangle/stablize/time" or "quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But Cassie is trying to find a way to force a state without breaking entanglement."
 "quantum/physics"	"Let's see... how can I put this... Quantum physics is the physics of very tiny things. Lots of really spooky things happen at these atomic scales."
 		
 	
@@ -3843,14 +3929,16 @@ Section 7 - Jack
 After asking the Jack about a topic listed in the Table of Jack's responses, say "[line break][response entry][line break]".
 
 After asking the Jack about something:
-	if the topic understood is not a topic listed in the Table of Jack's responses:
-		say "[line break][one of]Jack looks at you quizzically, 'I don't know much about that.[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Jack looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[at random]"
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else:
+		say "[line break][one of]Jack looks at you quizzically, 'I don't know much about that.'[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Jack looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[at random]"
 		
 After telling the Jack about a topic listed in the Table of Jack's responses, say "[line break][response entry][line break]".
 
 After telling the Jack about something:
 	if the topic understood is not a topic listed in the Table of Jack's responses:
-		say "[line break][one of]Jack looks at you quizzically, 'I don't know much about that.[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Jack looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[at random]"
+		say "[line break][one of]Jack looks at you quizzically, 'I don't know much about that.'[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Jack looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[at random]"
 
 
 Table of Jack's responses
@@ -3859,107 +3947,87 @@ topic	response
 "Kara"	"I love Kara. She happens to be an expert at quantum communication, and a great dresser."
 "Sarah"	"Sarah is my sister. Why do you ask about her? Do you know something I don't?"
 "Martin"	"He is like a father to me."
-"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
+"the/-- Quantum Contingent" or "the/-- Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
 "continuum"	"It is the name of Cassie's lab."
-"computer"	"Tardis is our quantum computer. I built it."
-"the computer"	"Tardis is our quantum computer. It is in space."
-"tardis"	"Tardis is our quantum computer. I built it."
-"mission"	"We must get to the Continuum and power up the console. As for me, Cassie wants me to do something with a laser in DC. That's all I know right now."
-"the mission"	"We must get to the Continuum and power up the console. As for me, Cassie wants me to do something with a laser in DC. That's all I know right now."
+"the/-- computer/tardis"	"Tardis is our quantum computer. I built it."
+"the/-- mission"	"We must get to the Continuum and power up the console. As for me, Cassie wants me to do something with a laser in DC. That's all I know right now."
 "Florin"	"Florin is great. He saved my butt more than once!"
 "Cassie"	"She's brilliant with time, but can't she see Martin is in love with her?"
-"President"	"President Bridget O'Connor is one of the finest women I have ever known."
-"Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
+"the/-- President"	"President Bridget O'Connor is one of the finest women I have ever known."
+"the/-- Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"Greg"	"I heard he's an author?"
-"Karen"	"Did you mean Kara or Cassie?"
-"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
-"mt dew"	"Refreshing!"
-"mountain dew"	"Refreshing!"
-"mtn dew"	"Refreshing!"
-"metaverse/vr/meta"	"I know Cassie has a great VR lab."
-"laser/lasers"	"All I know is that Cassie said there was a laser that would help her with her time experiment by aligning the quantum states."
-"movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
-"the lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
-"the abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"the/-- metaverse/vr/meta"	"I know Cassie has a great VR lab."
+"the/-- laser/lasers"	"All I know is that Cassie said there was a laser that would help her with her time experiment by aligning the quantum states."
+"the/-- movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
+"the/-- lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
+"the/-- abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
 "robert clayton"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "clayton/robert"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "meditation"	"I meditate to clear my head"
-"tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
-"light saber"	"It is a powerful weapon, just like Star Wars, except, I think we might be able to really make one."
-"light sabre"	"A powerful weapon with a british spelling."
-"crystal"	"I heard it was stolen by the Lion. It might be an energy source like the one Cassie needs."
+"the/-- tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
+"the/-- light saber"	"It is a powerful weapon, just like Star Wars, except, I think we might be able to really make one."
+"the/-- light sabre"	"A powerful weapon with a british spelling."
+"the/-- crystal"	"I heard it was stolen by the Lion. It might be an energy source like the one Cassie needs."
+"entanglement/tanglement/tangle/stablize/time" or "quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But Cassie is trying to find a way to force a state without breaking entanglement."
+"quantum/physics"	"Let's see... how can I put this... Quantum physics is the physics of very tiny things. Lots of really spooky things happen at these atomic scales."
+
 
 Section 8 - Sarah
 
 After asking the Sarah about a topic listed in the Table of Sarah's responses, say "[line break][response entry][line break]".
 
 After asking the Sarah about something:
-	if the topic understood is not a topic listed in the Table of Sarah's responses:
-		say "[line break]Sarah smiles. 'That's an interesting question!'.[line break]"
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else:
+		say "[line break]Sarah smiles. 'That's an interesting questions!'[line break]"
 		
 After telling the Sarah about a topic listed in the Table of Sarah's responses, say "[line break][response entry][line break]".
 
 After telling the Sarah about something:
 	if the topic understood is not a topic listed in the Table of Sarah's responses:
-		say "[line break][one of]Sarah looks at you quizzically, 'I don't know much about that.[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Sarah looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[at random]"
+		say "[line break][one of]Sarah looks at you quizzically, 'I don't know much about that.'[or]Sorry, I'm not sure.[or]Hmmmm... maybe Martin knows.[or]Sarah looks at you the way your dog look at you when you ask it if it wants to go for a walk and then says, 'Wow. I really don't know.'[at random]"
 
 Table of Sarah's responses
 topic	response
 "desmond"	"I love Desmond, he's my husband."
-"Jack"	"I love Jack, he's my brother."
+"Jack"	"I am very protective of my brother, Jack. We are quite close."
 "Kara"	"Kara is an expert at quantum communication."
 "Florin"	"Florin is a very capable agent. He trained me. He is a dear friend."
 "Martin"	"He is like a father to me. His connections are legendary."
-"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
-"computer"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
-"the computer"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
+"the/-- Quantum Contingent" or "the/-- Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
+"the/-- computer/computers"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
 "tardis"	"Tardis is our computer. It is in space. My brother, Jack, designed it."
-"mission"	"We must get to the Continuum and power up the console. I'm going to Cleveland to look for a way to contain a powerful energy source to power the console. Anything else is an unknown at this point."
-"the mission"	"We must get to the Continuum and power up the console. I'm going to Cleveland to look for a way to contain a powerful energy source to power the console. Anything else is an unknown at this point."
-"continuum"	"The Continuum is what Cassie calls her lab."
+"the/-- mission"	"We must get to the Continuum and power up the console. I'm going to Cleveland to look for a way to contain a powerful energy source to power the console. Anything else is an unknown at this point."
+"the/-- continuum"	"The Continuum is what Cassie calls her lab."
 "Cassie"	"She's brilliant with time, but can't she see Martin is in love with her?"
-"professor/eaton/prof"	"Professor Eaton is a brilliant scientist. She is the world's expert on time, and runs the quantum lab in Oxford."
+"the/-- professor/eaton/prof"	"Professor Eaton is a brilliant scientist. She is the world's expert on time, and runs the quantum lab in Oxford."
 "Professor Eaton"	"Professor Eaton is a brilliant scientist. She is the world's expert on time, and runs the quantum lab in Oxford."
 "President"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Prime Minister"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"Greg"	"I heard he's an author?"
-"Karen"	"Did you mean Kara or Cassie?"
-"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
-"metaverse/vr/meta"	"VR can be fun. I use the Meta Quest 8, myself.."
-"crystal"	"Cassie needs it to power something, but it needs a containment chamber."
-"tube/bulb"	"Maybe it could be used as a containment chamber?"
-"fluorescent tube"	"Maybe it could be used as a containment chamber?"
-"the lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
-"key/cage"	"Feel free to search Martin's office. It's part of your test."
-"iron cage"	"Feel free to search Martin's office. It's part of your test."
-"the abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"the/-- metaverse/vr/meta"	"VR can be fun. I use the Meta Quest 8, myself.."
+"the/-- crystal"	"Cassie needs it to power something, but it needs a containment chamber."
+"the/-- tube/bulb" or "the/-- fluorescent tube"	"Maybe it could be used as a containment chamber?"
+"the/-- lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
+"the/-- abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"the/-- key/cage" or "the/-- iron cage"	"Feel free to search Martin's office. It's part of your test."
 "robert clayton"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "clayton/robert"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
-"tapestry"	"I don't know anything about the tapestry. Maybe you should ask Cassie."
-"light saber"	"A light saber requires tremendous energy to operate."
-"light sabre"	"A light saber requires tremendous energy to operate."
-"crystal"	"I heard it was stolen by the lion."
+"the/-- tapestry"	"I don't know anything about the tapestry. Maybe you should ask Cassie."
+"the/-- light saber"	"A light saber requires tremendous energy to operate."
+"the/-- light sabre"	"A light saber requires tremendous energy to operate."
 
 Section 9 - Martin
 
 After asking the Martin about a topic listed in the Table of Martin's Replies, say "[line break][muse entry][line break]".
 
 After asking the Martin about something:
-	if the topic understood is not a topic listed in the Table of Martin's Replies:
+	if the topic understood is a topic listed in the Table of generic responses:
+		say "[line break][response entry][line break]";
+	else:
 		say "[line break]Martin narrows his eyes. 'Do you have any important questions?'"
 		
 After telling Martin about a topic listed in the Table of Martin's Replies, say "[line break][muse entry][line break]".
@@ -3968,40 +4036,31 @@ After telling Martin about something:
 	if the topic understood is not a topic listed in the Table of Martin's Replies:
 		say "[line break]Martin narrows his eyes. 'Excuse me? What are you talking about?'"
 
-
 [We can then provide a simple table giving Martin's responses:]
 
 Table of Martin's Replies
 Topic	Muse
-"Quantum Contingent" or "Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
-"the mission" or "mission"	"We need to help Cassie with her experiment. That means, rebooting the computer and getting to the Continuum to help her with her quantum console. Jack, Sarah and Kara are working on some other things required for the experiment to work. Only Cassie understands everything."
-"continuum"	"The name of Cassie's lab."
-"quantum console" or "console"	"You'll have to ask Cassie about that."
-"computer" or "the computer"	"Tardis is our quantum computer. It is in space."
-"tardis"	"Tardis is our quantum computer. It is in space."
+"the/-- Quantum Contingent" or "the/-- Contingent"	"The Quantum Contingent is a criminal organization whose members attempted to become immortal, and was willing to blackmail the world superpowers using their own Quantum Computer based on Quotient's computer design. They were stopped by Quotient in 2028."
+"the/-- mission"	"We need to help Cassie with her experiment. That means, rebooting the computer and getting to the Continuum to help her with her quantum console. Jack, Sarah and Kara are working on some other things required for the experiment to work. Only Cassie understands everything."
+"the/-- continuum"	"The name of Cassie's lab."
+"the/-- quantum console" or "the/-- console"	"You'll have to ask Cassie about that."
+"the/-- computer/tardis"	"Tardis is our quantum computer. It is in space."
 "Jack"	"Jack is like a son to me."
 "Sarah"	"Sarah is like a daughter to me."
 "Kara"	"Kara really proved herself during The Quantum Contingent Mission"
 "Florin"	"Florin is a very capable agent, and a long time friend."
 "Cassie"	"Cassie is very dear to me. I've known her since I was her student at Oxford."
-"President" or "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
-"Prime Minister" or "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
-"Greg"	"I heard he's an author?"
-"Karen"	"Did you mean Kara or Cassie?"
-"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
-"chili/skyline/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
-"metaverse/vr/meta"	"The metaverse is entertaining, but not something I know a lot about. I do know that Cassie has a VR lab."
-"escape hatch" or "the escape hatch"	"It's right over your head."
-"escape"	"Did you try up?"
-"tapestry"	"I don't know anything about the tapestry. Maybe you should ask Cassie."
-"the lion" or "lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
-"abyss" or "the abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
+"the/-- President" or "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
+"the/-- Prime Minister" or "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
+"the/-- metaverse/vr/meta"	"The metaverse is entertaining, but not something I know a lot about. I do know that Cassie has a VR lab."
+"the/-- escape hatch" or "escape"	"It's right over your head."
+"the/-- tapestry"	"I don't know anything about the tapestry. Maybe you should ask Cassie."
+"the/-- lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
+"the/-- abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
 "robert clayton"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
 "clayton/robert"	"Robert Clayton has escaped from the Abyss. He is a member of the Quantum Contingent."
-"light saber" or "light sabre"	"A light saber requires tremendous energy to operate."
-"communicator/comm/comms" or "tardis communicator"	"The TARDIS communicator will allow TARDIS to talk to you while you are on your mission. It can be very helpful in the field."
+"the/-- light saber" or "the/-- light sabre"	"A light saber requires tremendous energy to operate."
+"the/-- communicator/comm/comms" or "the/-- tardis communicator"	"The TARDIS communicator will allow TARDIS to talk to you while you are on your mission. It can be very helpful in the field."
 
 Section 10 - Robot
 
@@ -4015,14 +4074,33 @@ After asking the Robot about something:
 
 Table of Robot's Replies
 Topic	r2d2
-"pod bay doors"	"I'm sorry Dave, I can't do that."
-"doors" or "bay"	"I'm sorry Dave, I can't do that."
-"pod" or "pod bay"	"I'm sorry Dave, I can't do that."
-"light bulbs" or "light" or "lights"	"Fluorescent bulbs will always have dark ends."
-"christmas tree" or "tree"	"I will decorate the tree. You are not needed."
-"chili/skyline/skyline/scone/pretzel"	"Yum! Delicious."
-"skyline chili"	"Yum! Delicious."
-"dew/Pimms/beer/water/pop"	"Refreshing!"
+"the/-- pod bay doors"	"I'm sorry Dave, I can't do that."
+"the/-- doors" or "the/-- bay"	"I'm sorry Dave, I can't do that."
+"the/-- pod" or "the/-- pod bay"	"I'm sorry Dave, I can't do that."
+"the/-- light bulbs" or "the/-- light" or "the/-- lights"	"Fluorescent bulbs will always have dark ends."
+"the/-- christmas tree" or "the/-- tree"	"I will decorate the tree. You are not needed."
+"the/-- chili/skyline/skyline/scone/pretzel"	"Yum! Even I like this."
+"the/-- skyline chili"	"Yum! Delicious. Even for me."
+"the/-- dew/Pimms/beer/water/pop"	"Refreshing! But I prefer a little WD-40"
+
+[----- Generic Responses for All Characters -------]
+
+Table of generic responses
+Topic	response
+"the/-- chili/skyline/scone/pretzel"	"Yum! Delicious!"
+"the/-- mt dew" or "the/-- mountain dew" or "the/-- mtn dew"	"Yahoo Mountain Dew!"
+"the/-- pimms/beer/dew/soda/pop/water"	"Refreshing!"
+"the/-- skyline chili"	"Yum!"
+"smore"	"Delicious. It takes me back to my childhood!"
+"Greg"	"I heard he's an author?"
+"Karen"	"Did you mean Kara or Cassie?"
+"Frank"	"Frank is a villian in the book, but in real life he's a great guy!"
+"*"	"I'm uncertain what you mean."
+"dogs"	"Everyone should love dogs."
+"the/-- movies"	"I love Movies... I think Knight and Day is one of my favorites."
+"quantum"	"Quantum... yes, that's how Tardis works... but you'll need to ask Jack, Cassie, or Tardis itself for more info."
+"pickles"	"Hmmmm... like the kind you eat, of the kind you hang on the Christmas tree?"
+"the/-- hyperloop/hyper/loop"	"Think of it like a superfast subway."
 
 Section 11 - Talking
 
@@ -4334,7 +4412,7 @@ Playlisting is an action out of world. Understand "playlist" as Playlisting.
 
 Carry out playlisting:
 	say "The playlist of rooms you have visited is: [paragraph break]";
-	repeat with item running through the list of visited rooms:
+	repeat with item running through the visited-rooms-list:
 		if song title of the item is "":
 			say "[item] has no song yet!";
 		otherwise:
@@ -4413,6 +4491,7 @@ Release along with a file of "Spoiler-free Map" called "Quotient The Game - Map 
 Release along with a file of "Song list - Minor Spoilers" called "Quotient Song List.pdf".
 Release along with a file of "Full Map - SPOILERS" called "Quotient The Game - Map.pdf".
 Release along with a file of "Puzzle Diagram - SPOILERS" called "Quotient Puzzle Diagram.pdf".
+Release along with a file of "Formal Full Map" called "Full formal quotient map.pdf".
 
 
 

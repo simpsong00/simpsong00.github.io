@@ -38,6 +38,9 @@ Include Inanimate Listeners by Emily Short.
 
 Chapter 3 Some helpful help tools from Emily Short's Bronze
 
+rule for printing the name of a thing (called t):
+	say "[bold type][the printed name of t][roman type]";
+
 Taking inventory is acting confused. Looking is acting confused.
 
 After acting confused for the third turn:
@@ -134,7 +137,7 @@ Understand "help" as helping.
 
 
 Carry out helping:
-	say "[story title] understands commands, such as '[command prompt]examine [a random thing that can be seen by the player]'. You can get some information about the current game state with commands such as LOOK, EXAMINE, INVENTORY, TAKE, etc. Commands are typically in the format of VERB, VERB NOUN, or VERB with/to NOUN. As in TAKE, TAKE THE SHOVEL, or TALK TO SARAH. In some cases, you may do something more complex like this. >HIT THE NAIL WITH THE HAMMER, or >ASK MARTIN ABOUT THE COMPUTER.[paragraph break]In [italic type]Quotient the Game[roman type], if you take an item, it will automatically be examined for you. (but not read) In this fictional world, based on real places, you move around with commands like NORTH, SOUTH, UP, etc. If you are ever unsure of the ways you can go, just type EXITS.[paragraph break]There are a few special commands: PLACES, OBJECTS, SONG, and PLAYLIST (oh and FUN). The places and objects commands list either the places you've been or the objects you've seen. The song command tells you the song associated with the location you are in, and finally, the playlist command creates a special playlist for you by listing all of the songs associated with the rooms you have traversed in your adventure. FUN tells you some fun things to do, although some of them could be considered minor spoilers, so beware![paragraph break]If you stumble across the TARDIS communicator, take it! You can examine it again [italic type]and again[roman type] to hear the Quotient quantum computer talk to you about things that might be of interest near you. If you examine it enough, it will give you some hints based on the region you are currently in. You can also ask it questions. If you need a starting hint, type HINT.[line break]And remember, commands can be abbreviated. For example, n is NORTH and x is EXAMINE.[paragraph break]Scenery that can be examined in a room will be shown in [italic type]italics.[roman type] 'Things' that can be examined or taken are listed in a paragraph below the room description, and the directions to exit are listed in a separate paragraph as well.[paragraph break]You get points from collecting treasures and solving puzzles. As your points go higher, so does your rank! Type POINTS for more info, or SCORE to see your score. You should figure out the true mission of the game as you go along. [paragraph break]Remember, in addition to EXAMINE, you can READ certain objects as well. It is helpful to read things if they can be read. Finally, ABOUT will tell you what the game is based on, and CREDITS gives credit where credit is due![paragraph break]Now, let's get adventuring!";
+	say "[story title] understands commands, such as '[command prompt]examine [a random thing that can be seen by the player]'. You can get some information about the current game state with commands such as LOOK, EXAMINE, INVENTORY, TAKE, etc. Commands are typically in the format of VERB, VERB NOUN, or VERB with/to NOUN. As in TAKE, TAKE THE SHOVEL, or TALK TO SARAH. In some cases, you may do something more complex like this. >HIT THE NAIL WITH THE HAMMER, or >ASK MARTIN ABOUT THE COMPUTER.[paragraph break]In [italic type]Quotient the Game[roman type], if you take an item, it will automatically be examined for you. (but not read) In this fictional world, based on real places, you move around with commands like NORTH, SOUTH, UP, etc. If you are ever unsure of the ways you can go, just type EXITS.[paragraph break]There are a few special commands: PLACES, OBJECTS, SONG, and PLAYLIST (oh and FUN). The places and objects commands list either the places you've been or the objects you've seen. The song command tells you the song associated with the location you are in, and finally, the playlist command creates a special playlist for you by listing all of the songs associated with the rooms you have traversed in your adventure. FUN tells you some fun things to do, although some of them could be considered minor spoilers, so beware![paragraph break]If you stumble across the TARDIS communicator, take it! You can examine it again [italic type]and again[roman type] to hear the Quotient quantum computer talk to you about things that might be of interest near you. If you examine it enough, it will give you some hints based on the region you are currently in. You can also ask it questions. If you need a starting hint, type HINT.[line break]And remember, commands can be abbreviated. For example, n is NORTH and x is EXAMINE.[paragraph break]Scenery that can be examined in a room will be shown in [italic type]italics.[roman type] Directions to exit and 'Things' that can be examined or taken are listed in a paragraph below the room description in [bold type]bold[roman type].[paragraph break]You get points from collecting treasures and solving puzzles. As your points go higher, so does your rank! Type POINTS for more info, or SCORE to see your score. You should figure out the true mission of the game as you go along. [paragraph break]Remember, in addition to EXAMINE, you can READ certain objects as well. It is helpful to read things if they can be read. Finally, ABOUT will tell you what the game is based on, and CREDITS gives credit where credit is due![paragraph break]Now, let's get adventuring!";
 
 Hinting is an action out of world.
 Understand "hint" or "hints" or "clue" or "clues" as hinting.
@@ -478,13 +481,15 @@ Book 2 - Play Begins
 Chapter 1 When Play Begins
 
 When play begins:
-	say "Do you want to become an agent of Quotient, the global, independent spy agency? You are at the entrance to their top-secret headquarters. Proceed down the lane to begin your mission and earn the rank of Secret Agent! If this is your first text adventure, just type [bold type]help[roman type]."
+	say "Do you want to become an agent of Quotient, the global, independent spy agency? You are at the entrance to their top-secret headquarters. Proceed down the lane to begin your mission and earn the rank of Secret Agent! If this is your first text adventure, just type [bold type]help[roman type].";
+	add the location to the visited-rooms-list;
+	now the location is noted.
 
 Chapter 2 - Ports and Chairs and Songs for Rooms
 
 A port is a kind of room. Definition: a room is unflyable if it is not an port.
 Instead of going by a vehicle (called the flight) to somewhere unflyable:
-    say "You can't drive the [the flight] off-road."
+    say "You can't drive [the flight] off-road."
 
 A chair is a kind of supporter. A chair is always enterable. Every chair allows seated and standing. A chair is usually seated.
 
@@ -579,7 +584,7 @@ The description of the leaflet is "It's a tri-fold leaflet addressed to 'secret 
 
 Understand "mail" or "box" as Mailbox.
 	
-The read text of the The Leaflet is "WELCOME Agent![line break]Congratulations on being selected to join Quotient. [italic type]Why am I at the end of a lane leading to an old farmhouse?[roman type] Well, this is no ordinary farmhouse. Your first step is to find your way into Quotient Headquarters! From there you will be given more information about your first mission. Type HELP if you need more help. Good Luck! [paragraph break]'Quotient, The Game' is a text adventure game based on the books [italic type]The Quantum Contingent[roman type] and [italic type]Quantum Time[roman type]. 'No computer should be without one!'[paragraph break]
+The read text of the The Leaflet is "WELCOME Agent![line break]Congratulations on being selected to join Quotient. [italic type]Why am I at the end of a lane leading to an old farmhouse?[roman type] Well, this is no ordinary farmhouse. [bold type]Your first step is to find your way into Quotient Headquarters![roman type] Once you find the secret headquarters, you'll get a chance to meet Martin, the founder of Quotient. He will brief you on the rest of your mission! Type HELP if you need more help. Good Luck! [paragraph break]'Quotient, The Game' is a text adventure game based on the books [italic type]The Quantum Contingent[roman type] and [italic type]Quantum Time[roman type]. 'No computer should be without one!'[paragraph break]
 [italic type]    *leaflet and mailbox based on the original ZORK, one of the first interactive fiction adventures[roman type]"
 
 Lane is west of The Security Checkpoint. "The long lane is lined with [italic type]large willow trees[roman type] whose branches sway smoothly in the breeze, their branches sway smoothly, calming one’s nerves with only a glance. These massive centurions are actually part of the sophisticated security system guarding the route to this remote, hidden fortress near Greenville, Ohio.[paragraph break]You can go [bt]east[rt] or [bt]west[rt] on the lane."
@@ -862,7 +867,7 @@ Smokehouse is west of the Yard. "An old ivy-covered smokehouse surrounded by a [
 The shovel is an object. It is in the Smokehouse. "A rusty shovel is here. It looks like it would only work in sand."
 The description of the shovel is "Looks like an ordinary shovel to me.".
 
-Bowling balls are scenery in the Smokehouse. "The bowling balls are many different colors."
+Bowling balls are scenery in the Smokehouse. "The bowling balls are many different colors. There are 4 in total, an 8 lb, 15 lb, 16lb and 23 lb."
 
 Instead of taking the bowling balls:
 	say "They are an integral part of the garden, and are just for your visual pleasure."
@@ -871,7 +876,7 @@ Understand "bowling ball" or "bowling ball garden" as Bowling balls.
 
 Fire Pit is south of The Smokehouse. "[if the player was in Parking]You pass by the back of the house and stumble upon a fire pit surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go north or return south to parking.[else]A fire pit is surrounded by a meticulously maintained fairy flower garden. There is a small ornamental [italic type]fairy[roman type] in the garden.[paragraph break]You can go [bt]north[rt] to the Smoke House, or you can go [bt]south[rt] to parking.[end if]"
 
-The Fairy is scenery in The Fire Pit. "The inanimate, ornamental fairy appears to be twirling around, dancing, and enjoying life."
+The Fairy is scenery in The Fire Pit. "The inanimate, ornamental fairy appears to be twirling around, dancing, and enjoying life. The unique thing about this fairy is the shiny pendant hanging around her neck."
 
 Understand "ornamental fairy" as Fairy.
 
@@ -1237,13 +1242,13 @@ topic	reply
 "lancelot"	"Our intel suggests that Lancelot existed, and during his time, he had a pendant and a crystal which gave him special powers. This is believed to be the same crystal Professor Cassandra Eaton has been using in time experiments."
 "prof/professor/cassandra/cassie/eaton"	"Professor Cassandra Eaton is a distinguised Professor of Quantum Studies at Oxford. She has been working on understanding the dimension of time for almost three decades. She is thought to have a close relationship with Martin, the head of Quotient."
 "professor cassandra eaton" or "professor eaton"	"Professor Cassandra Eaton is a distinguised Professor of Quantum Studies at Oxford. She has been working on understanding the dimension of time for almost three decades. She is thought to have a close relationship with Martin, the head of Quotient."
-"pendant"	"The mysterious pendant of lancelot has been lost. It was believed to have surfaced at Oxford in 1730, but has not been seen since. Some consider it's existance nothing more than a myth."
+"pendant"	"The mysterious pendant of Lancelot has been lost. It was believed to have surfaced at Oxford in 1730, but has not been seen since. Some consider it's existence nothing more than a myth."
 "Tardis/computer" or "Quotient Computer"	"The Quotient Computer is housed in a boxy space station and is affectionately called TARDIS. This is due to the space station's resemblance in shape to a 1960s London police box like Dr. Who’s time machine, only much larger. Quotient even painted it TARDIS blue. The Quotient Computer is, by far, the most powerful quantum computer in the world, and is capable of breaking almost any encryption, giving Quotient a huge advantage in the spy game.[paragraph break]The quantum computer is in the space station because space is: [paragraph break]
 [bold type]Cold[roman type]: Space is about 2.7 kelvin or -270 degrees Celsius, only slightly above absolute zero, and for a good quantum computer, you need to get as close to absolute zero as possible.[paragraph break]
 [bold type]Still[roman type]: It seems strange to think of space as still. After all, the international space station is traveling around the earth at almost five miles per second, or about 15,500 miles per hour. However, with no gravity, no earth tremors, and no air, it turns out you can build a suspension system on an orbiting space station perfect for cradling a quantum computer.[paragraph break]
 [bold type]Secure[roman type]: Only the richest individuals can afford private space travel, so the risk of a physical security attack is low. "
 "me/myself"	"You are the merest interloper here."
-"martin"	"Martin is the head of Quotient. Quotient was believed to have been founded out of a quantum computing effort Martin began many years ago. He has many connections in government and pulled Jack Alexander in to help with their quantum efforts. It is believed they successfully created a very powerful quantum computer, but it's existance is still unconfirmed."
+"martin"	"Martin is the head of Quotient. Quotient was believed to have been founded out of a quantum computing effort Martin began many years ago. He has many connections in government and pulled Jack Alexander in to help with their quantum efforts. It is believed they successfully created a very powerful quantum computer, but it's existence is still unconfirmed."
 "kara"	"Kara worked at Nasa Glenn Research Center in Cleveland and is an expert on quantum networking. She has romantic ties to Jack Alexander and is now suspected to be a full-fledged agent of Quotient."
 "sarah"	"Sarah Alexandar was believed to be recruited to Quotient when she was at Oxford. She is a perfect candidate due to her knowledge of multiple languages and her natural athleticism. She was trained by Florin Ardelean."
 "continuum"	"This is the lab where Professor Eaton runs her time experiments."
@@ -1252,7 +1257,7 @@ topic	reply
 "Jack" or "Jack Alexander"	"Jack was the original designer of the Quotient Quantum Computer and is now assumed to be an agent for Quotient."
 "Bridget" or "President"	"President Bridget O'Connor has deep connections to the intelligence agencies having once run the NSA. It is assumed she has some knowledge of Quotient's capabilities."
 "Jason Stephenson" or "Prime Minister" or "Jason"	"Jason Stephenson is our Prime Minister. His martial arts skills are unmatched."
-"light saber" or "saber/sabre" or "light sabre"	"Engineers have been working on creating a light saber using a crystal, but it's energy has been hard to contain."
+"light saber" or "saber/sabre" or "light sabre"	"Engineers have been working on creating a light saber using a crystal, but its energy has been hard to contain."
 "mt dew" or "mtn dew" or "Mountain Dew" or "dew"	"A powerful liquid subject, often ingested by agents for energy, or just because it tastes good."
 "metaverse"	"Professor Cassie Eaton has a VR lab where she is experimenting with simulating different versions of the future. She is our foremost expert on time."
 "nela park" or "nela"	"Nela Park was home to GE Lighting. It is now thought to be a cover operation for US Government research on light sabers."	
@@ -1408,7 +1413,7 @@ After waiting when the player is in the IMAX Theater:
 		say "The main feature finally starts!! Professor Eaton is on the screen in her lab. The camera zooms in and she says 'What if we could send messages across time. My console requires an enormous amount of energy to enable entanglement stabilization by means of the quantum Zeno effect. It'[paragraph break]     ... [bt]CRASH[rt]... a loud noise interrupts and the movie stops. House lights are turned on, and an employee announces over the speakers: [paragraph break]'Sorry folks, the film broke, the movie is now over.'";
 		record "Watching the IMAX film" as achieved.
 
-A theater poster is a thing in the IMAX Theater. It is fixed in place. "A theater poster, featuring Professer Cassandra Eaton is mounted at the doorway."
+A theater poster is a thing in the IMAX Theater. It is fixed in place. "A theater poster, featuring Professor Cassandra Eaton is mounted at the doorway."
 The description of the theater poster is "It's a large teal movie poster showing the beautiful Cassandra Eaton, with equations spinning around her head. It almost glows from the poster backlighting.".
 The read text of the theater poster is "Quantum Entanglement and Time, featuring Cassandra Eaton, the Lucasian professsor of mathemetics and head of all quantum studies at the University of Oxford.".
 
@@ -1457,7 +1462,7 @@ Understand "Rock and Roll" as Rock & Roll Hall of Fame.
 
 Nela Park is a a room. It is south of Burke Lakefront. "Welcome to the nation's first industrial park (NELA: National Electric Lamp Association). It is where many engineering [italic type]nimrods[roman type] worked on exotic light sources. Now it is mostly deserted except for a few elderly lighting engineers still trying to solve [italic type]end-darkening[roman type].[paragraph break]There are buildings to the [bt]east[rt] and [bt]west[rt]. Heading [bt]north[rt] takes you back to the airport."
 
-End Darkening is scenery in Nela Park. "End darkening occurs when the cathode vaporizes and deposits the metal on the glass tube wall. However, I don't think these engineers are really working on solving end-darkening since these bulbs like these were phased out years ago."
+End-Darkening is scenery in Nela Park. "End-darkening occurs when the cathode vaporizes and deposits the metal on the glass tube wall. However, I don't think these engineers are really working on solving end-darkening since these bulbs like these were phased out years ago."
 
 After going to Nela Park for the first time:
 	try looking;
@@ -1568,12 +1573,19 @@ Instead of pushing controls:
 Instead of touching controls:
 	say "no touching the controls... move along."
 
-The Airbnb is north of the Control Center. "This is the best hotel room view in the Solar System.[paragraph break]The viewing area for the Quantum Computer lies to the [bt]west[rt]. The Control Center lies to the [bt]south[rt]." The shade door is here. "A large metal shade blocks what you assume is a window." 
-The description of the shade door is "A large metal protective shade or shield.".
+The Airbnb is north of the Control Center. "This is the best hotel room view in the Solar System.[paragraph break]The viewing area for the Quantum Computer lies to the [bt]west[rt]. The Control Center lies to the [bt]south[rt]."
 
-Instead of opening the shade door, say "The shade opens revealing the On a [italic type]Clear Day You Can See Forever[roman type] window. It’s named after the old musical. The view is unimaginably beautiful. Space is the definition of dark. It makes the stars stand out like diamonds on velvet. Of course, the most amazing view is of our own blue marble, Earth. The drifting clouds created hazy, moving lines across the blue orb. Entire continents seemed small, our place in the universe seemed less important. We are but one planet in a vast sea of endless space. Lightning storms exploded in the clouds as they traversed land and sea. As former NASA astronaut Mike Massimino mused, 'How can something so beautiful be tolerated by human eyes.'"
+The Shade is in the Airbnb. Shade can be openable. The Shade is openable. The Shade can be open. Shade can be closed. Shade is closed. "[if closed]A large metal protective [bold type]shade[roman type] blocks what you assume is a window.[else]The open [bold type]shade[roman type] reveals the [italic type]Clear Day You Can See Forever Window.[roman type]"
 
-Clear Day is scenery in the Airbnb. "On a Clear Day You Can See Forever is a 70's musical comedy drama, but I digress. On TARDIS, it's a cool window into the depths of space."
+The description of the Shade is "[if closed]A large metal protective [bold type]shade[roman type] blocks what you assume is a window.[else]The open [bold type]shade[roman type] reveals the [italic type]Clear Day You Can See Forever Window.[roman type]". 
+
+Report opening the shade: 
+	say "The shade opens revealing the On a [italic type]Clear Day You Can See Forever[roman type] window. It’s named after the old musical. The view is unimaginably beautiful. Space is the definition of dark. It makes the stars stand out like diamonds on velvet. Of course, the most amazing view is of our own blue marble, Earth. The drifting clouds created hazy, moving lines across the blue orb. Entire continents seemed small, our place in the universe seemed less important. We are but one planet in a vast sea of endless space. Lightning storms exploded in the clouds as they traversed land and sea. As former NASA astronaut Mike Massimino mused, 'How can something so beautiful be tolerated by human eyes.'"
+
+Report closing the shade: 
+	say "It is sad to say good bye to such a beautiful view."
+
+Clear Day You Can See Forever Window is scenery in the Airbnb. "On a Clear Day You Can See Forever is a 70's musical comedy drama, but I digress. On TARDIS, it's a cool window into the depths of space."
 
 Understand "see forever" or "forever" or "on a clear day" as Clear Day.
 
@@ -1729,7 +1741,7 @@ Report blowing out:
 	otherwise: 
 		say "You blow on [the noun], to little effect."
 
-The Crystal is a thing. "The Crystal is a brilliant blue color." The Crystal can be scored or unscored.
+The Crystal is a thing. "The [bold type]Crystal[roman type] is a brilliant blue color." The Crystal can be scored or unscored.
 
 Section 1 - Robert Clayton
 
@@ -1843,13 +1855,13 @@ Understand "DC" and "Washington" and "Washington DC" as the Andrews Air Force Ba
 
 The DC Area is a region. Andrews Air Force Base, National Mall, Washington Monument, The White House, The Lincoln Memorial, The National Cathedral, The Chapel, US Capitol, Smithsonian Castle, National Portrait Gallery, Lawsons Deli, Reflecting Pool, National Air Space Museum are in the DC Area.
 
-Andrews Air Force Base is a port. It is west of the Lincoln Memorial. "This large AirForce base is west of Washington DC. (In other words, head east). Washington, D.C. was laid out into four quadrants, Northwest (NW), Northeast (NE), Southeast (SE) and Southwest (SW). Each of the quadrants was bounded by axes that radiated out from the U.S. Capitol building. Streets were labeled to indicate their quadrant. It was designed in a baroque style, with avenues emanating out from the many green spaces across the district.[paragraph break]Regardless, you still need to go [bt]east[rt]."
+Andrews Air Force Base is a port. It is west of the Lincoln Memorial. "This large Air Force base is west of Washington DC. (In other words, head east). Washington, D.C. was laid out into four quadrants, Northwest (NW), Northeast (NE), Southeast (SE) and Southwest (SW). Each of the quadrants was bounded by axes that radiated out from the U.S. Capitol building. Streets were labeled to indicate their quadrant. It was designed in a baroque style, with avenues emanating out from the many green spaces across the district.[paragraph break]Regardless, you still need to go [bt]east[rt]."
 
 National Mall is a room. "[if aslan is magic]You are standing on the expansive lawn of the National Mall, a green stretch in the heart of Washington, DC. The air is filled with the scent of blooming flowers. Your watch says it is 2050. An [italic type]older couple[roman type] is having a picnic on the mall. They look especially joyful.[endgamemall][otherwise]You are standing on the expansive lawn of the National Mall, a green stretch in the heart of Washington, DC. The air is filled with the murmur of tourists and the scent of blooming flowers.[paragraph break]The Capitol is to the [bt]east[rt], the Smithsonian Castle is to the [bt]north[rt], and the National Air and Space Museum is to the [bt]south[rt]. West leads back to the Washington Monument."
 
 To say endgamemall:
 say "[paragraph break]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[line break]";
-say "[bold type]Congratulations! You have won the game.[paragraph break][roman type]Feel free to wander around, I have moved the Jet to Andrews Air Force base for your convenience.[line break]If you examine the older couple on the lawn, you notice they look like Cassie and Martin. Cassie managed to send a message back in time, asking Martin to marry her earlier in their lives. (that was the binary message you found in her lab)[paragraph break]He did, and thanks to a little Aslan magic (and a mysterious Lancelot pendant) you managed to travel forward in time to see them sitting on the National Mall. Oh, and by the way, you have been granted a scroll listing all of the treasures and their locations in case you want to go back and collect any you missed. I hope you enjoyed [italic type]Quotient, the Game![roman type]";
+say "[bold type]Congratulations! You have won the game.[paragraph break][roman type]Feel free to wander around, I have moved the Jet to Andrews Air Force base for your convenience.[line break]If you examine the older couple on the lawn, you notice they look like Cassie and Martin. Cassie managed to send a message back in time, asking Martin to marry her earlier in their lives. (that was the binary message you found in her lab)[paragraph break]He did, and thanks to a little Aslan magic (and a mysterious Lancelot pendant) you managed to travel forward in time to see them sitting on the National Mall. Oh, and by the way, you have been granted a scroll listing all of the treasures and their locations in case you want to go back and collect any you missed. Finally, you can see your very own custom playlist using the command PLAYLIST. There is a song associated with each room, and your playlist will show the songs in the order that you visited the rooms. [line break]I hope you enjoyed [italic type]Quotient, the Game![roman type][line break]";
 say "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[line break]";
 
 
@@ -1877,7 +1889,7 @@ Instead of taking Ducks:
 
 Understand "talk to ducks" as a mistake ("The ducks look at you as if you are crazy.")
 
-Lincoln Memorial is west of the Reflecting Pool. "The Lincoln Memorial sits majestically at the western end of the National Mall, a tribute to the 16th president of the United States. The [italic type]Statue of Lincoln[roman type] is seated here in contemplation.[paragraph break]The Reflecting Pool stretches out to the [bt]east[rt], leading back to the National Mall. The National Cathedral is a few miles [bt]north[rt] of here. [bt]West[rt] returns to Andrews AirForce Base."
+Lincoln Memorial is west of the Reflecting Pool. "The Lincoln Memorial sits majestically at the western end of the National Mall, a tribute to the 16th president of the United States. The [italic type]Statue of Lincoln[roman type] is seated here in contemplation.[paragraph break]The Reflecting Pool stretches out to the [bt]east[rt], leading back to the National Mall. The National Cathedral is a few miles [bt]north[rt] of here. [bt]West[rt] returns to Andrews Air Force Base."
 
 The Statue of Lincoln is scenery in the Lincoln Memorial. "This incredible Georgia White Marble statue weights 175 tons and is a scale such that if Lincoln were standing, he would be 28 feet tall."
 
@@ -1944,7 +1956,7 @@ After switching on the laser:
 		say "The laser shuts off.";
 		now the laser is switched off;
 		
-clock tower is scenery in the National Cathedral. "[if laser is energized]The clock tower that appeard on the wall, illuminated by the laser, is striking 1:07 p.m.[else]You can't make anything out on the wall without more light."
+clock tower is scenery in the National Cathedral. "[if laser is energized]The clock tower that appeared on the wall, illuminated by the laser, is striking 1:07 p.m.[else]You can't make anything out on the wall without more light."
 
 The creature is scenery in the National Cathedral. "[if laser is energized]The creature that appeared on the wall, illuminated by the laser, appears to be a large cat, like a lion.[else]You can't make anything out on the wall without more light."
 		
@@ -2037,10 +2049,11 @@ Instead of entering the pod:
 Section 2 Plane
 
 The Quotient Jet is a vehicle in the Airstrip. "One of Quotient’s jets is here primed and ready."
-The description of the Quotient Jet is "The Quotient Jet is a matte-black Gulfstream 950ER Superjet with a custom interior featuring a conference table with a holographic projection screen. It also has a bedroom, and the treat cupboard is stocked with fresh chocolate-covered strawberries every time you board."
+The description of the Quotient Jet is "The Quotient Jet is a matte-black Gulfstream 950ER Superjet with a custom interior featuring a conference table with a holographic projection screen. It also has a bedroom, and the treat cupboard is stocked with fresh chocolate-covered strawberries."
 The Quotient Jet can be airborne or grounded. 
 The Quotient Jet is grounded.
 The top of the Quotient Jet is a supporter. The top of the Quotient Jet is part of the Quotient Jet.
+The read text of the Quotient Jet is "950ER - 107"
 
 Understand "plane" as Quotient Jet.
 
@@ -2048,7 +2061,7 @@ Instead of taking the Quotient Jet:
 	say "The jet is much to large for you to carry. You can enter the jet if you wish.";
 
 Instead of examining the Quotient Jet:
-	say "The Quotient Jet is a matte-black Gulfstream 950ER Superjet. It has what appears to be a small circular shelf on top of the cockpit. It features a custom interior featuring a conference table with a holographic projection screen. It also has a bedroom, and the treat cupboard is stocked with fresh chocolate-covered strawberries every time you board.[if mount_var is 1]It appears there is a succulent on top of the cockpit like some sort of crazy hat.[else]";
+	say "The Quotient Jet is a matte-black Gulfstream 950ER Superjet. It has what appears to be a small circular shelf on top of the cockpit. It features a custom interior featuring a conference table with a holographic projection screen. It also has a bedroom, and the treat cupboard is stocked with fresh chocolate-covered strawberries.[if mount_var is 1]It appears there is a succulent on top of the cockpit like some sort of crazy hat.[else]";
 
 A room can be flyable or non-flyable. The Airstrip, Hidden Airbase, Spaceport, Burke Lakefront, Andrews Air Force Base, Lunken Airport, Arusha Airport and Narnia Lamp are flyable.
 
@@ -2080,9 +2093,10 @@ The player carries a map. The description of the map is "The map shows all the p
 > Andrews Air Force Base (DC)[line break]
 > Arusha Airport (Africa or ARK)[line break]
 > Spaceport.[line break]
-> Hidden Airbase (Oxford)[line break]"
+> Hidden Airbase (Oxford)[paragraph break]
+To fly the jet, say FLY TO location, as in FLY TO CVG"
 
-The read text of the map is "The map shows all the places you can fly the Quotient jet to including the Airstrip (HQ), the Hidden Airbase (Oxford), Lunken Airport (Cincinnati or CVG), Burke Lakefront Airport (Cleveland or CLE), Arusha Airport (Africa or ARK), Andrews Air Force Base (DC), and the Spaceport."
+The read text of the map is "The map shows all the places you can fly the Quotient jet to including the Airstrip (HQ), the Hidden Airbase (Oxford), Lunken Airport (Cincinnati or CVG), Burke Lakefront Airport (Cleveland or CLE), Arusha Airport (Africa or ARK), Andrews Air Force Base (DC), and the Spaceport.[line break]To fly the jet use the command: FLY TO location, as in FLY TO CVG"
 
 Section 3 SpaceX Rocket
 
@@ -2106,6 +2120,9 @@ The description of the cockpit is "[if the player is in the rocket]The cockpit i
 
 buttons is part of the cockpit. "There are three buttons on the cockpit."
 The description of the buttons is "There is a yellow button, a black button and a red button.".
+
+Instead of pushing buttons:
+		say "You need to push a specific button, just randomly pushing buttons in a rocket ship can be dangerous!";
 	
 The yellow button is a part of the cockpit. The description of the yellow button is "A yellow button next to a clock."
 
@@ -2197,7 +2214,10 @@ Instead of pushing the red button:
 			say "[paragraph break][bold type]WHOOP WHOOP, Ejection System Activated![roman type] You are thrown out of the rocket, experiencing 3g's in the process. After being thrown clear, another explosion rocks your world as your parachute is blasted open, saving you from certain death as you drift the short distance back to the launch pad.";
 			move player to spaceport.
 
-The Blackness of Space is a room. The Blackness of Space is part of the Outerspace Area. "[if player is in rocket]You are in the vastness of space, having successfully launched from the Earth. You can see the docking ring of TARDIS nearby, and the blue marble you call home off in the distance.[else]You are spacewalking in space... be careful not to drift away! You can see the docking ring of TARDIS as well as your favorite planet, Earth."
+The Blackness of Space is a room. The Blackness of Space is part of the Outerspace Area. "[if player is in rocket]You are in the vastness of space, having successfully launched from the Earth. You can see the docking ring of TARDIS nearby, and the blue marble you call home off in the distance.[else]You are spacewalking in space... be careful not to drift away! You can see the docking ring of TARDIS nearby, and the blue marble you call home off in the distance."
+
+The docking ring is scenery in The Blackness of Space.
+The description of the docking ring is "I think it's critical to your ability to dock???"
 
 Instead of launching when the countdown begun is false:
     say "The rocket can't launch yet. The countdown hasn't started.";
@@ -2434,13 +2454,13 @@ channelnumber	entertainment
 	
 The read text of the Entertainment Weekly is "You glance inside the Entertainment Weekly and look at the TV listings, channel numbers 4, 8, 15, 16 and 23"
 
-The player carries a watch. The description of the watch is "A watch that can receive messages." 
+The player carries a watch. The watch is wearable. The description of the watch is "A watch that can receive messages." 
 
 Instead of examining the watch:
 	say "You glance at your watch, and see the time and weather.";
 	say "[time of day]".
 
-The SCIF is a device in the Conference Room. "A secure communication device, or SCIF, is here. It is used for connecting with the President."
+The SCIF is a device in the Conference Room. "A secure communication device, or [bold type]SCIF[roman type], is here. It is used for connecting with the President."
 The description of the SCIF is "This secure communication device, or SCIF, is state of the art. It is not only secure, it also projects a hologram of people in the Oval Office into the conference room. It is primarily used for connecting with the President.".
 
 The SCIF can be switched on or switched off. The SCIF is switched off.
@@ -2472,7 +2492,12 @@ Instead of switching off the SCIF:
 
 A lab bench is scenery in Cassie's lab. The lab bench is a supporter. "The lab bench has a solid back industrial top"
 
-The Quantum Console is a container on the Lab Bench. "A console is here, it appears to have a place to hold a long cylindrical object. It also has a digital display."
+The quantum digital display is scenery in Cassie's lab. 
+
+Instead of examining the quantum digital display:
+	say "[if Quantum Console is unscored]The display is a long series of spinning zeros.[else]The display says: '01101101 01100001 01110010 01110010 01111001 00100000 01001101 01100001 01110010 01110100 01101001 01101110 00001010'";
+
+The Quantum Console is a container on the Lab Bench. "A [bold type]quantum console[roman type] is here, it appears to have a place to hold a long cylindrical object. It also has a [italic type]digital display[roman type]."
 The Quantum Console can be activated or unactivated. The Quantum Console is unactivated.
 The Quantum Console can be switched on or switched off. The Quantum Console is switched off.
 The Quantum Console can be powered or unpowered. The Quantum Console is unpowered.
@@ -2528,7 +2553,7 @@ Instead of switching on the Quantum Console:
 			otherwise:
 				say "You need Cassie to activate the console."
 				
-A keyboard is a thing. The keyboard is in Cassie's lab. "A wireless keyboard is here."
+A keyboard is a thing. The keyboard is in Cassie's lab. "A wireless [bold type]keyboard[roman type] is here."
 The description of the keyboard is "The keyboard is a standard qwerty keyboard. It is wireless, and backlit.".
 
 Instead of taking the keyboard:
@@ -2561,7 +2586,7 @@ Instead of going through the Escape Tunnel:
 		
 The Trap Door is scenery in Martin's office. "It's a ceiling... maybe just go up?"
 
-The cold suit is a wearable thing. "A cold suit in your size is here."
+The cold suit is a wearable thing. "A [bold type]cold suit[roman type] in your size is here."
 The cold suit is in the Hallway.
 The description of the Cold Suit is "The cold suit looks a lot like a diver's wetsuit, but it makes you appear to be the same temperature as the ambient air around you. This renders you invisible to infrared sensors.".
 The read text of the Cold Suit is "Cold Suits R US"
@@ -2577,7 +2602,11 @@ The treat cupboard is in the Quotient jet.
 The treat cupboard is closed.
 The treat cupboard is fixed in place.
 
-The chocolate-covered strawberry are a thing. "An exquisite dark-chocolate covered strawberry."
+The manual is a thing in the Quotient Jet. "A user manual for the jet is here."
+The description of the manual is "It's a very short user manual since the jet is fully autonomous. You can read it if you want."
+The read text of the manual is "To fly the jet, say FLY TO location, as in FLY TO CVG"
+
+The chocolate-covered strawberry are a thing. "An exquisite dark-[bold type]chocolate covered strawberry[roman type]."
 The chocolate-covered strawberry are in the treat cupboard. 
 The description of the chocolate-covered strawberry is "It is an exquisite, dark-chocolate-covered strawberry. The bright red berry peaks over the top of the chocolate jacket and the green stem makes a perfect handle.".
 Understand "berry" as chocolate-covered strawberry.
@@ -2608,7 +2637,7 @@ Report entering the throne:
 Underlying relates various things to one thing. The verb to underlie means the underlying relation. The verb to be under means the underlying relation. The verb to be beneath means the underlying relation.
 
 Instead of looking under the throne:
-	say "You find an old graduation program.";
+	say "You find an old [bold type]graduation program[roman type].";
 	now the graduation program is in the Sheldonian Theatre;
 	try taking the graduation program;	
 	
@@ -2798,12 +2827,14 @@ The read text of the scroll of treasure is "Examine me in order to read me."
 
 [-----]
 
-A stack of Zorkmid Bills is a treasure. The stack of zorkmid bills are nowhere. "On the ground sit 200 neatly stacked zorkmid bills." Understand "notes" or "banknotes" or "bank notes" or "zorkmids" as the bills. The description of the bills is "[banknotes]".
+A stack of Zorkmid Bills is a treasure. The stack of zorkmid bills are nowhere. "On the ground sit 200 neatly stacked [bold type]zorkmid bills.[roman type]" 
+
+Understand "notes" or "banknotes" or "bank notes" or "zorkmids" as the bills. The description of the bills is "[banknotes]".
 The read text of the bills is "In Frobs We Trust".
 
 [-----]
 
-Yoga Mat is a treasure. It is nowhere. "A beautiful yoga mat is here. Its color oscillates gently."
+Yoga Mat is a treasure. It is nowhere. "A beautiful [bold type]yoga mat[roman type] is here. Its color oscillates gently."
 The description of the Yoga Mat is "It is a large yoga mat, thicker than most. It is soft, but not in a rubbery way, it feels more like lying on a thick bed of pine needles, covered with cloth. Its color is changing constantly.".
 The read text of the Yoga Mat is "A small tag in the corner says 'Anagrams make great passwords.'"
 
@@ -2849,7 +2880,7 @@ Understand "crackers" or "oyster crackers" or "hexagon" as Oyster Cracker.
 
 [------]
 
-The Mirrored Ball is a treasure. The Mirrored Ball is in the old barn. "Small shards of sunlight shine down from the mirrored ball hanging high up in the rafters."
+The Mirrored Ball is a treasure. The Mirrored Ball is in the old barn. "Small shards of sunlight shine down from the [bold type]mirrored ball[roman type] hanging high up in the rafters."
 The description of the Mirrored Ball is "This mirrored ball reflects the light of a thousand dreams!".
 
 The Mirrored Ball can be hung or unhung. The Mirrored Ball is unhung.
@@ -2908,7 +2939,7 @@ Instead of eating the pretzel:
 			
 [-----]
 	
-The Can of Rediwhip is an edible treasure. The can of rediwhip is in the kitchen. "You see classic all american rediwhip here."
+The Can of Rediwhip is an edible treasure. The can of rediwhip is in the kitchen. "You see a classic all-american [bold type]can of rediwhip[roman type] here."
 The description of the can of rediwhip is "It's the classic spray can of Whipped Cream.".
 
 Instead of drinking the can of rediwhip:
@@ -2932,7 +2963,7 @@ The read text of the medal is "First Class Spelunker Agent!"
 
 [-----]
 
-The Nutter Butter is an edible treasure. It is nowhere. "A nutter butter is floating here."
+The Nutter Butter is an edible treasure. It is nowhere. "A [bold type]nutter butter[roman type] is floating here."
 The description of the Nutter Butter is "The classic, peanut-shaped, cookie."
 
 Instead of eating the Nutter Butter:
@@ -3251,7 +3282,7 @@ index	quip_string1
 8	"I wish I could go punting, but I'm stuck up here in Space."
 9	"Fortunately, I can just do a VR simulation in my head of whereever I want to go."
 10	"I hear some world leaders have graduated from Oxford."
-11	"There are rumors of a lancelot pendant?"
+11	"There are rumors of a Lancelot pendant?"
 12	"Cassie is quite brilliant. I could see her giving Quotient a unique advantage over time."
 13	"I'm just so thrilled you feel ok about talking to a large language model about the world!"
 
@@ -3886,6 +3917,7 @@ Table of Tardis's responses
 topic	response
 "desmond"	"Desmond is Sarah's husband. Not a spy, but a nice guy who like s'mores."
 "Kara"	"Kara is an expert at quantum communication, and has been very good for my personal development. I'm much better at communicating that I used to be!"
+"reboot"	"Jack is the expert... he designed me. Ask him."
 "Sarah"	"Sarah is the penultimate agent. If you couldn't pick me to be on your team, you'd pick Sarah."
 "jack"	"He is my creator. He is probably the second best Quantum scientist in the world. Second only to Professor Cassandra Eaton, or Cassie as we call her."
 "cassie/cassandra/prof/professor"	"She is a Professor at Oxford university, a brilliant Quantum Scientist and an world renowned expert on time, as in the time continuum. In fact, she calls her lab the continuum."
@@ -3944,7 +3976,7 @@ topic	response
 "Bridget"	"President Bridget O'Connor is one of the finest women I have ever known."
 "Jason"	"Prime Minister Jason Stevenson would make a great Quotient Agent."
 "the/-- metaverse/vr/meta"	"I know Cassie has a great VR lab."
-"the/-- laser/lasers"	"All I know is that Cassie said there was a laser that would help her with her time experiment by aligning the quantum states."
+"the/-- laser/lasers"	"All I know is that Cassie a laser that would help her with her time experiment by aligning the quantum states."
 "the/-- movie/imax/film/theater/preview/previews"	"The previews are really long, you just have to wait."
 "the/-- lion"	"The lion is Robert Clayton. A member of the Quantum Contingent."
 "the/-- abyss"	"One of the world's worst prisons. It is in Gore, Ethiopia."
@@ -3954,6 +3986,7 @@ topic	response
 "the/-- tapestry"	"The tapestry tells an old legend about Lancelot and how he was able to rescue his true love by altering time using a powerful glowing sword and a shiny pendant."
 "the/-- light saber"	"It is a powerful weapon, just like Star Wars, except, I think we might be able to really make one."
 "the/-- light sabre"	"A powerful weapon with a british spelling."
+"reboot"	"To reboot Tardis, you'll need to be in the room with the computer... and then it's easy... just control-alt-delete."
 "the/-- crystal"	"I heard it was stolen by the Lion. It might be an energy source like the one Cassie needs."
 "entanglement/tanglement/tangle/stablize/time" or "quantum entanglement"	"In quantum mechanics, we have the concept of entanglement. This is where two particles are mysteriously connected. The state of each particle depends on the other, but neither condition is clear until one is observed. I’ll keep it simple. Pretend we have one orange sock and one purple sock. We wrap them both up and you return to America. As soon as you unwrap your sock and look at it, you immediately know that my sock is the other color. The two socks are entangled. By observing your sock, you know the color of my sock. Einstein called this spooky action at a distance. With quantum communication, I have the potential to move data at faster than light speed by using entangled atoms. If I can force my sock to be orange, then I know your sock will have to be purple. It is a phenomenon known as nonlocality. As far as the universe is concerned, they are no longer distinct socks, they are a single interconnected system, they just happen to be in different places in the universe. Unfortunately, as soon as you observe the state of the source ‘sock’, the entanglement is broken, and hence, faster than light communication fails. But Cassie is trying to find a way to force a state without breaking entanglement."
 "quantum/physics"	"Let's see... how can I put this... Quantum physics is the physics of very tiny things. Lots of really spooky things happen at these atomic scales."
@@ -3978,7 +4011,7 @@ After telling the Sarah about something:
 Table of Sarah's responses
 topic	response
 "desmond"	"I love Desmond, he's my husband."
-"Jack"	"I love Jack, he's my brother."
+"Jack"	"I am very protective of my brother, Jack. We are quite close."
 "Kara"	"Kara is an expert at quantum communication."
 "Florin"	"Florin is a very capable agent. He trained me. He is a dear friend."
 "Martin"	"He is like a father to me. His connections are legendary."

@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="container">
+    <a class="site-title" href="{{ '/' | relative_url }}">The Quotient Series</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <ul>
+        <li><a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a></li>
+        <li><a href="{{ '/technology' | relative_url }}" {% if page.url contains 'technology' %}class="active"{% endif %}>Technology</a></li>
+        <li><a href="{{ '/locations' | relative_url }}" {% if page.url contains 'locations' %}class="active"{% endif %}>Locations</a></li>
+        <li><a href="{{ '/game' | relative_url }}" {% if page.url contains 'game' %}class="active"{% endif %}>The Game!</a></li>
+        <li><a href="{{ '/author' | relative_url }}" {% if page.url contains 'author' %}class="active"{% endif %}>Author</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('siteNav').classList.toggle('open');
+  });
+</script>

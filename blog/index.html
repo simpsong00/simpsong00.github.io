@@ -1,0 +1,136 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="blog-header">
+  <div class="container">
+    <h1>Blog</h1>
+    <p>Writing, technology, locations, and behind-the-scenes updates from Gregory R. Simpson.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="blog-layout">
+    <div>
+      <div class="tag-filter">
+        <button class="tag-btn active" data-tag="all">All</button>
+        <button class="tag-btn" data-tag="Learning">Learning</button>
+        <button class="tag-btn" data-tag="Technology">Technology</button>
+      </div>
+
+      <div class="post-list" id="postList">
+        {% for post in paginator.posts %}
+        <article class="post-card" data-tags="{{ post.tags | join: ',' }}">
+          <div class="post-card-meta">{{ post.date | date: "%B %-d, %Y" }}</div>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          {% if post.description and post.description != "" %}
+            <p class="post-card-excerpt">{{ post.description }}</p>
+          {% else %}
+            <p class="post-card-excerpt">{{ post.content | strip_html | truncatewords: 40 }}</p>
+          {% endif %}
+          <div class="post-card-tags">
+            {% for tag in post.tags %}
+              {% unless tag == "All" %}
+              <span class="post-tag">{{ tag }}</span>
+              {% endunless %}
+            {% endfor %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+
+      {% if paginator.total_pages > 1 %}
+      <nav class="pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer</a>
+        {% endif %}
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <span class="current">{{ page }}</span>
+          {% elsif page == 1 %}
+            <a href="{{ '/blog/' | relative_url }}">{{ page }}</a>
+          {% else %}
+            <a href="{{ site.paginate_path | replace: ':num', page | relative_url }}">{{ page }}</a>
+          {% endif %}
+        {% endfor %}
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | relative_url }}">Older &rarr;</a>
+        {% endif %}
+      </nav>
+      {% endif %}
+    </div>
+
+    <aside class="sidebar">
+      <div class="sidebar-widget">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="/blog/">All Posts</a></li>
+          <li><a href="/blog/?tag=Learning">Learning</a></li>
+          <li><a href="/blog/?tag=Technology">Technology</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <h3>Archives</h3>
+        <ul>
+          {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+          {% for year in postsByYear %}
+          <li><a href="/blog/?year={{ year.name }}">{{ year.name }} ({{ year.items | size }})</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <h3>Books</h3>
+        <ul>
+          <li><a href="https://www.amazon.com/Quantum-Contingent-Gregory-R-Simpson/dp/B09VFQMWCT" target="_blank" rel="noopener">The Quantum Contingent</a></li>
+          <li><a href="https://www.amazon.com/dp/B0D7XYZQT" target="_blank" rel="noopener">Quantum Time</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <h3>Subscribe</h3>
+        <p style="font-size:0.85rem;color:#555;"><a href="/feed.xml">RSS Feed</a></p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script>
+// Tag filter — works client-side (no page reload needed)
+const tagBtns = document.querySelectorAll('.tag-btn');
+const posts = document.querySelectorAll('.post-card');
+
+// Also check URL param for tag/year
+const params = new URLSearchParams(window.location.search);
+const activeTag = params.get('tag');
+const activeYear = params.get('year');
+
+if (activeTag) {
+  tagBtns.forEach(b => { b.classList.toggle('active', b.dataset.tag === activeTag); });
+  filterPosts(activeTag, null);
+} else if (activeYear) {
+  filterPosts(null, activeYear);
+}
+
+tagBtns.forEach(btn => {
+  btn.addEventListener('click', function() {
+    tagBtns.forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    filterPosts(this.dataset.tag === 'all' ? null : this.dataset.tag, null);
+  });
+});
+
+function filterPosts(tag, year) {
+  posts.forEach(post => {
+    const tags = post.dataset.tags;
+    const dateEl = post.querySelector('.post-card-meta');
+    const postYear = dateEl ? dateEl.textContent.trim().slice(-4) : '';
+    let show = true;
+    if (tag) show = tags.includes(tag);
+    if (year) show = postYear === year;
+    post.style.display = show ? '' : 'none';
+  });
+}
+</script>

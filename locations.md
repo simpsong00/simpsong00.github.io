@@ -20,7 +20,7 @@ permalink: /locations/
 
     <div class="map-embed">
       <iframe
-        src="https://www.google.com/maps/d/embed?mid=1BKFi0QkO4e2kpx5I5q6_quantum_contingent"
+        src="https://www.google.com/maps/d/embed?mid=1nK_ksShjMqerzJzqs4XYVGAgIIsRKuuo&ehbc=2E312F"
         allowfullscreen
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
@@ -61,7 +61,7 @@ permalink: /locations/
 
     <div class="map-embed">
       <iframe
-        src="https://www.google.com/maps/d/embed?mid=1BKFi0QkO4e2kpx5I5q6_quantum_time"
+        src="https://www.google.com/maps/d/embed?mid=1K1Xj-pYzc5Wjn3HJ3U_XKgxUX_9x70A&ehbc=2E312F"
         allowfullscreen
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
@@ -80,7 +80,6 @@ permalink: /locations/
       <div class="location-item"><a href="https://maps.google.com/?q=Bangalore+India" target="_blank" rel="noopener">Bangalore, India</a></div>
     </div>
 
-    <p style="margin-top:2rem;color:#777;font-size:0.9rem;"><em>Note: the embedded maps above use Google My Maps. If you have custom maps created in your Google account for these books, replace the <code>mid=</code> values in the map embed URLs with your actual map IDs.</em></p>
 
   </div>
 </div>

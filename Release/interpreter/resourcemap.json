@@ -1,0 +1,62 @@
+{
+  "pict-1": {
+    "image": 1,
+    "url": "interpreter/pict-1.jpeg",
+    "width": 150,
+    "height": 150
+  },
+  "pict-3": {
+    "image": 3,
+    "url": "interpreter/pict-3.png",
+    "width": 309,
+    "height": 412
+  },
+  "pict-4": {
+    "image": 4,
+    "url": "interpreter/pict-4.png",
+    "width": 450,
+    "height": 361
+  },
+  "pict-5": {
+    "image": 5,
+    "url": "interpreter/pict-5.png",
+    "width": 450,
+    "height": 338
+  },
+  "pict-6": {
+    "image": 6,
+    "url": "interpreter/pict-6.png",
+    "width": 450,
+    "height": 338
+  },
+  "pict-7": {
+    "image": 7,
+    "url": "interpreter/pict-7.png",
+    "width": 450,
+    "height": 338
+  },
+  "pict-8": {
+    "image": 8,
+    "url": "interpreter/pict-8.png",
+    "width": 450,
+    "height": 338
+  },
+  "pict-9": {
+    "image": 9,
+    "url": "interpreter/pict-9.png",
+    "width": 450,
+    "height": 299
+  },
+  "pict-10": {
+    "image": 10,
+    "url": "interpreter/pict-10.png",
+    "width": 450,
+    "height": 299
+  },
+  "pict-11": {
+    "image": 11,
+    "url": "interpreter/pict-11.png",
+    "width": 450,
+    "height": 254
+  }
+}

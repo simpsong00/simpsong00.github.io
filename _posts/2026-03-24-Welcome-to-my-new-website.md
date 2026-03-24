@@ -14,7 +14,7 @@ non-coding user getting lost. Vibe coding takes some technical knowledge to do a
 You need to integrate different tools, and understand the concept of pushes and pulls from github, but for a programmer, 
 WOW. Great stuff. 
 Here's a screen shot of some of my interactio with claude as I migrated the site over. 
-[![](/weebly/claude_screenshot.png)](/weebly/claude_screenshot.png)
+[![](/weebly/claude-screenshot.png)](/weebly/claude-screenshot.png)
 
 AI is revolutionizing coding, but I'm still writing my books by hand. The third one is coming... more on that later.
 

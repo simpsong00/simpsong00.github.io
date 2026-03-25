@@ -19,7 +19,7 @@ permalink: /technology/
     <h2>The Quantum Contingent</h2>
 
     <ul class="tech-list">
-      <li><a href="https://www.technologyreview.com/2019/05/30/65873/quantum-computers-pose-imminent-threat-to-bitcoin-security/" target="_blank" rel="noopener">Quantum Computing Risks &amp; Security Implications</a></li>
+      <li><a href="https://www.technologyreview.com/2018/12/03/138821/quantum-computers-encryption-threat/" target="_blank" rel="noopener">Quantum Computing Risks &amp; Security Implications</a></li>
       <li><a href="https://www.defensenews.com/pentagon/2019/03/01/the-pentagon-wants-to-use-swarms-of-small-drones-to-overwhelm-enemies/" target="_blank" rel="noopener">Autonomous Weapons Systems &amp; Drone Swarms</a></li>
       <li><a href="https://research.ibm.com/blog/what-is-quantum-volume" target="_blank" rel="noopener">Quantum Volume &amp; Error Suppression</a></li>
       <li><a href="https://www.tesla.com/autopilot" target="_blank" rel="noopener">Tesla Autopilot</a></li>

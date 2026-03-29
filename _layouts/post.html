@@ -6,6 +6,11 @@ layout: default
     <h1>{{ page.title }}</h1>
     <div class="post-header-meta">
       {{ page.date | date: "%B %-d, %Y" }}
+      &nbsp;&bull;&nbsp;
+      {% assign words = content | number_of_words %}
+      {% assign reading_time = words | divided_by: 200 %}
+      {% if reading_time < 1 %}{% assign reading_time = 1 %}{% endif %}
+      {{ reading_time }} min read
     </div>
     {% if page.tags and page.tags.size > 0 %}
     <div class="post-header-tags">
@@ -23,6 +28,13 @@ layout: default
   <div class="post-layout">
     <article class="post-content">
       {{ content }}
+
+      <div class="post-share">
+        <span>Share:</span>
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">X / Twitter</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
 
       <nav class="post-nav">
         <div>
@@ -63,6 +75,16 @@ layout: default
           <li><a href="{{ '/locations' | relative_url }}">Locations</a></li>
           <li><a href="{{ '/game' | relative_url }}">The Game!</a></li>
           <li><a href="{{ '/author' | relative_url }}">About the Author</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <h3>Also Worth Reading</h3>
+        <ul>
+          <li><a href="https://www.amazon.com/Digital-Fortress-Dan-Brown/dp/0312944926" target="_blank" rel="noopener">Digital Fortress — Dan Brown</a></li>
+          <li><a href="https://www.amazon.com/Daemon-Daniel-Suarez/dp/0451228731" target="_blank" rel="noopener">Daemon — Daniel Suarez</a></li>
+          <li><a href="https://www.amazon.com/Project-Hail-Mary-Andy-Weir/dp/0593135202" target="_blank" rel="noopener">Project Hail Mary — Andy Weir</a></li>
+          <li><a href="https://www.amazon.com/Hunt-Red-October-Jack-Ryan/dp/0425133516" target="_blank" rel="noopener">The Hunt for Red October — Tom Clancy</a></li>
         </ul>
       </div>
 

@@ -4,6 +4,13 @@ author: Gregory R. Simpson
 url: "https://simpsong00.com"
 baseurl: ""
 
+# Social / Open Graph
+twitter:
+  username: simpsong00
+  card: summary_large_image
+logo: /weebly/grs-tqc-cover-front-04origpng.png
+image: /weebly/grs-tqc-cover-front-04origpng.png
+
 # Build
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/

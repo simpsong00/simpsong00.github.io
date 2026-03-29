@@ -434,6 +434,38 @@ img { max-width: 100%; height: auto; display: block; }
   font-style: italic;
 }
 
+/* ---- Share Bar ---- */
+.post-share {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid #eee;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+.post-share span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #999;
+}
+.post-share a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #555;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 0.3rem 0.85rem;
+  transition: border-color 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.post-share a:hover { border-color: #f57c00; color: #f57c00; }
+
 .post-nav {
   display: flex;
   justify-content: space-between;

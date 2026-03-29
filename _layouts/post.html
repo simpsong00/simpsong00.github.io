@@ -24,6 +24,8 @@ layout: default
     <article class="post-content">
       {{ content }}
 
+      {% include disqus.html %}
+
       <nav class="post-nav">
         <div>
           {% if page.previous.url %}

@@ -694,6 +694,33 @@ img { max-width: 100%; height: auto; display: block; }
   .book-detail-cover { position: static; max-width: 220px; margin: 0 auto; }
 }
 
+/* ---- Search ---- */
+.search-box {
+  position: relative;
+}
+.search-box input {
+  width: 100%;
+  padding: 0.85rem 2.5rem 0.85rem 1rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.search-box input:focus { border-color: #f57c00; }
+#searchClear {
+  position: absolute;
+  right: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  color: #bbb;
+  cursor: pointer;
+  line-height: 1;
+}
+#searchClear:hover { color: #f57c00; }
+
 /* ---- Footer ---- */
 .site-footer {
   background: #111;

@@ -37,7 +37,7 @@ permalink: /author/
       <li><a href="https://a.co/d/gL9jduc" target="_blank" rel="noopener"><strong>Quantum Time</strong></a> — ebook, paperback, audiobook (narrated by the author)</li>
     </ul>
 
-    <p>Visit Greg's <a href="https://www.amazon.com/author/gregorysimpson" target="_blank" rel="noopener">Amazon Author Page</a> to order directly.</p>
+    <p>Visit Greg's <a href="https://www.amazon.com/stores/Gregory-R-Simpson/author/B09SNHJ34V" target="_blank" rel="noopener">Amazon Author Page</a> to order directly.</p>
 
     <h2>Connect</h2>
     <p>Greg welcomes questions about the books, the technology, and the writing journey. Reach out via <a href="https://linkedin.com/in/gregorysimpsonge" target="_blank" rel="noopener">LinkedIn</a> or leave a comment on the <a href="/blog/">blog</a>.</p>

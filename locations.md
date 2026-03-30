@@ -14,7 +14,7 @@ permalink: /locations/
 <div class="container">
   <div class="page-content">
 
-    <p>One of the most distinctive features of the Quotient Series is its commitment to real geography. Every location referenced in the books is a real place in the world — and most are places Greg has visited himself. The cover photo on this site was taken on the River Reuss in Lucerne, Switzerland — a scene that appears in <em>The Quantum Contingent</em>.</p>
+    <p>One of the most distinctive features of the Quotient Series is its commitment to real geography. Every location referenced in the books is a real place in the world — and most are places Greg has visited himself. For example, <a href="/weebly/lucerne-river-reuss.jpeg" target="_blank" rel="noopener">this photo</a> was taken on the River Reuss in Lucerne, Switzerland — a scene that appears in <em>The Quantum Contingent</em>.</p>
 
     <h2>The Quantum Contingent — Locations</h2>
 

@@ -17,7 +17,7 @@ description: "A globe-trotting techno-spy thriller set in 2028 — quantum compu
 
     <div class="book-detail">
       <div class="book-detail-cover">
-        <img src="/weebly/grs-tqc-cover-front-04origpng.png" alt="The Quantum Contingent book cover">
+        <a href="https://a.co/d/7KunQeZ" target="_blank" rel="noopener"><img src="/weebly/grs-tqc-cover-front-04origpng.png" alt="The Quantum Contingent book cover"></a>
         <div class="book-detail-buy">
           <a href="https://a.co/d/7KunQeZ" class="btn btn-primary" target="_blank" rel="noopener">Buy on Amazon</a>
         </div>

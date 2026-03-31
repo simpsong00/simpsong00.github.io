@@ -17,7 +17,7 @@ description: "The thrilling sequel to The Quantum Contingent — two timelines, 
 
     <div class="book-detail">
       <div class="book-detail-cover">
-        <img src="/weebly/quantum-time-book-frontjpg.jpg" alt="Quantum Time book cover">
+        <a href="https://a.co/d/gL9jduc" target="_blank" rel="noopener"><img src="/weebly/quantum-time-book-frontjpg.jpg" alt="Quantum Time book cover"></a>
         <div class="book-detail-buy">
           <a href="https://a.co/d/gL9jduc" class="btn btn-primary" target="_blank" rel="noopener">Buy on Amazon</a>
         </div>

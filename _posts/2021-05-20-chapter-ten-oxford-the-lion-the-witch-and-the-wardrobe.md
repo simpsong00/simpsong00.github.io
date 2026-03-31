@@ -20,6 +20,4 @@ Greg
 [![](/weebly/img-7775jpeg.jpeg)](/weebly/img-7775jpeg.jpeg)
 [![](/weebly/img-2963jpeg.jpeg)](/weebly/img-2963jpeg.jpeg)
 
-[Clark Edward Suprynowicz](http://immersiveartsalliance,org)
 
-[link](http://immersiveartsalliance,org)

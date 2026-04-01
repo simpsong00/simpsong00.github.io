@@ -3,12 +3,87 @@ layout: default
 title: Home
 ---
 
+<style>
+  .hero {
+    position: relative;
+    background: #0a0a14;
+    overflow: hidden;
+    padding: 5rem 1.5rem 4rem;
+  }
+  .hero canvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+  }
+  .hero .container { position: relative; z-index: 1; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: 0.06em; }
+</style>
+
 <section class="hero">
+  <canvas id="starfield"></canvas>
   <div class="container">
     <h1>The Quotient Series</h1>
     <p>Join Jack and Sarah as they race to save humanity in this techno-thriller series by Gregory R. Simpson.</p>
   </div>
 </section>
+
+<script>
+(function() {
+  const canvas = document.getElementById('starfield');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+  const STAR_COUNT = 160;
+
+  function resize() {
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+
+  function initStars() {
+    stars = [];
+    for (let i = 0; i < STAR_COUNT; i++) {
+      stars.push({
+        x:       Math.random() * canvas.width,
+        y:       Math.random() * canvas.height,
+        r:       Math.random() * 1.4 + 0.3,
+        speed:   Math.random() * 0.25 + 0.05,
+        opacity: Math.random() * 0.6 + 0.2,
+        twinkle: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function draw(ts) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(s => {
+      s.twinkle += 0.012;
+      const alpha = s.opacity * (0.7 + 0.3 * Math.sin(s.twinkle));
+      // Occasional faint orange star for accent
+      const isAccent = s.r > 1.6;
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = isAccent
+        ? `rgba(245, 124, 0, ${alpha * 0.7})`
+        : `rgba(255, 255, 255, ${alpha})`;
+      ctx.fill();
+
+      // Drift slowly upward and wrap
+      s.y -= s.speed;
+      if (s.y < -2) {
+        s.y = canvas.height + 2;
+        s.x = Math.random() * canvas.width;
+      }
+    });
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  initStars();
+  requestAnimationFrame(draw);
+  window.addEventListener('resize', () => { resize(); initStars(); });
+})();
+</script>
 
 <section class="books-section">
   <div class="container">

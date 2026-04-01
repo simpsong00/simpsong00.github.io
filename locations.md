@@ -4,9 +4,30 @@ title: Locations
 permalink: /locations/
 ---
 
-<div class="page-header" style="background-image: url('/weebly/lucerne-river-reuss.jpeg'); background-size: cover; background-position: center; position: relative;">
-  <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);"></div>
-  <div class="container" style="position:relative;z-index:1;">
+<style>
+  .locations-header {
+    background: url('/weebly/lucerne-river-reuss.jpeg') center/cover no-repeat;
+    position: relative;
+    color: #fff;
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .locations-header .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+  }
+  .locations-header .container {
+    position: relative;
+    z-index: 1;
+  }
+  .locations-header h1 { color: #fff; }
+  .locations-header p  { color: #bbb; }
+</style>
+
+<div class="locations-header">
+  <div class="overlay"></div>
+  <div class="container">
     <h1>Locations</h1>
     <p>Every setting in the Quotient Series is a real place — many visited personally by the author.</p>
   </div>

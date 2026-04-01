@@ -4,9 +4,30 @@ title: Technology
 permalink: /technology/
 ---
 
-<div class="page-header" style="background-image: url('/weebly/library.jpeg'); background-size: cover; background-position: center; position: relative;">
-  <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);"></div>
-  <div class="container" style="position:relative;z-index:1;">
+<style>
+  .technology-header {
+    background: url('/weebly/library.jpeg') center/cover no-repeat;
+    position: relative;
+    color: #fff;
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .technology-header .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+  }
+  .technology-header .container {
+    position: relative;
+    z-index: 1;
+  }
+  .technology-header h1 { color: #fff; }
+  .technology-header p  { color: #bbb; }
+</style>
+
+<div class="technology-header">
+  <div class="overlay"></div>
+  <div class="container">
     <h1>Technology</h1>
     <p>Every technology in the Quotient Series is real. Here are the resources behind the stories.</p>
   </div>

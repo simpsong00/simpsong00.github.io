@@ -4,8 +4,9 @@ title: Locations
 permalink: /locations/
 ---
 
-<div class="page-header">
-  <div class="container">
+<div class="page-header" style="background-image: url('/weebly/lucerne-river-reuss.jpeg'); background-size: cover; background-position: center; position: relative;">
+  <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);"></div>
+  <div class="container" style="position:relative;z-index:1;">
     <h1>Locations</h1>
     <p>Every setting in the Quotient Series is a real place — many visited personally by the author.</p>
   </div>

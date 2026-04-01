@@ -64,7 +64,4 @@ Here are a collection of my photos that were from places in Quantum Time, or wer
 [![](/weebly/michaelmas-oxford-235jpeg.jpeg)](/weebly/michaelmas-oxford-235jpeg.jpeg)
 [![](/weebly/old-iphone-177jpeg.jpeg)](/weebly/old-iphone-177jpeg.jpeg)
 
-[https://linkedin.com/in/gregorysimpsonge](https://linkedin.com/in/gregorysimpsonge)
-[https://www.simpsong00.com/cdn-cgi/l/email-protection#f98a9094898a96979ec9c9b99e94989095d79a9694](https://www.simpsong00.com/cdn-cgi/l/email-protection#f98a9094898a96979ec9c9b99e94989095d79a9694)
 
-[![Picture](/weebly/e1079635-2jpg-62.jpg)](https://sites.google.com/view/simpsong00-scavenger/home)

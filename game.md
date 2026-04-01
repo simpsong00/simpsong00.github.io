@@ -4,12 +4,63 @@ title: The Game!
 permalink: /game/
 ---
 
-<div class="page-header">
+<style>
+  .game-page-header {
+    background: #111;
+    color: #fff;
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .game-page-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: #fff;
+    margin-bottom: 0.5rem;
+    min-height: 1.4em;
+  }
+  .game-page-header p {
+    color: #bbb;
+  }
+  .typewriter-cursor {
+    display: inline-block;
+    width: 3px;
+    background: #f57c00;
+    margin-left: 2px;
+    animation: blink 0.75s step-end infinite;
+    vertical-align: baseline;
+    height: 0.9em;
+    position: relative;
+    top: 0.05em;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+  }
+</style>
+
+<div class="game-page-header">
   <div class="container">
-    <h1>Quotient — The Game</h1>
+    <h1><span id="typewriter-title"></span><span class="typewriter-cursor"></span></h1>
     <p>An interactive text adventure set in the world of the Quotient Series.</p>
   </div>
 </div>
+
+<script>
+  (function() {
+    const text = "Quotient \u2014 The Game";
+    const el = document.getElementById('typewriter-title');
+    let i = 0;
+    function type() {
+      if (i <= text.length) {
+        el.textContent = text.slice(0, i);
+        i++;
+        setTimeout(type, i === 1 ? 400 : 65);
+      }
+    }
+    // Small delay before starting so the page is fully rendered
+    setTimeout(type, 300);
+  })();
+</script>
 
 <div class="container">
   <div class="page-content">

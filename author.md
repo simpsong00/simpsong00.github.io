@@ -4,12 +4,121 @@ title: Author
 permalink: /author/
 ---
 
-<div class="page-header">
+<style>
+  .author-hero {
+    position: relative;
+    background: #0a0a14;
+    color: #fff;
+    padding: 3.5rem 1.5rem 3rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .author-hero canvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+  }
+  .author-hero .container {
+    position: relative;
+    z-index: 1;
+  }
+  .author-hero h1 {
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 0.4rem;
+  }
+  .author-hero p { color: #bbb; margin: 0; }
+</style>
+
+<div class="author-hero">
+  <canvas id="particleCanvas"></canvas>
   <div class="container">
     <h1>Gregory R. Simpson</h1>
     <p>Author of The Quotient Series</p>
   </div>
 </div>
+
+<script>
+(function() {
+  const canvas = document.getElementById('particleCanvas');
+  const ctx    = canvas.getContext('2d');
+  const COUNT  = 70;
+  const LINK_DIST = 140;
+  const SPEED  = 0.35;
+  let particles = [];
+
+  function resize() {
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+
+  function init() {
+    particles = [];
+    for (let i = 0; i < COUNT; i++) {
+      particles.push({
+        x:  Math.random() * canvas.width,
+        y:  Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * SPEED,
+        vy: (Math.random() - 0.5) * SPEED,
+        r:  Math.random() * 1.8 + 0.8,
+        // occasional orange accent node
+        accent: Math.random() < 0.12
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw links
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const a = particles[i], b = particles[j];
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < LINK_DIST) {
+          const alpha = (1 - dist / LINK_DIST) * 0.45;
+          const color = (a.accent || b.accent)
+            ? `rgba(245,124,0,${alpha * 0.8})`
+            : `rgba(255,255,255,${alpha * 0.35})`;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = color;
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Draw nodes
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = p.accent
+        ? 'rgba(245,124,0,0.85)'
+        : 'rgba(255,255,255,0.7)';
+      ctx.fill();
+
+      // Move
+      p.x += p.vx;
+      p.y += p.vy;
+
+      // Bounce off edges
+      if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  init();
+  draw();
+  window.addEventListener('resize', () => { resize(); init(); });
+})();
+</script>
 
 <div class="container">
   <div class="page-content">

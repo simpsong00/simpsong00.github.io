@@ -1,0 +1,353 @@
+---
+layout: default
+title: Beach Trip Menus
+permalink: /beachmenus/
+---
+
+<style>
+  /* ── Header ── */
+  .menus-hero {
+    background: linear-gradient(135deg, #0077b6 0%, #00b4d8 40%, #90e0ef 70%, #caf0f8 100%);
+    color: #fff;
+    padding: 3.5rem 1.5rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .menus-hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 55px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60'%3E%3Cpath d='M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z' fill='%23f9f6f0'/%3E%3C/svg%3E") bottom/cover no-repeat;
+  }
+  .menus-hero .container { position: relative; z-index: 1; }
+  .menus-hero h1 {
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 0.4rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .menus-hero p { color: #d0f0ff; margin: 0; }
+
+  /* ── Back link ── */
+  .back-link {
+    display: inline-block;
+    margin: 1.5rem 0 0.5rem;
+    color: #0077b6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .back-link:hover { text-decoration: underline; }
+
+  /* ── Grocery note ── */
+  .grocery-note {
+    background: #e8f7ff;
+    border-left: 4px solid #0077b6;
+    padding: 0.85rem 1.2rem;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.95rem;
+    color: #004f7c;
+    margin-bottom: 2rem;
+  }
+  .grocery-note strong { display: block; }
+
+  /* ── Day cards ── */
+  .day-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,80,0.07);
+    margin-bottom: 1.75rem;
+    overflow: hidden;
+  }
+  .day-card-header {
+    background: #0077b6;
+    color: #fff;
+    padding: 0.85rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .day-card-header h2 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .day-card-header .day-emoji { font-size: 1.3rem; }
+
+  .day-card-body { padding: 1.25rem 1.5rem; }
+
+  /* ── Meal sections ── */
+  .meal {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #eef4f8;
+  }
+  .meal:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+
+  .meal-label {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+    margin-bottom: 0.5rem;
+  }
+  .meal-label.breakfast { background: #fff3cd; color: #7a5c00; }
+  .meal-label.lunch     { background: #d4f1c4; color: #2d6a12; }
+  .meal-label.dinner    { background: #fde8d8; color: #8a3500; }
+
+  .meal-note {
+    font-style: italic;
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .meal ul {
+    margin: 0.25rem 0 0 1.25rem;
+    padding: 0;
+  }
+  .meal ul li {
+    font-size: 0.95rem;
+    color: #333;
+    padding: 0.15rem 0;
+    line-height: 1.5;
+  }
+
+  .course-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #0077b6;
+    margin: 0.6rem 0 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .dessert-note {
+    display: inline-block;
+    background: #fff0f5;
+    color: #a0004a;
+    border-radius: 20px;
+    padding: 0.25rem 0.8rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+
+  .tbd-badge {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #888;
+    border-radius: 20px;
+    padding: 0.25rem 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 600px) {
+    .day-card-body { padding: 1rem; }
+    .day-card-header { padding: 0.75rem 1rem; }
+  }
+</style>
+
+<div class="menus-hero">
+  <div class="container">
+    <div style="font-size:2rem;margin-bottom:0.4rem;">🍽️</div>
+    <h1>Beach Trip Menus</h1>
+    <p>July 3rd – July 10th &nbsp;·&nbsp; Corolla, NC</p>
+  </div>
+</div>
+
+<div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+
+  <a class="back-link" href="/beachtrip/">← Back to Beach Trip</a>
+
+  <div class="grocery-note">
+    <strong>🛒 Grocery Run</strong>
+    We will do a grocery run to stock basics in advance of the event!
+    <span style="display:block;margin-top:0.3rem;font-size:0.88rem;color:#e05000;">
+      Order complete — sorry, no more requests for pre-stocking!
+    </span>
+  </div>
+
+  <!-- Sunday July 3 -->
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-emoji">🌅</span>
+      <h2>Sunday, July 3 — Arrival Day</h2>
+    </div>
+    <div class="day-card-body">
+      <div class="meal">
+        <span class="meal-label dinner">Dinner</span>
+        <p class="meal-note">Probably pizza… or something people can grab as they arrive. No formal dinner since everyone will be rolling in at different times!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Monday July 4 -->
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-emoji">🎆</span>
+      <h2>Monday, July 4 — Independence Day</h2>
+    </div>
+    <div class="day-card-body">
+      <div class="meal">
+        <span class="meal-label dinner">Dinner</span>
+        <ul><li>Asian cuisine</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tuesday July 5 -->
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-emoji">🥯</span>
+      <h2>Tuesday, July 5</h2>
+    </div>
+    <div class="day-card-body">
+      <div class="meal">
+        <span class="meal-label breakfast">Breakfast</span>
+        <ul>
+          <li>Bagel bar</li>
+          <li>Scrambled eggs</li>
+          <li>Bacon &amp; sausage links</li>
+        </ul>
+      </div>
+      <div class="meal">
+        <span class="meal-label lunch">Lunch</span>
+        <p class="meal-note">Forage for food 🔍</p>
+      </div>
+      <div class="meal">
+        <span class="meal-label dinner">Dinner</span>
+        <p class="course-label">Appetizers</p>
+        <ul>
+          <li>Baked brie with fixings</li>
+          <li>Roasted artichoke asiago stuffed courgettes</li>
+        </ul>
+        <p class="course-label">Main Course</p>
+        <ul>
+          <li>Caesar salad with garlic croutons</li>
+          <li>Chicken breast roulade with basil, mozzarella &amp; tomato cream sauce (sauce on side)</li>
+          <li>Marinated roasted shoulder tender with chimichurri &amp; citrus onions</li>
+          <li>Green beans</li>
+          <li>Roasted vegetables including potatoes</li>
+        </ul>
+        <p class="course-label">Dessert</p>
+        <span class="dessert-note">🎂 Chef's Choice — Birthday Celebration!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wednesday July 6 -->
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-emoji">🐟</span>
+      <h2>Wednesday, July 6</h2>
+    </div>
+    <div class="day-card-body">
+      <div class="meal">
+        <span class="meal-label breakfast">Breakfast</span>
+        <ul>
+          <li>Bacon &amp; sausage links</li>
+          <li>Smoked turkey &amp; cheddar frittatas</li>
+          <li>Scratch biscuits with butter &amp; jelly</li>
+          <li>Home fries</li>
+        </ul>
+      </div>
+      <div class="meal">
+        <span class="meal-label lunch">Lunch</span>
+        <p class="meal-note">Forage for food 🔍</p>
+      </div>
+      <div class="meal">
+        <span class="meal-label dinner">Dinner</span>
+        <p class="course-label">Appetizers</p>
+        <ul>
+          <li>Bruschetta</li>
+          <li>Charcuterie board</li>
+        </ul>
+        <p class="course-label">Main Course</p>
+        <ul>
+          <li>Citrus quinoa salad (no sugar)</li>
+          <li>Lemon asparagus</li>
+          <li>Grilled vegetables including potatoes</li>
+          <li>Blackberry glazed blackened Scottish salmon with fruit salsa</li>
+          <li>Dry rubbed chicken quarters</li>
+        </ul>
+        <p class="course-label">Dessert</p>
+        <span class="dessert-note">🍮 Chef's Choice</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thursday July 7 -->
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-emoji">🌮</span>
+      <h2>Thursday, July 7 — Taco Night!</h2>
+    </div>
+    <div class="day-card-body">
+      <div class="meal">
+        <span class="meal-label breakfast">Breakfast</span>
+        <ul>
+          <li>Scrambled eggs</li>
+          <li>Turkey sausage links</li>
+          <li>Banana foster pancakes with caramel &amp; syrup (no walnuts)</li>
+          <li>Fruit board</li>
+        </ul>
+      </div>
+      <div class="meal">
+        <span class="meal-label lunch">Lunch</span>
+        <p class="meal-note">Forage for food 🔍</p>
+      </div>
+      <div class="meal">
+        <span class="meal-label dinner">Dinner</span>
+        <p class="course-label">Appetizers</p>
+        <ul>
+          <li>Beef empanadas</li>
+          <li>Chips &amp; salsa</li>
+        </ul>
+        <p class="course-label">Main Course</p>
+        <ul>
+          <li>Taco bar with all the fixings</li>
+          <li>Salsa, guacamole, pico de gallo</li>
+          <li>Queso fresco</li>
+          <li>Shredded lettuce &amp; cheddar</li>
+          <li>Black bean &amp; corn salad</li>
+        </ul>
+        <p class="course-label">Dessert</p>
+        <span class="dessert-note">🍰 Chef's Choice</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fri–Sat -->
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-emoji">📋</span>
+      <h2>Friday, July 8 – Saturday, July 9</h2>
+    </div>
+    <div class="day-card-body">
+      <p style="margin:0;color:#666;">
+        <span class="tbd-badge">TBD</span>
+        &nbsp; Menus for these days are still being planned. Check back!
+      </p>
+    </div>
+  </div>
+
+  <!-- Sunday July 10 -->
+  <div class="day-card">
+    <div class="day-card-header">
+      <span class="day-emoji">👋</span>
+      <h2>Sunday, July 10 — Checkout Day</h2>
+    </div>
+    <div class="day-card-body">
+      <p style="margin:0;color:#666;">Check-out by 10:00 AM. Safe travels, everyone! 🌊</p>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,386 @@
+---
+layout: default
+title: Simpson Beach Trip
+permalink: /beachtrip/
+---
+
+<style>
+  /* ── Beach Hero ── */
+  .beach-hero {
+    position: relative;
+    background: linear-gradient(135deg, #0077b6 0%, #00b4d8 40%, #90e0ef 70%, #caf0f8 100%);
+    color: #fff;
+    padding: 4rem 1.5rem 3.5rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .beach-hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60'%3E%3Cpath d='M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z' fill='%23f9f6f0'/%3E%3C/svg%3E") bottom/cover no-repeat;
+  }
+  .beach-hero .container { position: relative; z-index: 1; }
+  .beach-hero h1 {
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  }
+  .beach-hero .hero-emoji { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
+  .beach-hero .hero-dates {
+    font-size: 1.1rem;
+    color: #e0f7ff;
+    margin: 0.5rem 0 0.25rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+  .beach-hero .hero-checkin {
+    font-size: 0.9rem;
+    color: #b3e9f8;
+    margin: 0;
+  }
+
+  /* ── Section styles ── */
+  .beach-section {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,80,0.07);
+    padding: 2rem 2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .beach-section h2 {
+    font-size: 1.35rem;
+    color: #0077b6;
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #caf0f8;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* ── Quick Links ── */
+  .quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  .quick-links a {
+    display: inline-block;
+    background: #0077b6;
+    color: #fff !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .quick-links a:hover {
+    background: #005f92;
+    transform: translateY(-2px);
+    color: #fff !important;
+  }
+
+  /* ── Attendee groups ── */
+  .group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1rem;
+  }
+  .group-card {
+    border-radius: 10px;
+    padding: 1.2rem 1rem;
+    text-align: center;
+  }
+  .group-card h3 {
+    font-size: 1rem;
+    margin: 0 0 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .group-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .group-card ul li {
+    font-size: 0.9rem;
+    padding: 0.2rem 0;
+    line-height: 1.4;
+  }
+
+  /* Group color themes */
+  .group-leopard  { background: #fdf4e3; border: 2px solid #c8860a; }
+  .group-leopard h3 { color: #8a5c00; }
+  .group-yellow   { background: #fffde6; border: 2px solid #f9c700; }
+  .group-yellow h3 { color: #7a6000; }
+  .group-bw       { background: #f4f4f4; border: 2px solid #444; }
+  .group-bw h3    { color: #222; }
+  .group-orange   { background: #fff3e0; border: 2px solid #e67e22; }
+  .group-orange h3 { color: #a04000; }
+
+  /* ── Address / Map ── */
+  .address-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .address-text { flex: 1; min-width: 200px; }
+  .address-text p { margin: 0 0 0.25rem; font-size: 1rem; }
+  .address-text .addr-main { font-weight: 700; font-size: 1.1rem; color: #0077b6; }
+  .map-link-btn {
+    display: inline-block;
+    margin-top: 0.75rem;
+    background: #0077b6;
+    color: #fff !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .map-link-btn:hover { background: #005f92; color: #fff !important; }
+
+  .map-embed-beach {
+    flex: 2;
+    min-width: 280px;
+  }
+  .map-embed-beach iframe {
+    width: 100%;
+    height: 260px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  }
+
+  /* ── Photo Gallery ── */
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  .photo-gallery a {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .photo-gallery a:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+  .photo-gallery img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* ── Song Request Form ── */
+  .song-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    max-width: 500px;
+  }
+  .song-form input,
+  .song-form textarea {
+    padding: 0.65rem 1rem;
+    border: 1.5px solid #b3d9ef;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+  }
+  .song-form input:focus,
+  .song-form textarea:focus {
+    outline: none;
+    border-color: #0077b6;
+  }
+  .song-form textarea { resize: vertical; min-height: 80px; }
+  .song-form button {
+    align-self: flex-start;
+    background: #0077b6;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .song-form button:hover { background: #005f92; }
+  .song-form-note {
+    font-size: 0.82rem;
+    color: #888;
+    margin: 0.25rem 0 0;
+  }
+
+  /* ── Info note ── */
+  .info-note {
+    background: #e8f7ff;
+    border-left: 4px solid #0077b6;
+    padding: 0.9rem 1.2rem;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.95rem;
+    color: #004f7c;
+    margin-bottom: 2rem;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .beach-section { padding: 1.25rem 1rem; }
+    .address-block { flex-direction: column; }
+  }
+</style>
+
+<!-- Hero -->
+<div class="beach-hero">
+  <div class="container">
+    <span class="hero-emoji">🏖️</span>
+    <h1>Simpson Beach Trip!</h1>
+    <p class="hero-dates">July 3rd – July 10th</p>
+    <p class="hero-checkin">Check-in: 4:00 PM &nbsp;|&nbsp; Check-out: 10:00 AM</p>
+  </div>
+</div>
+
+<div class="container" style="padding-top:2.5rem; padding-bottom:3rem;">
+
+  <!-- Intro -->
+  <div class="info-note">
+    Welcome to the <strong>Simpson Beach Reunion!</strong> Everything you need for the week is right here — the venue, the crew, song requests, and the address. See you on the beach! 🌊
+  </div>
+
+  <!-- Quick Links -->
+  <div class="beach-section">
+    <h2>🔗 Quick Links</h2>
+    <div class="quick-links">
+      <a href="/beachmenus/">🍽️ Menus</a>
+      <a href="https://www.twiddy.com" target="_blank" rel="noopener">🏡 The Venue (Twiddy)</a>
+      <a href="#attendees">👕 Attendee Groups</a>
+      <a href="#song-request">🎵 Song Requests</a>
+      <a href="#address">📍 Address &amp; Map</a>
+      <a href="#gallery">📷 Photos</a>
+    </div>
+  </div>
+
+  <!-- Attendees -->
+  <div class="beach-section" id="attendees">
+    <h2>👕 Attendee Groups &amp; Shirt Colors</h2>
+    <div class="group-grid">
+      <div class="group-card group-leopard">
+        <h3>🐆 Leopard</h3>
+        <ul>
+          <li>Group Members</li>
+          <li>Listed Here</li>
+        </ul>
+      </div>
+      <div class="group-card group-yellow">
+        <h3>💛 Yellow</h3>
+        <ul>
+          <li>Group Members</li>
+          <li>Listed Here</li>
+        </ul>
+      </div>
+      <div class="group-card group-bw">
+        <h3>🖤🤍 Black &amp; White</h3>
+        <ul>
+          <li>Group Members</li>
+          <li>Listed Here</li>
+        </ul>
+      </div>
+      <div class="group-card group-orange">
+        <h3>🟠 Orange</h3>
+        <ul>
+          <li>Group Members</li>
+          <li>Listed Here</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Address & Map -->
+  <div class="beach-section" id="address">
+    <h2>📍 Address &amp; Directions</h2>
+    <div class="address-block">
+      <div class="address-text">
+        <p class="addr-main">337 Lindsey Lane</p>
+        <p>Corolla, NC</p>
+        <a class="map-link-btn"
+           href="https://maps.google.com/?q=337+Lindsey+Lane+Corolla+NC"
+           target="_blank" rel="noopener">
+          Open in Google Maps
+        </a>
+      </div>
+      <div class="map-embed-beach">
+        <iframe
+          src="https://maps.google.com/maps?q=337+Lindsey+Lane,+Corolla,+NC&output=embed"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Photo Gallery -->
+  <div class="beach-section" id="gallery">
+    <h2>📷 Photos</h2>
+    <div class="photo-gallery">
+      <a href="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-1.jpg" target="_blank" rel="noopener">
+        <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-1.jpg" alt="Beach Trip Photo 1" loading="lazy">
+      </a>
+      <a href="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-2.jpg" target="_blank" rel="noopener">
+        <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-2.jpg" alt="Beach Trip Photo 2" loading="lazy">
+      </a>
+      <a href="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-3.jpg" target="_blank" rel="noopener">
+        <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-3.jpg" alt="Beach Trip Photo 3" loading="lazy">
+      </a>
+      <a href="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-4.jpg" target="_blank" rel="noopener">
+        <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-4.jpg" alt="Beach Trip Photo 4" loading="lazy">
+      </a>
+      <a href="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-5.jpg" target="_blank" rel="noopener">
+        <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-5.jpg" alt="Beach Trip Photo 5" loading="lazy">
+      </a>
+      <a href="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-6.jpg" target="_blank" rel="noopener">
+        <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-6.jpg" alt="Beach Trip Photo 6" loading="lazy">
+      </a>
+      <a href="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-7.jpg" target="_blank" rel="noopener">
+        <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-7.jpg" alt="Beach Trip Photo 7" loading="lazy">
+      </a>
+      <a href="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-8.jpg" target="_blank" rel="noopener">
+        <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-8.jpg" alt="Beach Trip Photo 8" loading="lazy">
+      </a>
+      <a href="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-9.jpg" target="_blank" rel="noopener">
+        <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-9.jpg" alt="Beach Trip Photo 9" loading="lazy">
+      </a>
+    </div>
+    <p style="font-size:0.82rem;color:#999;margin-top:0.75rem;">Note: Update photo URLs once images are saved locally.</p>
+  </div>
+
+  <!-- Song Request -->
+  <div class="beach-section" id="song-request">
+    <h2>🎵 Song Requests</h2>
+    <p style="margin-top:0;color:#555;">Got a song you want to hear this week? Submit it below!</p>
+    <form class="song-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="text" name="song" placeholder="Song title &amp; artist" required>
+      <textarea name="notes" placeholder="Any notes or special requests..."></textarea>
+      <button type="submit">🎶 Submit Request</button>
+    </form>
+    <p class="song-form-note">Replace the Formspree form ID above, or swap this for a Google Form link.</p>
+  </div>
+
+</div>

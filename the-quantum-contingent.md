@@ -17,9 +17,9 @@ description: "A globe-trotting techno-spy thriller set in 2028 — quantum compu
 
     <div class="book-detail">
       <div class="book-detail-cover">
-        <a href="https://a.co/d/7KunQeZ" target="_blank" rel="noopener"><img src="/weebly/grs-tqc-cover-front-04origpng.png" alt="The Quantum Contingent book cover"></a>
+        <a href="https://www.amazon.com/dp/0578307243" target="_blank" rel="noopener"><img src="/weebly/grs-tqc-cover-front-04origpng.png" alt="The Quantum Contingent book cover"></a>
         <div class="book-detail-buy">
-          <a href="https://a.co/d/7KunQeZ" class="btn btn-primary" target="_blank" rel="noopener">Buy on Amazon</a>
+          <a href="https://www.amazon.com/dp/0578307243" class="btn btn-primary" target="_blank" rel="noopener">Buy on Amazon</a>
         </div>
         <div class="book-links-row">
           <a href="https://www.goodreads.com/book/show/60432112-the-quantum-contingent" target="_blank" rel="noopener">Goodreads</a>
@@ -56,7 +56,7 @@ description: "A globe-trotting techno-spy thriller set in 2028 — quantum compu
         </ul>
 
         <div class="book-detail-buy" style="margin-top:1.5rem;">
-          <a href="https://a.co/d/7KunQeZ" class="btn btn-primary" target="_blank" rel="noopener">Buy on Amazon</a>
+          <a href="https://www.amazon.com/dp/0578307243" class="btn btn-primary" target="_blank" rel="noopener">Buy on Amazon</a>
           <a href="/quantum-time/" class="btn btn-secondary">Read Book 2 →</a>
         </div>
 

@@ -142,7 +142,7 @@ permalink: /author/
     <p>Both novels in the Quotient Series are available in ebook, paperback, and audiobook formats on Amazon and Audible.</p>
 
     <ul>
-      <li><a href="https://a.co/d/7KunQeZ" target="_blank" rel="noopener"><strong>The Quantum Contingent</strong></a> — ebook, paperback, audiobook</li>
+      <li><a href="https://www.amazon.com/dp/0578307243" target="_blank" rel="noopener"><strong>The Quantum Contingent</strong></a> — ebook, paperback, audiobook</li>
       <li><a href="https://a.co/d/gL9jduc" target="_blank" rel="noopener"><strong>Quantum Time</strong></a> — ebook, paperback, audiobook (narrated by the author)</li>
     </ul>
 

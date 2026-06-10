@@ -714,6 +714,29 @@ img { max-width: 100%; height: auto; display: block; }
   font-style: normal;
 }
 
+.audio-sample {
+  background: #faf6f0;
+  border: 1px solid #f0e4d4;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.audio-sample h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+.audio-sample p { margin: 0.5rem 0; color: #555; font-size: 0.95rem; }
+.audio-sample audio {
+  width: 100%;
+  margin: 0.75rem 0 0.25rem;
+}
+.audio-sample .audio-cta {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+.audio-sample .audio-cta a { color: #e67e00; }
+
 .book-links-row {
   display: flex;
   flex-wrap: wrap;

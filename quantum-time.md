@@ -39,6 +39,16 @@ description: "The thrilling sequel to The Quantum Contingent — two timelines, 
 
         <p>New locations span Sydney and the Great Barrier Reef, the Dead Sea, Masada, Paris, Austin, Munich, Shanghai, and Bangalore — all places Gregory R. Simpson has visited personally, brought to life with the same authenticity that defined Book 1.</p>
 
+        <div class="audio-sample">
+          <h2>🎧 Listen to the Prologue</h2>
+          <p>Hear the opening of <em>Quantum Time</em>, narrated by the author himself.</p>
+          <audio controls preload="none" src="/audio/quantum-time-prologue.mp3">
+            Your browser doesn't support audio playback.
+            <a href="/audio/quantum-time-prologue.mp3">Download the prologue (MP3)</a>.
+          </audio>
+          <p class="audio-cta">Like what you hear? <a href="https://a.co/d/gL9jduc" target="_blank" rel="noopener">Get the full audiobook on Audible &rarr;</a></p>
+        </div>
+
         <h2>Reader Review</h2>
 
         <div class="review-block">

@@ -1,5 +1,17 @@
 <footer class="site-footer">
   <div class="container">
+    <div class="footer-signup">
+      <h3>Get Updates from Greg</h3>
+      <p>New books, new blog posts, behind-the-scenes news — no spam, ever.</p>
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/{{ site.buttondown_username }}"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.com/{{ site.buttondown_username }}', 'popupwindow')">
+        <input type="email" name="email" placeholder="you@example.com" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
     <p>&copy; {{ site.time | date: '%Y' }} Gregory R. Simpson &bull; The Quotient Series</p>
     <div class="footer-links">
       <a href="https://linkedin.com/in/gregorysimpsonge" target="_blank" rel="noopener">LinkedIn</a>

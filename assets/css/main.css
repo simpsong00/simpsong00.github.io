@@ -273,6 +273,48 @@ img { max-width: 100%; height: auto; display: block; }
 .explore-card p { color: #aaa; font-size: 0.85rem; margin: 0; }
 .explore-card:hover p { color: #fff; }
 
+/* ---- Praise ---- */
+.praise-section {
+  background: #111;
+  padding: 3.5rem 0;
+}
+.praise-section h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+.praise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.praise-card { text-align: center; }
+.praise-card .stars {
+  color: #f57c00;
+  font-size: 1.2rem;
+  letter-spacing: 0.25em;
+  margin-bottom: 1rem;
+}
+.praise-card blockquote {
+  margin: 0 0 1rem;
+  font-style: italic;
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.praise-card cite {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: normal;
+}
+.praise-card cite a { color: #aaa; }
+.praise-card cite a:hover { color: #f57c00; }
+
 /* ---- Blog Listing ---- */
 .blog-header {
   background: #111;
@@ -672,6 +714,29 @@ img { max-width: 100%; height: auto; display: block; }
   font-style: normal;
 }
 
+.audio-sample {
+  background: #faf6f0;
+  border: 1px solid #f0e4d4;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.audio-sample h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+.audio-sample p { margin: 0.5rem 0; color: #555; font-size: 0.95rem; }
+.audio-sample audio {
+  width: 100%;
+  margin: 0.75rem 0 0.25rem;
+}
+.audio-sample .audio-cta {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+.audio-sample .audio-cta a { color: #e67e00; }
+
 .book-links-row {
   display: flex;
   flex-wrap: wrap;
@@ -734,6 +799,50 @@ img { max-width: 100%; height: auto; display: block; }
 .site-footer a:hover { color: #f57c00; }
 .site-footer .footer-links { margin-top: 0.5rem; }
 .site-footer .footer-links a { margin: 0 0.75rem; }
+
+.footer-signup {
+  max-width: 440px;
+  margin: 0 auto 2rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid #2a2a2a;
+}
+.footer-signup h3 {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.35rem;
+}
+.footer-signup p {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+.footer-signup form {
+  display: flex;
+  gap: 0.5rem;
+}
+.footer-signup input[type="email"] {
+  flex: 1;
+  padding: 0.6rem 0.9rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #1a1a1a;
+  color: #eee;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.footer-signup input[type="email"]:focus { border-color: #f57c00; }
+.footer-signup button {
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 480px) {
+  .footer-signup form { flex-direction: column; }
+}
 
 /* ---- Responsive ---- */
 @media (max-width: 860px) {

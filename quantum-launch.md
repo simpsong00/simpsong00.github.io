@@ -31,7 +31,7 @@ description: "Quantum Launch — the prequel to the Quotient Series by Gregory R
           <span>📖 Prequel to the series</span>
         </div>
 
-        <p><em>Quantum Launch</em> is the prequel to the Quotient Series. Before Jack and Sarah, there was the mission that started it all.</p>
+        <p><em>Quantum Launch</em> is the prequel to the Quotient Series. Learn how Quotient formed and the backstory on some of your favorite members of the team!</p>
 
         <p><strong>More details coming soon.</strong> Follow the blog for updates on the writing process, release timeline, and behind-the-scenes previews.</p>
 

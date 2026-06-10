@@ -4,6 +4,9 @@ author: Gregory R. Simpson
 url: "https://simpsong00.com"
 baseurl: ""
 
+# Newsletter (Buttondown username — update after creating account at buttondown.com)
+buttondown_username: simpsong00
+
 # Social / Open Graph
 twitter:
   username: simpsong00

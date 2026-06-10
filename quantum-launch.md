@@ -18,6 +18,7 @@ description: "Quantum Launch — the prequel to the Quotient Series by Gregory R
     <div class="book-detail">
       <div class="book-detail-cover">
         <img src="/weebly/quantum-launch-placeholder.svg" alt="Quantum Launch book cover placeholder">
+        <p style="font-size:0.8rem;color:#999;text-align:center;margin-top:0.5rem;">Placeholder artwork — official cover reveal to come</p>
         <div class="book-detail-buy">
           <a href="/blog/" class="btn btn-primary">Follow the Blog for Updates</a>
         </div>

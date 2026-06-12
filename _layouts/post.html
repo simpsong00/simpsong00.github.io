@@ -48,6 +48,18 @@ layout: default
           {% endif %}
         </div>
       </nav>
+
+      <div class="post-comments">
+        <h2>Comments</h2>
+        <div id="cusdis_thread"
+          data-host="https://cusdis.com"
+          data-app-id="c7eedafc-835b-40f0-89a5-6230220b64db"
+          data-page-id="{{ page.id }}"
+          data-page-url="{{ page.url | absolute_url }}"
+          data-page-title="{{ page.title }}"
+        ></div>
+        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+      </div>
     </article>
 
     <aside class="sidebar">

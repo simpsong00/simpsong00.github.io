@@ -714,6 +714,16 @@ img { max-width: 100%; height: auto; display: block; }
   font-style: normal;
 }
 
+.post-comments {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+.post-comments h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
 .audio-sample {
   background: #faf6f0;
   border: 1px solid #f0e4d4;

@@ -812,6 +812,9 @@ img { max-width: 100%; height: auto; display: block; }
 .site-footer a:hover { color: #f57c00; }
 .site-footer .footer-links { margin-top: 0.5rem; }
 .site-footer .footer-links a { margin: 0 0.75rem; }
+.site-footer .footer-links a.footer-rocket { display: inline-flex; vertical-align: middle; }
+.site-footer .footer-links a.footer-rocket svg { transition: transform 0.2s ease; }
+.site-footer .footer-links a.footer-rocket:hover svg { transform: translateY(-2px) rotate(8deg); }
 
 .footer-signup {
   max-width: 440px;

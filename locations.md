@@ -47,15 +47,6 @@ permalink: /locations/
 
     <h2>The Quantum Contingent — Locations</h2>
 
-    <div class="map-embed">
-      <iframe
-        src="https://www.google.com/maps/d/embed?mid=1nK_ksShjMqerzJzqs4XYVGAgIIsRKuuo&ehbc=2E312F"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-
     <div class="location-grid">
       <div class="location-item"><a href="https://maps.google.com/?q=Greenville,Ohio" target="_blank" rel="noopener">Greenville, Ohio</a></div>
       <div class="location-item"><a href="https://maps.google.com/?q=Lincoln+Memorial+Beach+Volleyball+Courts" target="_blank" rel="noopener">Lincoln Memorial Beach Volleyball Courts</a></div>
@@ -87,15 +78,6 @@ permalink: /locations/
     </div>
 
     <h2>Quantum Time — Locations</h2>
-
-    <div class="map-embed">
-      <iframe
-        src="https://www.google.com/maps/d/embed?mid=1K1Xj-pYzc5Wjn3HJ3U_XKgxUX_9x70A&ehbc=2E312F"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
 
     <div class="location-grid">
       <div class="location-item"><a href="https://maps.google.com/?q=Sydney+Australia" target="_blank" rel="noopener">Sydney, Australia</a></div>

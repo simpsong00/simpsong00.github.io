@@ -39,7 +39,7 @@ permalink: /locations/
     <p>One of the most distinctive features of the Quotient Series is its commitment to real geography. Every location referenced in the books is a real place in the world — and most are places Greg has visited himself. For example, <a href="/weebly/lucerne-river-reuss.jpeg" target="_blank" rel="noopener">this photo</a> was taken on the River Reuss in Lucerne, Switzerland — a scene that appears in <em>The Quantum Contingent</em>.</p>
 
     <h2>Explore the World in 3D</h2>
-    <p>Spin the globe to see where the action unfolds across both books. <span style="color:#43d4ff;">Blue</span> markers trace <em>The Quantum Contingent</em>; <span style="color:#ffb13d;">orange</span> markers trace <em>Quantum Time</em>.</p>
+    <p>Spin the globe to see where the action unfolds across all three books. <span style="color:#43d4ff;">Blue</span> markers trace <em>The Quantum Contingent</em>; <span style="color:#ffb13d;">orange</span> markers trace <em>Quantum Time</em>; <span style="color:#b388ff;">purple</span> markers trace <em>Quantum Launch</em>.</p>
 
     <div class="globe-embed">
       <iframe src="/globe-embed.html" title="Interactive globe of Quotient Series locations" style="width:100%;height:80vh;border:0;" loading="lazy"></iframe>
@@ -113,6 +113,34 @@ permalink: /locations/
       <div class="location-item"><a href="https://maps.google.com/?q=Mount+Rushmore" target="_blank" rel="noopener">Mount Rushmore</a></div>
       <div class="location-item"><a href="https://maps.google.com/?q=Seven+Falls+Colorado+Springs" target="_blank" rel="noopener">Seven Falls, Colorado Springs</a></div>
       <div class="location-item"><a href="https://maps.google.com/?q=Great+Barrier+Reef+Australia" target="_blank" rel="noopener">Great Barrier Reef, Australia</a></div>
+    </div>
+
+    <h2>Quantum Launch — Locations</h2>
+    <p style="color:#777;margin-top:-0.5rem;">The prequel — coming 2027.</p>
+
+    <div class="location-grid">
+      <div class="location-item"><a href="https://maps.google.com/?q=MIT+Cambridge+MA" target="_blank" rel="noopener">MIT, Cambridge, MA</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Greenville+Ohio" target="_blank" rel="noopener">Greenville, Ohio</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=London+England" target="_blank" rel="noopener">London, England</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Jungfrau+Switzerland" target="_blank" rel="noopener">Jungfrau, Switzerland</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Cleveland+Ohio" target="_blank" rel="noopener">Cleveland, Ohio</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=CERN+Geneva+Switzerland" target="_blank" rel="noopener">CERN, Geneva</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Ashburn+Virginia" target="_blank" rel="noopener">Ashburn, VA</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Mongolia" target="_blank" rel="noopener">Mongolia</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Reno+Nevada" target="_blank" rel="noopener">Reno, Nevada</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=North+Korea" target="_blank" rel="noopener">North Korea</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Washington+DC" target="_blank" rel="noopener">Washington, D.C.</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Bar+Harbor+Maine" target="_blank" rel="noopener">Bar Harbor, Maine</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Sedona+Arizona" target="_blank" rel="noopener">Sedona, Arizona</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Lucerne+Switzerland" target="_blank" rel="noopener">Lucerne, Switzerland</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Copenhagen+Denmark" target="_blank" rel="noopener">Copenhagen, Denmark</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Sonderborg+Denmark" target="_blank" rel="noopener">Sønderborg, Denmark</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Queenstown+New+Zealand" target="_blank" rel="noopener">Queenstown, New Zealand</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Sorrento+Italy" target="_blank" rel="noopener">Sorrento, Italy</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Glenorchy+New+Zealand" target="_blank" rel="noopener">Glencovey, New Zealand</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Las+Vegas+Nevada" target="_blank" rel="noopener">Las Vegas, Nevada</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Kauai+Hawaii" target="_blank" rel="noopener">Kauai, Hawaii</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Lawrence+Livermore+National+Laboratory" target="_blank" rel="noopener">Lawrence Livermore National Laboratory</a></div>
     </div>
 
 

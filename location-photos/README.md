@@ -77,5 +77,30 @@ a placeholder for any that are missing, so the globe always works even with phot
 ⬜️ `qt-seven-falls.jpg` — Seven Falls, Colorado Springs _(reuse `seven-falls.jpg`)_
 ✅ `qt-gbr.jpg` — Great Barrier Reef, Australia
 
+## Quantum Launch (22) — prequel, coming 2027
+
+⬜️ `ql-mit.jpg` — MIT, Cambridge
+⬜️ `ql-greenville.jpg` — Greenville, Ohio _(reuse `greenville-oh.jpg`)_
+⬜️ `ql-london.jpg` — London, England _(reuse `waterloo.jpg`?)_
+⬜️ `ql-jungfrau.jpg` — Jungfrau, Switzerland
+⬜️ `ql-cleveland.jpg` — Cleveland, Ohio _(reuse `rrhof.jpg`?)_
+⬜️ `ql-cern.jpg` — CERN, Geneva
+⬜️ `ql-ashburn.jpg` — Ashburn, Virginia
+⬜️ `ql-mongolia.jpg` — Mongolia
+⬜️ `ql-reno.jpg` — Reno, Nevada
+⬜️ `ql-north-korea.jpg` — North Korea
+⬜️ `ql-washington.jpg` — Washington, D.C. _(reuse `qt-washington.jpg`)_
+⬜️ `ql-bar-harbor.jpg` — Bar Harbor, Maine
+⬜️ `ql-sedona.jpg` — Sedona, Arizona
+⬜️ `ql-lucerne.jpg` — Lucerne, Switzerland _(reuse `lucerne.jpg`)_
+⬜️ `ql-copenhagen.jpg` — Copenhagen, Denmark
+⬜️ `ql-sonderborg.jpg` — Sønderborg, Denmark
+⬜️ `ql-queenstown.jpg` — Queenstown, New Zealand
+⬜️ `ql-sorrento.jpg` — Sorrento, Italy
+⬜️ `ql-glencovey.jpg` — Glencovey, New Zealand
+⬜️ `ql-vegas.jpg` — Las Vegas, Nevada
+⬜️ `ql-kauai.jpg` — Kauai, Hawaii
+⬜️ `ql-llnl.jpg` — Lawrence Livermore Labs
+
 ---
-Total: 61 locations · 9 photos added
+Total: 83 locations · 9 photos added

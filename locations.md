@@ -80,15 +80,39 @@ permalink: /locations/
     <h2>Quantum Time — Locations</h2>
 
     <div class="location-grid">
+      <div class="location-item"><a href="https://maps.google.com/?q=Orvieto+Italy" target="_blank" rel="noopener">Orvieto, Italy</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Hotel+del+Coronado+San+Diego" target="_blank" rel="noopener">Hotel del Coronado, San Diego</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Wright-Patterson+Air+Force+Base" target="_blank" rel="noopener">Wright-Patterson Air Force Base</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Badlands+National+Park" target="_blank" rel="noopener">Badlands National Park</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Colorado+Springs+CO" target="_blank" rel="noopener">Colorado Springs, CO</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Torrey+Pines+State+Natural+Reserve" target="_blank" rel="noopener">Torrey Pines State Natural Reserve</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=University+of+Oxford" target="_blank" rel="noopener">University of Oxford</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=London+England" target="_blank" rel="noopener">London, England</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Gore+Ethiopia" target="_blank" rel="noopener">Gore, Ethiopia</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Washington+DC" target="_blank" rel="noopener">Washington, D.C.</a></div>
       <div class="location-item"><a href="https://maps.google.com/?q=Sydney+Australia" target="_blank" rel="noopener">Sydney, Australia</a></div>
-      <div class="location-item"><a href="https://maps.google.com/?q=Great+Barrier+Reef+Australia" target="_blank" rel="noopener">Great Barrier Reef, Australia</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Botany+Bay+Australia" target="_blank" rel="noopener">Botany Bay, Australia</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Nairobi+Kenya" target="_blank" rel="noopener">Nairobi, Kenya</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Uluru+Australia" target="_blank" rel="noopener">Uluru, Australia</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Key+West+Florida" target="_blank" rel="noopener">Key West, Florida</a></div>
       <div class="location-item"><a href="https://maps.google.com/?q=Dead+Sea+Jordan+Israel" target="_blank" rel="noopener">The Dead Sea</a></div>
       <div class="location-item"><a href="https://maps.google.com/?q=Masada+Israel" target="_blank" rel="noopener">Masada, Israel</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Greenville+Ohio" target="_blank" rel="noopener">Greenville, Ohio</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Skyline+Chili+Cincinnati" target="_blank" rel="noopener">Skyline Chili, Cincinnati</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Cincinnati+Museum+Center" target="_blank" rel="noopener">Cincinnati Museum Center</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Shanghai+China" target="_blank" rel="noopener">Shanghai, China</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Bengaluru+India" target="_blank" rel="noopener">Bengaluru, India</a></div>
       <div class="location-item"><a href="https://maps.google.com/?q=Paris+France" target="_blank" rel="noopener">Paris, France</a></div>
       <div class="location-item"><a href="https://maps.google.com/?q=Austin+Texas" target="_blank" rel="noopener">Austin, Texas</a></div>
       <div class="location-item"><a href="https://maps.google.com/?q=Munich+Germany" target="_blank" rel="noopener">Munich, Germany</a></div>
-      <div class="location-item"><a href="https://maps.google.com/?q=Shanghai+China" target="_blank" rel="noopener">Shanghai, China</a></div>
-      <div class="location-item"><a href="https://maps.google.com/?q=Bangalore+India" target="_blank" rel="noopener">Bangalore, India</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Scottish+Highlands" target="_blank" rel="noopener">Scottish Highlands</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Brussels+Belgium" target="_blank" rel="noopener">Brussels, Belgium</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Edinburgh+Scotland" target="_blank" rel="noopener">Edinburgh, Scotland</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Prestwick+Scotland" target="_blank" rel="noopener">Prestwick, Scotland</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Arctic+Circle+Jokkmokk+Sweden" target="_blank" rel="noopener">Arctic Circle, Jokkmokk</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Mount+Rushmore" target="_blank" rel="noopener">Mount Rushmore</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Seven+Falls+Colorado+Springs" target="_blank" rel="noopener">Seven Falls, Colorado Springs</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Great+Barrier+Reef+Australia" target="_blank" rel="noopener">Great Barrier Reef, Australia</a></div>
     </div>
 
 

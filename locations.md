@@ -56,6 +56,7 @@ permalink: /locations/
       <div class="location-item"><a href="https://maps.google.com/?q=Wall+Street+New+York" target="_blank" rel="noopener">Wall Street, New York</a></div>
       <div class="location-item"><a href="https://maps.google.com/?q=The+Sanctuary+Kiawah+Island+SC" target="_blank" rel="noopener">The Sanctuary, Kiawah Island, SC</a></div>
       <div class="location-item"><a href="https://maps.google.com/?q=Santa+Cruz+California" target="_blank" rel="noopener">Santa Cruz, CA</a></div>
+      <div class="location-item"><a href="https://maps.google.com/?q=Brazil" target="_blank" rel="noopener">Brazil</a></div>
       <div class="location-item"><a href="https://maps.google.com/?q=The+Broadmoor+Colorado+Springs" target="_blank" rel="noopener">The Broadmoor, Colorado Springs, CO</a></div>
       <div class="location-item"><a href="https://maps.google.com/?q=SpaceX+Headquarters+Hawthorne+CA" target="_blank" rel="noopener">SpaceX Headquarters</a></div>
       <div class="location-item"><a href="https://maps.google.com/?q=Starbase+Texas+Boca+Chica" target="_blank" rel="noopener">Starbase, Texas</a></div>

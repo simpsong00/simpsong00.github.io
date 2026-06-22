@@ -39,7 +39,7 @@ permalink: /locations/
     <p>One of the most distinctive features of the Quotient Series is its commitment to real geography. Every location referenced in the books is a real place in the world — and most are places Greg has visited himself. For example, <a href="/weebly/lucerne-river-reuss.jpeg" target="_blank" rel="noopener">this photo</a> was taken on the River Reuss in Lucerne, Switzerland — a scene that appears in <em>The Quantum Contingent</em>.</p>
 
     <h2>Explore the World in 3D</h2>
-    <p>Spin the globe to see where the action unfolds across all three books. <span style="color:#43d4ff;">Blue</span> markers trace <em>The Quantum Contingent</em>; <span style="color:#ffb13d;">orange</span> markers trace <em>Quantum Time</em>; <span style="color:#b388ff;">purple</span> markers trace <em>Quantum Launch</em>.</p>
+    <p>Spin the globe to see where the action unfolds across all three books. <span style="color:#43d4ff;">Blue</span> markers trace <em>The Quantum Contingent</em>; <span style="color:#ffb13d;">orange</span> markers trace <em>Quantum Time</em>; <span style="color:#b388ff;">purple</span> markers trace <em>Quantum Launch</em>. <strong>Click any marker to see a photo of that location.</strong></p>
 
     <div class="globe-embed">
       <iframe src="/globe-embed.html" title="Interactive globe of Quotient Series locations" style="width:100%;height:80vh;border:0;" loading="lazy"></iframe>

@@ -91,7 +91,7 @@ a placeholder for any that are missing, so the globe always works even with phot
 ⬜️ `ql-reno.jpg` — Reno, Nevada
 ⬜️ `ql-north-korea.jpg` — North Korea
 ⬜️ `ql-washington.jpg` — Washington, D.C. _(reuse `qt-washington.jpg`)_
-⬜️ `ql-bar-harbor.jpg` — Bar Harbor, Maine
+✅ `ql-bar-harbor.jpg` — Bar Harbor, Maine
 ⬜️ `ql-sedona.jpg` — Sedona, Arizona
 ✅ `ql-lucerne.jpg` — Lucerne, Switzerland _(reuse `lucerne.jpg`)_
 ⬜️ `ql-copenhagen.jpg` — Copenhagen, Denmark
@@ -104,4 +104,4 @@ a placeholder for any that are missing, so the globe always works even with phot
 ⬜️ `ql-llnl.jpg` — Lawrence Livermore Labs
 
 ---
-Total: 84 locations · 49 photos added
+Total: 84 locations · 50 photos added

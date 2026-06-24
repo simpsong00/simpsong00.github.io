@@ -9,7 +9,8 @@ draft: false
 Recursive Self Improvement (RSI) is a concept where an AI can autonomously design and develop its own code, essentially creating a new improved version of itself, which in turn creates an even better version of itself and so on, and so on... (like the '70's shampoo commercial for those that remember!)
 
 
-[![](/weebly/screenshot-2026-06-24-at-3-38-41-pm.png)](/weebly/screenshot-2026-06-24-at-3-38-41-pm.png)
+[![](/weebly/screenshot-2026-06-24-at-3-51-22-pm.png)](/weebly/screenshot-2026-06-24-at-3-51-22-pm.png)
+
 
 Recursive Self Improvement is closer than you think. This is a concerning development to many because of the risk the AI reaches a point where humans no longer can control it. If its directive is to improve itself, any attempt to stop it may be taken as going against its prime directive. Therefore, it may need to take action to prevent humans from shutting it down. These actions are depicted in many old science fiction movies, the dystopian ones.
 

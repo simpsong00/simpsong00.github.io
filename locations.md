@@ -2,6 +2,8 @@
 layout: default
 title: Locations
 permalink: /locations/
+redirect_from:
+  - /locations.html
 ---
 
 <style>

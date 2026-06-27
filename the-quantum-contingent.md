@@ -3,6 +3,9 @@ layout: default
 title: The Quantum Contingent
 permalink: /the-quantum-contingent/
 description: "A globe-trotting techno-spy thriller set in 2028 — quantum computing, espionage, and global stakes. Book 1 of the Quotient Series by Gregory R. Simpson."
+redirect_from:
+  - /the-quantum-contingent.html
+  - /quantum-contingent.html
 ---
 
 <div class="page-header">

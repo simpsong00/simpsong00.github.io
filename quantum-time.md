@@ -2,6 +2,8 @@
 layout: default
 title: Quantum Time
 permalink: /quantum-time/
+redirect_from:
+  - /quantum-time.html
 description: "The thrilling sequel to The Quantum Contingent — two timelines, a mysterious wind of death, and the fate of the world. Book 2 of the Quotient Series by Gregory R. Simpson."
 ---
 

@@ -2,6 +2,9 @@
 layout: default
 title: Author
 permalink: /author/
+redirect_from:
+  - /author.html
+  - /about.html
 ---
 
 <style>

@@ -2,6 +2,8 @@
 layout: default
 title: Technology
 permalink: /technology/
+redirect_from:
+  - /technology.html
 ---
 
 <style>

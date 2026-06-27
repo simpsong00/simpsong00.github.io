@@ -2,6 +2,9 @@
 layout: default
 title: The Game!
 permalink: /game/
+redirect_from:
+  - /game.html
+  - /the-game.html
 ---
 
 <style>

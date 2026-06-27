@@ -24,6 +24,7 @@ description: "Quantum Launch — the prequel to the Quotient Series by Gregory R
         </div>
         <div class="book-links-row">
           <a href="https://open.spotify.com/playlist/7IoVUxwDk5KDfwRWiFLhy1?si=fedc46f9a3414a0b" target="_blank" rel="noopener">Spotify Playlist</a>
+          <a href="/ql-photos/">Photo Gallery</a>
         </div>
       </div>
 

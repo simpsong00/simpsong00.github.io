@@ -25,6 +25,7 @@ description: "The thrilling sequel to The Quantum Contingent — two timelines, 
         </div>
         <div class="book-links-row">
           <a href="https://spoti.fi/4ceGFTJ" target="_blank" rel="noopener">Spotify Playlist</a>
+          <a href="/qt-photos/">Photo Gallery</a>
         </div>
       </div>
 

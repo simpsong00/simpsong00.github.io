@@ -27,6 +27,7 @@ redirect_from:
         <div class="book-links-row">
           <a href="https://www.goodreads.com/book/show/60432112-the-quantum-contingent" target="_blank" rel="noopener">Goodreads</a>
           <a href="https://open.spotify.com/playlist/1OgAjV587jSyJNvHjZYcso?si=1518fc3afadd4aca" target="_blank" rel="noopener">Spotify Playlist</a>
+          <a href="/tqc-photos/">Photo Gallery</a>
         </div>
       </div>
 

@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pidog Router — A Friendly Guide</title>
+<style>
+  :root{
+    --bg:#f4f1ea; --panel:#fbf9f4; --ink:#2b2724; --muted:#6f675e;
+    --line:#e3ddd1; --accent:#c4622d; --accent-soft:#eadfce;
+    --fast:#2f7d54; --smart:#2f6db0; --cloud:#7d4fb0; --home:#b8892b;
+    --shadow:0 1px 3px rgba(43,39,36,.06),0 8px 24px rgba(43,39,36,.05);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+       line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;letter-spacing:-.01em}
+  a{color:var(--accent)}
+  code{font-family:var(--mono);font-size:.86em;background:var(--accent-soft);
+       padding:.08em .38em;border-radius:5px;color:#7a3a17}
+
+  /* Hero */
+  header{background:linear-gradient(180deg,#efe9dc,#f4f1ea);border-bottom:1px solid var(--line)}
+  .hero{padding:64px 0 52px;text-align:center}
+  .paw{font-size:56px;line-height:1}
+  .hero h1{font-size:clamp(34px,6vw,52px);margin:.35em 0 .15em}
+  .hero .tag{font-family:var(--serif);font-style:italic;font-size:clamp(18px,3vw,23px);color:var(--accent)}
+  .hero p{max-width:640px;margin:18px auto 0;color:var(--muted);font-size:18px}
+  .pills{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+  .pill{font-size:13px;padding:5px 13px;border-radius:99px;background:var(--panel);
+        border:1px solid var(--line);color:var(--muted)}
+
+  section{padding:46px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(24px,4vw,32px);margin:0 0 6px}
+  .kicker{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;
+          color:var(--accent);font-family:var(--sans);margin-bottom:6px}
+  section > .wrap > p{color:#443f39;max-width:70ch}
+  .lead{font-size:19px}
+
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+        padding:20px 22px;box-shadow:var(--shadow)}
+  .grid{display:grid;gap:16px;margin-top:22px}
+  .g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:720px){.g2,.g3{grid-template-columns:1fr}}
+  .card h3{margin:.1em 0 .3em;font-size:19px;display:flex;align-items:center;gap:9px}
+  .card p{margin:.3em 0;color:var(--muted);font-size:15px}
+  .dot{width:11px;height:11px;border-radius:50%;flex:0 0 auto}
+
+  figure{margin:26px 0 6px;background:var(--panel);border:1px solid var(--line);
+         border-radius:14px;padding:14px;box-shadow:var(--shadow);overflow:hidden}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{color:var(--muted);font-size:13.5px;text-align:center;margin-top:8px;font-style:italic}
+
+  .steps{counter-reset:s;margin-top:22px;padding:0;list-style:none}
+  .steps li{counter-increment:s;position:relative;padding:12px 0 12px 52px;border-top:1px solid var(--line)}
+  .steps li:first-child{border-top:none}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:12px;width:34px;height:34px;
+    background:var(--accent);color:#fff;border-radius:50%;display:grid;place-items:center;
+    font-weight:700;font-family:var(--serif)}
+  .steps b{color:var(--ink)}
+
+  table{width:100%;border-collapse:collapse;margin-top:20px;font-size:14.5px;background:var(--panel);
+        border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:#efe9dc;font-family:var(--sans);font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  tr:last-child td{border-bottom:none}
+
+  .chat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px 6px;margin-top:20px}
+  .bubble{margin:8px 10px;padding:10px 15px;border-radius:14px;max-width:82%;font-size:15px}
+  .u{background:#e7eff6;margin-left:auto;border-bottom-right-radius:4px}
+  .d{background:var(--accent-soft);border-bottom-left-radius:4px}
+  .meta{font-family:var(--mono);font-size:12px;color:var(--muted);margin:2px 16px 10px}
+
+  .note{background:#fbf4ea;border-left:4px solid var(--accent);border-radius:0 10px 10px 0;
+        padding:12px 18px;margin-top:20px;font-size:15px;color:#5c4a3a}
+  .cfg{font-family:var(--mono);font-size:13.5px}
+  footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:10px;font-size:13px;color:var(--muted)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+</style>
+</head>
+<body>
+
+<header><div class="wrap hero">
+  <div class="paw">🐶</div>
+  <h1>The Pidog Router</h1>
+  <div class="tag">a robot dog with a brain that knows when to think small, think big, or phone home</div>
+  <p>This guide explains — in plain language — how a SunFounder Pidog is wired to a
+     little "router" program that decides, for every single thing you say, the smartest
+     and cheapest way to answer it. No jargon required.</p>
+  <div class="pills">
+    <span class="pill">🗣️ Voice in & out</span>
+    <span class="pill">🧠 3 AI brains</span>
+    <span class="pill">🦴 Real movement</span>
+    <span class="pill">📷 Vision</span>
+    <span class="pill">🏠 Smart home</span>
+    <span class="pill">🔎 Web search</span>
+  </div>
+</div></header>
+
+<!-- ───────────────────────── BIG PICTURE ───────────────────────── -->
+<section><div class="wrap">
+  <div class="kicker">The big picture</div>
+  <h2>Two computers, one dog</h2>
+  <p class="lead">The Pidog itself is a small Raspberry Pi computer. It's great at listening,
+     talking, moving, and seeing — but it isn't powerful enough to run a serious AI.
+     So it hands the <em>thinking</em> to a second computer (a Mac) running the
+     <strong>Router</strong>. They talk over your home Wi-Fi.</p>
+
+  <figure aria-label="System architecture diagram">
+  <svg viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+    <defs>
+      <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M0,0 L9,4.5 L0,9 z" fill="#8a8175"/>
+      </marker>
+    </defs>
+    <!-- Pi -->
+    <rect x="20" y="120" width="210" height="200" rx="14" fill="#fbf9f4" stroke="#d8cdb9" stroke-width="1.5"/>
+    <text x="125" y="150" text-anchor="middle" font-size="16" font-weight="700" fill="#2b2724">🐶 Pidog (Raspberry Pi)</text>
+    <text x="125" y="176" text-anchor="middle" font-size="12.5" fill="#6f675e">on your Wi-Fi</text>
+    <g font-size="12.5" fill="#443f39">
+      <text x="42" y="208">🎤 microphone</text>
+      <text x="42" y="232">🔊 speaker</text>
+      <text x="42" y="256">📷 camera</text>
+      <text x="42" y="280">🦿 servos &amp; sensors</text>
+      <text x="42" y="304">🐍 pidog_voice.py</text>
+    </g>
+    <!-- Router -->
+    <rect x="345" y="120" width="210" height="200" rx="14" fill="#fbf3ea" stroke="#e0a878" stroke-width="1.8"/>
+    <text x="450" y="150" text-anchor="middle" font-size="16" font-weight="700" fill="#7a3a17">🧭 Router (Mac)</text>
+    <text x="450" y="176" text-anchor="middle" font-size="12.5" fill="#a06a44">port :8000 · router.py</text>
+    <circle cx="450" cy="242" r="46" fill="#fff" stroke="#c4622d" stroke-width="1.8"/>
+    <text x="450" y="238" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c4622d">decide</text>
+    <text x="450" y="255" text-anchor="middle" font-size="11" fill="#a06a44">where to send it</text>
+    <!-- destinations -->
+    <g>
+      <rect x="675" y="30" width="205" height="52" rx="11" fill="#eaf3ee" stroke="#2f7d54"/>
+      <text x="690" y="52" font-size="13.5" font-weight="700" fill="#2f7d54">FAST · 3B model</text>
+      <text x="690" y="70" font-size="11.5" fill="#4a7a5f">on the Mac · chit-chat</text>
+
+      <rect x="675" y="100" width="205" height="52" rx="11" fill="#e9f0f8" stroke="#2f6db0"/>
+      <text x="690" y="122" font-size="13.5" font-weight="700" fill="#2f6db0">SMART · 7B model</text>
+      <text x="690" y="140" font-size="11.5" fill="#4a6a90">on the Mac · reasoning</text>
+
+      <rect x="675" y="170" width="205" height="52" rx="11" fill="#f1ebf8" stroke="#7d4fb0"/>
+      <text x="690" y="192" font-size="13.5" font-weight="700" fill="#7d4fb0">CLOUD · Claude API</text>
+      <text x="690" y="210" font-size="11.5" fill="#6a5090">internet · hard questions</text>
+
+      <rect x="675" y="240" width="205" height="52" rx="11" fill="#f8f1e2" stroke="#b8892b"/>
+      <text x="690" y="262" font-size="13.5" font-weight="700" fill="#9a7020">HOME · Home Assistant</text>
+      <text x="690" y="280" font-size="11.5" fill="#8a6a2a">another Pi · your devices</text>
+    </g>
+    <!-- arrows -->
+    <line x1="232" y1="205" x2="343" y2="205" stroke="#8a8175" stroke-width="2" marker-end="url(#ar)"/>
+    <line x1="343" y1="278" x2="232" y2="278" stroke="#8a8175" stroke-width="2" marker-end="url(#ar)"/>
+    <text x="287" y="196" text-anchor="middle" font-size="11" fill="#6f675e">your words</text>
+    <text x="287" y="298" text-anchor="middle" font-size="11" fill="#6f675e">the answer</text>
+    <g stroke="#c4a" stroke-width="0"><!-- spacer --></g>
+    <line x1="497" y1="215" x2="672" y2="56"  stroke="#bcae97" stroke-width="1.6" marker-end="url(#ar)"/>
+    <line x1="500" y1="230" x2="672" y2="126" stroke="#bcae97" stroke-width="1.6" marker-end="url(#ar)"/>
+    <line x1="500" y1="254" x2="672" y2="196" stroke="#bcae97" stroke-width="1.6" marker-end="url(#ar)"/>
+    <line x1="497" y1="270" x2="672" y2="266" stroke="#bcae97" stroke-width="1.6" marker-end="url(#ar)"/>
+  </svg>
+  <figcaption>The Pidog captures speech and sends the text to the Router. The Router picks one of four
+    destinations, gets an answer, and sends it back for the dog to speak — and act on.</figcaption>
+  </figure>
+</div></section>
+
+<!-- ───────────────────────── THREE BRAINS ───────────────────────── -->
+<section><div class="wrap">
+  <div class="kicker">The brains</div>
+  <h2>Three AI "brains" plus your smart home</h2>
+  <p>Not every question deserves the same effort. Asking "who's a good boy?" shouldn't cost
+     money or wait on the internet. The Router keeps a <strong>ladder</strong> of options and
+     climbs it only as far as a question needs.</p>
+
+  <div class="grid g2">
+    <div class="card"><h3><span class="dot" style="background:var(--fast)"></span>FAST — a small local model</h3>
+      <p>A compact 3-billion-parameter model (<code>Qwen2.5-3B</code>) running right on the Mac.
+      Instant, free, private. Handles greetings, jokes, quick chit-chat.</p></div>
+    <div class="card"><h3><span class="dot" style="background:var(--smart)"></span>SMART — a bigger local model</h3>
+      <p>A 7-billion-parameter model (<code>Qwen2.5-7B</code>), also on the Mac. Slower but
+      better at reasoning: "why", "how does", "compare", "explain". Still free and private.</p></div>
+    <div class="card"><h3><span class="dot" style="background:var(--cloud)"></span>CLOUD — Claude, over the internet</h3>
+      <p>Anthropic's Claude models via the API. Reserved for the hard stuff: current events,
+      long or expert answers, and anything needing a <strong>web search</strong>. Costs a little
+      per use, so it's used sparingly.</p></div>
+    <div class="card"><h3><span class="dot" style="background:var(--home)"></span>HOME — Home Assistant</h3>
+      <p>Not an AI at all — your existing smart-home hub. "Turn off the kitchen" is sent straight
+      here so <em>it</em> controls the lights and speaks the confirmation back.</p></div>
+  </div>
+
+  <table>
+    <tr><th>Brain</th><th>Lives</th><th>Good for</th><th>Speed</th><th>Cost</th></tr>
+    <tr><td><b style="color:var(--fast)">FAST</b> (3B)</td><td>Mac</td><td>chit-chat, quick replies</td><td>very fast</td><td>free</td></tr>
+    <tr><td><b style="color:var(--smart)">SMART</b> (7B)</td><td>Mac</td><td>reasoning, explanations</td><td>~20 words/sec</td><td>free</td></tr>
+    <tr><td><b style="color:var(--cloud)">CLOUD</b> (Claude)</td><td>internet</td><td>current events, expertise, search</td><td>fast, has network hop</td><td>pennies</td></tr>
+    <tr><td><b style="color:var(--home)">HOME</b> (HA)</td><td>your hub</td><td>lights, locks, thermostats</td><td>instant</td><td>free</td></tr>
+  </table>
+  <div class="note"><b>Automatic fallback.</b> If a chosen brain is unavailable (a model isn't
+    running, the internet is down, the smart home doesn't recognise a command), the Router quietly
+    tries the next option and tells you what it did. The dog never just goes silent.</div>
+</div></section>
+
+<!-- ───────────────────────── ROUTING ───────────────────────── -->
+<section><div class="wrap">
+  <div class="kicker">The decision</div>
+  <h2>How it chooses, in a blink</h2>
+  <p>The Router reads your words and checks them against simple rules — key phrases and length —
+     before any AI is even involved. This costs microseconds and keeps easy things cheap.</p>
+
+  <figure aria-label="Routing decision flowchart">
+  <svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+    <defs>
+      <marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M0,0 L9,4.5 L0,9 z" fill="#8a8175"/></marker>
+    </defs>
+    <rect x="20" y="128" width="150" height="46" rx="10" fill="#fff" stroke="#c4622d" stroke-width="1.6"/>
+    <text x="95" y="156" text-anchor="middle" font-size="13.5" font-weight="700" fill="#7a3a17">you speak</text>
+
+    <g font-size="12.5">
+      <!-- home -->
+      <path d="M205,151 L255,60" stroke="#8a8175" stroke-width="1.6" marker-end="url(#ar2)"/>
+      <rect x="258" y="34" width="240" height="46" rx="10" fill="#f8f1e2" stroke="#b8892b"/>
+      <text x="270" y="55" font-size="12" fill="#9a7020">“turn off / lock / dim …”</text>
+      <text x="270" y="72" font-size="11.5" font-weight="700" fill="#9a7020">→ HOME</text>
+      <!-- cloud -->
+      <path d="M205,151 L255,112" stroke="#8a8175" stroke-width="1.6" marker-end="url(#ar2)"/>
+      <rect x="258" y="92" width="240" height="46" rx="10" fill="#f1ebf8" stroke="#7d4fb0"/>
+      <text x="270" y="113" font-size="12" fill="#6a5090">“latest / today / weather”, long</text>
+      <text x="270" y="130" font-size="11.5" font-weight="700" fill="#7d4fb0">→ CLOUD (may web-search)</text>
+      <!-- smart -->
+      <path d="M205,151 L255,164" stroke="#8a8175" stroke-width="1.6" marker-end="url(#ar2)"/>
+      <rect x="258" y="150" width="240" height="46" rx="10" fill="#e9f0f8" stroke="#2f6db0"/>
+      <text x="270" y="171" font-size="12" fill="#4a6a90">“why / how / explain / compare”</text>
+      <text x="270" y="188" font-size="11.5" font-weight="700" fill="#2f6db0">→ SMART (7B)</text>
+      <!-- fast -->
+      <path d="M205,151 L255,216" stroke="#8a8175" stroke-width="1.6" marker-end="url(#ar2)"/>
+      <rect x="258" y="208" width="240" height="46" rx="10" fill="#eaf3ee" stroke="#2f7d54"/>
+      <text x="270" y="229" font-size="12" fill="#4a7a5f">everything else, short</text>
+      <text x="270" y="246" font-size="11.5" font-weight="700" fill="#2f7d54">→ FAST (3B)</text>
+    </g>
+    <text x="620" y="120" font-size="13" fill="#6f675e">A camera photo attached?</text>
+    <text x="620" y="142" font-size="13" font-weight="700" fill="#7d4fb0">always → CLOUD (only it can see)</text>
+    <text x="620" y="182" font-size="13" fill="#6f675e">A direct command like “sit”?</text>
+    <text x="620" y="204" font-size="13" font-weight="700" fill="#2f7d54">handled on the dog itself — no AI</text>
+  </svg>
+  <figcaption>Simple keyword &amp; length rules pick a destination first. You can also force one, or
+    set the whole dog to "always use CLOUD" for a setup with no local models.</figcaption>
+  </figure>
+</div></section>
+
+<!-- ───────────────────────── VOICE ───────────────────────── -->
+<section><div class="wrap">
+  <div class="kicker">Voice</div>
+  <h2>Ears and a mouth</h2>
+  <p>All the listening and speaking happens on the Pi. Each half has options so you can trade
+     convenience against privacy and quality.</p>
+  <div class="grid g2">
+    <div class="card"><h3>👂 Speech → text (hearing)</h3>
+      <p><b>Google</b> (default) — accurate, needs internet.<br>
+         <b>Vosk</b> — fully offline, private.<br>
+         <b>Home Assistant</b> — use your HA voice engine (e.g. Whisper).</p></div>
+    <div class="card"><h3>🗣️ Text → speech (talking)</h3>
+      <p><b>Local</b> (default) — the Pidog's built-in voice, free &amp; offline.<br>
+         <b>ElevenLabs</b> — a far more natural cloud voice.<br>
+         <b>Home Assistant</b> — HA's Piper/cloud voices.</p></div>
+  </div>
+  <div class="note"><b>Streaming speech.</b> The dog doesn't wait for the whole answer. As the AI
+    writes, the Router sends text over as it appears; the dog speaks <em>each sentence the moment it's
+    finished</em> while the rest is still being written. A long, web-searched answer starts coming out
+    of the speaker in a second or two instead of after a long silence.</div>
+</div></section>
+
+<!-- ───────────────────────── ACTIONS ───────────────────────── -->
+<section><div class="wrap">
+  <div class="kicker">Movement</div>
+  <h2>Making the dog actually move</h2>
+  <p>Talking is only half a robot dog. There are two ways it physically acts.</p>
+
+  <div class="grid g2">
+    <div class="card"><h3>⚡ Direct commands</h3>
+      <p>Say a plain command — <code>sit</code>, <code>come</code>, <code>shake hands</code>,
+      <code>turn left</code> — and the dog does it <b>instantly</b>, without asking any AI at all.
+      Works even if the internet and the Mac are off. Rock-solid and fast.</p></div>
+    <div class="card"><h3>🧠 AI-chosen actions</h3>
+      <p>For anything conversational, the AI can attach a hidden action to its reply. Ask it to
+      "pretend you're sleepy" and it might yawn a sentence <em>and</em> lie down. It can even chain a
+      short routine — turn, walk, sit — in one go.</p></div>
+  </div>
+
+  <div class="chat">
+    <div class="bubble u">Do a little routine for me — turn around and then sit.</div>
+    <div class="bubble d">Woohoo, routine time! Turning, then plopping into a sit like a good pup! 🐾</div>
+    <div class="meta">cloud · claude · performs: turn_left → forward → sit</div>
+  </div>
+  <div class="note">Behind the scenes the AI adds a tiny tag like <code>[[action:turn_left,forward,sit]]</code>
+    to its reply. The Router <b>removes that tag before the dog speaks</b> (so it's never said aloud) and
+    passes the moves to the Pi to perform in order. Unknown moves are ignored safely — a bad guess never
+    crashes the dog.</div>
+</div></section>
+
+<!-- ───────────────────────── VISION ───────────────────────── -->
+<section><div class="wrap">
+  <div class="kicker">Vision</div>
+  <h2>“What do you see?”</h2>
+  <p>Ask the dog what it sees and it snaps a photo with its camera, sends the picture along with your
+     question, and describes what's in front of it. Because only Claude can look at images, vision
+     questions always go to the <b style="color:var(--cloud)">CLOUD</b> brain automatically.</p>
+  <div class="chat">
+    <div class="bubble u">📷 What do you see?</div>
+    <div class="bubble d">I see a red ball on the wooden floor, and a person's sneakers just past it! Fetch? 🎾</div>
+    <div class="meta">cloud · claude · 📷 photo sent with the question</div>
+  </div>
+  <p style="margin-top:14px;color:var(--muted);font-size:15px">Trigger phrases include "what do you see",
+    "who is this", "what am I holding", and "take a look". Any other time, the camera stays off.</p>
+</div></section>
+
+<!-- ───────────────────────── HOME + SEARCH ───────────────────────── -->
+<section><div class="wrap">
+  <div class="kicker">Reaching outside</div>
+  <h2>The smart home &amp; the whole web</h2>
+  <div class="grid g2">
+    <div class="card"><h3>🏠 Home Assistant</h3>
+      <p>If you run <a href="https://www.home-assistant.io/">Home Assistant</a>, commands like
+      "turn off the kitchen" are forwarded to it. <b>HA does the understanding</b> — it already knows
+      your rooms and devices — then acts and hands back a spoken reply. If HA doesn't recognise the
+      phrase, it quietly falls through to the AI instead.</p></div>
+    <div class="card"><h3>🔎 Web search</h3>
+      <p>The CLOUD brain can search the web on its own. Ask for the weather or today's news and Claude
+      <b>decides by itself</b> to look it up, then answers with live information. You don't program the
+      "when" — it just knows. (Local models can't search, which is another reason those questions route
+      to the cloud.)</p></div>
+  </div>
+  <div class="chat">
+    <div class="bubble u">What's the weather right now?</div>
+    <div class="bubble d">Woof! It's mostly cloudy and 56° right now — sweater weather, not shorts weather! 🐾</div>
+    <div class="meta">cloud · claude · 🔎 searched the web</div>
+  </div>
+</div></section>
+
+<!-- ───────────────────────── INSTINCTS ───────────────────────── -->
+<section><div class="wrap">
+  <div class="kicker">Personality</div>
+  <h2>Instincts &amp; idle life</h2>
+  <p>Some behaviours don't involve thinking at all — they're reflexes, just like a real dog, and run
+     quietly in the background on the Pi.</p>
+  <div class="grid g3">
+    <div class="card"><h3>🖐️ Head pat</h3><p>Touch its head and it wags its tail — instantly, no AI.</p></div>
+    <div class="card"><h3>👂 Loud sound</h3><p>Tilts its head curiously toward an unexpected noise.</p></div>
+    <div class="card"><h3>🧱 Obstacle</h3><p>Refuses to walk into something close ahead — barks instead of bumping.</p></div>
+  </div>
+  <div class="note"><b>Idle behaviours.</b> Left alone for a while, the dog stretches, dozes off, or wags
+    on its own, so it feels alive rather than switched-off. All movement — commands, reflexes, idle — is
+    coordinated so the dog never tries to do two things at once.</div>
+</div></section>
+
+<!-- ───────────────────────── LIFECYCLE ───────────────────────── -->
+<section><div class="wrap">
+  <div class="kicker">Start to finish</div>
+  <h2>The journey of one question</h2>
+  <ol class="steps">
+    <li><b>You speak.</b> The Pi's microphone captures it and turns it into text.</li>
+    <li><b>Quick check.</b> Is it a direct command like "sit"? Do it now, done. A camera question? Take a photo.</li>
+    <li><b>Ask the Router.</b> The Pi sends the text (and photo, if any) over Wi-Fi to the Mac.</li>
+    <li><b>Choose a brain.</b> The Router matches keywords &amp; length → FAST, SMART, CLOUD, or HOME.</li>
+    <li><b>Get the answer</b> — searching the web or attaching an action if the moment calls for it.</li>
+    <li><b>Speak &amp; move.</b> The dog talks sentence-by-sentence as the answer streams back, then performs any actions.</li>
+    <li><b>Log it.</b> Every exchange appears on a live dashboard so you can watch what happened and what it cost.</li>
+  </ol>
+</div></section>
+
+<!-- ───────────────────────── DASHBOARD ───────────────────────── -->
+<section><div class="wrap">
+  <div class="kicker">Watching it work</div>
+  <h2>The live dashboard</h2>
+  <p>Open <code>http://&lt;your-mac&gt;:8000/dashboard</code> in any browser on your network to see a
+     running feed of every question: which brain answered, how fast, how many words, the estimated
+     cost, any moves performed, and the full conversation. It updates every couple of seconds — handy
+     for tuning and genuinely fun to watch.</p>
+  <div class="legend">
+    <span><span class="dot" style="background:var(--fast)"></span>fast</span>
+    <span><span class="dot" style="background:var(--smart)"></span>smart</span>
+    <span><span class="dot" style="background:var(--cloud)"></span>cloud</span>
+    <span><span class="dot" style="background:var(--home)"></span>home</span>
+  </div>
+</div></section>
+
+<!-- ───────────────────────── CONFIG ───────────────────────── -->
+<section><div class="wrap">
+  <div class="kicker">Under your control</div>
+  <h2>Turn things on and off</h2>
+  <p>Every major feature is a simple switch in a settings file (<code>.env</code>). A few examples:</p>
+  <table class="cfg">
+    <tr><th>Setting</th><th>What it does</th></tr>
+    <tr><td>CLOUD_MODEL</td><td>Which Claude model to use (cheaper Haiku vs. smarter Sonnet).</td></tr>
+    <tr><td>CLOUD_WEB_SEARCH</td><td>Let the cloud brain search the web. <code>0</code> to turn off.</td></tr>
+    <tr><td>ROUTER_DEFAULT_ROUTE</td><td>Send everything to one brain — e.g. <code>cloud</code> if you run no local models.</td></tr>
+    <tr><td>PIDOG_ACTIONS</td><td>Allow the AI to move the dog. <code>0</code> for a text-only setup.</td></tr>
+    <tr><td>STREAM_TTS</td><td>Speak sentence-by-sentence as the answer generates.</td></tr>
+    <tr><td>PIDOG_CAMERA · PIDOG_REFLEXES · IDLE_MINUTES</td><td>Vision, reflexes, and idle behaviours.</td></tr>
+  </table>
+  <div class="note">Two people can share the exact same code but behave completely differently — one with
+    local models and a real dog, another bypassing all of that to use only Claude in the cloud — just by
+    changing their own private settings file.</div>
+</div></section>
+
+<footer><div class="wrap">
+  🐶 &nbsp;The Pidog Router — a friendly guide.<br>
+  Built on SunFounder Pidog · Apple MLX (local models) · Anthropic Claude (cloud) · Home Assistant.
+</div></footer>
+
+</body>
+</html>

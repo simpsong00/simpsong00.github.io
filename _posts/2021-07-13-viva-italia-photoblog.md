@@ -2,7 +2,7 @@
 title: "Viva Italia, Photoblog"
 description: ""
 pubDate: "2021-07-13"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

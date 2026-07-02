@@ -2,7 +2,7 @@
 title: "The Audible version is here"
 description: ""
 pubDate: "2022-05-13"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

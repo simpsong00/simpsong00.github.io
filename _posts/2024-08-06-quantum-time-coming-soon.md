@@ -2,7 +2,7 @@
 title: "Quantum Time - Coming Soon"
 description: ""
 pubDate: "2024-08-06"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

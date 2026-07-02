@@ -2,7 +2,7 @@
 title: "Why don't you publish it now"
 description: ""
 pubDate: "2021-10-06"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

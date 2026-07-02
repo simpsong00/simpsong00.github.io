@@ -2,7 +2,7 @@
 title: "A ChatGPT View of TQC"
 description: ""
 pubDate: "2024-03-02"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

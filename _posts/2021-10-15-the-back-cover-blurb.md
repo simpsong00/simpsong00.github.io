@@ -2,7 +2,7 @@
 title: "The back Cover blurb"
 description: ""
 pubDate: "2021-10-15"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

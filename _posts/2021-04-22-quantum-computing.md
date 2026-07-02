@@ -2,7 +2,7 @@
 title: "quantum computing"
 description: ""
 pubDate: "2021-04-22"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

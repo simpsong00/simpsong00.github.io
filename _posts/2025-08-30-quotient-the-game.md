@@ -2,7 +2,7 @@
 title: "Quotient, The Game"
 description: ""
 pubDate: "2025-08-30"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

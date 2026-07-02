@@ -2,7 +2,7 @@
 title: "Book Research and Photos"
 description: ""
 pubDate: "2021-11-17"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

@@ -2,7 +2,7 @@
 title: "You can't do a techno-thriller without AI"
 description: ""
 pubDate: "2021-07-07"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

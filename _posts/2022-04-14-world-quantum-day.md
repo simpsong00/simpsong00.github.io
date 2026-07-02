@@ -2,7 +2,7 @@
 title: "World Quantum Day!"
 description: ""
 pubDate: "2022-04-14"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

@@ -2,7 +2,7 @@
 title: "Writing by Numbers"
 description: ""
 pubDate: "2021-05-27"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

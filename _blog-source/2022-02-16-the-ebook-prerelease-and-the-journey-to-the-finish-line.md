@@ -2,7 +2,7 @@
 title: "The EBOOK Prerelease and the Journey to the Finish Line."
 description: ""
 pubDate: "2022-02-16"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

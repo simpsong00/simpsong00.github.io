@@ -2,7 +2,7 @@
 title: "Another Mystery Location"
 description: ""
 pubDate: "2021-05-05"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

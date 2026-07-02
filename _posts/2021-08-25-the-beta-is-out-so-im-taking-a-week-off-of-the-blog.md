@@ -2,7 +2,7 @@
 title: "The Beta Is out, so I'm taking a week off of the blog!"
 description: ""
 pubDate: "2021-08-25"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

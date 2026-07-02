@@ -2,7 +2,7 @@
 title: "writing a book is just the beginning"
 description: ""
 pubDate: "2021-06-24"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

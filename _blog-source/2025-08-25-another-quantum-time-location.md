@@ -2,7 +2,7 @@
 title: "Another Quantum Time Location"
 description: ""
 pubDate: "2025-08-25"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

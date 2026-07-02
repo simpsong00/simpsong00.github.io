@@ -2,7 +2,7 @@
 title: "Amazon Pre-release ending soon! Audible is next!"
 description: ""
 pubDate: "2022-04-06"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

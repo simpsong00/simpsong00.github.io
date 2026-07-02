@@ -2,7 +2,7 @@
 title: "The Del and Key West"
 description: ""
 pubDate: "2025-07-15"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

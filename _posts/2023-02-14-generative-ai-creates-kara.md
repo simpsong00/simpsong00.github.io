@@ -2,7 +2,7 @@
 title: "Generative AI Creates KARA"
 description: ""
 pubDate: "2023-02-14"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

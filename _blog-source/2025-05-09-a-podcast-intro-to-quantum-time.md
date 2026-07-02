@@ -2,7 +2,7 @@
 title: "A Podcast Intro to Quantum Time"
 description: ""
 pubDate: "2025-05-09"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

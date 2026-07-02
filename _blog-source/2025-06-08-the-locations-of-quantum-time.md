@@ -2,7 +2,7 @@
 title: "The locations of Quantum Time"
 description: ""
 pubDate: "2025-06-08"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

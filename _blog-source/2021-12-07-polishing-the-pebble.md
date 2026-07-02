@@ -2,7 +2,7 @@
 title: "Polishing the Pebble"
 description: ""
 pubDate: "2021-12-07"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

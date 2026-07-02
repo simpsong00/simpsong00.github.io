@@ -2,7 +2,7 @@
 title: "New Chapters… and a photoblog"
 description: ""
 pubDate: "2021-08-11"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

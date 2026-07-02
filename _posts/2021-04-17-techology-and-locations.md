@@ -2,7 +2,7 @@
 title: "Techology and Locations"
 description: ""
 pubDate: "2021-04-17"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

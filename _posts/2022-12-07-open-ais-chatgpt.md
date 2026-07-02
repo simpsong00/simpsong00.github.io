@@ -2,7 +2,7 @@
 title: "Open AI's CHATGPT"
 description: ""
 pubDate: "2022-12-07"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

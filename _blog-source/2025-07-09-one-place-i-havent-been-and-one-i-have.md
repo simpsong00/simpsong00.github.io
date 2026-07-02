@@ -2,7 +2,7 @@
 title: "One place I haven't been, and one I have"
 description: ""
 pubDate: "2025-07-09"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

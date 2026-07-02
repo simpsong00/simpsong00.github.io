@@ -2,7 +2,7 @@
 title: "The Rewrite before christmas"
 description: ""
 pubDate: "2021-12-21"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

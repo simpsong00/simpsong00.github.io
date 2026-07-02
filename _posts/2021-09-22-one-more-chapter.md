@@ -2,7 +2,7 @@
 title: "One more chapter…"
 description: ""
 pubDate: "2021-09-22"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

@@ -2,7 +2,7 @@
 title: "Ngorongoro Crater and Lalibela"
 description: ""
 pubDate: "2021-06-17"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

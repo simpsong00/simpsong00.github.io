@@ -2,7 +2,7 @@
 title: "Resources for Writers"
 description: ""
 pubDate: "2021-04-28"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

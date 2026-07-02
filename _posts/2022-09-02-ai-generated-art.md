@@ -2,7 +2,7 @@
 title: "AI Generated art"
 description: ""
 pubDate: "2022-09-02"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

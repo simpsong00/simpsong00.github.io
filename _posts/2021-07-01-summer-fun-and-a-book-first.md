@@ -2,7 +2,7 @@
 title: "Summer fun… and a book first…"
 description: ""
 pubDate: "2021-07-01"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

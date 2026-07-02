@@ -2,7 +2,7 @@
 title: "Quantum Time Photos"
 description: ""
 pubDate: "2024-08-21"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

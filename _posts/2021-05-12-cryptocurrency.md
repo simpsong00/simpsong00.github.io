@@ -2,7 +2,7 @@
 title: "CryptoCurrency..."
 description: ""
 pubDate: "2021-05-12"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

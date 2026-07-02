@@ -2,7 +2,7 @@
 title: "An AI Generated podcast about TQC"
 description: ""
 pubDate: "2025-02-22"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

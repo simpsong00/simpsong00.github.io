@@ -2,7 +2,7 @@
 title: "Hidden Meanings"
 description: ""
 pubDate: "2022-03-15"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

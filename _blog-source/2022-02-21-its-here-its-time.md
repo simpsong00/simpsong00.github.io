@@ -2,7 +2,7 @@
 title: "It's Here. It's Time."
 description: ""
 pubDate: "2022-02-21"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

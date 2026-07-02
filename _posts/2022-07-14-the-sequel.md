@@ -2,7 +2,7 @@
 title: "The SEQUEL"
 description: ""
 pubDate: "2022-07-14"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

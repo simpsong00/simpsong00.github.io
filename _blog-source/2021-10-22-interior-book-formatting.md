@@ -2,7 +2,7 @@
 title: "Interior Book FormatTing"
 description: ""
 pubDate: "2021-10-22"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

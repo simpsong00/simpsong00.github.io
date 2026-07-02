@@ -2,7 +2,7 @@
 title: "It is almost time for Quantum Time..."
 description: ""
 pubDate: "2025-04-26"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

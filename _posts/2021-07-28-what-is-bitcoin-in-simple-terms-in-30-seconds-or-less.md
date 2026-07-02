@@ -2,7 +2,7 @@
 title: "What is bitcoin, in simple terms, in 30 seconds or less?"
 description: ""
 pubDate: "2021-07-28"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

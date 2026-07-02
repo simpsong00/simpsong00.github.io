@@ -2,7 +2,7 @@
 title: "Chapter TEN - Oxford - The Lion, The Witch and the Wardrobe"
 description: ""
 pubDate: "2021-05-20"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

@@ -2,7 +2,7 @@
 title: "Pencils down!"
 description: ""
 pubDate: "2022-01-13"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

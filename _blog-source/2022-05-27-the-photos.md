@@ -2,7 +2,7 @@
 title: "The Photos"
 description: ""
 pubDate: "2022-05-27"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

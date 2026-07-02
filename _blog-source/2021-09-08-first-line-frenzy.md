@@ -2,7 +2,7 @@
 title: "first line frenzy"
 description: ""
 pubDate: "2021-09-08"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

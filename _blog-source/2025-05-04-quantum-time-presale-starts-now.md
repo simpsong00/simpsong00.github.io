@@ -2,7 +2,7 @@
 title: "Quantum Time Presale starts now!"
 description: ""
 pubDate: "2025-05-04"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

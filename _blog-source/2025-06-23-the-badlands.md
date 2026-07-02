@@ -2,7 +2,7 @@
 title: "The Badlands"
 description: ""
 pubDate: "2025-06-23"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

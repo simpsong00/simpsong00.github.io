@@ -2,7 +2,7 @@
 title: "Quantum Time goes down under"
 description: ""
 pubDate: "2025-06-16"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

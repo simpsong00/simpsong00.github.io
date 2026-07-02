@@ -2,7 +2,7 @@
 title: "Libraries are great!"
 description: ""
 pubDate: "2022-04-20"
-tags: ["All", "Learning", "Technlogy"]
+tags: ["All", "Learning", "Technology"]
 draft: false
 ---
 

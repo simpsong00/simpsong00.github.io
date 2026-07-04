@@ -79,6 +79,12 @@
   .note{background:#fbf4ea;border-left:4px solid var(--accent);border-radius:0 10px 10px 0;
         padding:12px 18px;margin-top:20px;font-size:15px;color:#5c4a3a}
   .cfg{font-family:var(--mono);font-size:13.5px}
+  .keys td:first-child{font-family:var(--mono);color:#7a3a17;white-space:nowrap;font-size:13px}
+  pre.term{background:#2b2724;color:#efe9dc;border-radius:12px;padding:15px 18px;margin:14px 0 0;
+        font-family:var(--mono);font-size:13.5px;line-height:1.7;overflow-x:auto;box-shadow:var(--shadow)}
+  pre.term .cm{color:#b58a5a}          /* comments */
+  pre.term .pr{color:#e0a878}          /* the $ prompt */
+  pre.term b{color:#7dd8a0;font-weight:600}   /* the command itself */
   footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px}
   .legend{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:10px;font-size:13px;color:var(--muted)}
   .legend span{display:inline-flex;align-items:center;gap:6px}
@@ -169,6 +175,108 @@
   <figcaption>The Pidog captures speech and sends the text to the Router. The Router picks one of four
     destinations, gets an answer, and sends it back for the dog to speak — and act on.</figcaption>
   </figure>
+</div></section>
+
+<!-- ───────────────────────── STARTING IT ───────────────────────── -->
+<section><div class="wrap">
+  <div class="kicker">Turning it on</div>
+  <h2>Starting Astro</h2>
+  <p class="lead">Two things run: the <strong>brain</strong> on the Mac, and the
+     <strong>voice</strong> on Astro (the dog). Start the brain first, then the dog.</p>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>1 · The brain — on the Mac</h3>
+      <p>Starts both local models + the router together. Leave this window open —
+         it <em>is</em> the running brain; closing it (or Ctrl-C) stops everything.</p>
+      <pre class="term"><span class="pr">$</span> cd "MLX LLM"
+<span class="pr">$</span> <b>./start-all.sh</b>
+<span class="cm"># dashboard: http://localhost:8000/dashboard</span></pre>
+    </div>
+    <div class="card">
+      <h3>2 · The voice — on Astro</h3>
+      <p>Connect to the dog by name (<code>astro.local</code>), then launch the
+         voice loop. <code>sudo</code> is needed for the speaker &amp; servos.</p>
+      <pre class="term"><span class="pr">$</span> ssh simpsong00@astro.local
+<span class="pr">$</span> <b>sudo MAC_IP=192.168.68.101 \
+    ~/pidog-venv/bin/python ~/pidog_voice.py</b>
+<span class="cm"># wait for "🎤 listening..." then talk</span></pre>
+    </div>
+  </div>
+
+  <div class="note"><strong>MAC_IP vs astro.local:</strong> <code>astro.local</code> is
+    the <em>dog's</em> address (used from the Mac to connect to it). <code>MAC_IP</code>
+    (<code>192.168.68.101</code>) is the <em>Mac's</em> address — Astro needs it to reach
+    the brain. If the Mac's IP ever changes, update that number (a router "DHCP
+    reservation" keeps it fixed).</p></div>
+
+  <h3 style="margin-top:28px">Handy commands</h3>
+  <table class="keys">
+    <tr><th>Run this</th><th>What it does</th></tr>
+    <tr><td>./start-all.sh</td><td><b>Mac:</b> start the brain (both models + router). Ctrl-C stops it.</td></tr>
+    <tr><td>./push-to-dog.sh</td><td><b>Mac:</b> copy an updated <code>pidog_voice.py</code> to <code>astro.local</code> and restart the dog.</td></tr>
+    <tr><td>python chat.py</td><td><b>Mac:</b> type to the dog to test it (no voice needed).</td></tr>
+    <tr><td>pidog_voice.py <b>--selftest</b></td><td><b>Astro:</b> check brain/mic/camera/deps are all reachable, then exit.</td></tr>
+    <tr><td>pidog_voice.py <b>--test-actions</b></td><td><b>Astro:</b> run through every move once (a physical smoke-test).</td></tr>
+  </table>
+
+  <h3 style="margin-top:28px">Options you can add</h3>
+  <p>Set these in the <code>.env</code> file, or type them right before the launch
+     command (e.g. <code>sudo MAC_IP=… STT_PAUSE=2 ~/pidog-venv/bin/python ~/pidog_voice.py</code>).</p>
+  <table class="keys">
+    <tr><th>Option</th><th>What it changes</th></tr>
+    <tr><td>MAC_IP</td><td>Which Mac the dog talks to (default <code>192.168.68.101</code>).</td></tr>
+    <tr><td>STT_PAUSE</td><td>Seconds of silence that end a sentence. Raise it (e.g. <code>2</code>) if it cuts you off.</td></tr>
+    <tr><td>STT_ENERGY</td><td>Mic sensitivity — set a number if it clips mid-word (lower = more sensitive).</td></tr>
+    <tr><td>WAKE_WORD</td><td>Only respond after a phrase, e.g. <code>"hey pidog"</code>. Empty = always listening.</td></tr>
+    <tr><td>TTS_ENGINE</td><td>The voice — see “A nicer voice” below: <code>auto</code> (robotic, free) · <code>ha</code> (Piper, free &amp; natural) · <code>elevenlabs</code> (most lifelike, <em>paid plan</em>).</td></tr>
+    <tr><td>CLOUD_MODEL</td><td><code>claude-haiku-4-5</code> (cheap) · <code>claude-sonnet-5</code> · <code>claude-opus-4-8</code>.</td></tr>
+    <tr><td>ROUTER_DEFAULT_ROUTE</td><td>Force every question to one place, e.g. <code>cloud</code> (skips the local models).</td></tr>
+    <tr><td>PIDOG_SOUND_REFLEX</td><td><code>1</code> to enable the “turn head toward sounds” reflex (off by default).</td></tr>
+    <tr><td>IDLE_MINUTES</td><td>Do a random idle move after N quiet minutes (<code>0</code> = never).</td></tr>
+  </table>
+
+  <h3 style="margin-top:28px">A nicer voice</h3>
+  <p>The default voice is a free, offline, slightly robotic one (espeak). Two upgrades,
+     both set on Astro (voice runs on the dog):</p>
+  <div class="grid g2">
+    <div class="card">
+      <h3>🗣️ Piper (via Home Assistant) — free</h3>
+      <p>HA’s built-in neural voice — clearly nicer than espeak, free and offline, no
+         monthly cap. Needs your HA connection set up (same token as home commands):</p>
+      <pre class="term"><span class="pr">$</span> export TTS_ENGINE=ha
+<span class="pr">$</span> export HA_URL=http://homeassistant.local:8123
+<span class="pr">$</span> export HA_TOKEN=&lt;long-lived token&gt;
+<span class="pr">$</span> export HA_TTS_ENGINE=tts.piper</pre>
+    </div>
+    <div class="card">
+      <h3>🎙️ ElevenLabs — most lifelike <em>(paid)</em></h3>
+      <p><strong>Requires a paid ElevenLabs plan</strong> (Starter ~$5/mo). As of 2026
+         the <em>free</em> tier can’t use any voices through the API — there are no free
+         default voices anymore. With a subscription:</p>
+      <pre class="term"><span class="pr">$</span> ~/pidog-venv/bin/pip install elevenlabs
+<span class="pr">$</span> export TTS_ENGINE=elevenlabs
+<span class="pr">$</span> export ELEVENLABS_API_KEY=sk_...
+<span class="pr">$</span> export ELEVENLABS_VOICE_ID=&lt;a voice from your account&gt;</pre>
+    </div>
+  </div>
+  <div class="note">Put these in <code>~/dog.sh</code> (or the systemd service’s
+    <code>Environment=</code> lines) so they stick. If a fancy voice is ever
+    unavailable, the dog automatically falls back to the built-in one — it never
+    goes silent. <strong>Free &amp; natural = Piper.</strong> ElevenLabs is the paid,
+    even-more-lifelike option.</div>
+
+  <h3 style="margin-top:28px">Things to say</h3>
+  <table class="keys">
+    <tr><td>“sit” · “shake hands” · “walk backwards”</td><td>instant moves (no AI)</td></tr>
+    <tr><td>“ask Claude …”</td><td>force a smart cloud answer</td></tr>
+    <tr><td>“go to sleep” → “wake up”</td><td>nap &amp; rouse (keeps listening while asleep)</td></tr>
+    <tr><td>“shut down”</td><td>actually stop the voice program</td></tr>
+  </table>
+
+  <div class="note"><strong>Hands-free option:</strong> Astro can start listening the
+    moment it powers on (no terminal) via a small “systemd service” — see the project
+    README. Then you only ever start the brain on the Mac.</div>
 </div></section>
 
 <!-- ───────────────────────── THREE BRAINS ───────────────────────── -->

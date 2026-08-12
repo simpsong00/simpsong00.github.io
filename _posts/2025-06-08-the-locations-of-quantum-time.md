@@ -4,6 +4,8 @@ description: ""
 pubDate: "2025-06-08"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/the-locations-of-quantum-time
 ---
 
 One of the trademarks of my novels are real world locations, most of which I have been to before. For the next few weeks I'll be highlighting some interesting sites from Quantum Time. This week, I'd like to start with something more personal instead of exotic. In Quantum Time, we visit Cincinnati. Cincinnati has been my home for the last 24 years! We're going to look at two key places in Cincinnati, the Cincinnati Museum Center, and Skyline Chili! Both have a feature in the book.

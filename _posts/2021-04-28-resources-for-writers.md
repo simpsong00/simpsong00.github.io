@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-04-28"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/resources-for-writers
 ---
 
 [![Picture](/weebly/screen-shot-2021-04-26-at-3-09-32-pmpng.png)]()

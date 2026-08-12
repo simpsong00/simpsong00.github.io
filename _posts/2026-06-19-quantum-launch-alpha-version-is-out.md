@@ -4,6 +4,8 @@ description: "The Alpha version of Quantum Launch the prequel is released!"
 pubDate: "2026-06-19"
 tags: ["All"]
 draft: false
+redirect_from:
+  - /blog/quantum-launch-alpha-version-is-out
 ---
 
 The alpha version of Quantum Launch, due for publication in 2027, is now out. This means several things.

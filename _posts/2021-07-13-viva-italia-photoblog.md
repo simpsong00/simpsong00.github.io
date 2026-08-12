@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-07-13"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/viva-italia-photoblog
 ---
 
 An old colleague from Italy messaged me last week that they were looking to buy my book when it came out, so this week, I thought I'd do a photoblog of a few locations in 

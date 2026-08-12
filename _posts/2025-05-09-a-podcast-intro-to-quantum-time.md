@@ -4,6 +4,8 @@ description: ""
 pubDate: "2025-05-09"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/a-podcast-intro-to-quantum-time
 ---
 
 Google's NotebookLLM created a 12 minute podcast about the new book.... here's the first three minutes... Are you ready to read 

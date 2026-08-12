@@ -4,6 +4,8 @@ description: ""
 pubDate: "2022-07-14"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/the-sequel
 ---
 
 First, thank you to all of you who have read 

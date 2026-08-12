@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-11-17"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/book-research-and-photos
 ---
 
 I had the joy of attending my niece's wedding in Washington, DC last weekend. We went for a couple of extra days and made a road trip of it. This gave me a chance to do some refinement of one of my Washington, DC chapters in 

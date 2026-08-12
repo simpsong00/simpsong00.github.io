@@ -4,6 +4,8 @@ description: ""
 pubDate: "2025-07-15"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/the-del-and-key-west
 ---
 
 Two U.S. locations featured in Quantum Time are The Hotel Del Coronado (The Del) and Key West. 

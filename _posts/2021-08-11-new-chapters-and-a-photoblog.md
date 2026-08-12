@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-08-11"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/new-chapters-and-a-photoblog
 ---
 
 I did a lot of editing this past week in preparation for the beta reader release. In fact, I added two chapters. One was entirely new, the other was more of a split of an earlier chapter into two chapters. You know what it means when I add chapters? More songs on 

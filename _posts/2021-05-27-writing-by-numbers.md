@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-05-27"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/writing-by-numbers
 ---
 
 A friend commented that she like the data based approach I was taking with my novel after seeing my blog article that showed the distribution of pacing of the novel.  I pulled the graphic from a tool called ProWritingAid. It turns out that it has a treasure trove of reports that can analyze your writing. I just completed my rough draft manuscript, and started running some of these reports. One report I really like is the "sensory" report. It tracks how many different senses you are using in the descriptions of your novel. For example, chapter ten shows these stats: Sight 66% (27 words), Sound 12% (5 words), Touch 10% (4 words), Taste 7% (3 words). It's good to engage all of your readers senses when writing a novel. It brings them deeper into the story. This report provides a good way for me to check to see if I am using all of the senses in my chapters. 

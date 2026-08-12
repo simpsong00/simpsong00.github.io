@@ -4,6 +4,8 @@ description: ""
 pubDate: "2022-02-21"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/its-here-its-time
 ---
 
 I am pleased to announce that 

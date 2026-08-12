@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-04-12"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/getting-started
 ---
 
 Thank you for following along on my journey. As the old Chinese proverb says, "The journey is the reward." (also the title of a Steve Jobs biography)

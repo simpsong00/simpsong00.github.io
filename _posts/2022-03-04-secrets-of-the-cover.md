@@ -4,6 +4,8 @@ description: ""
 pubDate: "2022-03-04"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/secrets-of-the-cover
 ---
 
 T

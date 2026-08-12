@@ -4,6 +4,8 @@ description: ""
 pubDate: "2025-08-30"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/quotient-the-game
 ---
 
 I'm really enjoying the narration of my game by @jwalrus over on intfiction.org. Here are the photos that he's uncovered so far. I'll add more photos to this post as they come up in the "Let's Play" adventure.

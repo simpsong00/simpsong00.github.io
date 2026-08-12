@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-10-06"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/finishing-touches
 ---
 
 Hello friends, I continue to put the finishing touches on 

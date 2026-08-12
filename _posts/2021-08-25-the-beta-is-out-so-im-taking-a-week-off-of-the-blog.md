@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-08-25"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/the-beta-is-out-so-im-taking-a-week-off-of-the-blog
 ---
 
 Have a great week... talk to you soon! (I took the picture below in Ngorongoro Crater, one of the locations in 

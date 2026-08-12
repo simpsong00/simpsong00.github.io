@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-05-05"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/another-mystery-location
 ---
 
 This is a beautiful place that I stayed at on vacation recently. It is the location of one of the chapters of 

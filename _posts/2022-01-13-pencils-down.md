@@ -4,6 +4,8 @@ description: ""
 pubDate: "2022-01-13"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/pencils-down
 ---
 
 Ok, it's time for pencil's down. I think the manuscript for 

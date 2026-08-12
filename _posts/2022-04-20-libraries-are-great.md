@@ -4,6 +4,8 @@ description: ""
 pubDate: "2022-04-20"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/libraries-are-great
 ---
 
 Libraries make an entire world of reading available to everyone! Sometimes book clubs avoid buying books because they don't want to collect so many copies, but they enjoy reading. 

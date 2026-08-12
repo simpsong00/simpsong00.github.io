@@ -4,6 +4,8 @@ description: ""
 pubDate: "2022-04-06"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/amazon-pre-release-ending-soon-audible-is-next
 ---
 
 The Amazon pre-release sale is set to end April 12th. Based on activity on the pre-release page, (both pre-release sales and the number of people who simply browse the page) Amazon will estimate how many copies it will sell in what parts of the country and place orders for its warehouses both in the US and abroad! Once it has the physical copies in its warehouses, Amazon will end the pre-sale, and begin shipping books to those who pre-ordered and the book will show as "available" instead of as for "pre-sale" on Amazon's site.

@@ -4,6 +4,8 @@ description: ""
 pubDate: "2024-08-06"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/quantum-time-coming-soon
 ---
 
 Quantum Time is almost here! Thank you for your patience in waiting for the follow-up to The Quantum Contingent. The book is written and the audiobook is recorded.

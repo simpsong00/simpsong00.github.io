@@ -4,6 +4,8 @@ description: ""
 pubDate: "2026-04-01"
 tags: ["All"]
 draft: false
+redirect_from:
+  - /blog/more-details-on-a-claude-code-website
 ---
 
 One of the nice features of Claude Code is that your work on different projects shows up as different "chats". You can return to a prior chat and pick up right where you left off on any of your projects. I can drop back into the specific chat about my website and add new features anytime I think of one. 

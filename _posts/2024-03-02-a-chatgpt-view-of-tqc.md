@@ -4,6 +4,8 @@ description: ""
 pubDate: "2024-03-02"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/a-chatgpt-view-of-tqc
 ---
 
 I made a custom GPT using the PDF of 

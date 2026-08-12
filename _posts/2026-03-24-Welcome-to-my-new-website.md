@@ -4,6 +4,8 @@ description: "Rebuilding my author website with Claude Code"
 pubDate: "2026-03-24"
 tags: ["All", "Learning"]
 draft: false
+redirect_from:
+  - /blog/Welcome-to-my-new-website
 ---
 Welcome to my new website! I migrated my old site over to github using Claude code. It was a fun way to see how 
 capable the model was at handling a small project. It did a fabulous job, and explained the code it generated in detail. 

@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-12-07"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/polishing-the-pebble
 ---
 
 Sometimes I feel like a small babbling brook, just polishing the same pebble, over and over... Editing my stream of consciousness to make the pebble smoother and more pleasant to the touch. In this case, the pebble is 

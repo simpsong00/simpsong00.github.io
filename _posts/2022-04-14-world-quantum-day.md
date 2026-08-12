@@ -4,6 +4,8 @@ description: ""
 pubDate: "2022-04-14"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/world-quantum-day
 ---
 
 That’s right, April 14th is World Quantum Day! 

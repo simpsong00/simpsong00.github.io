@@ -4,6 +4,8 @@ description: ""
 pubDate: "2025-07-09"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/one-place-i-havent-been-and-one-i-have
 ---
 
 One place I haven't been that Jack and Sarah went to in 

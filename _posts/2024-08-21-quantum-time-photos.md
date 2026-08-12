@@ -4,6 +4,8 @@ description: ""
 pubDate: "2024-08-21"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/quantum-time-photos
 ---
 
 I've put together a photo gallery of personal photos representing many of the places in my second novel, 

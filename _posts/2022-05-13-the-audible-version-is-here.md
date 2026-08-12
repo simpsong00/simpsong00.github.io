@@ -4,6 +4,8 @@ description: ""
 pubDate: "2022-05-13"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/the-audible-version-is-here
 ---
 
 Haven't read 

@@ -4,6 +4,8 @@ description: "Releasing a second book breathes new life into the first book!"
 pubDate: "2026-05-25"
 tags: ["All", "Learning"]
 draft: false
+redirect_from:
+  - /blog/how-quantum-time-drives-sales-for-my-first-book
 ---
 
 People sometimes ask how my book sales are going. What I find most interesting is the impact book 2 has on book 1 sales. Here's a graph showing the sales rank of The Quantum Contingent (book 1) on Amazon. The higher the graph, the better the sales. Each jump or peak represents one or more book sales. You can see that sales finally stall out completely around October of 2024.

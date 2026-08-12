@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-07-01"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/summer-fun-and-a-book-first
 ---
 
 It’s summertime and for many that means fun outside with friends and family. If you know me, you know I love to dance, and that means I like listening to good music. When writing my book, I used several pop culture references along the way, and that made me think of some of my favorite songs.

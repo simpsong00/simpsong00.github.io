@@ -4,6 +4,8 @@ description: ""
 pubDate: "2024-08-21"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/interactive-fiction
 ---
 
 If you are old enough to remember Zork, or the original Adventure, then I have a treat for you! I am launching

@@ -4,6 +4,8 @@ description: ""
 pubDate: "2025-11-17"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/the-quantum-time-photo-collection
 ---
 
 Here are a collection of my photos that were from places in Quantum Time, or were inspiration for Quantum Time. Can you tell where these places occur in the book?

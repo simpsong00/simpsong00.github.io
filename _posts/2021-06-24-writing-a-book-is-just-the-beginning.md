@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-06-24"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/writing-a-book-is-just-the-beginning
 ---
 
 I've crossed a key milestone in writing my book, the rough draft manuscript. I'll call it the "alpha" release. I've sent the alpha release to an impartial developmental editor. I've had some wonderful developmental editing from my daughter and wife, but this will be from an impartial third party. After I incorporate her feedback, I'll be at the "beta" stage. (I get the feedback on 7/31) If you'd like to be a "beta" reader, you'd need to be willing to not only read the book, but provide constructive feedback on the book. What did you like, what didn't you like? Was there something you didn't understand? Was a section that was boring? Was there a section that was great? I plan to send beta copies out to volunteers in September. If you are interested, use the form to provide your email and preferred format. I will also ask beta readers to submit a review on Amazon when the time comes!

@@ -4,6 +4,8 @@ description: ""
 pubDate: "2025-08-25"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/another-quantum-time-location
 ---
 
 One of the other prominent location in Quantum Time is Scotland! Here are some of my pictures from Scotland, as well as a picture of my cousin's Scottish Highland Cattle. Come along with Jack and Sarah in their new adventure, Quantum Time!

@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-05-20"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/chapter-ten-oxford-the-lion-the-witch-and-the-wardrobe
 ---
 
 Today's blog is another look at one of the locations in the book, 

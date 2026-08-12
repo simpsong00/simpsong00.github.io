@@ -4,6 +4,8 @@ description: ""
 pubDate: "2022-12-07"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/open-ais-chatgpt
 ---
 
 Open AI's ChatGPT is turning lots of heads on the internet. There are numerous articles out there from reputable sources, so I won't try and write a full in-depth article here. I just want to highlight some of the more amazing examples I've seen and talk about some of the implications of such a tool. One of the biggest questions out there is if we are seeing the birth of the tool that displaces Google. Google, the champion of search, is where most people turn to ask questions. The idea of searching for answers on the internet via a search engine essentially gave everyone an augmented intelligence of all of the trivia you might hear at a bar, or every cat video worth its salt. ChatGPT is working to raise the game. Instead of asking google and getting a list of links back that may get you the answer you want if you read through the links, imagine if you could talk with an expert on just about anything and get a well educated answer back on the topic. (and yes Google does surface some answers directly to certain queries now too) \

@@ -4,6 +4,8 @@ description: ""
 pubDate: "2025-04-26"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/it-is-almost-time-for-quantum-time
 ---
 
 It's been years since we ran around the world with Jack, Sarah and Kara. Well, now is the 

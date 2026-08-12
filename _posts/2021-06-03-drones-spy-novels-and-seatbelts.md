@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-06-03"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/drones-spy-novels-and-seatbelts
 ---
 
 Drones seem to be a spy's best friend. They are portable, stealthy and getting more powerful every day. They are already in use in many fields including agriculture, real estate, military and law enforcement applications, and delivery. (I do look forward to my first drone delivery) Drones don't have to be small either. The US Air Force is working on Skyborg. (yes, really) Skyborg is an ambitious autonomous program for UAVs (Unmanned Aerial Vehicles). So, you can only imagine the scenarios that come to the mind of a spy novelist when you think of fleets of autonomous UAV's traveling on autonomous "ghost ships." One of the interesting things about 

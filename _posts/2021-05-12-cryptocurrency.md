@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-05-12"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/cryptocurrency
 ---
 
 [![Picture](/weebly/884465013jpg.jpg)]()

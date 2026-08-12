@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-09-08"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/first-line-frenzy
 ---
 
 I listened to a 

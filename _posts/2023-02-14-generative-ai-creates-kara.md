@@ -4,6 +4,8 @@ description: ""
 pubDate: "2023-02-14"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/generative-ai-creates-kara
 ---
 
 2022 was the year of Generative AI. Dall-E generated artwork based on a text prompt. Others, like MidJourney, soon followed. Chat-GPT started generating essays on demand based on text prompts, and the tech giants, Microsoft and Google, started a new search war to create a new chat-based search tool. This is a search where the chatbot can talk to you about almost any topic instead of just showing you a series of links that you need to read yourself. In Microsoft's demo, they reference the sources alongside the conversational answer. 

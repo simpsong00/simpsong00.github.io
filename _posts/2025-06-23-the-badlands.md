@@ -4,6 +4,8 @@ description: ""
 pubDate: "2025-06-23"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/the-badlands
 ---
 
 Appropriately named, "The Badlands" and their rust-colored hue play a key role in 

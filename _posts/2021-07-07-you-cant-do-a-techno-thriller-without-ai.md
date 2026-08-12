@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-07-07"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/you-cant-do-a-techno-thriller-without-ai
 ---
 
 In 

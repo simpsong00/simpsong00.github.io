@@ -4,6 +4,8 @@ description: ""
 pubDate: "2025-06-16"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/quantum-time-goes-down-under
 ---
 
 One of the more interesting places 

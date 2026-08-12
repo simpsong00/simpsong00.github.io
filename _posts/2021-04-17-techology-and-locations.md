@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-04-17"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/techology-and-locations
 ---
 
 One of the things that's good to do when you write a novel is to write what you know. I've been in technology for many years, and it is a passion of mine, so it made sense for me to incorporate technology into the novel. In my opinion, there is no better genre to incorporate technology than the spy novel. Q was the technology leader for MI-6 in the famous James Bond series and Q was also an omnipotent villain in Star Trek, The Next Generation. It only seemed natural that I'd opt for a techno-thriller with spies and even a bit of outer space thrown in. You may even find a Q character in my novel.

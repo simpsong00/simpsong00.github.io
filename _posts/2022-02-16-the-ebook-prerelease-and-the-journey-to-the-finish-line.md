@@ -4,6 +4,8 @@ description: ""
 pubDate: "2022-02-16"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/the-ebook-prerelease-and-the-journey-to-the-finish-line
 ---
 
 I’m happy to say that 

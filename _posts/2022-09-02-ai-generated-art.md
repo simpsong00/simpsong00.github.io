@@ -4,6 +4,8 @@ description: ""
 pubDate: "2022-09-02"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/ai-generated-art
 ---
 
 AI-generated art is making a splash. What are the implications to creative professions? I've added two images below, inspired by a scene in my book, 

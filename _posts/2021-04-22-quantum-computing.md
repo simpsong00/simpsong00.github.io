@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-04-22"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/quantum-computing
 ---
 
 [![Picture](/weebly/tumblr-napff8hrcr1tedol3o1-500gif.gif)](/weebly/tumblr-napff8hrcr1tedol3o1-500gif.gif)

@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-07-21"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/continuous-learning
 ---
 
 One of the things I've always believed in is that you must be a continuous learner in life. The minute you stop learning, you stop growing. There is an adage, "The more you learn, you the more you realize you don't know." I have certainly found this true in my life. When I started my career at GE Lighting, I had no idea how difficult it was to mass produce something as 'simple' as Edison's light bulb. (It turns out making a million a day of anything is hard) As I learn about what is involved in becoming an author, I discover many detailed alleys of learning that one must traverse on the journey to publishing a book. In today's world, self-publishing is becoming easier and easier, however, 

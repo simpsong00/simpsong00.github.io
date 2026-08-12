@@ -4,6 +4,8 @@ description: ""
 pubDate: "2022-05-27"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/the-photos
 ---
 
 For those of you that bought the paperback edition of The Quantum Contingent, the chapter heading photos are small and in black and white. I thought I'd share a gallery of the photos for those that wanted to see a more detailed version of the color photo. The photos represent the location of the chapter. (Note that some chapters use the same photo, since they are in the same location.) 

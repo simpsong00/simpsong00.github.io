@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-12-21"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/the-rewrite-before-christmas
 ---
 
 Two new chapters and some more changes as I re-write / re-structure the ending based on the final developmental editing feedback. I've now got the final draft and am doing one last final proof. For the budding authors out there, that are interested in details, I've generated a PDF version for printing, and three different ePub files for ebooks. One specifically for Kindle, one for Apple Books, and one generic ePub for all other ebook publishers. The Apple Books ePub uses higher resolution photos than the generic file. Amazon uses a slightly older version of ePub, so my formatting program, Vellum, knows to generate an ePub that is optimized for specifically for Kindle. Thanks to Vellum, generating those different formats was as easy as clicking the generate button. 

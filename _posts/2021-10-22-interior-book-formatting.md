@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-10-22"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/interior-book-formatting
 ---
 
 Guess what. You need to format the interior of your book too. A great cover is important to capture the reader and convince them to buy the book, but interior formatting is an art as well. Being a technology guy, I decided to purchase a program for the interior formatting work. I am using Vellum. Vellum makes the chore of formatting the interior of your book dramatically easier. Here are some examples of the things you think about when formatting. First, the opening sentence of the chapter. A drop quote is nice... Do you want it to be cursive, or block? Also, the first paragraph is usually not indented, where following paragraphs are...

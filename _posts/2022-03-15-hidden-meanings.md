@@ -4,6 +4,8 @@ description: ""
 pubDate: "2022-03-15"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/hidden-meanings
 ---
 
 One of the fun things about writing a book is that you can hide “Easter eggs” in the story. Some are personal that only close friends will recognize, others are there for anyone to find. One good place to find hidden meaning is in character names. One of the characters in 

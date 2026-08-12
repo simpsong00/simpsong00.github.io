@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-09-22"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/one-more-chapter
 ---
 
 Some people have been surprised to hear that I have “beta” readers. Beta readers are not unlike software beta testers, They are early adopters who try your software/manuscript out and give you feedback on how they liked it. (They also point out errors!) I have about 25 beta readers and I’ve enjoyed getting their feedback. In fact, as a result of the feedback, in addition to many updates, I’ve added one more chapter! (and yes that means one more song on the playlist) Here’s a picture from where this chapter is based. 

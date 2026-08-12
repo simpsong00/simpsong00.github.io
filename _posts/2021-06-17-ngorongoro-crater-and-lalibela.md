@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-06-17"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/ngorongoro-crater-and-lalibela
 ---
 
 This week's blog is a photo blog of two locations  in 

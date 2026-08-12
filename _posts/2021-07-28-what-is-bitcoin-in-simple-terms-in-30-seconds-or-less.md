@@ -4,6 +4,8 @@ description: ""
 pubDate: "2021-07-28"
 tags: ["All", "Learning", "Technology"]
 draft: false
+redirect_from:
+  - /blog/what-is-bitcoin-in-simple-terms-in-30-seconds-or-less
 ---
 
 [![Picture](/weebly/884465013-origorigjpg.jpg)]()

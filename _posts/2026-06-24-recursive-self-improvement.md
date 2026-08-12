@@ -4,6 +4,8 @@ description: ""
 pubDate: "2026-06-24"
 tags: ["All", "Technology"]
 draft: false
+redirect_from:
+  - /blog/recursive-self-improvement
 ---
 
 Recursive Self Improvement (RSI) is a concept where an AI can autonomously design and develop its own code, essentially creating a new improved version of itself, which in turn creates an even better version of itself and so on, and so on... (like the '70's shampoo commercial for those that remember!)

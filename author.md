@@ -131,8 +131,8 @@ redirect_from:
         <img src="/weebly/greg-simpson-author.jpg" alt="Gregory R. Simpson">
       </div>
       <div>
-        <p>Gregory R. Simpson spent over 37 years in technology, serving in senior executive roles including Chief Technology Officer and Chief Technology/AI Leader. In March 2021, he retired from corporate life to soak in life and pursue his passion for writing.</p>
-        <p>The result was <em>The Quantum Contingent</em>, the first book in the Quotient Series — a fast-paced techno-thriller blending espionage, quantum computing, and global stakes. The sequel, <em>Quantum Time</em>, launched May 10, 2025, and is available in ebook, paperback, and audiobook. Greg narrated the audiobook himself.</p>
+        <p>Gregory R. Simpson spent over 37 years in technology, serving in senior executive roles including Chief Technology Officer and Chief Technology/AI Leader. In March 2021, he retired from corporate life to soak in life and pursue his passion for writing. When he isn't writing, he is serving on boards, acting as an executive advisor or coach, being a father and husband, or daydreaming on trips about his next project.</p>
+        <p>The result of his writing passion was <em>The Quantum Contingent</em>, the first book in the Quotient Series — a fast-paced techno-thriller blending espionage, quantum computing, and global stakes. The sequel, <em>Quantum Time</em>, launched May 10, 2025. It is available in ebook, paperback, and audiobook. Greg narrated the Quantum Time audiobook himself.</p>
       </div>
     </div>
 

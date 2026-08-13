@@ -18,7 +18,7 @@ How do you see these images relating to the book?
 
 On the back, some of you noticed the red letters. What does it spell? 
 
-I think the image turned out fantastic! Thank you Jason for your work on this cover!
+I think the cover image turned out fantastic! Thank you Jason for your work on this cover!
 
 Greg
 

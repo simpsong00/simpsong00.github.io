@@ -30,7 +30,7 @@ redirect_from:
 <div class="locations-header">
   <div class="overlay"></div>
   <div class="container">
-    <h1>Locations</h1>
+    <h1>Field Locations</h1>
     <p>Every setting in the Quotient Series is a real place — many visited personally by the author.</p>
   </div>
 </div>

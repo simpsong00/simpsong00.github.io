@@ -102,7 +102,7 @@ redirect_from:
 <div class="technology-header">
   <div class="overlay"></div>
   <div class="container">
-    <h1>Technology</h1>
+    <h1>Quotient Labs Tech</h1>
     <p>Every technology in the Quotient Series is real. Here are the resources behind the stories.</p>
   </div>
 </div>

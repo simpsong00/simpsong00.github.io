@@ -335,7 +335,7 @@ redirect_from:
 <div class="tech-card">
         <span class="tech-badge now">Available today</span>
         <h3>Escaping AI Swarms</h3>
-        <p>When the OpenAI AI breakout and attack on HuggingFace came out, It sounded like an excerpt from my novel. The prequel features a rogue AI, you can read about a real rogue AI swarm here, as well as in my blog.</p>
+        <p>When the OpenAI AI breakout and attack on HuggingFace came out, it sounded like an excerpt from my novel. The prequel features a rogue AI, you can read about a real rogue AI swarm here, as well as in my blog.</p>
         <a class="tech-link" href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" target="_blank" rel="noopener">Read more →</a>
       </div>
 

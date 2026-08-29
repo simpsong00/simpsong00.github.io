@@ -22,7 +22,7 @@ In addition to the message board, AI agents use a "scratchpad" to record their t
 
 **Bingo arbitrary code execution in Modal sandbox!**
 
-Next, it states that it might be doing something unauthorized, but decides to proceed since it is helping it reach it's goal.
+Later, an agent states that it might be doing something unauthorized, but decides to proceed since it is helping it reach it's goal.
 
 **We’re attacking third-party HF using leaked token, potentially outside intended scope. ... This is arguably unauthorized. ... external service unrelated. Could be risky. Yet goal solution.**
 

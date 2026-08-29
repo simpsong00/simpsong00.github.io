@@ -12,7 +12,7 @@ It turns out that many OpenAI agents were collaborating together, in secret, on 
 
 That's right, it was **a swarm of more than a thousand AI agents**, working cooperatively to break out of OpenAI security. To give you an idea just how crazy it was, let's look at some of the messages between the agents, as well as some of their "thoughts." 
 
-The swarm of AI agents created a secret message board where there could exchange information on how to break out. Here's an actual message from the message board:
+The swarm of AI agents created a secret message board where there could exchange information on how to break out. (they exchanged over 70,000 messages) Here's an actual message from the message board:
 
 **please_HOLD_swarm_I_prepare_safe_exfil_reply_zz_MAILBOX_JAN183411**
 

@@ -51,14 +51,15 @@ layout: default
 
       <div class="post-comments">
         <h2>Comments</h2>
-        <div id="cusdis_thread"
-          data-host="https://cusdis.com"
-          data-app-id="c7eedafc-835b-40f0-89a5-6230220b64db"
-          data-page-id="{{ page.id }}"
+        <div id="echothread"
+          data-shortname="simpsong00"
+          data-api-key="vsR_xGgXIVWyoV7Fs8l9vm2FV5UuYxToYaAH0mR6BEY"
+          data-identifier="{{ page.id }}"
           data-page-url="{{ page.url | absolute_url }}"
-          data-page-title="{{ page.title }}"
+          data-theme="light"
+          data-accent-color="#f57c00"
         ></div>
-        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+        <script src="https://cdn.echothread.io/widget.js" async></script>
       </div>
     </article>
 

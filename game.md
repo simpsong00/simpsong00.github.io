@@ -72,7 +72,8 @@ redirect_from:
       <h2>Ready to Play?</h2>
       <p>Quotient is a text-based interactive fiction game — think Zork, but set in the world of the novels. Begin a secret mission at Quotient headquarters, fly a jet, and travel by rocket to unusual locations around the world.</p>
       <a href="https://simpsong00.github.io/play.html" class="btn btn-primary" target="_blank" rel="noopener">Play Quotient</a>
-      <a href="https://intfiction.org/t/lets-play-quotient-the-game-by-gregory-simpson/75735/1" class="btn btn-secondary" target="_blank" rel="noopener">Walkthrough</a>
+      <a href="https://intfiction.org/t/lets-play-quotient-the-game-by-gregory-simpson/75735/1" class="btn btn-secondary" target="_blank" rel="noopener">A Play Through</a>
+      <a href="/quotient-the-game-walkthrough.html" class="btn btn-secondary" target="_blank" rel="noopener">Walkthrough</a>
     </div>
 
     <h2>About the Game</h2>

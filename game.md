@@ -100,7 +100,8 @@ redirect_from:
     <ul>
       <li><a href="https://simpsong00.github.io/Quotient%20The%20Game%20-%20Map%20Spoiler%20Free.pdf" target="_blank" rel="noopener">Spoiler-Free Map (PDF)</a></li>
       <li><a href="/game/resources/" target="_blank" rel="noopener">Full Maps, Puzzle Diagrams &amp; Song List</a></li>
-      <li><a href="https://intfiction.org/t/lets-play-quotient-the-game-by-gregory-simpson/75735/1" target="_blank" rel="noopener">Walkthrough on intfiction.org</a></li>
+      <li><a href="/quotient-the-game-walkthrough.html" target="_blank" rel="noopener">Complete Walkthrough</a></li>
+      <li><a href="https://intfiction.org/t/lets-play-quotient-the-game-by-gregory-simpson/75735/1" target="_blank" rel="noopener">A Play Through on intfiction.org</a></li>
     </ul>
 
     <p style="margin-top:2rem;font-size:0.9rem;color:#777;"><em>Quotient is currently in active development by Gregory Simpson. New content and locations may be added over time.</em></p>

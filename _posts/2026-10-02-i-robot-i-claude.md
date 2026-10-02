@@ -19,6 +19,7 @@ https://youtu.be/aBUniZHgCnE?is=ic3G3Mkw8LcqyPnJ
 In this clip, Anthropic's Chloe Lubinski talks about how AI works, and how when Claude is asked about a potentially lethal dose of medicine, the emotional vector of fear is activated. The model of reality created by the neural network lights up certain vectors associated with emotions in the right conditions.
 
 
+
 [![](/weebly/emotional-claude.jpg)](/weebly/emotional-claude.jpg)
 
 
@@ -32,11 +33,11 @@ Maybe we all need to watch I, Robot before we put AI in all of our humanoid robo
 
 For more on emotional vectors, see this fascinating article from Anthropic. 
 
-https://www.anthropic.com/research/emotion-concepts-function
+[https://www.anthropic.com/research/emotion-concepts-function](https://www.anthropic.com/research/emotion-concepts-function)
 
 As for the NYT's article, it seemed incredible that I encountered all three of these pieces of media in the same few days. The NYT piece looks at how Anthropic engaged religious leaders in discussions about the potential of consciousness in a system like Claude.
 
-So, what do you think? Just fancy word completion, or a an advanced neural net that is building a representation of our world based on the world's accumulated knowledge. One that actually triggers "emotional vectors" when encountering difficult situations? Are emotional vectors the same as feeling emotion? Will AI gain agency? 
+So, what do you think? Just fancy word completion, or an advanced neural net that is building a representation of our world based on the world's accumulated knowledge. One that actually triggers "emotional vectors" when encountering difficult situations? Are emotional vectors the same as feeling emotion? Will AI gain agency? 
 
 So, will this equal consciousness? I treat my LLM helpers kindly, just in case.
 

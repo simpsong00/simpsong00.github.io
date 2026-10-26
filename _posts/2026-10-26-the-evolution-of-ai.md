@@ -42,6 +42,9 @@ The next column on my first slide will certainly be interesting, if not a little
 
 Greg 
 
-(For the those wanting the details, the model distributed across the TV set boxes was Gemma4-26B-A4B, running at 0.39 tokens per second.)
+(For the those wanting the details, the model distributed across the TV set boxes was Gemma4-26B-A4B, running at 0.39 tokens per second.
+
+Also, the link to the Anthropic Article is here: [https://www.anthropic.com/research/self-replicating-ai](https://www.anthropic.com/research/self-replicating-ai)
+)
 
 

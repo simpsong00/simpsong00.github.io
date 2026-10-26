@@ -1,6 +1,6 @@
 ---
 title: "The Evolution of AI"
-description: "An evolution of AI"
+description: "A look at the evolution of AI, and what might be next."
 pubDate: "2026-10-26"
 tags: ["All", "Technology"]
 draft: false
@@ -20,10 +20,11 @@ The implications of:
 1) Faster and faster end user devices
 2) More and more capable small AI models
 3) More powerful foundational models
-could lead to the insane science fiction scenario I referred to earlier. 
+could lead to the insane science fiction scenario I referred to earlier: 
 
-*A rogue AI, running on millions of smart devices running free after being put there by a foundational model that has slipped its leash. *
-(Did I mention I have a book coming out next year? It's called Quantum Launch.)
+**A rogue AI, running on millions of smart devices running free after being put there by a foundational model that has slipped its leash.**
+
+(Did I mention I have a book coming out next year? It's called *Quantum Launch*.)
 
 Along these lines, the other thing I've been looking at is quantization of models, and distillation of models. Quantization helps make models smaller (think drawing a picture with a box of 48 crayons instead of 256... same drawing, just not quite as precise)
 
@@ -35,7 +36,9 @@ With quantization to make models smaller, distillation to make small models bett
 
 So, smarter models getting smaller, hardware getting faster, and now models having the ability to run across distributed smart devices. 
 
-The next column on my first slide will certainly be interesting, if not a little scarier than the last. ***What do you think the next evolutionary step will look like? ***
+The next column on my first slide will certainly be interesting, if not a little scarier than the last.
+
+**What do you think the next evolutionary step will look like?**
 
 Greg 
 

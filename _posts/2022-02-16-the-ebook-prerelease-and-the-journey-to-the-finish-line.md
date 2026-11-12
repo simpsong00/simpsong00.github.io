@@ -4,6 +4,7 @@ description: ""
 pubDate: "2022-02-16"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/5d8b962d-2327-4f4a-a4a4-2db4c833bdfaorigjpg.jpg
 redirect_from:
   - /blog/the-ebook-prerelease-and-the-journey-to-the-finish-line
 ---

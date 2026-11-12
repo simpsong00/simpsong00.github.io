@@ -4,6 +4,7 @@ description: ""
 pubDate: "2025-05-09"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/qt-cover-fullorigjpg.jpg
 redirect_from:
   - /blog/a-podcast-intro-to-quantum-time
 ---

@@ -4,6 +4,7 @@ description: ""
 pubDate: "2025-08-25"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/bridget-to-oxford-empty-next-trip-343origjpg-2.jpg
 redirect_from:
   - /blog/another-quantum-time-location
 ---

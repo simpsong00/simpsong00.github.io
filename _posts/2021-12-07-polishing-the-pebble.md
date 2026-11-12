@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-12-07"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/img-0159origjpeg.jpeg
 redirect_from:
   - /blog/polishing-the-pebble
 ---

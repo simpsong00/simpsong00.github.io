@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-09-02"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/spacexrocketreturn-origorigjpeg.jpeg
 redirect_from:
   - /blog/outer-space
 ---

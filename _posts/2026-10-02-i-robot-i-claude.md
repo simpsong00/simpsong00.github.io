@@ -4,6 +4,7 @@ description: "Is AI becoming conscious?"
 pubDate: "2026-10-02"
 tags: ["All"]
 draft: false
+image: /weebly/emotional-claude.jpg
 ---
 
 This week, I watched the 2004 movie, "I, Robot" loosely based on the Isaac Asimov set of short stories of the same name. I found the following movie quote fascinating, especially since the NYT just posted an article titled "[Is Claude Conscious? Inside Anthropic's Quest to Instill Morality inside its AI Models.](https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html)" Here's the movie quote: 

@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-05-20"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/img-2953jpeg.jpeg
 redirect_from:
   - /blog/chapter-ten-oxford-the-lion-the-witch-and-the-wardrobe
 ---

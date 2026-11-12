@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-06-11"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/spacexrocketreturnorigjpeg.jpeg
 redirect_from:
   - /blog/elon-technologies
 ---

@@ -4,6 +4,7 @@ description: "A look at the cover of the novel Quantum Time"
 pubDate: "2026-08-13"
 tags: ["All"]
 draft: false
+image: /weebly/qt-cover-full.jpg
 ---
 
 Quantum Time's cover was designed by my son, Jason Simpson. He incorporated many secrets in the cover. Let's examine some of them.

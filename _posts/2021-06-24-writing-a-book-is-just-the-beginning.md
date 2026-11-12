@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-06-24"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/dsc00594origjpg.jpg
 redirect_from:
   - /blog/writing-a-book-is-just-the-beginning
 ---

@@ -33,6 +33,11 @@ paginate_path: "/blog/page:num/"
 
 # Apply default layout to posts
 defaults:
+  # Fallback social-share image for anything without its own `image:`
+  - scope:
+      path: ""
+    values:
+      image: /weebly/grs-tqc-cover-front-04origpng.png
   - scope:
       path: "_posts"
       type: posts

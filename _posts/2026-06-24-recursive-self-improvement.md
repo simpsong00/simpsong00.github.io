@@ -4,6 +4,7 @@ description: ""
 pubDate: "2026-06-24"
 tags: ["All", "Technology"]
 draft: false
+image: /weebly/screenshot-2026-06-24-at-3-51-22-pm.png
 redirect_from:
   - /blog/recursive-self-improvement
 ---

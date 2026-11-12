@@ -4,6 +4,7 @@ description: ""
 pubDate: "2025-04-26"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/bridget-to-oxford-empty-next-trip-343origjpg.jpg
 redirect_from:
   - /blog/it-is-almost-time-for-quantum-time
 ---

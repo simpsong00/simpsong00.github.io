@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-07-07"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/history-of-ai-1024x819origjpg.jpg
 redirect_from:
   - /blog/you-cant-do-a-techno-thriller-without-ai
 ---

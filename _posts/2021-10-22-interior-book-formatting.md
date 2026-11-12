@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-10-22"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/screen-shot-2021-10-20-at-4-40-33-pmorigpng.png
 redirect_from:
   - /blog/interior-book-formatting
 ---

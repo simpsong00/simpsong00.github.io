@@ -4,6 +4,7 @@ description: ""
 pubDate: "2022-05-27"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/1-the-demandsjpeg.jpeg
 redirect_from:
   - /blog/the-photos
 ---

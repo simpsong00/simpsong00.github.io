@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-10-06"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/img-0128origjpg.jpg
 redirect_from:
   - /blog/finishing-touches
 ---

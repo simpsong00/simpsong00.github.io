@@ -4,6 +4,7 @@ description: ""
 pubDate: "2022-03-15"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/6-saras-smileorigjpeg.jpeg
 redirect_from:
   - /blog/hidden-meanings
 ---

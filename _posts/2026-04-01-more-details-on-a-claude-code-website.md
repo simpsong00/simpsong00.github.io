@@ -4,6 +4,7 @@ description: ""
 pubDate: "2026-04-01"
 tags: ["All"]
 draft: false
+image: /weebly/screenshot-2026-04-01-at-8-01-32-am.png
 redirect_from:
   - /blog/more-details-on-a-claude-code-website
 ---

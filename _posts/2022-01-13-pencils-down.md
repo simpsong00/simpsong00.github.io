@@ -4,6 +4,7 @@ description: ""
 pubDate: "2022-01-13"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/1-the-demandsorigjpeg.jpeg
 redirect_from:
   - /blog/pencils-down
 ---

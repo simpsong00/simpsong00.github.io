@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-08-11"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/p78png.png
 redirect_from:
   - /blog/new-chapters-and-a-photoblog
 ---

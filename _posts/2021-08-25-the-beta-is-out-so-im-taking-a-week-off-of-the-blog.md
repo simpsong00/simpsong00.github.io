@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-08-25"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/africa-355origjpg.jpg
 redirect_from:
   - /blog/the-beta-is-out-so-im-taking-a-week-off-of-the-blog
 ---

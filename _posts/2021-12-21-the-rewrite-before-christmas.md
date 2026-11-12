@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-12-21"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/screen-shot-2021-12-21-at-5-23-01-pmorigpng.png
 redirect_from:
   - /blog/the-rewrite-before-christmas
 ---

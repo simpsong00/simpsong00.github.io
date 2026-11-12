@@ -4,6 +4,7 @@ description: "A look at the evolution of AI, and what might be next."
 pubDate: "2026-10-26"
 tags: ["All", "Technology"]
 draft: false
+image: /weebly/screenshot-2026-10-26-at-3-27-39-pm.png
 ---
 
 This month I was preparing for a presentation on AI to a non-technical audience, and I wanted to provide some background on how we got to where we are today. I came up with the following graphic to illustrate the progression. It's amazing/scary/pick-your-word to see this level of progress in such a short time.

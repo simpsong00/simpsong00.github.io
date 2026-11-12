@@ -4,6 +4,7 @@ description: "Releasing a second book breathes new life into the first book!"
 pubDate: "2026-05-25"
 tags: ["All", "Learning"]
 draft: false
+image: /weebly/book-sales.jpg
 redirect_from:
   - /blog/how-quantum-time-drives-sales-for-my-first-book
 ---

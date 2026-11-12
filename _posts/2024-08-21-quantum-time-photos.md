@@ -4,6 +4,7 @@ description: ""
 pubDate: "2024-08-21"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/6b4ca1f6-4f18-467a-bdcd-7688c32fd273origjpg.jpg
 redirect_from:
   - /blog/quantum-time-photos
 ---

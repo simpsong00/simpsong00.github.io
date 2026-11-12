@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-10-06"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/images-4origjpeg.jpeg
 redirect_from:
   - /blog/why-dont-you-publish-it-now
 ---

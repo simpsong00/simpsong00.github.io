@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-10-15"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/africa-930jpg.jpg
 redirect_from:
   - /blog/the-back-cover-blurb
 ---

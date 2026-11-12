@@ -4,6 +4,7 @@ description: ""
 pubDate: "2025-07-09"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/dsc00803origjpg.jpg
 redirect_from:
   - /blog/one-place-i-havent-been-and-one-i-have
 ---

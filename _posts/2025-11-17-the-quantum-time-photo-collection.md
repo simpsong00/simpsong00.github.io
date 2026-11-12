@@ -4,6 +4,7 @@ description: ""
 pubDate: "2025-11-17"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/6b4ca1f6-4f18-467a-bdcd-7688c32fd273jpeg.jpeg
 redirect_from:
   - /blog/the-quantum-time-photo-collection
 ---

@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-09-08"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/3b82bae0-9f36-47c1-ada7-6d10bc3827b7origjpg.jpg
 redirect_from:
   - /blog/first-line-frenzy
 ---

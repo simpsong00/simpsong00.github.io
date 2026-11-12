@@ -4,6 +4,7 @@ description: ""
 pubDate: "2022-05-13"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/screen-shot-2022-05-13-at-9-11-47-amorigpng.png
 redirect_from:
   - /blog/the-audible-version-is-here
 ---

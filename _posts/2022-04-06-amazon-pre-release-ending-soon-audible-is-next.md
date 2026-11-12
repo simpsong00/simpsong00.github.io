@@ -4,6 +4,7 @@ description: ""
 pubDate: "2022-04-06"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/img-0380origjpg.jpg
 redirect_from:
   - /blog/amazon-pre-release-ending-soon-audible-is-next
 ---

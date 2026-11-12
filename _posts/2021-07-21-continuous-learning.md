@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-07-21"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/statistic-id605067-isbns-assigned-to-self-published-titles-in-the-us-2010-2018origpng.png
 redirect_from:
   - /blog/continuous-learning
 ---

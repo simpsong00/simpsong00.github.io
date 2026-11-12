@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-04-17"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/img-2983origjpeg.jpeg
 redirect_from:
   - /blog/techology-and-locations
 ---

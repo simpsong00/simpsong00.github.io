@@ -4,6 +4,7 @@ description: ""
 pubDate: "2022-03-04"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/grs-tqc-cover-front-04origpng-2.png
 redirect_from:
   - /blog/secrets-of-the-cover
 ---

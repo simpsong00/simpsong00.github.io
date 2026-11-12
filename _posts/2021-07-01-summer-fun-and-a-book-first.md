@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-07-01"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/kost-wedding-benson-bash-235origjpg.jpg
 redirect_from:
   - /blog/summer-fun-and-a-book-first
 ---

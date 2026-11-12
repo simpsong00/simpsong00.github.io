@@ -4,6 +4,7 @@ description: ""
 pubDate: "2025-08-30"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/signorigpng.png
 redirect_from:
   - /blog/quotient-the-game
 ---

@@ -4,6 +4,7 @@ description: ""
 pubDate: "2025-06-08"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/img-6721origjpeg.jpeg
 redirect_from:
   - /blog/the-locations-of-quantum-time
 ---

@@ -4,6 +4,7 @@ description: ""
 pubDate: "2022-02-21"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/grs-tqc-cover-front-04origpng.png
 redirect_from:
   - /blog/its-here-its-time
 ---

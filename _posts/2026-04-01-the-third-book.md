@@ -4,6 +4,7 @@ description: "The prequel to the Quotient Series, the third book is coming in 20
 pubDate: "2026-04-01"
 tags: ["All"]
 draft: false
+image: /weebly/img-1900.jpeg
 redirect_from:
   - /blog/the-third-book
 ---

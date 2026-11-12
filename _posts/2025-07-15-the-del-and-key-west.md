@@ -4,6 +4,7 @@ description: ""
 pubDate: "2025-07-15"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/img-2426origjpeg.jpeg
 redirect_from:
   - /blog/the-del-and-key-west
 ---

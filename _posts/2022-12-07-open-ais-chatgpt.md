@@ -4,6 +4,7 @@ description: ""
 pubDate: "2022-12-07"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/twitter-fjkbcgpwyaio2mkorigjpg.jpg
 redirect_from:
   - /blog/open-ais-chatgpt
 ---

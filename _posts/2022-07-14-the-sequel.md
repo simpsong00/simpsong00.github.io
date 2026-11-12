@@ -4,6 +4,7 @@ description: ""
 pubDate: "2022-07-14"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/fe58ff14-50de-41fe-b977-e5cba3bb99d4origjpeg.jpeg
 redirect_from:
   - /blog/the-sequel
 ---

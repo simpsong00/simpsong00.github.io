@@ -4,6 +4,7 @@ description: ""
 pubDate: "2025-05-04"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/qt-cover-front-072dpiorigjpg.jpg
 redirect_from:
   - /blog/quantum-time-presale-starts-now
 ---

@@ -4,6 +4,7 @@ description: "The Alpha version of Quantum Launch the prequel is released!"
 pubDate: "2026-06-19"
 tags: ["All"]
 draft: false
+image: /weebly/img-8103.jpeg
 redirect_from:
   - /blog/quantum-launch-alpha-version-is-out
 ---

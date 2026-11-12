@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-08-06"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/bitcoin-mining-businessorigjpg.jpg
 redirect_from:
   - /blog/bitcoin-mining
 ---

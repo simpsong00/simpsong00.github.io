@@ -4,6 +4,7 @@ description: ""
 pubDate: "2026-08-13"
 tags: ["All"]
 draft: false
+image: /weebly/screenshot-2026-08-13-at-10-48-03-am.png
 ---
 
 Quantum Time takes place in two different time periods. 2028-2029 and 2050. I've created a timeline to help illustrate where The Quantum Contingent and Quantum Time fit, and how they interact. 

@@ -4,6 +4,7 @@ description: ""
 pubDate: "2022-04-20"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/hoopla-library-maporigpng.png
 redirect_from:
   - /blog/libraries-are-great
 ---

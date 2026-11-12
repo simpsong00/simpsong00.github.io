@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-11-17"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/screen-shot-2021-11-17-at-12-53-33-pmorigpng.png
 redirect_from:
   - /blog/book-research-and-photos
 ---

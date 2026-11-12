@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-06-17"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/africa-203jpeg.jpeg
 redirect_from:
   - /blog/ngorongoro-crater-and-lalibela
 ---

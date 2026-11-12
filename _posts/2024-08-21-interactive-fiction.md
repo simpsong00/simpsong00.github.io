@@ -4,6 +4,7 @@ description: ""
 pubDate: "2024-08-21"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/postcardorigjpg.jpg
 redirect_from:
   - /blog/interactive-fiction
 ---

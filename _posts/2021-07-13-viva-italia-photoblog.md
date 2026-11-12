@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-07-13"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/european-vacation-028jpg.jpg
 redirect_from:
   - /blog/viva-italia-photoblog
 ---

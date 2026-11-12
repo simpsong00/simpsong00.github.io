@@ -4,6 +4,7 @@ description: ""
 pubDate: "2022-04-14"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/12-the-princess-brideorigjpeg.jpeg
 redirect_from:
   - /blog/world-quantum-day
 ---

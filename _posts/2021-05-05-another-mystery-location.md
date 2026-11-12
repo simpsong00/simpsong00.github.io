@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-05-05"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/img-3810jpeg.jpeg
 redirect_from:
   - /blog/another-mystery-location
 ---

@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-05-27"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/screen-shot-2021-05-26-at-9-30-26-pmorigpng.png
 redirect_from:
   - /blog/writing-by-numbers
 ---

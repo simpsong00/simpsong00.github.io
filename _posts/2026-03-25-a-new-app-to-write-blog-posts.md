@@ -4,6 +4,7 @@ description: ""
 pubDate: "2026-03-25"
 tags: ["All"]
 draft: false
+image: /weebly/screenshot-2026-03-25-at-11-04-22-am.png
 redirect_from:
   - /blog/a-new-app-to-write-blog-posts
 ---

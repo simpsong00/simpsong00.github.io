@@ -4,6 +4,7 @@ description: "Rebuilding my author website with Claude Code"
 pubDate: "2026-03-24"
 tags: ["All", "Learning"]
 draft: false
+image: /weebly/claude-screenshot.png
 redirect_from:
   - /blog/Welcome-to-my-new-website
 ---

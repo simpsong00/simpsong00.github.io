@@ -4,6 +4,7 @@ description: ""
 pubDate: "2021-09-22"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/p52png.png
 redirect_from:
   - /blog/one-more-chapter
 ---

@@ -4,6 +4,7 @@ description: ""
 pubDate: "2025-06-23"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/img-0364origjpeg.jpeg
 redirect_from:
   - /blog/the-badlands
 ---

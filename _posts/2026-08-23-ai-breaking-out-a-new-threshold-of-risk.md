@@ -4,6 +4,7 @@ description: "OpenAI's model broke out and broke into another companies network 
 pubDate: "2026-08-23"
 tags: ["All", "Technology", "AI"]
 draft: false
+image: /weebly/copydoc-display-crop-image1-png.webp
 ---
 
 By now, if you follow AI, you've heard about the incident where's OpenAI was testing a model and it "broke out" and "broke in" to another company. Let's talk about this for just a moment.

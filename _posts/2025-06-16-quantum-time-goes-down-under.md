@@ -4,6 +4,7 @@ description: ""
 pubDate: "2025-06-16"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/bridget-austrailia-and-spring-break-2444origjpg.jpg
 redirect_from:
   - /blog/quantum-time-goes-down-under
 ---

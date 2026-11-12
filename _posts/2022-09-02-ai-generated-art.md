@@ -4,6 +4,7 @@ description: ""
 pubDate: "2022-09-02"
 tags: ["All", "Learning", "Technology"]
 draft: false
+image: /weebly/obiwanknights-a-spacestation-shaped-like-dr-whos-tardis-orbiti-33c178f8-1862-4ae9-bb1c-d69.png
 redirect_from:
   - /blog/ai-generated-art
 ---

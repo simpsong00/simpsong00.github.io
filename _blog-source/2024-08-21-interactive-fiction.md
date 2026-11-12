@@ -16,6 +16,6 @@ interactive fiction
    (it's hosted on 
 GitHub)
 
-[Play the game!](https://simpsong00.github.io/play.html)
+[Play the game!](/play.html)
 
 [![Picture](/simpsong00-clone/images/uploads/weebly/postcardorigjpg.jpg)]()

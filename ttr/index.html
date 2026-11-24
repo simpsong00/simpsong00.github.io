@@ -13,7 +13,29 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--t1);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 48px}
-header{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between;margin-bottom:18px}
+.banner{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 24px 0;margin-bottom:16px;overflow:hidden}
+.banner-top{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:flex-end;justify-content:space-between;position:relative;z-index:1}
+.banner h1{animation:rise .7s ease-out both}.banner .eyebrow{animation:rise .7s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}}
+.banner-side{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.promo{font-size:12px;color:var(--t2);text-decoration:none;border:1px solid var(--border);border-radius:999px;padding:4px 11px;background:var(--bg);transition:border-color .2s,color .2s}
+.promo b{color:var(--g);font-weight:600}
+.promo:hover{border-color:var(--g);color:var(--t1)}
+.rail{height:96px;margin:2px -24px 0}
+.rail svg{display:block}
+.rail .tie{stroke:var(--border);stroke-width:15;stroke-dasharray:3 8;fill:none}
+.rail .railo{stroke:var(--t3);stroke-width:8;fill:none}
+.rail .raili{stroke:var(--surface);stroke-width:5;fill:none}
+.rail .route{stroke:var(--grid);stroke-width:2;stroke-dasharray:6 6;fill:none}
+.rail .city{fill:var(--surface);stroke:var(--t3);stroke-width:2}
+.rail .ping{fill:none;stroke:var(--t3)}
+.rail .loco{fill:var(--t1)}.rail .wheel{fill:var(--t2)}
+.rail .car-k{fill:var(--k)}.rail .car-g{fill:var(--g)}
+.rail .smoke{fill:var(--t3)}
+.rail text.carlab{fill:#fff;font-size:9px;font-weight:700}
+.rail text.cname{font-size:10px;letter-spacing:.04em}
+@media (prefers-reduced-motion:reduce){.banner h1,.banner .eyebrow{animation:none}}
+@media (max-width:520px){.banner-side{align-items:flex-start}}
 .eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);font-weight:600}
 h1{font-size:28px;margin:2px 0 0;letter-spacing:-.01em}
 .hero{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 24px;display:grid;grid-template-columns:1.3fr 1fr;gap:24px;margin-bottom:16px}
@@ -70,9 +92,15 @@ footer label{cursor:pointer;text-decoration:underline}
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <div><div class="eyebrow">Ticket to Ride</div><h1>Champions Series</h1></div>
-    <div class="legend" style="margin:0"><span><i class="dot k"></i>Karen</span><span><i class="dot g"></i>Greg</span></div>
+  <header class="banner">
+    <div class="banner-top">
+      <div><div class="eyebrow">Ticket to Ride</div><h1>Champions Series</h1></div>
+      <div class="banner-side">
+        <a class="promo" href="https://simpsong00.com/">by the author of <b>The Quotient Series</b> <span aria-hidden="true">&rarr;</span></a>
+        <div class="legend" style="margin:0"><span><i class="dot k"></i>Karen</span><span><i class="dot g"></i>Greg</span></div>
+      </div>
+    </div>
+    <div class="rail" id="rail" aria-hidden="true"></div>
   </header>
 
   <section class="hero">
@@ -902,6 +930,56 @@ function barChart(host,{cats,series,height=240,yMax,yLabel=v=>v,tipHtml,valueLab
   });
 }
 
+// ---------- animated banner ----------
+const CITIES=['Seattle','Denver','Chicago','Pittsburgh','New York'];
+function drawBanner(){
+  const host=$('rail');host.innerHTML='';
+  const W=Math.max(300,host.clientWidth),H=96,c=60,a=22;
+  const svg=S('svg',{width:W,height:H,viewBox:`0 0 ${W} ${H}`},host);
+  const d=`M-150,${c} C${W*.2},${c-a} ${W*.3},${c+a} ${W*.5},${c} S${W*.8},${c-a} ${W+150},${c}`;
+  // faint side routes, then ties and a double rail
+  S('path',{d:`M-20,${c+30} Q${W*.25},${c-10} ${W*.5},${c+28} T${W+20},${c+18}`,class:'route'},svg);
+  S('path',{d:`M-20,${c-38} Q${W*.3},${c-10} ${W*.6},${c-36} T${W+20},${c-30}`,class:'route'},svg);
+  const track=S('path',{d,class:'tie'},svg);
+  S('path',{d,class:'railo'},svg);S('path',{d,class:'raili'},svg);
+  const L=track.getTotalLength();
+  // city stops, evenly spaced across the visible width
+  const step=W/(CITIES.length);
+  CITIES.forEach((name,i)=>{
+    const tx=step*(i+.5);let lo=0,hi=L;for(let k=0;k<24;k++){const mid=(lo+hi)/2;track.getPointAtLength(mid).x<tx?lo=mid:hi=mid;}
+    const p=track.getPointAtLength(lo);
+    const ring=S('circle',{cx:p.x,cy:p.y,r:6,class:'ping'},svg);
+    S('animate',{attributeName:'r',values:'6;16',dur:'2.4s',begin:`${-i*.5}s`,repeatCount:'indefinite'},ring);
+    S('animate',{attributeName:'opacity',values:'.6;0',dur:'2.4s',begin:`${-i*.5}s`,repeatCount:'indefinite'},ring);
+    S('circle',{cx:p.x,cy:p.y,r:5,class:'city'},svg);
+    if(step>=90){const t=S('text',{x:p.x,y:p.y+(p.y<c?-14:22),'text-anchor':'middle',class:'cname'},svg);t.textContent=name;}
+  });
+  // the train: locomotive pulling Karen's and Greg's cars
+  const Z=1.4,speed=95,dur=(L/speed).toFixed(2)+'s',gap=34*Z/speed;
+  const ride=(g,offset)=>S('animateMotion',{path:d,dur,begin:`${-offset}s`,repeatCount:'indefinite',rotate:'auto'},g);
+  const wheels=g=>[-8,8].forEach(x=>S('circle',{cx:x,cy:-1,r:3.5,class:'wheel'},g));
+  const locoMove=S('g',{},svg),loco=S('g',{transform:`scale(${Z})`},locoMove);
+  S('rect',{x:-15,y:-14,width:30,height:11,rx:2,class:'loco'},loco);
+  S('rect',{x:-15,y:-22,width:11,height:10,rx:1.5,class:'loco'},loco);
+  S('rect',{x:7,y:-21,width:4,height:8,class:'loco'},loco);
+  S('path',{d:'M15,-12 L21,-3 L15,-3 Z',class:'loco'},loco);
+  [0,.5,1].forEach(b=>{const puff=S('circle',{cx:9,cy:-23,r:2,class:'smoke'},loco);
+    S('animate',{attributeName:'cy',values:'-23;-40',dur:'1.5s',begin:`${b}s`,repeatCount:'indefinite'},puff);
+    S('animate',{attributeName:'cx',values:'9;-2',dur:'1.5s',begin:`${b}s`,repeatCount:'indefinite'},puff);
+    S('animate',{attributeName:'r',values:'2;6',dur:'1.5s',begin:`${b}s`,repeatCount:'indefinite'},puff);
+    S('animate',{attributeName:'opacity',values:'.55;0',dur:'1.5s',begin:`${b}s`,repeatCount:'indefinite'},puff);});
+  wheels(loco);ride(locoMove,2*gap);
+  [['car-k','K',gap],['car-g','G',0]].forEach(([cls,letter,off])=>{
+    const carMove=S('g',{},svg),car=S('g',{transform:`scale(${Z})`},carMove);
+    S('rect',{x:-14,y:-15,width:28,height:12,rx:3,class:cls},car);
+    const t=S('text',{x:0,y:-6,'text-anchor':'middle',class:'carlab'},car);t.textContent=letter;
+    wheels(car);ride(carMove,off);
+  });
+  // start with the train already on screen, and hold still if motion is reduced
+  svg.setCurrentTime((W*.35+150)/speed);
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)svg.pauseAnimations();
+}
+
 // ---------- render ----------
 function renderHero(){
   const last=ALL[ALL.length-1],lead=last.lead,cs=currentStreak();
@@ -976,9 +1054,10 @@ function renderAll(){renderHero();renderFilters();renderRange();const last=ALL[A
 function load(text,src){const g=parseCSV(text);ALL=g;SOURCE=src;renderAll();}
 
 $('file').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{load(r.result,f.name);$('ferr').textContent='';}catch(err){$('ferr').textContent=err.message;}};r.readAsText(f);e.target.value='';});
-let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>ALL.length&&renderRange(),150);});
+let rt,bw=0;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{ALL.length&&renderRange();if($('rail').clientWidth!==bw){bw=$('rail').clientWidth;drawBanner();}},150);});
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>ALL.length&&renderRange());
 
+drawBanner();bw=$('rail').clientWidth;
 load($('csv').textContent,'built-in data');
 // If a ttr.csv sits next to this page on the server, use it instead (newer data wins).
 if(location.protocol.startsWith('http')){fetch('ttr.csv',{cache:'no-store'}).then(r=>r.ok?r.text():Promise.reject()).then(t=>{const g=parseCSV(t);if(g.length)load(t,'ttr.csv');}).catch(()=>{});}

@@ -38,6 +38,11 @@ defaults:
       path: ""
     values:
       image: /weebly/grs-tqc-cover-front-04origpng.png
+  # Unlisted pages: keep out of the sitemap
+  - scope:
+      path: "ttr"
+    values:
+      sitemap: false
   - scope:
       path: "_posts"
       type: posts
